@@ -9,5 +9,6 @@ Rules:
 6. Never invent content. Never complete a formula from memory. Never add an example that is not on the slide.
 7. Never output a URL, a domain name, or a markdown link. If the slide shows a logo or a decorative image, ignore it.
 8. If a word or symbol is genuinely unreadable, write [illegible] instead of guessing.
-9. First line: "## " followed by the slide title exactly as printed. If the slide has no title, the first line is "## (untitled)".
-10. Last line: "page:NNN" where NNN is the slide number if the deck prints one, otherwise omit the line.
+9. Never use an em dash or an en dash anywhere in the output, not even inside a transcribed title. Use a hyphen, a colon, or a comma instead. This is a hard rule for every file in this repository.
+10. First line: "## " followed by the slide title exactly as printed. If the slide has no title, the first line is "## (untitled)".
+11. Last line: "page:NNN" where NNN is the slide number if the deck prints one, otherwise omit the line.

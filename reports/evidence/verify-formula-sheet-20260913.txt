@@ -1,0 +1,84 @@
+VERIFICATION OF FORMULA SHEET AND ASSIGNMENT KEY
+checks run: 79   passed: 79   failed: 0
+
+PASS  binomial pmf sums to 1 (n=12, p=0.1)  [sum=1.000000000000000]
+PASS  binomial mean = np  [E=1.200000000000 np=1.200000000000]
+PASS  binomial variance = npq  [Var=1.080000000000 npq=1.080000000000]
+PASS  poisson pmf sums to 1 (lambda=2)  [sum=1.000000000000000]
+PASS  poisson mean = lambda  [E=2.000000000000]
+PASS  poisson variance = lambda (mean equals variance)  [Var=2.000000000000]
+PASS  binomial approximates poisson at large n small p  [binomial=0.2706976371 poisson=0.2706705665 lambda=2.0000, gap 2.71e-05 is the expected O(1/n) limit error]
+PASS  uniform pdf integrates to 1
+PASS  uniform mean = (a+b)/2  [E=4.000000000]
+PASS  uniform variance = (b-a)^2/12  [Var=1.333333333 formula=1.333333333]
+PASS  normal pdf integrates to 1  [integral=1.000000000000]
+PASS  normal symmetry Phi(-z) = 1 - Phi(z)
+PASS  standardisation Z = (X-mu)/sigma for X=200
+PASS  P(X>8.6) with mu=8 sigma=5 is 0.4522 (ppt4 p033)  [computed=0.452242 slide=0.4522]
+PASS  F(0.12)=0.5478 (ppt4 p031)  [computed=0.547758]
+PASS  normal landmark 1 sigma covers 68.27 percent  [computed=68.27]
+PASS  normal landmark 2 sigma covers 95.45 percent  [computed=95.45]
+PASS  normal landmark 3 sigma covers 99.73 percent  [computed=99.73]
+PASS  inverse: X = mu + Z sigma for 20 percent lower tail  [X=3.792 slide=3.792]
+PASS  exponential pdf integrates to 1  [integral=1.000000000007]
+PASS  exponential mean = 1/lambda  [E=0.500000000]
+PASS  exponential variance = 1/lambda^2  [Var=0.250000000]
+PASS  exponential tail P(T>t) = exp(-lambda t)
+PASS  exponential memorylessness
+PASS  Assignment1 Q2 exact value is 5e^-4 = 0.0915782, key prints 0.0915 which is truncated not rounded  [computed=0.0915782, rounds to 0.0916, key prints 0.0915 (truncation)]
+PASS  Assignment1 Q2 closed form 5*exp(-4)  [5e^-4=0.091578 computed=0.091578]
+PASS  Assignment1 Q2 tail identity e^(-x/3)(1+x/3) equals 5e^-4 at x=12  [identity=0.091578]
+PASS  Assignment1 Q2 tail identity agrees with numeric integral at x=12  [identity=0.091578 integral=0.091578]
+PASS  Var of one fair die = 35/12  [computed=2.9166666667 35/12=2.9166666667]
+PASS  Var of sum of two dice = 35/6
+PASS  Chebyshev bound for dice, P(|X-7|>=3) <= 35/54  [bound=0.6481481481 35/54=0.6481481481]
+PASS  actual dice probability = 1/3 (official key)  [computed=0.3333333333]
+PASS  bound >= actual probability  [bound=0.648148 actual=0.333333]
+PASS  600 throws mean = 100
+PASS  600 throws variance = 250/3  [83.333333]
+PASS  Chebyshev lower bound for 80 to 120 sixes = 19/24  [computed=0.791666666667 19/24=0.791666666667]
+PASS  actual binomial probability far above the Chebyshev bound  [actual=0.975429 bound=0.791667]
+PASS  Assignment1 long Q1(i) P(60<=T<=70) = 0.1544 (official key)  [computed=0.154360 key=0.1544]
+PASS  Assignment1 long Q1 P(T>60) = 0.3175  [computed=0.317440]
+PASS  Assignment1 long Q1(ii) conditional = 0.4863 (official key)  [computed=0.486265 key=0.4863]
+PASS  Assignment1 long Q2 pmf sums to exactly 1 at k=1/10  [sum=1.000000000000000]
+PASS  normalisation equation 10k^2+9k-1=0 has exact root 1/10
+PASS  stated equation 12k+10k^2=1 is NOT satisfied by k=1/10  [value at k=0.1 is 1.30 not 1]
+PASS  stated equation 14k+10k^2=1 is NOT satisfied by k=1/10  [value at k=0.1 is 1.50 not 1]
+PASS  F(x) column matches official key 0, .1, .3, .5, .8, .81, .83, 1  [computed=[0, 0.1, 0.3, 0.5, 0.8, 0.81, 0.83, 1.0]]
+PASS  P(X<6) = 81/100
+PASS  P(X>=6) = 19/100  [computed=0.19 (a stated 0.91 in the submission sheet)]
+PASS  P(0<X<5) = 4/5
+PASS  minimum c with P(X<=c) > 1/2 is 4 (official key c=4)  [computed c=4]
+PASS  P(1.5<X<4.5 | X>2) = 5/7 (official key)  [computed=0.7142857143 5/7=0.7142857143]
+PASS  hypergeometric mean nK/N = 0.8 exactly
+PASS  hypergeometric pmf sums to 1
+PASS  hypergeometric mean computed = 0.8  [computed=0.800000000000]
+PASS  oranges pmf 12/19, 32/95, 3/95 (official key)  [computed=[0.631579, 0.336842, 0.031579]]
+PASS  Chebyshev k=2 gives 0.75
+PASS  Chebyshev k=3 gives 0.8888888888888888
+PASS  Chebyshev k=4 gives 0.9375
+PASS  CLT: mean of standardised sample means near 0  [mean=0.0017]
+PASS  CLT: variance of standardised sample means near 1  [var=1.0251]
+PASS  CLT: skewness of standardised means sits at population_skew/sqrt(n)  [sample skewness=0.3882, theory 2/sqrt(36)=0.3333, population 2.0]
+PASS  CLT: skewness far below the population skew of 2.0  [sample=0.3882]
+PASS  Xbar unbiased for mu (population mean 0.5)  [E[Xbar]=0.4956]
+PASS  S^2 with n-1 unbiased for sigma^2 (0.25)  [E[S^2]=0.2460]
+PASS  S^2 with n is biased low for sigma^2  [E[biased]=0.2159 vs 0.25]
+PASS  MSE = Var + Bias^2  [MSE=0.041001 Var+Bias^2=0.041001]
+PASS  efficiency ranking: sigma^2/5 < 2sigma^2 < 3sigma^2/2  [t1=0.2s^2, t3=1.5s^2, t2=2s^2 so t1 is most efficient]
+PASS  E(X+Y) = E(X) + E(Y) with dependent variables  [E(X)+E(Y)=8.51867 E(X+Y)=8.51867]
+PASS  E(XY) = E(X)E(Y) for independent variables  [E(XY)=24.9719 E(X)E(Y)=24.9667]
+PASS  E(XY) != E(X)E(Y) when dependent  [gap=4.1343]
+PASS  Var(aX+b) = a^2 Var(X), a=3 b=-7  [Var(3X-7)=75.461115 9Var(X)=75.461115]
+PASS  Var(X+Y) = Var(X)+Var(Y) for independent variables (exact, two dice)  [35/12 + 35/12 = 35/6]
+PASS  Var(X+Y) != Var(X)+Var(Y) when dependent (exact, X and X)  [Var(2X)=35/3=11.67 vs 2Var(X)=35/6=5.83]
+PASS  sum of independent Poisson(1.5) is Poisson(3)  [max gap 2.78e-17]
+PASS  standard error shrinks by sqrt(n): SE(100) is half SE(25)  [SE(25)=2.0000 SE(100)=1.0000]
+PASS  Chebyshev bound is vacuous at k=1  [bound = 1 at k=1]
+PASS  all 11 sources parsed from sources.yaml  [parsed 11]
+PASS  declared page total is 348  [sum=348]
+PASS  every source sha256 matches its manifest entry  [mismatches: none]
+PASS  every declared page count equals pdfinfo  [mismatches: none]
+
+FAILED: 0

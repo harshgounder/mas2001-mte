@@ -1,0 +1,419 @@
+           THEORY OF ESTIMATION
+
+           Parameter • Statistic • Point & Interval Estimation
+Characteristics of Good Estimator • Applications & Numerical Problems
+
+
+
+
+                  MAS2001: STATISTICS AND PROBABILTY
+                  Prepared by : Dr. Shamshad Ur Rasool
+                                              Learning Outcomes
+          • Define parameter, statistic, estimator and estimate.
+          • Distinguish between point estimation and interval estimation.
+          • Understand unbiasedness, consistency and efficiency.
+          • Use sufficient conditions to establish consistency.
+          • Compare estimators using bias and variance.
+          • Apply estimation concepts to practical numerical situations.
+
+
+
+
+MAS2001   |   2
+                                               Basic Statistical Terminology
+        Population Parameter                                       Statistic
+
+        A numerical characteristic describing a population.        A numerical quantity computed from sample data.
+        Examples: μ, σ², p.                                                  ̄ , S², ̂p.
+                                                                   Examples: X
+
+
+
+        Estimator                                                  Estimate
+
+        A function of sample observations used to estimate a       The numerical value obtained from an estimator.
+        parameter.                                                 Example: ̄ x = 52.
+        Example: ̄X as an estimator of μ.
+
+        Sample Space                                               Parameter Space
+
+        The set of all possible outcomes of a random experiment.   The set of all possible values of a parameter.
+        Example: S = {HH, HT, TH, TT}.                             Example: Θ = (−∞, ∞) for μ.
+
+
+
+
+MAS2001 |   3
+                                                           Estimation
+       Estimation is the statistical procedure in which a random sample is selected from a
+       population and a sample statistic is used to approximate an unknown population
+       parameter.
+
+
+
+                       Population → Random Sample → Statistic → Estimate of Parameter
+
+
+
+               Point Estimation                                    Interval Estimation
+               A single value is used to estimate the unknown      A range of values is used to estimate the
+               parameter.                                          unknown parameter.
+
+
+
+
+MAS2001|   4
+                                                           Point Estimation
+           A point estimate is a single numerical value used to estimate an unknown population
+           parameter.
+
+                                                 μ ≈ X̄          σ² ≈ S²           p ≈ p̂
+
+
+               Mean                                    Variance                                 Proportion
+               Estimate μ using ̄X.                    Estimate σ² using S².                    Estimate p using ̂p.
+
+
+
+
+                    Advantage: simple and easy to report. Limitation: it does not directly communicate sampling uncertainty.
+
+
+
+
+MAS2001|   5
+                                                     Interval Estimation
+       Interval estimation provides a range of values within which a population parameter is expected
+       to lie with a specified level of confidence.
+
+
+               • Accounts for uncertainty in estimation.
+               • Results in a confidence interval.
+               • More informative than a point estimate when precision matters.
+
+
+
+
+                                Confidence Interval = Point Estimate ± Margin of Error
+
+
+
+
+MAS2001|   6
+                                      Point Estimate vs Interval Estimate
+
+           POINT ESTIMATE                                 INTERVAL ESTIMATE
+           One value                                      A range of plausible values
+
+           Example:                                       Example:
+           Estimated average response time = 210 ms       95% CI = (204 ms, 216 ms)
+
+           ✓ Simple                                       ✓ Shows uncertainty
+           ✗ Uncertainty not shown                        ✓ More informative
+
+
+
+
+MAS2001|   7
+                                    Characteristics of a Good Estimator
+
+       Unbiasedness                 Consistency                  Efficiency                    Sufficiency
+       Correct on average           Approaches the true          Smallest variance             Uses all relevant
+                                    value as n increases         among comparable              information in the
+                                                                 unbiased estimators           sample
+
+
+
+
+                            Good estimator → little systematic error + stability + precision
+
+
+
+MAS2001|   8
+                                            Unbiased Estimator
+       An estimator θ෠ is said to be unbiased for a parameter θ if
+
+
+                                                    ෡ =θ
+                                                  E(θ)
+
+                    It neither overestimates nor underestimates the parameter on average.
+
+
+
+                                                   ෡ = E(θ)
+                                              Bias(θ)    ෡ −θ
+
+
+
+
+MAS2001|   9
+                                                      Consistency
+       An estimator θ෠ ₙ of a population parameter θ is said to be consistent if it converges in probability to θ
+       as the sample size n tends to infinity.
+
+
+           Mathematically,                        ෡ ₙ →ᴾ θ as n → ∞
+                                                  θ
+
+
+           This implies that for any ε > 0,
+
+                                                  ෡ ₙ − θ| < ε) → 1 as n → ∞
+                                              P(| θ
+
+
+
+
+MAS2001|   10
+                                           Sufficient Condition :Consistency
+
+                Sufficient Condition for Consistency
+                For a sequence of estimators Tₙ:
+
+                ① E(Tₙ) → θ as n → ∞
+
+                ② Var(Tₙ) → 0 as n → ∞
+
+                Then Tₙ is a consistent estimator of θ.
+
+
+
+
+                                             For 𝑋ത : E( ത
+                                                        𝑋)=μ and Var( ത
+                                                                     𝑋)=σ²/n → 0
+
+MAS2001|   11
+                                     Why is the Sample Mean Consistent?
+                                          𝑋ത = (X₁ + X₂ + ⋯ + Xₙ)/n
+
+
+
+           Condition 1: Mean                   Condition 2: Variance             Conclusion
+             ̄ )=μ
+           E(X                                     ̄ ) = σ²/n
+                                               Var(X                             Both conditions hold.
+
+           Therefore,                          As n → ∞,                         Therefore ̄X is a consistent
+             ̄ ) → μ.
+           E(X                                 σ²/n → 0.                         estimator of μ.
+
+
+
+
+                               More observations → smaller variance → more stable estimate
+
+
+
+MAS2001|   12
+                                                    Efficient Estimator — Definition
+           Let θ෠ ₁ and θ෠ ₂ be two unbiased estimators for parameter θ:
+
+                                                             ෡ ₁)=θ
+                                                           E(θ               and        ෡ ₂)=θ
+                                                                                      E(θ
+
+
+           If:                                                      ෡ ₁) < Var(θ
+                                                                Var(θ          ෡ ₂)
+
+
+                                                   ෡ ₁ is said to be more efficient than θ
+                                              then θ                                     ෡ ₂.
+
+
+
+                 Mathematical statement
+
+                 Among all unbiased estimators, the most efficient one has the smallest variance.
+
+
+
+
+MAS2001|    13
+                                          Efficiency: A Simple Visual
+
+            Estimator A                                    Estimator B
+            Unbiased                                       Unbiased
+
+            Variance = 4                                   Variance = 9
+
+            More concentrated estimates                    More spread in estimates
+            → Higher precision                             → Lower precision
+
+
+
+
+                                          Efficiency ∝ 1 / Variance
+
+
+MAS2001|   14
+                Example 1: Comparing Estimators for a Normal Mean
+
+
+
+
+                                        .
+
+
+
+
+MAS2001|   15
+                         Solution: Step 1 — Find λ
+                For t₃ to be unbiased, we require E(t₃)=μ.
+
+                      E(t₃) = [2E(X₁)+E(X₂)+λE(X₃)]/3
+
+
+                       = (2μ + μ + λμ)/3 = [(3+λ)/3] μ
+
+
+
+                        (3+λ)/3 = 1 ⇒ λ = 0
+
+
+                          Hence, t₃ = (2X₁ + X₂)/3.
+
+
+
+
+MAS2001|   16
+                                   Solution: Step 2 — Check Unbiasedness
+
+           t₁                              t₂                             t₃
+           E(t₁) = (μ+μ+μ+μ+μ)/5 = μ       E(t₂) = (μ+μ)/2 + μ = 2μ       With λ=0:
+                                                                          E(t₃) = (2μ+μ)/3 = μ
+           ✓ t₁ is unbiased.               ✗ t₂ is biased.
+                                                                          ✓ t₃ is unbiased.
+
+
+
+
+                                         Unbiased estimators: t₁ and t₃
+
+
+
+MAS2001|   17
+                                   Solution: Step 3 — Compare Variances
+                       Let Var(Xᵢ)=σ² and assume the observations are independent.
+
+                    Var(t₁) = σ²/5                Var(t₂) = σ²/2 + σ² =            Var(t₃) = (4σ²+σ²)/9 =
+                                                          3σ²/2                             5σ²/9
+
+
+                Comparison
+
+                σ²/5 < 5σ²/9 < 3σ²/2
+
+                Therefore t₁ has the smallest variance among the unbiased estimators.
+
+
+                                                Best estimator = t₁ = X̄
+
+
+
+MAS2001|   18
+                    Properties of a Good Point Estimator
+Example2: Let X₁, X₂ and X₃ be a random sample of size 3 from a population with
+mean μ and variance σ². T₁, T₂ and T₃ are estimators used to estimate the mean μ,
+where:
+T₁ = X₁ + X₂ − X₃
+T₂ = 2X₁ + 3X₃ − 4X₂
+T₃ = (𝜆X₁ + X₂ + X₃) / 3
+Answer the following:
+1. Are T₁ and T₂ unbiased estimators?
+2. Find the value of 𝜆 such that T₃ is an unbiased estimator for μ.
+3. With the value of 𝜆 obtained, is T₃ a consistent estimator?
+4. Which one is the best estimator?
+               Properties of a Good Point Estimator
+(ii) Finding value of λ for T₃ to be unbiased
+Let T₃ = λ (X₁ + X₂ + X₃) / 3
+For unbiasedness, E(T₃) = μ
+E(T₃) = (λ / 3)[E(X₁) + E(X₂) + E(X₃)]
+= (λ / 3)(μ + μ + μ) = λμ
+For unbiasedness: λμ = μ ⇒ λ = 1
+
+(iii) Consistency of T₃
+With λ = 1, T₃ = (X₁ + X₂ + X₃) / 3 = X̄ (sample mean).
+Since the sample mean is a consistent estimator of the population
+mean, T₃ is a consistent estimator.
+                Properties of a Good Point Estimator
+
+(iv) Variance of the estimators:
+Var(T₁) = Var(X₁) + Var(X₂) + Var(X₃) = 3σ²
+Var(T₂) = 4Var(X₁) + 9Var(X₃) + 16Var(X₂) = 29σ²
+Var(T₃) = (1/9) [Var(X₁) + Var(X₂) + Var(X₃)]
+= (1/9)(3σ²)
+= σ² / 3
+Since Var(T₃) is minimum, T₃ is the best estimator.
+                                 Real-Life Numerical 1: Average Server Response Time
+           Situation                             Question                   Solution
+           A service team records the            Estimate the population    ̄X = (sum of observations)/8
+           response times (ms) of 8 randomly     mean response time using
+           selected requests:                    a point estimator.         = 1640/8
+
+           180, 210, 195, 220,                   Also state the estimator   = 205 ms
+           205, 190, 200, 240                    and the estimate.
+                                                                            Estimator: ̄X
+                                                                            Estimate: 205 ms
+
+
+
+
+Statistical Inference   |   19
+                                 Real-Life Numerical 2: Packet Delivery Success
+           Situation                          Question                       Solution
+
+           During a network test, 500         Estimate the probability p     ̂p = X/n
+           packets are transmitted. Of        of successful packet
+           these, 465 are successfully        delivery.                      = 465/500
+           delivered.
+                                              Identify the estimator used.   = 0.93
+
+                                                                             Estimated success probability =
+                                                                             93%.
+
+
+
+
+Statistical Inference   |   20
+                                     Real-Life Numerical 3: Battery-Life Estimation
+           Situation                                  Question                                Solution
+           A sample of 25 devices has an              Construct a 95% confidence              CI = ̄X ± z(σ/√n)
+           average battery life of 8.4 hours. The     interval for the population
+           population standard deviation is           mean battery life.                      = 8.4 ± 1.96(1.5/5)
+           known to be 1.5 hours.
+                                                      Use z₀.₉₇₅ = 1.96.                      = 8.4 ± 0.588
+
+                                                                                              CI ≈ (7.81, 8.99) hours.
+
+
+
+
+                                Interpretation: the interval gives a plausible range for the population mean.
+
+
+
+MAS2001|    21
+                                 Quick Comparison: Three Real-Life Problems
+           1. Response Time                     2. Packet Success                    3. Battery Life
+
+           Parameter: μ                         Parameter: p                         Parameter: μ
+
+           Statistic: ̄X                        Statistic: ̂p                        Statistic: ̄X
+
+           Point estimate = 205 ms              Point estimate = 0.93                95% CI ≈ (7.81, 8.99)
+
+
+
+
+                                 Point estimation → one value     Interval estimation → range
+
+
+
+MAS2001|    22
+                  References
+1. Devore, J. L., Probability & Statistics for Engineering and the
+Sciences, 8th Edition, Cengage Learning, 2012.
+

@@ -1,0 +1,647 @@
+           THEORY OF ESTIMATION
+
+           Parameter • Statistic • Point & Interval Estimation
+Characteristics of Good Estimator • Applications & Numerical Problems
+
+
+
+
+                    MAS2001: STATISTICS AND PROBABILTY
+
+
+
+
+               MUJ | Dr. VIvek Singh                     1
+                                                  Learning Outcomes
+          • Define parameter, statistic, estimator and estimate.
+          • Distinguish between point estimation and interval estimation.
+          • Understand unbiasedness, consistency and efficiency.
+          • Use sufficient conditions to establish consistency.
+          • Compare estimators using bias and variance.
+          • Apply estimation concepts to practical numerical situations.
+
+
+
+
+                                     MUJ | Dr. VIvek Singh                  2
+MAS2001
+                                                  Basic Statistical Terminology
+          Population Parameter                                        Statistic
+
+          A numerical characteristic describing a population.         A numerical quantity computed from sample data.
+          Examples: μ, σ², p.                                                   ̄ , S², ̂p.
+                                                                      Examples: X
+
+
+
+          Estimator                                                   Estimate
+
+          A function of sample observations used to estimate a        The numerical value obtained from an estimator.
+          parameter.                                                  Example: ̄ x = 52.
+          Example: ̄X as an estimator of μ.
+
+          Sample Space                                                Parameter Space
+
+          The set of all possible outcomes of a random experiment.    The set of all possible values of a parameter.
+          Example: S = {HH, HT, TH, TT}.                              Example: Θ = (−∞, ∞) for μ.
+
+
+
+
+                                              MUJ | Dr. VIvek Singh                             3
+MAS2001
+• Statistical inference is the process by which we acquire information about populations
+  from samples.
+• There are two procedures for making inferences:
+   – Estimation.
+   – Hypotheses testing.
+
+Concepts of Estimation
+• The objective of estimation is to determine the value of a population parameter on the basis
+  of a sample statistic.
+• There are two types of estimators
+   – Point Estimator
+   – Interval estimator
+                             MUJ | Dr. VIvek Singh                 4
+                                                       Estimation
+   • Estimation is the statistical procedure in which a random sample is selected from a population
+     and a sample statistic is used to approximate an unknown population parameter.
+
+               Population → Random Sample → Statistic → Estimate of Parameter
+
+
+  Point Estimation                                              Interval Estimation
+• A single value is used to estimate the                      • A range of values is used to estimate the
+  unknown parameter.                                            unknown parameter.
+• A point estimator draws inference about a                   • An interval estimator draws inferences about a
+  population by estimating the value of an                      population by estimating the value of an
+  unknown parameter using a single value or a                   unknown parameter using an interval.
+  point.                                                      • The interval estimator is affected by the
+                                                                sample size.
+
+
+
+                               MUJ | Dr. VIvek Singh                             5
+MAS2001|
+                                                           Point Estimation
+          A point estimate is a single numerical value used to estimate an unknown population
+          parameter.
+
+                                                ഥ
+                                            μ ≈ 𝑿                 σ² ≈ S²      p ≈ p̂
+
+
+           Mean                                       Variance                              Proportion
+           Estimate μ using ̄X.                       Estimate σ² using S².                 Estimate p using ̂p.
+
+
+
+
+                Advantage: simple and easy to report. Limitation: it does not directly communicate sampling uncertainty.
+
+
+
+                                          MUJ | Dr. VIvek Singh                                6
+MAS2001
+                                                   Interval Estimation
+      Interval estimation provides a range of values within which a population parameter is expected
+      to lie with a specified level of confidence.
+
+
+          • Accounts for uncertainty in estimation.
+          • Results in a confidence interval.
+          • More informative than a point estimate when precision matters.
+
+
+
+
+                           Confidence Interval = Point Estimate ± Margin of Error
+
+
+
+
+                                     MUJ | Dr. VIvek Singh                   7
+MAS2001
+                                      Point Estimate vs Interval Estimate
+
+           POINT ESTIMATE                                       INTERVAL ESTIMATE
+           One value                                            A range of plausible values
+
+           Example:                                             Example:
+           Estimated average response time = 210 ms             95% CI = (204 ms, 216 ms)
+
+           ✓ Simple                                             ✓ Shows uncertainty
+           ✗ Uncertainty not shown                              ✓ More informative
+
+
+
+
+                                        MUJ | Dr. VIvek Singh                         8
+MAS2001|
+                                   Characteristics of a Good Estimator
+
+      Unbiasedness                 Consistency                  Efficiency                    Sufficiency
+      Correct on average           Approaches the true          Smallest variance             Uses all relevant
+                                   value as n increases         among comparable              information in the
+                                                                unbiased estimators           sample
+
+
+
+
+                           Good estimator → little systematic error + stability + precision
+
+
+
+                                     MUJ | Dr. VIvek Singh                            9
+MAS2001
+                                                Unbiased Estimator
+      An estimator θ෠ is said to be unbiased for a parameter θ if
+
+
+                                                             ෡ =θ
+                                                           E(θ)
+
+                   It neither overestimates nor underestimates the parameter on average.
+
+
+
+                                                        ෡ = E(θ)
+                                                   Bias(θ)    ෡ −θ
+
+
+
+
+                                   MUJ | Dr. VIvek Singh                  10
+MAS2001
+                                                                      Consistency
+       An estimator θ෠ ₙ of a population parameter θ is said to be consistent if it converges in probability to θ
+       as the sample size n tends to infinity.
+
+
+           Mathematically,                                ෡ ₙ →ᴾ θ as n → ∞
+                                                          θ
+
+
+           This implies that for any ε > 0,
+
+                                                     ෡ ₙ − θ| < ε) → 1 as n → ∞
+                                                 P(| θ
+
+
+
+
+                                              MUJ | Dr. VIvek Singh                 11
+MAS2001|
+                                      Sufficient Condition :Consistency
+
+           Sufficient Condition for Consistency
+           For a sequence of estimators Tₙ:
+
+           ① E(Tₙ) → θ as n → ∞
+
+           ② Var(Tₙ) → 0 as n → ∞
+
+           Then Tₙ is a consistent estimator of θ.
+
+
+
+
+                                        For 𝑋ത : E( ത
+                                                   𝑋)=μ and Var( ത
+                                                                𝑋)=σ²/n → 0
+                                       MUJ | Dr. VIvek Singh                  12
+MAS2001|
+                                 Why is the Sample Mean Consistent?
+                                      𝑋ത = (X₁ + X₂ + ⋯ + Xₙ)/n
+
+
+
+           Condition 1: Mean                   Condition 2: Variance         Conclusion
+             ̄ )=μ
+           E(X                                     ̄ ) = σ²/n
+                                               Var(X                         Both conditions hold.
+
+           Therefore,                          As n → ∞,                     Therefore ̄X is a consistent
+             ̄ ) → μ.
+           E(X                                 σ²/n → 0.                     estimator of μ.
+
+
+
+
+                           More observations → smaller variance → more stable estimate
+
+
+
+                                    MUJ | Dr. VIvek Singh                     13
+MAS2001|
+                                                    Efficient Estimator — Definition
+           Let θ෠ ₁ and θ෠ ₂ be two unbiased estimators for parameter θ:
+
+                                                             ෡ ₁)=θ
+                                                           E(θ               and        ෡ ₂)=θ
+                                                                                      E(θ
+
+
+           If:                                                       ෡ ₁) < Var(θ
+                                                                 Var(θ          ෡ ₂)
+
+
+                                                   ෡ ₁ is said to be more efficient than θ
+                                              then θ                                     ෡ ₂.
+
+
+
+                 Mathematical statement
+
+                 Among all unbiased estimators, the most efficient one has the smallest variance.
+
+
+
+
+                                                  MUJ | Dr. VIvek Singh                             14
+MAS2001|
+                                           Efficiency: A Simple Visual
+
+           Estimator A                                       Estimator B
+           Unbiased                                          Unbiased
+
+           Variance = 4                                      Variance = 9
+
+           More concentrated estimates                       More spread in estimates
+           → Higher precision                                → Lower precision
+
+
+
+
+                                            Efficiency ∝ 1 / Variance
+
+
+                                     MUJ | Dr. VIvek Singh                    15
+MAS2001|
+           Example 1: Comparing Estimators for a Normal Mean
+
+
+
+
+                                            .
+
+
+
+
+                    MUJ | Dr. VIvek Singh           16
+MAS2001|
+                    Solution: Step 1 — Find λ
+           For t₃ to be unbiased, we require E(t₃)=μ.
+
+                   E(t₃) = [2E(X₁)+E(X₂)+λE(X₃)]/3
+
+
+                     = (2μ + μ + λμ)/3 = [(3+λ)/3] μ
+
+
+
+                        (3+λ)/3 = 1 ⇒ λ = 0
+
+
+                           Hence, t₃ = (2X₁ + X₂)/3.
+
+
+
+
+              MUJ | Dr. VIvek Singh                    17
+MAS2001|
+                                   Solution: Step 2 — Check Unbiasedness
+
+           t₁                                     t₂                           t₃
+           E(t₁) = (μ+μ+μ+μ+μ)/5 = μ              E(t₂) = (μ+μ)/2 + μ = 2μ     With λ=0:
+                                                                               E(t₃) = (2μ+μ)/3 = μ
+           ✓ t₁ is unbiased.                      ✗ t₂ is biased.
+                                                                               ✓ t₃ is unbiased.
+
+
+
+
+                                              Unbiased estimators: t₁ and t₃
+
+
+
+                                       MUJ | Dr. VIvek Singh                    18
+MAS2001|
+                              Solution: Step 3 — Compare Variances
+                  Let Var(Xᵢ)=σ² and assume the observations are independent.
+
+               Var(t₁) = σ²/5                      Var(t₂) = σ²/2 + σ² =      Var(t₃) = (4σ²+σ²)/9 =
+                                                           3σ²/2                       5σ²/9
+
+
+           Comparison
+
+           σ²/5 < 5σ²/9 < 3σ²/2
+
+           Therefore t₁ has the smallest variance among the unbiased estimators.
+
+
+                                               Best estimator = t₁ = X̄
+
+
+                                   MUJ | Dr. VIvek Singh                      19
+MAS2001|
+                    Properties of a Good Point Estimator
+Example2: Let X₁, X₂ and X₃ be a random sample of size 3 from a population with
+mean μ and variance σ². T₁, T₂ and T₃ are estimators used to estimate the mean μ,
+where:
+T₁ = X₁ + X₂ − X₃
+T₂ = 2X₁ + 3X₃ − 4X₂
+T₃ = (𝜆X₁ + X₂ + X₃) / 3
+Answer the following:
+1. Are T₁ and T₂ unbiased estimators?
+2. Find the value of 𝜆 such that T₃ is an unbiased estimator for μ.
+3. With the value of 𝜆 obtained, is T₃ a consistent estimator?
+4. Which one is the best estimator?   MUJ | Dr. VIvek Singh                    20
+               Properties of a Good Point Estimator
+(ii) Finding value of λ for T₃ to be unbiased
+Let T₃ = λ (X₁ + X₂ + X₃) / 3
+For unbiasedness, E(T₃) = μ
+E(T₃) = (λ / 3)[E(X₁) + E(X₂) + E(X₃)]
+= (λ / 3)(μ + μ + μ) = λμ
+For unbiasedness: λμ = μ ⇒ λ = 1
+
+(iii) Consistency of T₃
+With λ = 1, T₃ = (X₁ + X₂ + X₃) / 3 = X̄ (sample mean).
+Since the sample mean is a consistent estimator of the population
+mean, T₃ is a consistent estimator.
+                              MUJ | Dr. VIvek Singh                 21
+                Properties of a Good Point Estimator
+
+(iv) Variance of the estimators:
+Var(T₁) = Var(X₁) + Var(X₂) + Var(X₃) = 3σ²
+Var(T₂) = 4Var(X₁) + 9Var(X₃) + 16Var(X₂) = 29σ²
+Var(T₃) = (1/9) [Var(X₁) + Var(X₂) + Var(X₃)]
+= (1/9)(3σ²)
+= σ² / 3
+Since Var(T₃) is minimum, T₃ is the best estimator.
+
+
+                                MUJ | Dr. VIvek Singh   22
+                                   .
+
+
+
+
+           MUJ | Dr. VIvek Singh       23
+MAS2001|
+                                   .
+
+
+
+
+           MUJ | Dr. VIvek Singh       24
+MAS2001|
+                                   .
+
+
+
+
+           MUJ | Dr. VIvek Singh       25
+MAS2001|
+                                   .
+
+
+
+
+           MUJ | Dr. VIvek Singh       26
+MAS2001|
+                             Real-Life Numerical 1: Average Server Response Time
+           Situation                                     Question                   Solution
+           A service team records the                    Estimate the population    ̄X = (sum of observations)/8
+           response times (ms) of 8 randomly             mean response time using
+           selected requests:                            a point estimator.         = 1640/8
+
+           180, 210, 195, 220,                           Also state the estimator   = 205 ms
+           205, 190, 200, 240                            and the estimate.
+                                                                                    Estimator: ̄X
+                                                                                    Estimate: 205 ms
+
+
+
+
+                                           MUJ | Dr. VIvek Singh                       27
+Statistical Inference   |
+                                Real-Life Numerical 2: Packet Delivery Success
+           Situation                                   Question                       Solution
+
+           During a network test, 500                  Estimate the probability p     ̂p = X/n
+           packets are transmitted. Of                 of successful packet
+           these, 465 are successfully                 delivery.                      = 465/500
+           delivered.
+                                                       Identify the estimator used.   = 0.93
+
+                                                                                      Estimated success probability =
+                                                                                      93%.
+
+
+
+
+                                         MUJ | Dr. VIvek Singh                            28
+Statistical Inference   |
+                                     Real-Life Numerical 3: Battery-Life Estimation
+           Situation                                       Question                           Solution
+           A sample of 25 devices has an                   Construct a 95% confidence         CI = ̄X ± z(σ/√n)
+           average battery life of 8.4 hours. The          interval for the population
+           population standard deviation is                mean battery life.                 = 8.4 ± 1.96(1.5/5)
+           known to be 1.5 hours.
+                                                           Use z₀.₉₇₅ = 1.96.                 = 8.4 ± 0.588
+
+                                                                                              CI ≈ (7.81, 8.99) hours.
+
+
+
+
+                                Interpretation: the interval gives a plausible range for the population mean.
+
+
+                                               MUJ | Dr. VIvek Singh                            29
+MAS2001|    21
+                                 Quick Comparison: Three Real-Life Problems
+           1. Response Time                         2. Packet Success                    3. Battery Life
+
+           Parameter: μ                             Parameter: p                         Parameter: μ
+
+           Statistic: ̄X                            Statistic: ̂p                        Statistic: ̄X
+
+           Point estimate = 205 ms                  Point estimate = 0.93                95% CI ≈ (7.81, 8.99)
+
+
+
+
+                                 Point estimation → one value         Interval estimation → range
+
+
+
+                                         MUJ | Dr. VIvek Singh                            30
+MAS2001|    22
+                             Interval Estimate of a Population Mean: s Known
+
+
+
+
+             In order to develop an interval estimate of a population mean, the margin of error must
+              be computed using either:
+               • the population standard deviation s , or
+               • the sample standard deviation s
+              s is rarely known exactly, but often a good estimate can
+               be obtained based on historical data or other information.
+             We refer to such cases as the s known case.
+
+
+
+
+                                    MUJ | Dr. VIvek Singh                   31
+MAS2001
+                     Interval Estimate of a Population Mean: s Known
+
+Estimating the Population Mean when the Population Standard Deviation
+is Known (i.e. s Known)
+• How is an interval estimator produced from a sampling distribution?
+     – To estimate m, a sample of size n is drawn from the population, and its mean x is
+       calculated.
+     – Under certain conditions, x is normally distributed (or approximately normally
+       distributed.), thus
+
+                                x −m
+                             Z=
+                                s  n
+
+
+     9/11/2026              MUJ | Dr. VIvek Singh     MUJ | Dr Vivek
+                                                                  32 Singh
+MAS2001
+             Interval Estimate of a Population Mean: s Known
+     There is a 1 −  probability that the value of a sample mean will provide a margin of
+error of z /2 s x or less.
+
+                                                                 Sampling
+                                                                  distribution
+                                                                    of x
+                                                  1 -  of all
+                            /2                    x values             /2
+
+
+                                                                              x
+                                                        m
+                                            z /2 s x       z /2 s x
+
+ 9/11/2026                 MUJ | Dr Vivek Singh
+                    Interval Estimate of a Population Mean: s Known
+
+
+
+                                                                             Sampling
+                                                                              distribution
+                                                                                of x
+                                                      1 -  of all
+                                  /2                                                    /2
+                                                       x values
+             interval
+             does not                                                                                   x         interval
+            include m                                           m                                                includes m
+                                                z /2 s x               z /2 s x
+                                                                            x -------------------------]
+                                                    [-------------------------
+                                                             [-------------------------x -------------------------]
+                                     x -------------------------]
+             [-------------------------
+
+
+9/11/2026                       MUJ | Dr Vivek Singh
+                                                         Confidence level
+
+                                                  1-
+
+
+                                    s                            s
+                           x − z 2                x    x + z 2
+                                     n                            n
+
+            Lower confidence limit                s       Upper confidence limit
+                                           2z  2
+                                                   n
+                                           s            s 
+                                 x − z  2 n , x + z 2 n 
+                                                          
+
+
+9/11/2026                  MUJ | Dr Vivek Singh
+                               s                      s
+– We know that P( m − z 2            x  m + z 2       ) = 1−
+                                 n                    n
+– This leads to the relationship
+                     s                 s
+        P( x − z  2     m  x + z 2    ) = 1− 
+                      n                 n
+
+ 1 -  of all the values of x obtained in repeated sampling
+ from this distribution, construct an interval
+                         s            s 
+               x − z  2 n , x + z 2 n 
+                                        
+ that includes (covers) the expected value of the population.
+         9/11/2026                                                  MUJ | Dr Vivek Singh
+                     Interval Estimate of a Population Mean: s Known
+
+
+Interval Estimate of m
+                                   s
+                       x  z /2
+                                     n
+
+
+ where:      𝑥ҧ is the sample mean
+            1 - is the confidence coefficient
+            z/2 is the z value providing an area of /2 in the upper tail of the standard
+                   normal probability distribution
+             s is the population standard deviation
+             n is the sample size
+
+
+9/11/2026                 MUJ | Dr Vivek Singh
+                 Interval Estimate of a Population Mean: s Known
+
+
+Values of z/2 for the Most Commonly Used Confidence Levels
+
+     Confidence                 Table
+        Level         /2   Look-up Area    z/2
+
+        90%     .10   .05        .9500       1.645
+
+        95%     .05   .025       .9750       1.960
+
+        99%     .01   .005       .9950       2.576
+                         Meaning of Confidence
+
+
+
+
+            Because 90% of all the intervals constructed using
+                        will contain the population mean,
+            we say we are 90% confident that the interval
+                        includes the population mean m.
+
+            We say that this interval has been established at the
+            90% confidence level.
+
+            The value .90 is referred to as the confidence
+            coefficient.
+
+
+9/11/2026           MUJ | Dr Vivek Singh
+                  References
+1. Devore, J. L., Probability & Statistics for Engineering and the
+Sciences, 8th Edition, Cengage Learning, 2012.
+
+
+
+
+                      MUJ | Dr. VIvek Singh       40
+

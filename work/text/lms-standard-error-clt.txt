@@ -1,0 +1,177 @@
+Sampling Concepts & Limit
+Theorems
+Population, Sample, Standard Error, and Central Limit Theorem with Practical Examples
+Population vs. Sample
+The foundation of statistical inference
+
+
+
+
+ Population (N)                                                 Sample (n)
+ • Definition: The entire group of individuals, objects, or     • Definition: A specific, smaller subset of the population
+ measurements that you want to draw conclusions about.          collected to observe and analyze.
+ • Characteristics: Parameters (e.g., Population Mean μ,        • Characteristics: Statistics (e.g., Sample Mean ̄ x,
+ Population Standard Deviation σ).                              Sample Standard Deviation s).
+ • Reality: Often too large, costly, or impossible to measure   • Reality: Must be representative and randomly selected
+ completely.                                                    to avoid bias.
+ • Example: All 500,000 lightbulbs produced by a factory in a   • Example: 100 randomly chosen lightbulbs selected for
+ month.                                                         quality testing.
+Understanding Standard Error (SE)
+Measuring estimate precision
+
+
+
+What is Standard Error?
+Standard Error measures the variability or dispersion of a sample statistic (usually the sample mean) across multiple hypothetical
+samples. It quantifies how much your sample estimate is expected to deviate from the true population parameter.
+
+The Formula for Standard Error of the Mean (SEM):
+    SE = σ / √n
+Where: σ = Population Standard Deviation | n = Sample Size
+
+Key Takeaway: As sample size (n) increases, the Standard Error decreases. Larger samples lead to more precise estimates.
+Standard Error: Practical Example
+Calculating precision step-by-step
+
+
+
+ Scenario: Lightbulb Lifespan
+ • A factory produces lightbulbs with a known population standard deviation (σ) of 100 hours.
+ • A quality control inspector randomly pulls a sample of 25 lightbulbs (n = 25) to test.
+ • Problem: Find the Standard Error of the Mean (SEM) for this sample size, and see what happens if we increase n to 100.
+
+ Calculation Steps:
+ Case 1 (n = 25): SE = 100 / √25 = 100 / 5 = 20 hours
+ Case 2 (n = 100): SE = 100 / √100 = 100 / 10 = 10 hours
+ Interpretation: Quadrupling the sample size from 25 to 100 cut our standard uncertainty exactly in half (from 20 hours down to 10
+ hours).
+Central Limit Theorem
+   Statistics and Probability – MAS2001
+The Central Limit Theorem (CLT)
+The bridge to modern data analysis
+
+Core Definition
+The Central Limit Theorem states that if you take sufficiently large samples from a population, the
+distribution of the sample means will follow a normal distribution (bell curve)—regardless of the
+population's underlying shape (even if it is heavily skewed, uniform, or bimodal).
+
+Three Critical Rules of CLT:
+1. Center Rule: The mean of the sample means will equal the population mean (μ_x̄ = μ).
+2. Spread Rule: The standard deviation of the sample means will equal the Standard Error
+(σ_x̄ = σ / √n).
+3. Shape Rule: As sample size n increases, the shape becomes normal. If n ≥ 30, normality is
+assumed safely.
+                                          Note:
+
+
+1. For a population with any distribution, if 𝑛 > 30, then the sample means will have a
+distribution that can be approximated by a normal distribution with mean 𝜇 and standard
+            𝜎
+devisation where n is the sample size.
+            𝑛
+
+
+2. If 𝑛 ≤ 30 and the original population has a normal distribution, then the sample means
+                                                                 𝜎
+have a normal distribution with mean 𝜇 and standard deviation ,where n is the sample
+                                                                 𝑛
+size
+
+3. if 𝑛 ≤ 30 and the original population does not have a normal distribution, then we
+cannot apply the CLT.
+Central Limit Theorem: Practical Example
+Applying normality to skewed distributions
+
+
+ Scenario: Bank ATM Wait Times
+ • The wait times at a bank ATM follow a heavily right-skewed distribution (most people finish fast,
+ a few take a very long time).
+ • Population parameters: Mean wait time (μ) = 4 minutes, Standard Deviation (σ) = 2 minutes.
+ • Problem: If we track a random sample of 36 customers (n = 36), what is the probability that their
+ average wait time is greater than 4.5 minutes?
+Central Limit Theorem: Practical Example
+Solution Using CLT Steps:
+1. Apply Normality: Since n = 36 (which is ≥ 30), the sampling distribution of means is Normal,
+even though individual wait times are skewed.
+2. Calculate Standard Error: SE = 2 / √36 = 2 / 6 = 0.333 minutes.
+3. Find Z-Score: Z = ̄(x - μ) / SE = (4.5 - 4) / 0.333 = 0.5 / 0.333 = 1.50.
+4. Determine Probability: Looking up Z = 1.50 on a standard normal table gives an upper-tail
+probability of approximately 6.68%. Therefore, there is only a 6.68% chance a sample of 36
+customers averages over 4.5 minutes.
+Example:
+
+     The amount of impurity in a batch of a chemical product is a random
+     variable with mean value 4.0 g and standard deviation 1.5 g. If 50 batches
+     are independently prepared, what is the approximated probability that the
+     average amount of impurity in these 50 batches is between 3.5 g and 3.8 g?
+Example:
+     1. The amount of impurity in a batch of a chemical product is a random variable with mean value
+     4.0 g and standard deviation 1.5 g. If 50 batches are independently prepared, what is the
+     approximated probability that the average amount of impurity in these 50 batches is between 3.5 g
+     and 3.8 g?
+
+     Solution:
+     Given 𝜇 = 4, 𝜎 = 1.5 ,          𝑛 = 50
+                                                                                          𝜎    1.5
+     Using CLT, the average will follow the normal distribution with mean (𝜇)= 4 and SD = 𝑛 = √{50}
+     Then,
+                                      3.5 − 4 𝑋ത − 4 3.8 − 4
+              𝑃(3.5 < 𝑋ത < 3.8) = 𝑃          <       <              = 𝑃 −2.36 < 𝑍 < −0.4
+                                        1.5     1.5     1.5
+                                      √{50}    √{50}   √{50}
+
+     ⇒ 𝑃 3.5 < 𝑋ത < 3.8 = 𝑃 0 < 𝑍 < 2.36 − 𝑃 0 < 𝑍 < 0.4 = 0.4909 − 0.3264 = 0.1644
+Example:
+
+     2. A factory produces LED bulbs. The lifespan of these bulbs is heavily skewed. The
+     mean life span is 50,000 hours with a standard deviation of 8,000 hours. A quality
+     control inspector tests a random sample of 64 bulbs. What is the probability that the
+     average lifespan of this batch is less than 48,000 hours?
+Example:
+
+     2. A factory produces LED bulbs. The lifespan of these bulbs is heavily skewed. The mean life span
+     is 50,000 hours with a standard deviation of 8,000 hours. A quality control inspector tests a
+     random sample of 64 bulbs. What is the probability that the average lifespan of this batch is less
+     than 48,000 hours?
+
+     Solution:
+     Given 𝜇 = 50000, 𝜎 = 8000 ,            𝑛 = 64
+     Using CLT, the average will follow the normal distribution with mean (𝜇)= 50000 and
+          𝜎    8000
+     SD = 𝑛 = √{64}
+     Then,
+                                     𝑋ത − 50000 48000 − 50000
+                   𝑃(𝑋ത < 48000) = 𝑃           <                         = 𝑃 𝑍 < −2
+                                        8000        8000
+                                        √{64}       √{64}
+
+              𝑃 𝑋ത < 48000 = 𝑃 −∞ < 𝑍 < 0 − 𝑃 0 < 𝑍 < 2 = 0.5 − 0.4772 = 0.0228
+Example:
+
+     3. The average life of a machine is 7 years with a standard deviation of 1 year. If the lives
+     of these machines follow the normal distribution, find the probability that the average
+     life of 9 random samples of such machines falls between 6.4 years to 7.2 years.
+Example:
+
+     3. The average life of a machine is 7 years with a standard deviation of 1 year. If the lives of these
+     machines follow the normal distribution, find the probability that the average life of 9 random
+     samples of such machines falls between 6.4 years to 7.2 years.
+
+     Solution: Given a population of machines and life time of machines follows a normal
+     distribution with average life (𝜇) = 7 and SD (𝜎) = 1.
+     Sample size (𝑛) = 9
+     Using CLT we say that average life of the samples also follows the normal distribution with
+                            𝜎     1
+     mean (𝜇)= 7 and SD = = .
+                              𝑛       3
+     Then,
+                              6.4−7           ത
+                                              𝑋−7       7.2−7
+     𝑃 6.4 < 𝑋ത < 7.2 = 𝑃         1       <    1    <     1     = 𝑃 −1.8 < 𝑍 < 0.6
+                                  3            3          3
+     𝑃 6.4 < 𝑋ത < 7.2 = 𝑃 −1.8 < 𝑍 < 0 + 𝑃 0 < 𝑍 < 0.6
+     𝑃 6.4 < 𝑋ത < 7.2 = 0.4641 + 0.2257 = 0.6898
+References:
+ 1. Devore, J. L. (2016). Probability and statistics for engineering and the sciences (9th ed.). Cengage Learning.
+ 2. Gupta, S. C. & Kapoor, V. K. (2002). Fundamentals of Mathematical Statistics (10th ed.). Sultan Chand & Sons.
+

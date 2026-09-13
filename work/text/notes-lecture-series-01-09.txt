@@ -1,0 +1,1401 @@
+    B.TECH. SECOND YEAR
+       ACADEMIC YEAR: 2026-2027
+
+
+
+
+COURSE NAME: STATISTICS AND PROBABILITY
+COURSE CODE                : MAS2001
+LECTURE SERIES NO : 01 (ONE)
+CREDITS                :         3
+MODE OF DELIVERY : POWER POINT PRESENTATION
+FACULTY                :       DR. VIVEK SINGH
+EMAIL-ID                   :   vivek.singh@Jaipur.manipal.edu
+MUJ | DR VIVEK SINGH                                            1
+PROPOSED DATE OF DELIVERY: 23 JULY 2026
+                       “TO DEVELOP THE
+SESSION OUTCOME        UNDERSTANDING OF THE
+                       COURSE”
+
+
+
+MUJ | DR VIVEK SINGH
+
+
+
+
+                                              2
+                Contents
+✓ Introduction
+✓ Statistics
+✓ Importance of Statistics
+✓ Limitation of Statistics
+✓ Probability
+✓ Random variable
+✓ Discrete Random Variable
+      ▪ PMF/PDF & CDF
+      ▪ Expectation
+      ▪ Variance and Standard Deviation
+
+
+
+
+           MUJ | DR VIVEK SINGH           3
+                       Course Name : Statistics and
+                       Probability
+
+
+  INTRODUCTION         Course Code :     MAS2001
+  ABOUT THE
+  COURSE               Course Credits:   3 Credits
+
+
+                       LTPC:             2103
+
+
+
+MUJ | DR VIVEK SINGH                                  4
+                       This course is offered by the Dept. of Mathematics and Statistics as
+                       a regular course to make the students acquainted with the subject
+                       of probability and statistics at an early stage. Probability and
+                       statistics are important foundations for computer science fields such
+                       as machine learning, artificial intelligence, computer graphics,
+                       randomized algorithms, image processing, and scientific
+                       simulations. In this course, students will expand their knowledge of
+   INTRODUCTION:       probabilistic methods and apply them to diverse computational
+                       problems. The first part of the course offers in depth knowledge of
+                       probability theory (random event, probability, characteristics of
+                       random variables, probability distributions and moment generating
+                       functions) which is necessary for simulation of random processes. In
+                       the second part, sampling theory is discussed. Each concept is
+                       explained through various examples and application-oriented
+                       problems.
+
+
+MUJ | DR VIVEK SINGH                                                                     5
+COURSE OUTCOMES:
+
+At the end of the course, students will be able to think logically.
+
+
+
+     [MAS2001.1]. Understand the concepts of probability and random variables to analyze and
+     solve a wide range of real-world problems under uncertainty principles and make decisions
+     in practical scenarios
+
+
+                       [MAS2001.2]. Employ probability distributions to effectively model and analyze real-
+                       world engineering problems.
+
+
+                               [MAS2001.3 Describe point and interval estimators for parameter estimation to
+                               provide reliable and accurate conclusions in industry and business for effective
+                               decision-making.
+
+
+
+MUJ | DR VIVEK SINGH                                                                                              6
+COURSE OUTCOMES:
+
+
+
+
+        [MAS2001.4]. Formulate and test the Hypothesis
+          related to engineering problems and enhance
+                decision-making and employability.
+
+
+MUJ | DR VIVEK SINGH                                     7
+ASSESSMENT PLAN
+                       Criteria         Description                     Maximum Marks
+                                    Sessional Exam (Closed Book)             30
+                                   In class Quizzes and Assignments ,        30
+   Internal Assessment            Activity feedbacks (Accumulated and
+       (Summative)                              Averaged)
+                                     End Term Exam (Closed Book)             40
+      End Term Exam
+       (Summative)
+                                                 Total                       100
+
+
+
+MUJ | DR VIVEK SINGH                                                                    8
+                       ➢ Probability Theory: Basic terminology and concepts of probability
+                         Theory.
+                       ➢ Random Variables: Discrete and continuous random variables; Probability
+                         mass function (PMF); Probability density function (PDF); Cumulative
+                         distribution function (CDF); Mathematical expectation and variance,
+                         Chebyshev’s inequality.
+                       ➢ Standard Probability Distributions: Binomial, Poisson, Uniform, Normal,
+                         Exponential.
+   SYLLABUS            ➢ Sampling Concepts and Limit Theorem: Population and sample;
+                         Standard error; Central Limit Theorem.
+                       ➢ Theory of Estimation: Parameter and statistic, Point and interval
+                         estimation; Characteristics of a good estimator. Methods of Estimation:
+                         Method of Moments (MoM) and Maximum Likelihood Estimation (MLE).
+                         Introduction of Bayesian estimation, Confidence interval for mean.
+                       ➢ Hypothesis testing: Null and alternative hypotheses, Level of
+                         significance, Critical region, Type I and Type II errors. Testing of
+                         significance: 𝑡-test, 𝐹-test, chi-square test, and Analysis of Variance
+                         (ANOVA).
+MUJ | DR VIVEK SINGH                                                                     9
+                       Reference Books:
+                       1. Goon A.M., Gupta M.K., and Dasgupta B., An Outline of Statistical
+                       Theory, Vol. II, Kolkata: World Press, 2022.
+                       2. Kendall M.G., and Stuart A., The Advanced Theory of Statistics, Vol.
+                       II. London: Charles Griffin & Co. Ltd, 1962.
+
+  REFERENCES           3. Casella G. and Berger R. L., Statistical Inference, 2nd edition,
+                       Belmont, CA: Thomson Duxbury, 2007.
+  BOOKS
+                       4. Hogg V.R., Tanis E., Zimmerman D., Probability and Statistical
+                                     Tanis    Zimmerman
+
+
+
+
+                       Inference, 9th edition, New York: Macmillan Publishing Company Inc,
+                       2023.
+
+                       5. Feller W., An Introduction to Probability Theory and Its Applications,
+                       Vol. I, 3rd edition. New York: John Wiley & Sons, 2008.
+
+
+
+
+MUJ | DR VIVEK SINGH                                                                               10
+Text Book:
+Devore, J. L.,
+Probability & Statistics for
+Engineering and the
+Sciences,
+8th Edition,
+Cengage Learning,
+2012.
+
+               MUJ | DR VIVEK SINGH   11
+• Statement: All Statistics are
+numerical statements (data)
+but all numerical statements
+(data) are not statistics.
+
+• Ex. Ram has 100 Rs. In his
+pocket is not statistics. The
+average age of 5th class is 10
+yrs. is a statistical concept
+
+
+
+                          MUJ | DR VIVEK SINGH   12
+MUJ | DR VIVEK SINGH   13
+MUJ | DR VIVEK SINGH   14
+MUJ | DR VIVEK SINGH   15
+• Importance of Statistics
+ • Supports managerial decision-making
+ • Helps in forecasting and planning
+ • Essential for market research and consumer analysis
+ • Used in quality control and performance evaluation
+ • Assists in risk analysis and business strategy formulation
+ • Marketing: demand analysis, pricing, consumer behavior
+ • Finance: risk assessment, budgeting, investment analysis
+ • Operations: quality control, inventory management
+ • HR: performance appraisal and workforce planning
+
+
+                                     MUJ | DR VIVEK SINGH       16
+• Example:
+A survey on “customer
+satisfaction” is conducted
+only among loyal customers
+and ignores dissatisfied
+ones, leading to falsely
+positive results.
+
+
+
+
+                             MUJ | DR VIVEK SINGH   17
+MUJ | DR VIVEK SINGH   18
+MUJ | DR VIVEK SINGH   19
+                       Nearly every engineering decision involves uncertainty.
+                       Applications include
+
+                                       Artificial Intelligence
+                                        Machine Learning
+  WHY SHOULD                              Data Science
+  ENGINEERS                                  Robotics
+  LEARN                                Computer Networks
+  PROBABILITY AND                       Signal Processing
+  STATISTICS?                             Quality Control
+                                      Reliability Engineering
+                                          Manufacturing
+                                             Finance
+                                       Healthcare Analytics
+
+MUJ | DR VIVEK SINGH                                                             20
+                       Can we predict tomorrow's weather
+                       with 100% certainty?
+
+
+  QUESTION TO
+  STUDENTS             How does Netflix recommend movies?
+
+
+
+                       How does Google Maps estimate
+                       travel time?
+
+
+MUJ | DR VIVEK SINGH                                       21
+REAL-LIFE APPLICATIONS
+
+
+        Healthcare                    Finance             Manufacturing      Computer Science
+         Disease
+        prediction                Stock market risk       Quality control    Machine Learning
+
+
+                                               Mechanical              Electrical
+                       Civil Engineering
+                                               Engineering            Engineering
+                       Traffic prediction
+                                            Reliability analysis   Signal processing
+
+
+MUJ | DR VIVEK SINGH                                                                        22
+Random Experiment
+Definition
+A random experiment is an experiment whose outcome cannot be predicted
+with certainty in advance, although all possible outcomes are known.
+Examples
+1. Tossing a coin
+2. Rolling a die
+3. Drawing a card from a deck of 52 cards
+4. Selecting a student randomly from a class
+
+
+                                                    Illustration
+                                               Experiment                         Possible Outcomes
+                                               Toss a coin                        Head (H), Tail (T)
+                                               Roll a die                         1, 2, 3, 4, 5, 6
+                                               Draw one card                      Any one of the 52 cards
+
+                                           Note: We know all possible outcomes, but we do not know
+                                           which one will occur.
+                             MUJ | DR VIVEK SINGH                                                           23
+Sample Space
+Definition
+The sample space is the set of all possible outcomes of a
+random experiment.
+It is usually denoted by S.
+                                                       Example 2: Rolling one die
+Examples
+                                                                            𝑆= 123456
+Example 1: Tossing one coin
+Possible outcomes:
+                            𝑆= 𝐻 𝑇
+                                                       Example 3: Tossing two coins
+                                                       Possible outcomes are
+                                                                           𝑆 = 𝐻 𝐻 𝐻 𝑇𝑇𝐻𝑇𝑇
+                                                       There are 4 outcomes.
+
+
+                                                      Example 4: Rolling two dice
+                                                                       𝑆 = 1 1 1 2 . .. 6 6
+                                                      Total outcomes
+                                                                               6 × 6 = 36
+
+
+
+                               MUJ | DR VIVEK SINGH                                           24
+Mutually Exclusive Events                                  Example 2
+Definition                                                 Toss one coin.
+Two events are mutually exclusive if they cannot occur     A = Head
+simultaneously.                                            B = Tail
+Mathematically,                                            A coin cannot show Head and Tail together.
+                         𝐴∩𝐵 =∅                            Hence,
+That means there is no common outcome.                     A and B are mutually exclusive.
+
+
+Example 1
+Roll one die.                                            Counter Example
+Event A:                                                 Roll one die.
+Getting an even number                                   A = Even number
+                         𝐴= 24 6                                                 𝐴= 2 4 6
+Event B:                                                 B = Prime number
+Getting an odd number                                                            𝐵= 235
+                         𝐵= 135                          Here,
+Since                                                                            𝐴∩𝐵 = 2
+                          𝐴∩𝐵 =∅                         Since they have a common outcome,
+they are mutually exclusive.                             they are NOT mutually exclusive.
+
+                                 MUJ | DR VIVEK SINGH                                                   25
+Mutually exclusive events
+
+
+
+
+         MUJ | DR VIVEK SINGH   26
+Independent Events                                          Example 2
+Definition                                                  Draw one card, replace it, then draw another card.
+Two events are independent if the occurrence of one event   Event A: First card is Ace
+does not affect the occurrence of the other.                Event B: Second card is King
+Mathematically,                                             Since the first card is replaced, the second draw is
+                                                            unaffected.
+ P(A∩B)=P(A)×P(B)                                           Hence,
+                                                            A and B are independent.
+Example 1
+Toss a coin and roll a die.
+Event A:
+                       1
+Getting Head 𝑃 𝐴 = 2
+Event B:
+                   1
+Getting 6 𝑃 𝐵 = 6
+These two events do not affect each other.
+Therefore,
+                                      1 1  1
+                            𝑃 𝐴∩𝐵 = × =
+                                      2 6 12
+Hence,
+A and B are independent events.
+
+                                MUJ | DR VIVEK SINGH                                                           27
+Independence of events
+
+
+
+
+Proposition:
+
+
+
+Independence of More Than Two Events
+
+
+
+
+                                       MUJ | DR VIVEK SINGH   28
+2   Probability
+
+
+
+
+     MUJ | DR VIVEK SINGH   29
+Outcome: a possible result of the random phenomenon studied.
+
+Experiment: any process leading to an uncertain outcome.
+
+The sample space of an experiment is the set of all possible
+outcomes.
+An event is a collection (subset) of outcomes in the sample space.
+
+                            MUJ | DR VIVEK SINGH                     30
+Some Relations from Set Theory
+
+
+
+
+           MUJ | DR VIVEK SINGH   31
+Some Relations from Set Theory
+An event is just a set, so relationships and results
+from elementary set theory can be used to study
+events.
+The following operations will be used to create new
+events from given events.
+Definition
+1. The complement of an event A, denoted by A, is
+the set of all outcomes in 𝑆 that are not contained in
+A.                     MUJ | DR VIVEK SINGH            32
+Some Relations from Set Theory
+2. The union of two events A and B, denoted by A 
+B and read “A or B,” is the event consisting of all
+outcomes that are either in A or in B or in both events
+(so that the union includes outcomes for which both
+A and B occur as well as outcomes for which exactly
+one occurs) that is, all outcomes in at least one of
+the events.
+
+                      MUJ | DR VIVEK SINGH            33
+Some Relations from Set Theory
+3.The intersection of two events A and B, denoted
+by A  B and read “A and B,” is the event consisting
+of all outcomes that are in both A and B.
+
+
+
+
+                     MUJ | DR VIVEK SINGH              34
+Some Relations from Set Theory
+Sometimes A and B have no outcomes in common,
+so that the intersection of A and B contains no
+outcomes.
+Definition
+Let 𝜙 denote the null event (the event consisting of
+no outcomes whatsoever).
+When A  B = 𝜙, A and B are said to be mutually
+exclusive or disjoint events.
+                     MUJ | DR VIVEK SINGH              35
+Some Relations from Set Theory
+The operations of union and intersection can be
+extended to more than two events.
+For any three events A, B, and C,
+• the event A  B  C is the set of outcomes
+   contained in at least one of the three events,
+• the event A  B  C is the set of outcomes
+   contained in all three events.
+
+                      MUJ | DR VIVEK SINGH          36
+Some Relations from Set Theory
+Given events A1, A2, A3 ,..., these events are said to
+be mutually exclusive (or pairwise disjoint) if no two
+events have any outcomes in common.
+
+
+
+
+                      MUJ | DR VIVEK SINGH               37
+Some Relations from Set Theory
+A pictorial representation of events and
+manipulations with events is obtained by using Venn
+diagrams.
+
+To construct a Venn diagram, draw a rectangle
+whose interior will represent the sample space 𝑆.
+
+Then any event A is represented as the interior of a
+closed curve (often a MUJ |
+                      circle)      contained in 𝑆.
+                            DR VIVEK SINGH           38
+Some Relations from Set Theory
+
+
+
+
+                  MUJ | DR VIVEK SINGH   39
+Some Relations from Set Theory
+
+
+
+
+                  MUJ | DR VIVEK SINGH   40
+MUJ | DR VIVEK SINGH   41
+MUJ | DR VIVEK SINGH   42
+MUJ | DR VIVEK SINGH   43
+                       • Axiom:
+                          • P(S) = 1.
+                          • P(A) ≥ 0 for every event A.
+                          • If 𝐴1 , 𝐴2 , 𝐴3 ,…… is an infinite
+                            collection of disjoint events,
+                            then
+                       • 𝑃 𝐴1 𝑈𝐴2 𝑈 … … … … =
+                       σ∞𝑖=1 𝑃(𝐴𝑗 )
+
+
+
+
+MUJ | DR VIVEK SINGH                                             44
+Basic of probability
+
+
+
+
+      MUJ | DR VIVEK SINGH   45
+• Q2. The computers of six faculty members in a certain department are to be replaced.
+Two of the faculty members have selected laptop machines and the other four have
+chosen desktop machines. Suppose that only two of the setups can be done on a particular
+day, and the two computers to be set up are randomly selected from the six (implying 15
+equally likely outcomes; if the computers are numbered 1, 2, . . . , 6, then one outcome
+consists of computers 1 and 2, another consists of computers 1 and 3, and so on).
+  • What is the probability that both selected setups are for laptop machines?
+  • What is the probability that both selected setups are desktop machines?
+  • What is the probability that at least one selected setup is for a desktop computer?
+  • What is the probability that at least one computer of each type is chosen for setup?
+
+
+
+                                   MUJ | DR VIVEK SINGH                                    46
+•    Q2. The computers of six faculty members in a certain department are to be replaced. Two of the faculty members have selected laptop
+machines and the other four have chosen desktop machines. Suppose that only two of the setups can be done on a particular day, and the two
+computers to be set up are randomly selected from the six (implying 15 equally likely outcomes; if the computers are numbered 1, 2, . . . , 6,
+then one outcome consists of computers 1 and 2, another consists of computers 1 and 3, and so on).
+    •    What is the probability that both selected setups are for laptop computers?
+    •    What is the probability that both selected setups are desktop machines?
+    •    What is the probability that at least one selected setup is for a desktop computer?
+    •    What is the probability that at least one computer of each type is chosen for setup?
+
+
+
+
+        MUJ | DR VIVEK SINGH                                                                                                                 47
+Q3. A starting lineup in basketball consists of two guards, two forwards, and a center.
+ • A certain college team has on its roster three centers, four guards, four forwards, and
+    one individual (X) who can play either guard or forward. How many different starting
+    lineups can be created? [Hint: Consider lineups without X, then lineups with X as guard,
+    then lineups with X as forward.]
+ • Now suppose the roster has 5 guards, 5 forwards, 3 centers, and 2 ‘swing players’ (X
+    and Y) who can play either guard or forward. If 5 of the 15 players are randomly
+    selected, what is the probability that they constitute a legitimate starting lineup?
+
+
+
+
+                                    MUJ | DR VIVEK SINGH                                       48
+•   Q3. A starting lineup in basketball consists of two guards, two forwards, and a center.
+    •    A certain college team has on its roster three centers, four guards, four forwards, and one individual
+         (X) who can play either guard or forward. How many different starting lineups can be created? [Hint:
+         Consider lineups without X, then lineups with X as guard, then lineups with X as forward.]
+    •    Now suppose the roster has 5 guards, 5 forwards, 3 centers, and 2 ‘swing players’ (X and Y) who can
+         play either guard or forward. If 5 of the 15 players are randomly selected, what is the probability that
+         they constitute a valid starting lineup?
+
+
+
+
+        MUJ | DR VIVEK SINGH                                                                                   49
+Conditional Probability
+
+
+
+
+    Example 1.
+
+
+
+
+                          MUJ | DR VIVEK SINGH   50
+                                        Random variable
+
+A random variable is a function whose domain is the sample space and whose range is the set of real
+numbers.
+
+
+
+
+                                        MUJ | DR VIVEK SINGH                                 51
+                            Random variable
+
+Example
+ • E = Tossing the fair coin
+   With 𝑺= {H, T}, define an rv X by
+                X (H) = 1       X (T) = 0
+   The rv X takes whether (1) or not (0)
+
+ • Definition
+ • Any random variable whose only possible values are 0 and 1 is
+   called a Bernoulli random variable.
+
+                            MUJ | DR VIVEK SINGH                   52
+Random variable
+
+
+
+
+MUJ | DR VIVEK SINGH   53
+Random variable
+
+
+
+
+MUJ | DR VIVEK SINGH   54
+Random variable
+
+
+
+
+MUJ | DR VIVEK SINGH   55
+Random variable
+
+
+
+
+MUJ | DR VIVEK SINGH   56
+Random variable
+
+
+
+
+MUJ | DR VIVEK SINGH   57
+Random variable
+
+
+
+
+MUJ | DR VIVEK SINGH   58
+Random variable
+
+
+
+
+MUJ | DR VIVEK SINGH   59
+     Random variable
+
+
+4:
+
+
+
+
+     MUJ | DR VIVEK SINGH   60
+Random variable
+
+
+
+
+MUJ | DR VIVEK SINGH   61
+Random variable
+
+
+
+
+MUJ | DR VIVEK SINGH   62
+                                      Random variable
+
+Discrete Random Variable: A discrete random variable is an rv whose possible values
+either constitute a finite set or else can be listed in an infinite sequence in which there is a
+first element, a second element, and so on (“countably” infinite).
+
+
+Continuous Random Variable: A random variable is continuous if both of the
+following apply:
+1. Its set of possible values consists either of all numbers in a single interval on the
+number line (possibly infinite in extent, e.g., from to ) or all numbers in a disjoint union
+of such intervals (e.g., [0, 10] [20, 30]).
+2. No possible value of the variable has positive probability, that is, P(X = c) = 0 for any
+possible value c.
+
+                                      MUJ | DR VIVEK SINGH                                   63
+                       Discrete Random Variable
+
+• Probability Mass Function (p.m.f): The probability distribution or
+  probability mass function (pmf) of a discrete rv is defined for every
+  number x by 𝑝 (𝑥) = 𝑃(𝑋 = 𝑥) = 𝑃 (all s  𝑆: X (s) = x).
+• The density function of a random variable completely describe
+  the behavior of the variable.
+• In words, for every possible value x of the random variable, the pmf
+   specifies the probability of observing that value when the experiment is
+   performed.
+• The necessary and sufficient conditions
+  (i) 𝒑(𝒙) ≥ 𝟎 and
+ (ii) all possible x 𝒑 (𝒙) = 𝟏 are required of any pmf.
+                              MUJ | DR VIVEK SINGH                            64
+                                     Discrete Random Variable
+Example
+
+
+
+
+          (a) What is the probability that at most 2 pumps are in use?
+          (b) What is the probability at least 3 pumps are in use?
+          (c) Probability that between 2 and 5 pumps inclusive are in use?
+
+
+
+
+                                               MUJ | DR VIVEK SINGH          65
+          Discrete Random Variable
+
+Example
+
+
+
+
+              MUJ | DR VIVEK SINGH   66
+          Discrete Random Variable
+Example
+
+
+
+
+              MUJ | DR VIVEK SINGH   67
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   68
+                 Discrete Random Variable
+
+
+
+
+c. P(𝒙 ≥ 𝟔) =.40+.15 = .55                   P(𝒙 > 𝟔) = .15
+                      MUJ | DR VIVEK SINGH                    69
+          Discrete Random Variable
+Example
+
+
+
+
+              MUJ | DR VIVEK SINGH   70
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   71
+          Discrete Random Variable
+Example
+
+
+
+
+              MUJ | DR VIVEK SINGH   72
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   73
+                      Discrete Random Variable
+Cumulative Distribution Function:
+
+
+
+
+                            MUJ | DR VIVEK SINGH   74
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   75
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   76
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   77
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   78
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   79
+      Discrete Random Variable
+EX.
+
+
+
+
+          MUJ | DR VIVEK SINGH   80
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   81
+      Discrete Random Variable
+
+EX.
+
+
+
+
+          MUJ | DR VIVEK SINGH   82
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   83
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   84
+      Discrete Random Variable
+EX.
+
+
+
+
+          MUJ | DR VIVEK SINGH   85
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   86
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   87
+                 Discrete Random Variable
+The Expected Value of X
+
+
+
+
+                     MUJ | DR VIVEK SINGH   88
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   89
+                                18
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   90
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   91
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   92
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   93
+                             Discrete Random Variable
+EX. Let 𝑋 be a random variable with the following probability distribution :
+
+       x           -3           6            9
+   𝑃(𝑋 = 𝑥)        1/6         1/2          1/3
+
+Find 𝐸(𝑋) and 𝐸(𝑋 2 ) and using the laws of expectation, evaluate 𝐸 2𝑋 + 1 2 .
+
+Ans. E(X)=11/2, 𝑬 𝑿𝟐 = 𝟗𝟑/𝟐, 209
+
+
+
+
+                                     MUJ | DR VIVEK SINGH                        94
+ Discrete Random Variable
+
+
+
+
+The Variance of X
+
+
+
+
+     MUJ | DR VIVEK SINGH   95
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   96
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   97
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   98
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   99
+                          Discrete Random Variable
+The Variance of X
+
+• The quantity h(X) = (X –  )2 is the squared deviation of X from its mean,
+  and 2 is the expected squared deviation—i.e., the weighted average of
+  squared deviations, where the weights are probabilities from the
+  distribution.
+• If most of the probability distribution is close to , then 2 will be
+  relatively small.
+• However, if there are x values far from  that have large p(x), then 2 will
+  be quite large.
+• Very roughly  can be interpreted as the size of a representative deviation
+  from the mean value .
+
+                                MUJ | DR VIVEK SINGH                        100
+     Discrete Random Variable
+
+
+
+
+A Shortcut Formula for 2
+
+
+
+
+          MUJ | DR VIVEK SINGH   101
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   102
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   103
+                     Discrete Random Variable
+
+Proposition
+𝑉(𝑎𝑋 + 𝑏)=2 𝑎𝑋+𝑏 = 𝑎2 2 and 𝑎𝑋+𝑏 = 𝑎 𝑥
+In Particular
+𝑎𝑋 = 𝑎 𝑥 , 𝑋+𝑏 =𝑋
+The absolute value is necessary because a might be negative, yet a
+standard deviation cannot be.
+Usually multiplication by a corresponds to a change in the unit of
+measurement (e.g. dollars to euros).
+
+
+                           MUJ | DR VIVEK SINGH                 104
+                    Discrete Random Variable
+
+
+Rules of Variance
+• According to the first relation, the sd in the new unit is
+  the original sd multiplied by the conversion factor.
+
+• The second relation says that adding or subtracting a
+  constant does not impact variability; it just shifts the
+  distribution to the right or left.
+
+
+                         MUJ | DR VIVEK SINGH                  105
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   106
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   107
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   108
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   109
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   110
+Discrete Random Variable
+
+
+
+
+    MUJ | DR VIVEK SINGH   111
+Continuous Random Variables
+
+
+
+
+       Continuous Random Variables
+                   and
+         Probability Distributions
+
+
+
+
+        MUJ | DR VIVEK SINGH         112
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   113
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   114
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   115
+Continuous Random Variables
+
+
+
+
+       MUJ | DR VIVEK SINGH   116
+Continuous Random Variables
+
+
+
+
+                              Continuous Random Variables
+
+
+
+
+                                      MUJ | DR VIVEK SINGH   117
+                   Continuous Random Variables
+Probability Distributions for Continuous Variables
+
+• That is, the probability that X takes on a value in the interval [a, b] is the
+  area above this interval and under the graph of the density function, as
+  illustrated in figure.
+
+
+
+
+                     P(a  X  b) = the area under the density curve between a and b
+
+
+
+• The graph of f(x) is referred to as the density curve.
+
+                                      MUJ | DR VIVEK SINGH                             118
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   119
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   120
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   121
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   122
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   123
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   124
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   125
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   126
+      Continuous Random Variables
+EX.
+
+
+
+
+              MUJ | DR VIVEK SINGH   127
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   128
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   129
+  Continuous Random Variables
+
+
+
+
+The Cumulative Distribution
+        Function
+
+
+
+
+          MUJ | DR VIVEK SINGH   130
+                 Continuous Random Variables
+The cumulative distribution function (cdf) F(x) for a discrete rv X
+gives, for any specified number x, the probability P(X  x) .
+
+It is obtained by summing the pmf p(y) over all possible values y
+satisfying y  x.
+
+
+The cdf of a continuous rv gives the same probabilities
+P(X  x) and is obtained by integrating the pdf f(y) between the limits
+x.
+
+
+
+                            MUJ | DR VIVEK SINGH                      131
+                    Continuous Random Variables
+
+Definition
+The cumulative distribution function F(x) for a continuous rv X is defined for
+every number x by
+                                     𝑥
+                F(x) = P(X  x) = න 𝑓(y) 𝑑𝑦
+                                    −∞
+
+
+For each x, F(x) is the area under the density curve to the left of x. This is
+illustrated in Figure, where F(x) increases smoothly as x increases.
+
+
+
+
+                              A pdfMUJ
+                                   and |associated cdf
+                                         DR VIVEK SINGH                          132
+Continuous Random Variables
+
+
+
+
+ Using F(x) to Compute
+     Probabilities
+
+
+
+
+        MUJ | DR VIVEK SINGH   133
+                     Continuous Random Variables
+
+The importance of the cdf here, just as for discrete rv’s, is that probabilities of
+various intervals can be computed from a formula for or table of F(x).
+
+Proposition
+Let X be a continuous rv with pdf f(x) and cdf F(x). Then for any number a,
+                        P(X > a) = 1 – F(a)
+and for any two numbers a and b with a < b,
+
+                    P(a  X  b) = F(b) – F(a)
+
+
+
+                                   MUJ | DR VIVEK SINGH                               134
+                     Continuous Random Variables
+
+Figure illustrates the second part of this proposition; the desired probability is
+the shaded area under the density curve between a and b, and it equals the
+difference between the two shaded cumulative areas.
+
+
+
+
+                           Computing P(a  X  b) from cumulative probabilities
+
+
+This is different from what is appropriate for a discrete integer valued random
+variable:
+P(a  X  b) = F(b) – F(a – 1) when a and b are integers.
+
+                                       MUJ | DR VIVEK SINGH                          135
+Continuous Random Variables
+
+
+
+
+  Obtaining f(x) from F(x)
+
+
+
+
+        MUJ | DR VIVEK SINGH   136
+                    Continuous Random Variables
+
+For X discrete, the pmf is obtained from the cdf by taking the difference
+between two F(x) values. The continuous analog of a difference is a derivative.
+
+The following result is a consequence of the Fundamental Theorem of Calculus.
+
+Proposition
+If X is a continuous rv with pdf f(x) and cdf F(x), then at every x at which the
+derivative F(x) exists,
+                                  F(x) = f(x).
+
+
+
+                                  MUJ | DR VIVEK SINGH                             137
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   138
+                Continuous Random Variables
+The distribution function of the random variable X is given by
+
+                     0,                      𝑥<1
+                   (𝑥 − 1)4
+             𝐹 𝑥 =          ,            1≤𝑥≤3
+                      16
+                        1,               𝑥>3
+i. Find corresponding density function.
+ii. Compute P(2 ≤ 𝑥 ≤ 3)
+
+
+
+
+                             MUJ | DR VIVEK SINGH                139
+Continuous Random Variables
+
+
+
+
+    Expected Values
+
+
+
+
+        MUJ | DR VIVEK SINGH   140
+                  Continuous Random Variables
+For a discrete random variable X, E(X) was obtained by summing x p(x) over
+possible X values.
+
+Here we replace summation by integration and the pmf by the pdf to get a
+continuous weighted average.
+
+Definition
+The expected or mean value of a continuous rvX with
+pdf f(x) is
+
+        x = E(X) =      x f(x) dx
+
+
+                               MUJ | DR VIVEK SINGH                          141
+                     Continuous Random Variables
+
+
+
+
+                                                   Continuous Random Variables
+EX. The hospitalization period, in days for patients, following treatment for a certain
+type of kidney disorder is a random variable Y = X + 4, where X has the density
+function
+
+
+                                                                  32
+                                                                            𝑥>0
+                                                       𝑓(𝑥) = (𝑥 + 4)3
+                                                                0      elsewhere
+
+
+Find the average number of days that the person is hospitalized following treatment
+for this disorder.
+Ans. E(Y)= 8 Days
+                                                             MUJ | DR VIVEK SINGH         142
+                     Continuous Random Variables
+
+
+
+Proposition
+If X is a continuous rv with pdf f(x) and h(X) is any function of X, then
+
+
+              E[h(X)] = h(X) =      h(x) f (x) dx
+
+
+
+
+                                   MUJ | DR VIVEK SINGH                     143
+                    Continuous Random Variables
+
+For h(X), a linear function, E[h(X)] = E(aX + b) = aE(X) + b.
+
+In the discrete case, the variance of X was defined as the expected squared
+deviation from  and was calculated by summation. Here again integration
+replaces summation.
+
+Definition
+The variance of a continuous random variable X with pdf f(x) and mean value 
+is
+
+       = V(X)       (x – )2 f(x)dx = E[(X – )2]
+
+The standard deviation (SD) of X is X =
+                                 MUJ | DR VIVEK SINGH                         144
+                    Continuous Random Variables
+
+The variance and standard deviation give quantitative measures of how much
+spread there is in the distribution or population of x values.
+
+Again  is roughly the size of a typical deviation from . Computation of 2 is
+facilitated by using the same shortcut formula employed in the discrete case.
+
+Proposition
+
+                    V(X) = E(X2) – [E(X)]2
+
+
+
+
+                                 MUJ | DR VIVEK SINGH                            145
+      Continuous Random Variables
+EX.
+
+
+
+
+              MUJ | DR VIVEK SINGH   146
+Continuous Random Variables
+
+
+
+
+        MUJ | DR VIVEK SINGH   147
+

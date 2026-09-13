@@ -1,0 +1,303 @@
+                                  MANIPAL UNIVERSITY JAIPUR
+                                            Department of CSE/ECE
+                                               Course Hand-out
+
+  A.      Basic Details:
+             Programme Name:                                         B.Tech.
+             Course Name:                                            Statistics and Probability
+             Course Code:                                            MAS2001
+             LTPC (Lecture Tutorial Practical Credits):              2103
+             Session:                                                July-Nov. 2026
+             Class:                                                  3rd Semester
+             Course Coordinator:                                     Dr. Kalpana Sharma/ Dr. Ashish Kumar
+                                                                     Dr. Kalpana Sharna
+                                                                     Dr. Ruchika Mehta
+                                                                     Dr. Ashish Kumar
+                                                                     Dr. Monika Saini
+                                                                     Dr. Ashok Kumar Pal
+              Course Instructor(s):                                  Dr. Mahesh Kumar Dubey
+                                                                     Dr. Vivek Singh
+                                                                     Dr. Ankur Kumar Jain
+                                                                     Dr. Alka Choudhary
+                                                                     Dr. Vijaypal Poonia
+                                                                     Dr. Shamshad Ur Rasool
+              Additional Practitioner(s) – if any
+              (Industry Fellow/ Visiting Faculty/ Adjunct            To be identified and appointed later
+              Faculty, etc.):
+
+  B.      Introduction: This course is offered by the Dept. of Mathematics and Statistics as a regular course to
+          make the students acquainted with the subject of probability and statistics at an early stage. Probability
+          and statistics are important foundations for computer science fields such as machine learning, artificial
+          intelligence, computer graphics, randomized algorithms, image processing, and scientific simulations. In
+          this course, students will expand their knowledge of probabilistic methods and apply them to diverse
+          computational problems. The first part of the course offers in depth knowledge of probability theory
+          (random event, probability, characteristics of random variables, probability distributions and moment
+          generating functions) which is necessary for simulation of random processes. In the second part, sampling
+          theory is discussed. Each concept is explained through various examples and application-oriented
+          problems.
+
+  C.      Course Outcomes: At the end of the course, students will be able to:
+
+                                                                                          Target         Target
+                     CO Statement                             CO            Level       Attainment     Attainment
+                                                                                            %             level
+Understand the concepts of probability and random           2001.1          L2           At least
+                                                                                                            3
+variables to analyze and solve a wide range of real-world               (Understand)       85%
+
+
+                                                        1
+problems under uncertainty principles and make
+decisions in practical scenarios.
+Employ probability distributions to effectively model and    2001.2         L3            At least
+                                                                                                            2
+analyze real-world engineering problems.                                  (Apply)          70%
+Describe point and interval estimators for parameter         2001.3
+                                                                            L4            At least
+estimation to provide reliable and accurate conclusions in                                                  2
+                                                                         (Analysis)        70%
+industry and business for effective decision-making.
+Formulate and test the Hypothesis related to engineering
+                                                                            L5            At least
+problems      and     enhance     decision-making     and    2001.4                                         1
+                                                                         (Evaluate)        65%
+employability.
+
+
+  D.      PROGRAM OUTCOMES AND PROGRAM SPECIFIC OUTCOMES:
+          (B. Tech in CSE/ECE): At the end of the programme, students will be able to:
+
+           [PO. 1]   Engineering knowledge: apply the knowledge of mathematics, computer science, and
+                     communication engineering fundamentals to the solution of complex engineering problems.
+           [PO. 2]   Problem analysis: identify, formulate, review research literature, and analyse complex
+                     engineering problems reaching substantiated conclusions using basic principles of
+                     mathematics, computing techniques and communication engineering principles.
+           [PO. 3]   Design/development of solutions: design solutions for complex engineering problems and
+                     design system components or processes that meet the specified requirements with
+                     appropriate consideration for law, safety, cultural & societal obligations with environmental
+                     considerations.
+           [PO. 4]   Conduct investigations of complex problems: use research-based knowledge and research
+                     methods including design of experiments, analysis and interpretation of data, and synthesis
+                     of the information to provide valid conclusions.
+           [PO. 5]   Modern tool usage: create, select, and apply appropriate techniques, resources, and modern
+                     engineering and IT tools including prediction and modelling to complex engineering
+                     activities with an understanding of the limitations.
+           [PO. 6]   The engineer and society: apply reasoning informed by the contextual knowledge to assess
+                     societal, health, safety, legal and cultural issues and the consequent responsibilities relevant
+                     to the professional engineering practice.
+           [PO. 7]   Environment and sustainability: understand the impact of the professional engineering
+                     solutions in societal and environmental contexts, and demonstrate the knowledge of, and
+                     need for sustainable development.
+           [PO. 8]   Ethics: apply ethical principles and commit to professional ethics, responsibilities and
+                     norms of the engineering practice.
+           [PO. 9]   Individual and teamwork: function effectively as an individual, and as a member or leader
+                     in diverse teams, and in multidisciplinary settings.
+           [PO. 10] Communication: communicate effectively for all engineering processes & activities with
+                     the peer engineering team, community and with society at large. Clarity of thoughts, being
+                     able to comprehend and formulate effective reports and design documentation, make
+                     effective presentations, and give and receive clear instructions.
+           [PO. 11] Project management and finance: demonstrate knowledge and understanding of the
+                     engineering and management principles and apply these to one’s own work, as a member
+                     and leader in a team, to manage projects and in varied environments.
+           [PO. 12] Life-long learning: recognize the need for and have the preparation and ability to engage in
+                     independent and life-long learning in the broadest context of technological change.
+           [PSO.1]. Will be able to design, develop and implement efficient software for a given real life problem.
+
+                                                         2
+            [PSO.2]. Will be able to apply knowledge of AI, Machine Learning and Data Mining in analysis big
+                      data for extracting useful information from it and for performing predictive analysis.
+            [PSO.3]. Will be able to design, manage and secure wired/ wireless computer networks for transfer and
+                      sharing of information.
+
+
+
+
+    E.     Assessment Plan:
+                  Criteria                              Description                        Maximum Marks
+                                                  Mid-Term Examination                          30
+              Internal Assessment                      (Close Book)
+                  (Summative)                  Class Work Sessional (CWS):                         30
+                                                   Quiz, Assignment etc.
+                End Term Exam                  End Term Exam (Close Book)                          40
+                 (Summative)
+                                                            Total                                 100
+
+    F.     SYLLABUS:
+                  Probability Theory: Basic terminology and concepts of probability Theory. Random
+           Variables: Discrete and continuous random variables; Probability mass function (PMF);
+           Probability density function (PDF); Cumulative distribution function (CDF); Mathematical
+           expectation and variance, Chebyshev’s inequality. Standard Probability Distributions:
+           Binomial, Poisson, Uniform, Normal, Exponential. Sampling Concepts and Limit Theorem:
+           Population and sample; Standard error; Central Limit Theorem. Theory of Estimation:
+           Parameter and statistic, Point and interval estimation; Characteristics of a good estimator.
+           Methods of Estimation: Method of Moments (MoM) and Maximum Likelihood Estimation (MLE).
+           Introduction of Bayesian estimation, Confidence interval for mean. Hypothesis testing: Null
+           and alternative hypotheses, Level of significance, Critical region, Type I and Type II errors.
+           Testing of significance: 𝑡-test, 𝐹-test, chi-square test, and Analysis of Variance (ANOVA).
+G        References:
+    1. Goon A.M., Gupta M.K., and Dasgupta B., An Outline of Statistical Theory, Vol. II, Kolkata: World
+       Press, 2022.
+    2. Kendall M.G., and Stuart A., The Advanced Theory of Statistics, Vol. II. London: Charles Griffin
+       & Co. Ltd, 1962.
+    3. Casella G. and Berger R. L., Statistical Inference, 2nd edition, Belmont, CA: Thomson Duxbury,
+       2007.
+    4. Hogg V.R., Tanis E., Zimmerman D., Probability and Statistical Inference, 9th edition, New York:
+       Macmillan Publishing Company Inc, 2023.
+    5. Feller W., An Introduction to Probability Theory and Its Applications, Vol. I, 3rd edition. New
+         York: John Wiley & Sons, 2008.
+
+
+
+
+                                                       3
+H. Lecture Plan:
+
+                                                                                                                                      Mode of
+  Lect. No.                    Topics                                Session Outcome                    CO       Mode of delivery
+                                                                                                                                    Assessing CO
+      1       Introduction of the Course                Develop the understanding about the course
+                                                                                                                     Lecture            NA
+                                                                                                     MAS2001.1
+      2       Basic terminology and concepts of         Revise the concept of probability theory     MAS2001.1                      MTE, CWS,
+                                                                                                                     Lecture
+              probability Theory                                                                                                      ETE
+     3-4      Random variables, Discrete random         Learn about Random Variable                  MAS2001.1                      MTE, CWS,
+                                                                                                                     Lecture
+              variables, Continuous random variables                                                                                  ETE
+     5-6      Probability mass and density functions,   Understand the types of random variables     MAS2001.1                      MTE, CWS,
+                                                                                                                     Lecture
+              Cumulative distribution functions                                                                                       ETE
+      7       Expectation of random variables           Learn about properties of random variables   MAS2001.1                      MTE, CWS,
+                                                                                                                     Lecture
+                                                                                                                                      ETE
+     8-9      Expectation of random variables,          Learn about properties of random variables   MAS2001.1                      MTE, CWS,
+                                                                                                                     Lecture
+              Independent random variables                                                                                            ETE
+    10-11     Chebyschev's inequality                   Learn about properties of random variables   MAS2001.1                      MTE, CWS,
+                                                                                                                     Lecture
+                                                                                                                                      ETE
+     12       Binomial distribution                     Acquire the knowledge about distributions    MAS2001.2                      MTE, CWS,
+                                                                                                                     Lecture
+                                                        of data                                                                       ETE
+     13       Poisson distribution                      Acquire the knowledge about distributions    MAS2001.2    Lecture, Peer     MTE, CWS,
+                                                        of data                                                     teaching          ETE
+     14       Uniform distribution (Continuous)         Acquire the knowledge about distributions    MAS2001.2   Lecture/ Flipped   MTE, CWS,
+                                                        of data                                                    Classroom          ETE
+     15       Normal distribution                       Acquire the knowledge about distributions    MAS2001.2                      MTE, CWS,
+                                                                                                                     Lecture
+                                                        of data                                                                       ETE
+     16       Exponential distribution                  Acquire the knowledge about distributions    MAS2001.2                      MTE, CWS,
+                                                                                                                     Lecture
+                                                        of data                                                                       ETE
+     17       Sampling Concepts and Limit               Gain knowledge of sampling Theory            MAS2001.3
+                                                                                                                                    MTE, CWS,
+              Theorem: Population and sample;                                                                        Lecture
+                                                                                                                                      ETE
+              Standard error;
+
+
+                                                                             4
+ 18     Central Limit Theorem                      Acquire the knowledge about limit              MAS2001.2                     MTE, CWS,
+                                                                                                                 Lecture
+                                                   theorems                                                                       ETE
+ 19     Theory of Estimation: Introduction,        Gain knowledge about estimation theory         MAS2001.3
+                                                                                                                                MTE, CWS,
+        Parameter and Statistic, Point and                                                                       Lecture
+                                                                                                                                  ETE
+        Interval estimation
+20-21   Characteristics of a good estimator        Gain knowledge about estimation theory         MAS2001.3                     MTE, CWS,
+                                                                                                                 Lecture
+                                                                                                                                  ETE
+ 22     Maximum Likelihood                         Gain knowledge about estimation theory         MAS2001.3      Lecture       CWS, ETE
+ 23     Method Moment Estimation                   Gain knowledge about estimation theory         MAS2001.3   Group-teaching
+                                                                                                                               CWS, ETE
+                                                                                                               and learning
+ 24     Introduction of Bayesian estimation        Gain knowledge about Bayesian estimation       MAS2001.3                     CWS, ETE
+                                                                                                                 Lecture
+                                                   theory
+ 25     Confidence intervals for means             Develop the notion of interval estimator for   MAS2001.3
+                                                                                                              Peer teaching     CWS, ETE
+                                                   unknown parameters
+ 27     Confidence intervals for means (Z Test)    Develop the notion of interval estimator for   MAS2001.3                     CWS, ETE
+                                                                                                                 Lecture
+                                                   unknown parameters
+ 28     Confidence intervals for means (Student    Develop the notion of interval estimator for   MAS2001.3                     CWS, ETE
+                                                                                                                 Lecture
+        t test)                                    unknown parameters
+ 29     Hypothesis testing: Null and alternative   Elaborate the concept of testing of            MAS2001.4                     CWS, ETE
+        hypotheses, Level of significance,         hypothesis                                                    Lecture
+        Critical region,
+ 30     Type I and Type II errors (Theory and      Elaborate the concept of testing of            MAS2001.4
+                                                                                                                 Lecture        CWS, ETE
+        Numerical)                                 hypothesis
+ 31     Testing of significance: Test about        Gain knowledge about implementation of t-      MAS2001.4   Group-teaching
+                                                                                                                                CWS, ETE
+        one mean (t test )                         test                                                        and learning
+ 32     Test about equality of two means-t test    Gain knowledge about implementation of t-      MAS2001.4
+                                                                                                                 Lecture        CWS, ETE
+                                                   test
+ 33     F-test                                     Gain knowledge about the implementation        MAS2001.4
+                                                                                                              Peer teaching     CWS, ETE
+                                                   of the F-test
+ 34     Chi-square test – Test for Independence    Gain knowledge about the implementation        MAS2001.4
+                                                                                                                 Lecture        CWS, ETE
+        of Attribute                               of the Chi-square test
+
+
+                                                                         5
+       35        Analysis of Variance (ANOVA) One              Gain knowledge about implementation of         MAS2001.4
+                                                                                                                                 Peer teaching     CWS, ETE
+                 way                                           ANOVA
+       36        Analysis of Variance (ANOVA) One              Gain knowledge about the implementation        MAS2001.4
+                                                                                                                                    Lecture        CWS, ETE
+                 way                                           of ANOVA
+                                                                       End Term Examination
+
+I.   Outside class engagement activities (To complete the 30 Notional hours for each credit as per NCrF guidelines):
+          Type of Activity                                                                                       Difficulty Level        Hours Engaged
+          Participating in academic clubs, technical competitions, or seminars                                   Low                     10 Hrs
+          Engaging in mini-projects, case studies, or problem-solving exercises                                  Moderate                10 Hrs
+          Collaborating with faculty or peers on research ideas or innovative prototypes                         Moderate                5 Hrs
+          Attending faculty-guided doubt-clearing or reinforcement sessions                                      High                    20 Hrs
+          Watching recommended video lectures, tutorials, or educational webinars                                Low                     10 Hrs
+          Participating in group study circles or peer-learning sessions                                         Moderate                10 Hrs
+          Flipped Classroom                                                                                      Low                     5 Hrs
+          Individual learning/ self-study                                                                        Moderate                5 Hrs
+
+
+J. Course Articulation Matrix: (Mapping of COs with POs and PSOs)
+
+
+            CO                    Statement                               Correlation with Program Outcomes and Program Specific Outcomes
+                                                                PO    PO     PO   PO   PO    PO    PO    PO     PO    PO    PO      PO    PSO     PSO    PSO
+                                                                 1     2      3    4    5     6     7     8      9    10    11      12     1       2      3
+     MAS2001.1 Understand            the     concepts     of
+                     probability and random variables to
+                     analyze and solve a wide range of
+                                                                 2     1      1               1           1                          1
+                     real-world       problems         under
+                     uncertainty principles and make
+                     decisions in practical scenarios.
+     MAS2001.2       Employ probability distributions to
+                     effectively model and analyze real-         1    2       3    1    1     2           1      1           1       1        2
+                     world engineering problems.
+
+                                                                                   6
+MAS2001.3 Describe point and interval estimators
+              for parameter estimation to provide
+              reliable and accurate conclusions in    2     2     3     2     3     2             1    2      1            1   2   1
+              industry and business for effective
+              decision-making.
+MAS2001.4     Formulate and test the Hypothesis
+              related to engineering problems and
+                                                      1     3     3     2     3    2      1       1    1                   1   1   1
+              enhance      decision-making    and
+              employability.
+
+                                                     1: Low Correlation 2: Moderate Correlation   3: Substantial Correlation
+
+
+
+
+                                                                        7
+

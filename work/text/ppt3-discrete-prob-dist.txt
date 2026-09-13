@@ -1,0 +1,322 @@
+Discrete Probability
+    Distribution
+  Statistics and Probability –MAS2001
+Binomial Distribution
+   Discrete Probability Distribution
+Take the example of 5-coin
+ tosses. What’s the probability
+ that you flip exactly 3 heads in 5-
+ coin tosses?
+
+
+
+
+                                       3
+Solution:
+One way to get exactly 3 heads: HHHTT
+
+What’s the probability of this exact arrangement?
+P(heads)xP(heads) xP(heads)xP(tails)xP(tails) =(1/2)3 x (1/2)2
+
+Another way to get exactly 3 heads: THHHT
+Probability of this exact outcome = (1/2)1 x (1/2)3 x (1/2)1 = (1/2)3 x
+ (1/2)2
+
+                                                                          4
+In fact, (1/2)3 x (1/2)2 is the probability of each unique outcome that
+has exactly 3 heads and 2 tails.
+
+So, the overall probability of 3 heads and 2 tails is:
+(1/2)3 x (1/2)2 + (1/2)3 x (1/2)2 + (1/2)3 x (1/2)2 + ….. for as many
+unique arrangements as there are—but how many are there??
+
+
+
+
+                                                                          5
+                      Outcome             Probability
+                      THHHT               (1/2)3 x (1/2)2
+                      HHHTT               (1/2)3 x (1/2)2
+                      TTHHH               (1/2)3 x (1/2)2
+                      HTTHH               (1/2)3 x (1/2)2
+       ways to        HHTTH               (1/2)3 x (1/2)2   The probability
+5    arrange 3      HTHHT               (1/2)3 x (1/2)2   of each unique
+     heads in       THTHH               (1/2)3 x (1/2)2   outcome (note:
+ 3   5 trials       HTHTH               (1/2)3 x (1/2)2   they are all
+                                                            equal)
+                      HHTHT               (1/2)3 x (1/2)2
+                      THHTH               (1/2)3 x (1/2)2
+                      10 arrangements x (1/2)3 x (1/2)2
+5C = 5!/3!2! = 10
+  3
+
+
+
+                   Factorial review: n! = n(n-1)(n-2)…                        6
+P(3 heads and 2 tails)
+ 5
+=     x P(heads)3 x P(tails)2
+  3
+
+
+= 10 x (½)5=31.25%
+ Binomial distribution
+• Let a random experiment be performed repeatedly
+• The occurrence of an event in a trial be called a success and its
+  non-occurrence a failure.
+• Consider a set of n independent trials (n being finite).
+• The probability 'p' of success in any trial is constant for each trial.
+• Then q = 1 - p, is the probability of failure in any trial.
+Binomial distribution
+Definition:
+A random variable X is said to follow binomial distribution if it
+assumes only non-negative values and its 'Probability mass function
+is given by
+
+                  𝑥
+            𝑛    𝑝 𝑞 𝑛−𝑥 for x = 0, 1, 2, … . . n
+P(X = x) = ቊ 𝐶 𝑥
+             0,                    otherwise
+• The two independent constants n and p in the distribution are
+  known as the parameters of the distribution.
+• 'n' is also, sometimes known as the degree of the binomial
+  distribution.
+• We shall use the notation X~B (n, p) to denote that the random
+  variable X follow the binomial distribution with parameters n and p.
+     Physical conditions for Binomial Distribution
+
+We get the binomial distribution under the following experimental
+conditions.
+
+
+1) Each trial results in two mutually disjoint outcomes termed as
+   success and failure.
+2) The number of trials ‘n' is finite.
+3) The trials are independent of each other.
+4) The probability of success 'p’ is constant for-each trial.
+Mean and variance of binomial distribution
+
+Mean = E(X) = np
+
+Var(X) = npq
+Problem Statement
+
+10% of pens manufactured by a company are defective. A box contains 12 pens.
+Find the probability that the box contains:
+(i) Exactly 2 defective pens (ii) At least 2 defective pens (iii) No defective pen
+
+
+Given Parameters
+
+          n (trials)                       p (defective)                        q=1−p              Distribution
+
+            12                               10/100                             1 − 0.1
+                                                                                                  X ~ B(12, 0.1)
+       (pens in box)                          = 0.1                              = 0.9
+
+
+
+                       P(X = x)     =    ⁿCₓ · pˣ · qⁿ⁻ˣ                    where x = 0, 1, 2, ... n
+
+
+
+
+                                                                                                                   13
+Part (i): Exactly 2 Defective Pens
+Find P(X = 2) where n = 12, p = 0.1, q = 0.9
+
+Step 1: Apply PMF Formula
+
+                                   P(X = 2)          =     ¹²C₂ × (0.1)² × (0.9)¹⁰
+
+Step 2: Expand the Combination
+
+                                         ¹²C₂    =   12! / (2! × 10!)              =    66
+
+Step 3: Compute
+
+                                    66     ×    (0.01)       ×   (0.3487)      =       0.2301
+
+
+                                                         ✓ P(X = 2) = 0.2301
+
+                                                                                                Binomial Distribution | Problems & Solutions
+Part (ii): At Least 2 Defective Pens
+Find P(X ≥ 2) = 1 − P(X < 2) = 1 − [P(X = 0) + P(X = 1)]
+
+Strategy: Complement Rule
+
+  P(X = 0)                                                              P(X = 1)
+
+                ¹²C₀ × (0.1)⁰ × (0.9)¹²                                              ¹²C₁ × (0.1)¹ × (0.9)¹¹
+
+  = 1 × 1 × 0.2824 = 0.2824                                             = 12 × 0.1 × 0.3138 = 0.3766
+
+
+
+Final Calculation
+
+                    P(X ≥ 2)         =    1 − [0.2824 + 0.3766]                 =   1 − 0.659           =      0.341
+
+
+                                                           ✓ P(X ≥ 2) = 0.341
+
+                                                                                                       Binomial Distribution | Problems & Solutions
+Part (iii): No Defective Pen
+Find P(X = 0) — probability that all 12 pens are non-defective
+Apply PMF with x = 0
+
+                                  P(X = 0)          =     ¹²C₀ × (0.1)⁰ × (0.9)¹²
+
+Evaluate Each Term
+
+                     ¹²C₀                                        (0.1)⁰                         (0.9)¹²
+
+                     =1                                           =1                          = 0.2824
+
+
+Multiply the terms
+
+                                         1    ×    1     ×   0.2824       =   0.2824
+
+
+                                                        ✓ P(X = 0) = 0.2824
+                                                                                       Binomial Distribution | Problems & Solutions
+Problem 2: Irregular Six-Faced Die
+
+  Problem Statement
+
+  An irregular six-faced die is thrown. The probability of getting 5 even numbers in 10 throws
+  is TWICE the probability of getting 4 even numbers in 10 throws.
+  In 10,000 sets of 10 throws each, how many times would you expect NO even number?
+
+
+Given Condition → P(X = 5) = 2 · P(X = 4)
+
+                                    ¹⁰C₅ · p⁵ · q⁵        =    2 × ¹⁰C₄ · p⁴ · q⁶
+
+Let X = number of even numbers obtained | n = 10
+
+Finding p (probability of getting an even number on one throw)
+
+     252 · p      =   210 · 2q            →         3p = 5q = 5(1−p)                →            p = 5/8,          q = 3/8
+                                                                                             Binomial Distribution | Problems & Solutions
+Problem 2: Finding Expected Sets
+
+Parameters: n = 10, p = 5/8, q = 3/8
+
+              n                                    p                                          q                                         Target
+
+
+             10                             5/8 = 0.625                               3/8 = 0.375                                       X=0
+
+
+Step 1: Probability of getting NO even number (X = 0)
+
+                  P(X = 0)       =      ¹⁰C₀ × (5/8)⁰ × (3/8)¹⁰                           =       (3/8)¹⁰          ≈       0.00005
+
+Step 2: Expected number of sets (out of 10,000)
+
+                  Expected sets           =      10,000           ×     P(X = 0)              =    10,000           ×        0.00005
+
+
+                                          ✓ Expected sets with no even number ≈ 0.549
+
+                             Interpretation: In 10,000 repetitions, we expect this rare event less than once on average.
+                                                                                                                       Binomial Distribution | Problems & Solutions
+Poisson Distribution
+   Discrete Probability Distribution
+The Poisson probability distribution provides a good model for the
+probability distribution of the number of “rare events” that occur randomly .
+Following are some instances where Poisson distribution may be successfully
+employed
+1) Number of deaths from a disease. Such as heart attack or cancer or due to
+   snake bite.
+2) Number of suicides reported in a particular city.
+3) The number of defective material in a packing manufactured by a good
+   concern.
+4) Number of faulty blades in a packet of 100.
+5) Number of air accidents in some unit of time.
+6) Number of printing mistakes at each page of the book.
+7) Number of cars passing a crossing per minute during the busy hours of a day.
+Poisson distribution is a limiting case of the binomial distribution under
+the following conditions:
+1) n, the number of trials is indefinitely large, i.e., n→∞.
+
+2) p, the constant probability of success for each trial is indefinitely
+   small, i.e., p→0 .
+
+                                       𝜆         𝜆
+3)   np = λ, (say), is finite. Thus p = , q = 1 - , where λ is a positive real
+                                       𝑛         𝑛
+     number.
+Definition:
+• A random variable X is said to follow a Poisson distribution if it assumes
+  only non-negative values and its probability mass function is given by
+                    -𝜆
+                𝑒    λ𝑥
+                        ;   x = 0, 1, 2, … … . . ; λ > 0
+• P(X = x) =ቐ       𝑥!
+                0,                           otherwise
+
+• Here λ is known as the parameter of the distribution.
+
+• We shall use the notation X~P (λ) to denote that X is a Poisson variate
+  with parameter λ.
+• Mean and variance of Poisson distribution
+
+
+
+• Mean = E(X) = λ.
+
+
+
+• Var X = λ
+Poisson Distribution Examples
+
+Example 1:
+A random variable X has a Poisson distribution with parameter λ such that
+P (X = 1) = (0.2) P (X = 2). Find P (X = 0).
+
+Solution:
+For the Poisson distribution, the probability function is defined as:
+
+P (X =x) = (e– λ λx)/x!, where λ is a parameter.   Now, substitute λ = 10, in the
+Given that, P (x = 1) = (0.2) P (X = 2)            formula, we get:
+(e– λ λ1)/1! = (0.2)(e– λ λ2)/2!                   P (X =0 ) = (e– λ λ0)/0!
+⇒λ = λ2/ 10                                        P (X =0) = e-10 = 0.0000454
+⇒λ = 10                                            Thus, P (X= 0) = 0.0000454
+Example 2:
+Telephone calls arrive at an exchange according to the Poisson process at a rate
+ λ= 2/min.
+Calculate the probability that exactly two calls will be received during each of the first 5
+minutes of the hour.
+Solution:
+Assume that “N” be the number of calls received during a 1 minute period.
+Therefore,
+P(N= 2) = (e-2. 22)/2!
+P(N=2) = 2e-2.
+Now, “M” be the number of minutes among 5 minutes considered, during which exactly
+2 calls will be received. Thus “M” follows a binomial distribution with parameters n=5
+and p= 2e-2.
+P(M=5) = 32 x e-10
+P(M =5) = 0.00145, where “e” is a constant, which is approximately equal to 2.718.
+Example 3: A life insurance company insures the lives of 5,000 men of age
+42. If actuarial studies show the probability of any 42-year-old man dying in
+a given year to be 0.001, the probability that the company will have to pay 4
+claims in a given year can be approximated by the Poisson distribution.
+
+
+Number of men (n): 5,000
+Probability of death (p): 0.001            Substituting our values:
+lambda =5,000*0.001=5
+The Poisson probability mass               P ( X = 4) = (e– λ λ4)/4!
+function       for      finding the               =0.1745
+probability of exactly x events is:
+P (X =x) = (e– λ λx)/x!,
+References
+
+1. S.C. Gupta and V.K. Kapoor, Fundamentals of Mathematical Statistics, Sultan Chand & Sons.
+S. Palaniammal, Probability and Random Variables, PHI Learning.
+K. Sundarapandian, Probability, Statistics and Queuing Theory, PHI Learning.
+

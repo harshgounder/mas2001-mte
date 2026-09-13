@@ -1,0 +1,213 @@
+Maximum Likelihood
+ Estimation(MLE)
+  Statistics and Probability – MAS2001
+            Maximum Likelihood Estimation (MLE)
+
+Content:
+• Background & Motivations
+• Meaning of Likelihood
+• Examples to Understand MLE
+• MLE of Binomial Distribution
+• MLE of Poisson Distribution:
+             Maximum Likelihood Estimation (MLE)
+Suppose we have a random sample 𝑋1 , 𝑋2 , … , 𝑋𝑛
+whose assumed probability distribution depends on some unknown
+parameter 𝜃.
+Examples of Unknown Parameters in Different Distributions
+• For Binomial Distribution:
+  Unknown parameters → 𝑛 𝑝
+• For Poisson Distribution:
+  Unknown parameter → 𝜆
+• For Normal Distribution:
+  Unknown parameters → 𝜇, 𝜎 2
+               Maximum Likelihood Estimation (MLE)
+Suppose we have a random sample 𝑋1 , 𝑋2 , … , 𝑋𝑛 whose assumed
+probability distribution depends on some unknown parameter 𝜃.
+
+Our primary goal here will be to find a point estimator 𝑢, such that
+                               𝑢 𝑥1 𝑥2 … 𝑥𝑛
+is a “good” point estimate of 𝜃,
+where 𝑥1 , 𝑥2 , … , 𝑥𝑛 are the observed values of the random sample.
+
+i.e., Our goal is to find a good estimate of 𝜃 using the data
+                               𝑥1 , 𝑥2 , … , 𝑥𝑛
+that we obtained from our specific random sample.
+              Maximum Likelihood Estimation (MLE)
+• Maximum Likelihood Estimation (MLE) is a technique used
+  for estimating the parameters of a given distribution using
+  some observed data.
+
+• For example, if a population is known to follow a normal
+  distribution, but the mean and variance are unknown, MLE
+  can be used to estimate them using a limited sample of the
+  population.
+
+• This is done by finding particular values of the mean and
+  variance so that the observed data is the most likely result to
+  have occurred.
+              Maximum Likelihood Estimation (MLE)
+Example: Suppose the weights of randomly selected Indian female
+college students are normally distributed with unknown mean 𝜇and
+standard deviation 𝜎.
+A random sample of 10 Indian female college students yielded the
+following weights (in pounds):
+             115, 122, 130, 127, 149, 160, 152, 138, 149, 180
+Using this data, we identify the likelihood function and the maximum
+likelihood estimator (MLE) of 𝜇.
+
+• It seems reasonable that a good estimate of the unknown
+  parameter 𝜃 would be the value of 𝜃 that maximizes the
+  probability, that is, the likelihood of getting the data we observed.
+
+• This is the reason why it is called the likelihood function.
+               Maximum Likelihood Estimation (MLE)
+Definition: Let 𝑥1 , 𝑥2 , . . . , 𝑥𝑛 be observations from 𝑛 independent and
+identically distributed random variables drawn from a probability
+distribution that depends on some parameter 𝜃.
+
+The goal of Maximum Likelihood Estimation (MLE) is to maximize the
+likelihood function:
+                                               𝑛
+
+                 𝐿 = 𝑓 𝑥1 𝑥2 . . . 𝑥𝑛 ∣ 𝜃 = ෑ 𝑓 𝑥𝑖 ∣ 𝜃
+                                              𝑖=1
+For maximization, we have:
+                        𝑑𝐿         𝑑2 𝐿
+                           = 0 and    2
+                                        <0
+                        𝑑𝜃         𝑑𝜃
+Maximum Likelihood Estimation (MLE)
+               Maximum Likelihood Estimation (MLE)
+                           For Discrete Case
+The simplest case is when both the distribution and the parameter
+space (the possible values of the parameters) are discrete, meaning
+that there are a finite number of possibilities for each.
+
+In this case, the MLE can be determined by explicitly trying all
+possibilities.
+
+Example: An unfair coin is flipped 100 times, and 61 heads are
+                                           1 1     2
+observed. The coin either has probability , ,or of flipping a head
+                                           3 2     3
+each time it is flipped. Which of the three is the MLE?
+                        Maximum Likelihood Estimation (MLE)
+Solution: Here the distribution is the Binomial distribution with 𝑛 = 100.
+p.m.f. of Binomial Distribution
+                                                       𝑛 𝑥
+                                          𝑃 𝑋=𝑥 =         𝑝 ቀ1 − 𝑝)𝑛−𝑥
+                                                       𝑥
+where
+                                            0 ≤ 𝑝 ≤ 1, 𝑥 = 0,1,2, … , 𝑛
+
+                                                               61          39
+                                           1   100         1           2
+                            𝑃 𝐻 = 61 ∣ 𝑝 =   =                                  ≈ 9.6 × 10−9
+                                           3   61          3           3
+                                                                    61          39
+                                             1   100           1           1
+                              𝑃 𝐻 = 61 ∣ 𝑝 =   =                                     = 0.007
+                                             2   61            2           2
+                                                                    61          39
+                                             2   100           2           1
+                              𝑃 𝐻 = 61 ∣ 𝑝 =   =                                     = 0.040
+                                             3   61            3           3
+Since
+                                                                   2
+                                              𝑃 𝐻 = 61 ∣ 𝑝 =
+                                                                   3
+is maximum, the Maximum Likelihood Estimate (MLE) is
+                                                   2
+                                              𝑝Ƹ =
+                                                   3
+                           Maximum Likelihood Estimation (MLE)
+Example: An unfair coin is flipped 100 times, and 61 heads are observed. What is the MLE when nothing is previously known about
+the coin?
+Solution: Since the distribution follows a Binomial distribution with parameter 𝑝. Here 𝑛 = 100.
+The likelihood function is
+                                                            100 61
+                                         𝑃 𝐻 = 61 ∣ 𝑝 =           𝑝 ቀ1 − 𝑝)39
+                                                            61
+For Maximization
+                                                 𝑑
+                                                    𝑃 𝐻 = 61 ∣ 𝑝 = 0
+                                                 𝑑𝑝
+                                       100
+                                   ⇒         ቂ61𝑝60 ൫1 − 𝑝)39 − 39𝑝61 1 − 𝑝)38 = 0
+                                       61
+                                                                               61
+                                  ⇒ 𝑝60 ൫1 − 𝑝)38 61 − 100𝑝 = 0 ⇒ 𝑝 = 0,           , 1
+                                                                              100
+Likelihood Values
+                                                𝑃 𝐻 = 61 ∣ 𝑝 = 0 = 0
+                                                                          61       39
+                                                     61       100     61      39
+                                   𝑃 𝐻 = 61 ∣ 𝑝 =         =
+                                                    100        61    100     100
+                                                𝑃 𝐻 = 61 ∣ 𝑝 = 1 = 0
+                         61
+Since 𝑃 𝐻 = 61 ∣ 𝑝 = 100
+                                                                                 61
+is maximum, therefore the Maximum Likelihood Estimator (MLE) is 𝑝Ƹ = 100
+Maximum Likelihood Estimation (MLE)
+Maximum Likelihood Estimation (MLE)
+                       Maximum Likelihood Estimation (MLE)
+Example: Find the Maximum Likelihood Estimate (MLE) of the parameter 𝜆 of a Poisson distribution for a
+random sample 𝑥1 , 𝑥2 , 𝑥3 , … , 𝑥𝑛 .
+Solution: For Poisson distribution, we have
+                                                    𝑒 −𝜆 𝜆𝑥𝑖
+                                           𝑓 𝑥𝑖   =          , 𝑥𝑖 = 0,1,2, …
+                                                       𝑥𝑖 !
+Likelihood Function
+The likelihood function 𝐿is defined as
+                                                        𝑛
+
+                                                  𝐿 = ෑ 𝑓 𝑥𝑖 ∣ 𝜆
+                                                       𝑖=1
+                                                         𝑛
+                                                      𝑒 −𝜆 𝜆𝑥𝑖
+                                                  𝐿=ි
+                                                         𝑥𝑖 !
+                                                        𝑖=1
+Log Likelihood
+                                    𝑛                       𝑛
+                                          𝑒 −𝜆 𝜆𝑥𝑖
+                            log 𝐿 = ෍ log          = ෍[ log 𝑒 −𝜆 + log 𝜆𝑥𝑖 − log 𝑥𝑖 ! ൧
+                                             𝑥𝑖 !
+                                   𝑖=1                   𝑖=1
+                        𝑛                                            𝑛           𝑛
+
+                     = ෍[ −𝜆 + 𝑥𝑖 log 𝜆 − log 𝑥𝑖 ! ሿ = −𝑛𝜆 + ෍ 𝑥𝑖 log 𝜆 − ෍ log 𝑥𝑖 !
+                        𝑖=1                                         𝑖=1         𝑖=1
+                     Maximum Likelihood Estimation (MLE)
+MLE of Poisson Parameter
+                                              𝑑
+                                                 log 𝐿 = 0
+                                             𝑑𝜆
+                                                      𝑛
+                                                   1
+                                           ⇒ −𝑛 + ෍ 𝑥𝑖 = 0
+                                                   𝜆
+                                                     𝑖=1
+                                                     σ𝑛𝑖=1 𝑥𝑖
+                                             ⇒𝜆=
+                                                        𝑛
+                                                   መ
+                                                ∴ 𝜆 = 𝑥ҧ
+Second Derivative Test
+                                                           𝑛
+                                     𝑑2           1
+                                        log 𝐿 = −    ෍ 𝑥𝑖 < 0
+                                    𝑑𝜆2           𝜆2
+                                                           𝑖=1
+Hence, the MLE for 𝜆 is the sample mean.
+                                                 𝜆መ = 𝑥ҧ
+
+
+Example: Find the MLE of the parameters 𝜇 and 𝜎 2 of a normal distribution for a
+random sample 𝑥1 , 𝑥2 , … , 𝑥𝑛 .
+References
+
+ 1. Devore, J. L., Probability & Statistics for Engineering and the
+ Sciences, 8th Edition, Cengage Learning, 2012.
+

@@ -1,0 +1,119 @@
+# Five day plan to the MTE
+
+Window opens Friday 18 September 2026 and closes Friday 25 September. Paper is 30 marks,
+closed book. Today is Sunday 13 September, so there are five clear days: 13, 14, 15, 16, 17.
+
+Reading refs are files in this repo. `md/<label>.md` is the assembled document,
+`md/<label>/pNNN.md` is a single slide.
+
+## Day 0, today, Sunday 13 September (evening, 3 hours)
+
+Goal: know exactly what the paper can ask, and close the one hole that has no source.
+
+1. Read `reports/00-SCOPE-AND-EXAM-FACTS.md` and `reports/01-COVERAGE-MAP.md`. 20 minutes.
+   Outcome: you can say out loud which lectures are in scope (1 to 21) and which are not (22+).
+2. Read `reports/03-FORMULA-SHEET.md` end to end. 40 minutes. Do not memorise yet, just map.
+3. Chebyshev block, since it has no slides anywhere. `reports/03-FORMULA-SHEET.md` section E
+   then `reports/04-QUESTION-BANK.md` section E. 60 minutes. Re-derive the dice bound 35/54
+   and the 19/24 bound by hand without looking.
+4. Reproduce the two Chebyshev bounds from memory on blank paper. 20 minutes.
+5. Skim `md/notes-lecture-series-01-09.md` p001 to p011, the course framing, once. 40 minutes.
+
+Gate to pass before sleeping: you can write the Chebyshev inequality in both forms and
+explain why it needs no distributional assumption.
+
+## Day 1, Monday 14 September (4 hours, classes run as normal)
+
+Goal: units 1 and 2, the 136 pages that only exist in the lecture deck.
+
+1. `md/notes-lecture-series-01-09.md` p012 to p050. Statistics framing, random experiment,
+   sample space, events, set relations, probability axioms, conditional probability.
+   Read with the formula sheet section A open. 110 minutes.
+2. Work the combinatorics problems on p046 and p048 properly, on paper. 30 minutes.
+3. `md/notes-lecture-series-01-09.md` p051 to p087. Random variable, discrete rv, pmf, cdf,
+   the pump example, the expected value slides. 80 minutes.
+4. `md/notes-lecture-series-01-09.md` p088 to p111. Expectation, variance, the shortcut
+   formula, rules of variance. 60 minutes.
+
+Gate: write the pmf and cdf of the 3 children example from scratch, then check against
+`md/mas2001-assignment-1/p001.md` and the key in `reports/04-QUESTION-BANK.md` section A.
+
+## Day 2, Tuesday 15 September (4 hours)
+
+Goal: continuous random variables, then the two big discrete distributions.
+
+1. `md/notes-lecture-series-01-09.md` p112 to p147. Continuous rv, pdf, cdf, expectation,
+   variance, the Pareto exercise on the last pages. 100 minutes.
+2. `md/ppt3-discrete-prob-dist.md` p001 to p018, binomial. 60 minutes. Do the pens problem
+   and the irregular die problem on paper before reading the solution slides.
+3. `md/ppt3-discrete-prob-dist.md` p019 to p028, Poisson. 50 minutes. Learn the
+   approximation conditions cold: n large, p small, np moderate.
+4. Twenty minutes of pure recall: write E and Var for binomial and Poisson, plus the
+   conditions for each, from memory.
+
+Gate: solve "10 percent of pens defective, box of 12, find P(at least 2 defective)" without
+looking. Answer is 1 minus (0.2824 + 0.3766) = 0.3410.
+
+## Day 3, Wednesday 16 September (4.5 hours)
+
+Goal: the four continuous distributions and the CLT block. This is the heaviest single day.
+
+1. `md/ppt4-continuous-prob-dist.md` p001 to p006, uniform. 30 minutes.
+2. p007 to p037, normal. 130 minutes. This is the largest single block in the paper's
+   potential and the one with the most worked practice. Drill standardisation in both
+   directions, forward from X to probability and inverse from probability to X.
+3. p038 to p043, exponential. 50 minutes. Drill the lambda versus 1/lambda trap until it
+   is automatic.
+4. `md/lms-standard-error-clt.md` p001 to p018. 70 minutes. Standard error, then the CLT
+   statement and the three worked examples.
+
+Gate: state the CLT precisely, including the n greater than or equal to 30 rule of thumb,
+and explain the difference between the sigma population and the standard error sigma over
+root n.
+
+## Day 4, Thursday 17 September (4.5 hours)
+
+Goal: estimation block, then a full timed paper, then fix what the paper exposes.
+
+1. `md/ppt5-estimation-summary.md` all 26 pages. 90 minutes. Then
+   `md/lms-theory-of-estimation.md` p022 to p030 for the extra worked numericals only.
+2. Sit `reports/07-MOCK-PAPER.md` closed book, 90 minutes, no formula sheet. Mark it with
+   the worked solutions in `reports/08-MOCK-SOLUTIONS.md`.
+3. Spend the rest of the day on whatever the mock exposed. Re-derive every formula you
+   failed to recall. 90 minutes.
+
+Gate: 24 or more out of 30 on the mock, with no formula looked up during the sitting.
+
+## Day 5, Friday 18 September, window opens
+
+1. Formula sheet read twice, out loud, 40 minutes.
+2. The three Chebyshev values (k=2 gives 3/4, k=3 gives 8/9, k=4 gives 15/16) and the four
+   distribution mean-variance pairs (binomial np and npq, Poisson lambda and lambda,
+   uniform (a+b)/2 and (b-a)^2/12, exponential 1/lambda and 1/lambda^2, normal mu and sigma^2)
+   from memory. 20 minutes.
+3. No new material. Nothing below lecture 22.
+
+## Weekly shape of a study day
+
+```
+  20 min   read the day's slide range once, fast, no notes
+  90 min   second pass with the formula sheet open, derive every formula you meet
+  60 min   problems, on paper, before reading the solution slides
+  40 min   recall drill, blank paper, from memory
+  30 min   redo yesterday's failures only
+```
+
+## Order of priority if a day collapses
+
+1. Chebyshev, because it has no source and is guaranteed cheap marks when known.
+2. Binomial and Poisson closed forms plus the exponential rate trap.
+3. Standard error and the CLT, the whole of lectures 17 and 18 is usually one clean question.
+4. Normal standardisation in both directions.
+5. The estimation comparison layout.
+
+## What to ignore
+
+Maximum likelihood (lecture 22), method of moments (23), Bayesian estimation (24),
+confidence interval mechanics (25, 27, 28), hypothesis testing and all the tests
+(29 to 36). All of it is formally out of the mid term. Read the slides only if a CWS
+deadline puts them back in play.

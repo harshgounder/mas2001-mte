@@ -1,0 +1,561 @@
+Continuous Probability
+     Distribution
+   Statistics and Probability –MAS2001
+                Probability Distributions
+                             Probability
+                            Distributions
+
+       Discrete                                  Continuous
+Probability Distributions                   Probability Distributions
+
+
+              Binomial                       Uniform
+
+              Poisson                        Normal
+
+                                             Exponential
+       The Uniform Distribution
+• The uniform distribution is a probability distribution that has equal
+  probabilities for all possible outcomes of the random variable
+
+
+
+
+                                 f(x)
+                                                              Total area under the
+                                                              uniform probability
+                                                              density function is 1.0
+
+
+                                              xmin   xmax x
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+   The Uniform Distribution                                                                       (continued)
+
+                                 The Continuous Uniform Distribution:
+
+                                                            1
+                                                               if a  x  b
+                                                           b−a
+                                              f(x) =
+                                                             0       otherwise
+
+                                          where
+                                            f(x) = value of the density function at any x value
+                                            a = minimum value of x
+                                            b = maximum value of x
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+ Properties of the Uniform Distribution
+     • The mean of a uniform distribution is
+
+                                                  a+b
+                                               μ=
+                                                   2
+     • The variance is
+                                                           2
+                                                   (b - a)
+                                              σ2 =
+                                                     12
+
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+               Uniform Distribution Example
+Example: Uniform probability distribution over the range 2 ≤ x ≤ 6:
+
+                             1
+                    f(x) = 6 - 2 = .25 for 2 ≤ x ≤ 6
+
+        f(x)
+                                                                               a+b 2+6
+                                                                        μ=        =    =4
+        .25                                                                     2   2
+
+                                                                           (b - a)2 (6 - 2)2
+                                                                       σ =2
+                                                                                   =         = 1.333
+                2                               6         x                  12       12
+
+                      Statistics for Business and Economics, 6e © 2007 Pearson Education, Inc.
+The Normal Distribution
+                   Probability
+                  Distributions
+
+                                                 Continuous
+                                                  Probability
+                                                 Distributions
+
+                                                    Uniform
+
+                                                    Normal
+
+                                                      Exponential
+  Statistics for Business and Economics, 6e © 2007 Pearson Education,
+  Inc.
+                    The Normal Distribution (continued)
+• ‘Bell Shaped’
+
+• Symmetrical                                                       f(x)
+• Mean, Median and Mode
+       are Equal
+Location is determined by the mean, μ                                                            σ
+Spread is determined by the standard                                                                 x
+deviation, σ                                                                                 μ
+
+                                                                                          Mean
+The random variable has an infinite
+theoretical range:                                                                      = Median
++  to −                                                                               = Mode
+
+                       Statistics for Business and Economics, 6e © 2007 Pearson Education,
+                       Inc.
+The Normal Distribution                                              (continued)
+
+   •        The normal distribution closely approximates the probability
+            distributions of a wide range of random variables
+   •        Distributions of sample means approach a normal distribution given a
+            “large” sample size (Will say more on this later!!)
+   •        Computations of probabilities are direct and elegant
+   •        The normal probability distribution has led to good business decisions
+            for a number of applications
+
+
+
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+Many Normal Distributions
+
+
+
+
+By varying the parameters μ and σ, we obtain
+        different normal distributions
+
+         Statistics for Business and Economics, 6e © 2007 Pearson Education,
+         Inc.
+                           f(x)                      Changing μ shifts the
+                                                     distribution left or right.
+
+                                                                                      Changing σ increases
+                                                                                      or decreases the
+                                                                               σ      spread.
+
+
+                                                                           μ                    x
+
+                   Given the mean μ and variance σ we define the normal
+                   distribution using the notation
+                                                                               X ~ N(μ,σ 2 )
+Statistics for Business and Economics, 6e © 2007 Pearson Education, Inc.
+The Normal Probability Density Function
+          • The formula for the normal probability density function is
+
+
+                                                          1    − (x −μ) 2 /2σ 2
+                                                 f(x) =      e
+                                                         2π
+                          Where           e = the mathematical constant approximated by 2.71828
+                                          π = the mathematical constant approximated by 3.14159
+                                          μ = the population mean
+                                          σ = the population standard deviation
+                                          x = any value of the continuous variable, − < x < 
+ Statistics for Business and Economics, 6e ©
+ 2007 Pearson Education, Inc.
+Cumulative Normal Distribution
+    • For a normal random variable X with mean μ and variance σ2 , i.e.,
+      X~N(μ, σ2), the cumulative distribution function is
+
+
+                                                     F(x 0 ) = P(X  x 0 )
+
+                                              f(x)
+
+                                                                          P(X  x 0 )
+
+
+                                                               0     x0         x
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+                                  Finding Normal Probabilities
+The probability for a range of values is measured by the area
+under the curve
+
+                                              P(a  X  b) = F(b) − F(a)
+
+
+
+
+                                                     a    μ   b       x
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+                          Finding Normal Probabilities (continued)
+                                              F(b) = P(X  b)
+
+                                                                a   μ   b   x
+
+
+
+                                              F(a) = P(X  a)
+
+                                                                a   μ   b   x
+
+
+
+                     P(a  X  b) = F(b) − F(a)
+
+Statistics for Business and Economics, 6e ©                     a   μ   b   x
+2007 Pearson Education, Inc.
+                                                              f(Z)
+
+                        Z ~ N(0,1)                                             1
+                                                                                   Z
+                                                                           0
+
+
+
+                                                                         X −μ
+                                                                      Z=
+                                                                          σ
+
+Statistics for Business and Economics, 6e © 2007 Pearson Education,
+Inc.
+   X − μ 200 − 100
+Z=      =          = 2.0
+    σ       50
+
+
+
+  Statistics for Business and Economics, 6e © 2007 Pearson Education,
+  Inc.
+       Comparing X and Z units
+
+
+
+                                       100                  200                  X (μ = 100, σ = 50)
+                                        0                   2.0                  Z (μ = 0, σ = 1)
+
+Note that the distribution is the same, only the scale has changed. We
+can express the problem in original units (X) or in standardized units (Z)
+                   Statistics for Business and Economics, 6e © 2007 Pearson Education,
+                   Inc.
+     Finding Normal Probabilities
+                                                                           a −μ     b −μ
+                                                         P(a  X  b) = P       Z     
+                                                                           σ          σ 
+                       f(x)                                       b −μ  a −μ
+                                                              = F       − F    
+                                                                  σ   σ 
+
+
+
+
+                                              a      µ    b            x
+                                              a −μ       b −μ
+                                                     0                 Z
+                                               σ          σ
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+Probability as Area Under the Curve
+                              The total area under the curve is 1.0, and the curve is
+                              symmetric, so half is above the mean, half is below
+
+                           f(X) P( −  X  μ) = 0.5
+                                                                   P(μ  X   ) = 0.5
+
+
+
+                                                   0.5       0.5
+
+                                                         μ                    X
+                                              P( −  X   ) = 1.0
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+Appendix Table 1
+                           • The Standardized Normal table in the textbook
+                             (Appendix Table 1) shows values of the cumulative
+                             normal distribution function
+
+                           • For a given Z-value a , the table shows F(a)
+                                    (the area under the curve from negative infinity to a )
+
+
+
+                                                                 F(a) = P(Z  a)
+
+
+  Statistics for Business and Economics, 6e ©              0     a        Z
+  2007 Pearson Education, Inc.
+22
+▪ Appendix Table 1 gives the probability F(a) for
+  any value a
+
+
+
+
+Example:                                                                          .9772
+P(Z < 2.00) = .9772
+
+                                                                 0        2.00            Z
+
+            Statistics for Business and Economics, 6e © 2007 Pearson Education,
+            Inc.
+                                                                                                  (continued)
+
+                    ▪ For negative Z-values, use the fact that the
+                      distribution is symmetric to find the needed
+                      probability:
+                                                                            .9772
+
+                                                                                                  .0228
+          Example:
+                                                                                       0   2.00       Z
+          P(Z < -2.00) = 1 – 0.9772
+                       = 0.0228                                                               .9772
+                                                                           .0228
+
+
+                                                                               -2.00   0              Z
+Statistics for Business and Economics, 6e © 2007 Pearson Education, Inc.
+General Procedure for Finding Probabilities
+  To find P(a < X < b) when X is distributed normally:
+
+  • Draw the normal curve for the problem in terms of X
+
+
+  • Translate X-values to Z-values
+
+  • Use the Cumulative Normal Table
+
+
+
+                      Statistics for Business and Economics, 6e © 2007 Pearson Education,
+                                                                                            Chap 6-28
+                      Inc.
+Finding Normal Probabilities
+• Suppose X is normal with mean 8.0 and standard deviation
+  5.0
+• Find P(X < 8.6)
+
+
+
+
+                                                          X
+                                              8.0
+Statistics for Business and Economics, 6e ©
+                                                    8.6
+2007 Pearson Education, Inc.
+Finding Normal Probabilities (continued)
+
+             X − μ 8.6 − 8.0
+          Z=      =          = 0.12
+              σ       5.0
+
+                μ=8                                                                μ=0
+                σ = 10                                                             σ=1
+
+
+       8 8.6                    X                                         0 0.12         Z
+
+    P(X < 8.6)                                                   P(Z < 0.12)
+          Statistics for Business and Economics, 6e © 2007 Pearson Education,
+                                                                                             Chap 6-30
+          Inc.
+            Solution: Finding P(Z < 0.12)
+Standardized Normal Probability                                                       P(X < 8.6)
+Table (Portion)                                                                      = P(Z < 0.12)
+      z     F(z)                                                                 F(0.12) = 0.5478
+     .10   .5398
+
+     .11   .5438
+
+     .12   .5478
+                                                                                              Z
+                                                                          0.00
+     .13   .5517
+                                                                                0.12
+               Statistics for Business and Economics, 6e © 2007 Pearson Education,
+                                                                                                     Chap 6-31
+               Inc.
+               Upper Tail Probabilities
+                         • Suppose X is normal with mean 8.0 and
+                           standard deviation 5.0.
+                         • Now Find P(X > 8.6)
+
+
+
+
+                                                          X
+                                              8.0
+Statistics for Business and Economics, 6e ©
+                                                    8.6
+2007 Pearson Education, Inc.
+                                                                                                (continued)
+                              • Now Find P(X > 8.6)…
+                              P(X > 8.6) = P(Z > 0.12) = 1.0 - P(Z ≤ 0.12)
+                                                                     = 1.0 - 0.5478 = 0.4522
+
+                                                                       0.5478
+                                                         1.000                                1.0 - 0.5478
+                                                                                                = 0.4522
+
+
+
+                                                                 Z                                 Z
+                                              0                                   0
+
+Statistics for Business and Economics, 6e ©
+                                                  0.12                                 0.12
+                                                                                Chap 6-33
+2007 Pearson Education, Inc.
+    Finding the X value for a Known Probability
+
+           • Steps to find the X value for a known probability:
+               1. Find the Z value for the known probability
+               2. Convert to X units using the formula:
+
+                                              X = μ + Zσ
+
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+Finding the X value for a Known Probability
+                                                                                 (continued)
+Example:
+• Suppose X is normal with mean 8.0 and standard deviation 5.0.
+• Now find the X value so that only 20% of all values are below this X
+
+
+
+
+                                               .2000
+
+
+
+                                                       ?   8.0               X
+ Statistics for Business and Economics, 6e ©
+                                                       ?    0    Chap 6-35   Z
+ 2007 Pearson Education, Inc.
+    Find the Z value for 20% in the Lower Tail
+                           1. Find the Z value for the known probability
+              Standardized Normal Probability • 20% area in the lower
+              Table (Portion)                   tail is consistent with a
+                             z                F(z)
+                                                     Z value of -0.84
+
+                          .82             .7939                           .80
+                                                        .20
+                          .83             .7967
+
+                          .84             .7995
+                                                                ?   8.0         X
+                          .85             .8023               -0.84 0           Z
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+                                     Finding the X value
+                                 2. Convert to X units using the formula:
+
+                                                  X = μ + Zσ
+
+                                                    = 8.0 + ( −0.84 )5.0
+
+                                                    = 3.80
+
+                                              So 20% of the values from a distribution
+                                              with mean 8.0 and standard deviation
+                                              5.0 are less than 3.80
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+The Exponential Distribution
+                       Probability
+                      Distributions
+
+                                                     Continuous
+                                                      Probability
+                                                     Distributions
+
+                                                             Normal
+
+                                                            Uniform
+
+                                                          Exponential
+      Statistics for Business and Economics, 6e © 2007 Pearson Education,
+      Inc.
+The Exponential Distribution
+ • Used to model the length of time between two occurrences of an
+   event (the time between arrivals)
+
+         • Examples:
+            • Time between trucks arriving at an unloading dock
+            • Time between transactions at an ATM Machine
+            • Time between phone calls to the main operator
+
+
+
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+The Exponential Distribution                                                          (continued)
+
+
+   • The exponential random variable T (t>0) has a probability
+     density function
+
+                                        −λt
+                f(t) = λ e                           for t  0
+
+   • Where
+      • 1/ is the mean number of occurrences per unit time
+      • t is the number of time units until the next occurrence
+      • e = 2.71828
+
+
+                Statistics for Business and Economics, 6e © 2007 Pearson Education,
+                Inc.
+       The Exponential Distribution
+                        • T is said to follow an exponential probability distribution
+                         defined by a single parameter, its mean 1/ (lambda)
+
+
+
+                        • The cumulative distribution function (the probability that
+                          an arrival time is less than some specified time t) is
+                                                                              −λt
+                                                         F(t) = 1− e
+                                 where        e = mathematical constant approximated by 2.71828
+                                              1/ = the population mean number of arrivals per unit
+                                              t = any value of the continuous variable where t > 0
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+         Exponential Distribution Example
+         Example: Customers arrive at the service counter at the rate of 15 per
+         hour. What is the probability that the arrival time between
+         consecutive customers is less than three minutes?
+
+
+
+
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+         Exponential Distribution Example
+         Example: Customers arrive at the service counter at the rate of 15 per
+         hour. What is the probability that the arrival time between
+         consecutive customers is less than three minutes?
+
+
+                      ▪       The mean number of arrivals per hour is 15, so  = 15
+                      ▪       Three minutes is .05 hours
+                      ▪       P(arrival time < .05) = 1 – e- X = 1 – e-(15)(.05) = 0.5276
+                      ▪       So there is a 52.76% probability that the arrival time
+                              between successive customers is less than three
+                              minutes
+Statistics for Business and Economics, 6e ©
+2007 Pearson Education, Inc.
+References
+
+S.C. Gupta and V.K. Kapoor, Fundamentals of Mathematical Statistics, Sultan
+Chand & Sons.
+
+S. Palaniammal, Probability and Random Variables, PHI Learning.
+
+K. Sundarapandian, Probability, Statistics and Queuing Theory, PHI Learning.
+
+J. T. Mc Clave, Statistics for Business and Economics, Pearson Education, Inc.
+

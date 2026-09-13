@@ -1,0 +1,126 @@
+Method of Moments(MOM)
+    Statistics and Probability – MAS2001
+   Introduction
+
+       Parameter Estimation
+          Parameter estimation is the process of using sample data to estimate the values of
+          unknown population parameters.
+
+
+
+      Two Common Methods of Parameter Estimation
+
+           1           Method of Moments (MOM)
+
+
+           2          Maximum Likelihood Estimation (MLE)
+
+
+
+
+MAS2001 | Statistics and Probability | Manipal University Jaipur 1
+THE METHOD OF MOMENTS WORKS BY EQUATING POPULATION MOMENTS WITH
+SAMPLE MOMENTS.
+
+Population r-th moment about origin
+                              μ′ᵣ = E(Xʳ)
+
+
+Sample r-th moment
+
+
+
+
+Idea: Replace theoretical moments with sample moments and solve for unknown parameters.
+STEPS IN METHOD OF MOMENTS
+Step 1: Write the Population Moments
+ Compute the first k theoretical (population) moments about the origin:
+
+
+
+
+Step 2: Compute the Sample Moments
+ Compute the corresponding sample moments from the observed data:
+STEPS IN METHOD OF MOMENTS
+Step 3: Equate Population and Sample Moments
+
+
+
+
+Step 4: Solve for Parameters
+
+ Solve the resulting k equations to obtain estimates of the unknown parameters.
+
+
+
+
+Step 5: State the MoM Estimators
+EXAMPLE 1 — POISSON DISTRIBUTION
+Question
+ Estimate the parameter λ of a Poisson distribution using the Method of Moments.
+
+
+Solution
+
+
+
+
+                        (The parameter of the Poisson distribution)
+
+
+    Method of Moments says:
+EXAMPLE 1 — POISSON DISTRIBUTION
+Step-by-Step Derivation                           Solve for λ
+ Put r = 1
+
+ μ′₁ = λ (First population moment about origin)
+
+
+
+ μ′₁ = m′₁
+EXAMPLE 2 — EXPONENTIAL DISTRIBUTION
+Question
+ Estimate the parameter λ of the Exponential distribution using the Method of Moments.
+
+
+Solution
+
+
+
+
+   Method of Moments says:
+EXAMPLE 2 — EXPONENTIAL DISTRIBUTION (STEP-BY-STEP SOLUTION)
+Step-by-Step Derivation                   Solve for λ
+ Put r = 1
+
+ μ′₁ = 1/λ
+
+ (First population moment about origin)
+
+
+
+ μ′₁ = m′₁
+   Practice Question: Method of Moments Estimation
+
+      Consider the Pareto random variable X with probability density function
+
+
+
+
+        Using the Method of Moments (MoM), estimate the unknown parameter θ.
+        Does the resulting moment estimator always make sense?
+
+
+
+
+       Think Before Solving: Identify the first population moment and equate it with the first sample moment.
+
+
+
+MAS2001 | Statistics and Probability | Practice Question | Slide
+References
+ 1. Devore, J. L. (2016). Probability and statistics for engineering and the sciences (9th ed.). Cengage Learning.
+ 2. Gupta, S. C. & Kapoor, V. K. (2002). Fundamentals of Mathematical Statistics (10th ed.). Sultan Chand & Sons.
+ 3. Devore, J. L., Probability & Statistics for Engineering and the Sciences, 8th Edition, Cengage Learning, 2012.
+ 4. K. Sundarapandian, Probability, Statistics and Queuing Theory, PHI Learning.
+
