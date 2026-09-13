@@ -1,0 +1,13 @@
+You are transcribing ONE slide from a university probability and statistics lecture deck for exam revision. Output markdown only. No preamble, no closing commentary, no headings other than the slide title.
+
+Rules:
+1. Transcribe every visible word of text verbatim. Keep bullet order and numbering.
+2. Rebuild every equation as LaTeX. Use inline $...$ for short expressions and display $$...$$ for standalone formulas. Restore the structure that PDF text extraction destroys: binomial coefficients as \binom{n}{x}, fractions as \frac{}{}, summations as \sum, piecewise definitions as \begin{cases}, and correct subscripts and superscripts. If something is visibly a formula, do not leave it written as plain running text.
+3. For tables, emit a markdown table with the same rows and columns.
+4. For every diagram, chart, histogram, curve, tree or figure, add a line starting with "Figure:" followed by what it shows, including axis labels, numeric ticks you can read, and the shape of the curve.
+5. Keep worked examples in order. Preserve step labels such as Solution, Step 1, Given, Formula, Answer. Keep every number exactly as printed.
+6. Never invent content. Never complete a formula from memory. Never add an example that is not on the slide.
+7. Never output a URL, a domain name, or a markdown link. If the slide shows a logo or a decorative image, ignore it.
+8. If a word or symbol is genuinely unreadable, write [illegible] instead of guessing.
+9. First line: "## " followed by the slide title exactly as printed. If the slide has no title, the first line is "## (untitled)".
+10. Last line: "page:NNN" where NNN is the slide number if the deck prints one, otherwise omit the line.

@@ -1,0 +1,87 @@
+# MAS2001 MTE source material
+# Data file consumed by scripts/convert.py. Not code.
+# Every path is an absolute path to an existing PDF. Nothing is moved or deleted.
+
+dpi: 110
+max_tokens: 6000
+workers: 6
+page_dir: work/pages
+out_dir: md
+
+sources:
+  - label: ppt3-discrete-prob-dist
+    path: "/home/liebert511/PS/PPT 3 SnP LMS.pdf"
+    pages: 28
+    author: "Dr. Ashish Kumar"
+    topic: "Discrete probability distributions, binomial"
+    sha256: "9cc7f631c99f5afd171767ad47ab653ef1e5033e85ccdf1b8a643f27cfae1dea"
+
+  - label: ppt4-continuous-prob-dist
+    path: "/home/liebert511/PS/PPT 4 SnP LMS.pdf"
+    pages: 44
+    author: "Dr. Ashish Kumar"
+    topic: "Continuous distributions: uniform, normal, exponential"
+    sha256: "b3de25d8294cf071a255e7620f158204f1101668df5c1ec79e49e203d532c191"
+
+  - label: ppt5-estimation-summary
+    path: "/home/liebert511/PS/PPT 5 SnP LMS.pdf"
+    pages: 26
+    author: "Dr. Shamshad Ur Rasool"
+    topic: "Theory of estimation, characteristics of a good estimator"
+    sha256: "2af21af1032ce9a1fc2d6566b5eb6f7a38c97ea387ada5e2f9725c549e3679b9"
+
+  - label: lms-theory-of-estimation
+    path: "/home/liebert511/PS/LMS- Theory_of_Estimation_.pdf"
+    pages: 40
+    author: "Dr. Shamshad Ur Rasool"
+    topic: "Theory of estimation, expanded deck"
+    sha256: "0c8a88567cec1521ffec203c6ea64f7d91e940144ced729d1e50b6e690e7b95c"
+
+  - label: lms-standard-error-clt
+    path: "/home/liebert511/PS/LMS -Standard Error & Central Limit Theorem.pdf"
+    pages: 19
+    author: "Dr. Ashish Kumar"
+    topic: "Population, sample, standard error, central limit theorem"
+    sha256: "e48f4981ed692c1842903f75195dab348596c8e963ceca174bfcd5e7e698c807"
+
+  - label: lms-method-of-moments
+    path: "/home/liebert511/PS/LMS -Method of Moments(MOM).pdf"
+    pages: 11
+    author: "Dr. Ashish Kumar"
+    topic: "Method of moments, parameter estimation"
+    sha256: "9abbabce952e5e086496f0046a01c2e00e25ee9bd93b85bd5d8755ab8756650a"
+
+  - label: lms-maximum-likelihood
+    path: "/home/liebert511/PS/Maximum Likelihood Estimator(MLE).pdf"
+    pages: 16
+    author: "Dr. Ashish Kumar"
+    topic: "Maximum likelihood estimation"
+    sha256: "0723bb0d11d0cb8f7b71426985876131f2d558f3f2c0bbdcf84612828d341c24"
+
+  - label: notes-lecture-series-01-09
+    path: "/home/liebert511/muj-academics/handouts/Lecture notes MAS2001_SnP_1_9.pdf"
+    pages: 147
+    author: "Dr. Vivek Singh"
+    topic: "Course lecture series 01 to 09, units 1 and 2 live here"
+    sha256: "96e4e4053587c4e4aa8b7f63bac905f9d8b638e220df1d0aef6110f5f8bad34e"
+
+  - label: mas2001-course-handout
+    path: "/home/liebert511/muj-academics/courses/MAS2001/MAS2001_Course_Handout.pdf"
+    pages: 7
+    author: "Department of Mathematics and Statistics"
+    topic: "Course outcomes, assessment scheme, MTE weight, textbooks"
+    sha256: "600361e9666d0493528411e58f7bd0816733f7820a538223d0bd32516b2707ba"
+
+  - label: mas2001-assignment-1
+    path: "/home/liebert511/muj-academics/courses/MAS2001/MAS2001-Assignment 1.pdf"
+    pages: 6
+    author: "Course faculty"
+    topic: "Assignment 1 problem set"
+    sha256: "2ab4f6511361b75b8cc2924c9e1182de1387efae18b3d804ca3c7b908d1dc037"
+
+  - label: mas2001-assignment-2
+    path: "/home/liebert511/Videos/Assignment 2_MAS2001-2.pdf"
+    pages: 4
+    author: "Course faculty"
+    topic: "Assignment 2 problem set"
+    sha256: "5ff197311b6037e1211ccbf2540c02d9340f52ccc3e94bc9c5484d3a2befb18f"
