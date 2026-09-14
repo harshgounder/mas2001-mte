@@ -14,7 +14,7 @@ Goal: know exactly what the paper can ask, and close the one hole that has no so
    Outcome: you can say out loud which lectures are in scope (1 to 21) and which are not (22+).
 2. Read `reports/03-FORMULA-SHEET.md` end to end. 40 minutes. Do not memorise yet, just map.
 3. Chebyshev block, since it has no slides anywhere. `reports/03-FORMULA-SHEET.md` section E
-   then `reports/04-QUESTION-BANK.md` section E. 60 minutes. Re-derive the dice bound 35/54
+   then `reports/04-QUESTION-BANK.md` section 6. 60 minutes. Re-derive the dice bound 35/54
    and the 19/24 bound by hand without looking.
 4. Reproduce the two Chebyshev bounds from memory on blank paper. 20 minutes.
 5. Skim `md/notes-lecture-series-01-09.md` p001 to p011, the course framing, once. 40 minutes.
@@ -92,6 +92,42 @@ Gate: 24 or more out of 30 on the mock, with no formula looked up during the sit
    uniform (a+b)/2 and (b-a)^2/12, exponential 1/lambda and 1/lambda^2, normal mu and sigma^2)
    from memory. 20 minutes.
 3. No new material. Nothing below lecture 22.
+
+## Re-pin, Monday 14 September evening (supersedes Days 0 and 1)
+
+Written after the slides-versus-syllabus audit in `10-SLIDES-VS-SYLLABUS.md`. Four slots
+remain before the window opens on Friday 18: tonight, then Tuesday, Wednesday and Thursday
+17, the last clear day. The plan below assumes Days 0 and 1 were partial at best.
+
+Tonight, 3 hours, covers what Day 0 and Day 1 were for:
+
+1. Chebyshev block, first, because it has no source anywhere. `reports/03-FORMULA-SHEET.md`
+   section E, then `reports/04-QUESTION-BANK.md` section 6. 60 minutes. Re-derive the dice
+   bound 35/54 and the 19/24 bound on paper without looking. Gate: write both forms of the
+   inequality from memory and say why it needs no distributional assumption.
+2. `md/notes-lecture-series-01-09.md` p012 to p062, one fast pass with the formula sheet
+   open. 60 minutes. The examinable skeleton: sample space, axioms, conditional probability,
+   event independence, random variable, discrete versus continuous.
+3. `md/notes-lecture-series-01-09.md` p063 to p111, second pass at exam depth. 60 minutes.
+   PMF/CDF layout, expectation, variance, the shortcut formula, the rules of variance.
+4. If anything slips, it moves to Tuesday morning, not to 2 am.
+
+The independence gap, 10 minutes, before Tuesday's distributions block: from
+`reports/03-FORMULA-SHEET.md` sections C and D write down E(XY) = E(X)E(Y) under
+independence and Var(X + Y) = Var(X) + Var(Y), then recompute Var(sum of two dice) = 35/6
+from Var(one die) = 35/12. Assignment 1 already graded this rule, it is cheap to own.
+
+Tuesday 15 September: Day 2 as written above, unchanged (continuous rv block, binomial,
+Poisson).
+Wednesday 16 September: Day 3 as written above, unchanged (uniform, normal, exponential,
+standard error, CLT). This is the heaviest day; protect it.
+Thursday 17 September: Day 4 as written above, unchanged (estimation block, then the mock
+closed book, then repair what it exposes).
+
+Checkpoint on Thursday after the mock: 24 or more out of 30 means stay the course. 18 to 23
+means Friday morning goes to the weak block only, no new material. Below 18 means the weak
+block is almost certainly the units 1 and 2 deck or the CLT, and Friday morning goes there
+before the formula sheet drill.
 
 ## Weekly shape of a study day
 

@@ -203,4 +203,117 @@ The two places your own submission departs from the key are analysed in
 
 ---
 
-<!-- SECTIONS 8 AND 9 ARE APPENDED WHEN THE LIMIT THEOREM AND ESTIMATION DECKS FINISH CONVERTING -->
+## 9. Estimation
+
+### 9.1 Comparing three estimators of a normal mean (ppt5 p015 to p018, and lms-theory p017 to p022)
+
+Sample of 5 from a normal population, estimators t1 = mean, t2 = (X1+X2)/2 + X3, and
+t3 = (2X1 + X2 + lambda X3)/3 with lambda chosen for unbiasedness.
+
+```
+  lambda:      E(t3) = (2mu + mu + lambda mu)/3 = [(3+lambda)/3] mu, so lambda = 0
+  unbiased:    t1 yes (mean of 5 means), t2 NO, E(t2) = mu + mu = 2mu, t3 yes
+  variances:   Var(t1) = sigma^2/5 = 0.2000 sigma^2
+               Var(t2) = sigma^2/2 + sigma^2 = 1.5000 sigma^2
+               Var(t3) = (4 sigma^2 + sigma^2)/9 = 0.5556 sigma^2
+  best:        t1, the sample mean, smallest variance among the unbiased ones
+```
+
+### 9.2 A second set with a different lambda position (ppt5 p019 to p021)
+
+T1 = X1 + X2 - X3, T2 = 2X1 + 3X3 - 4X2, T3 = (lambda X1 + X2 + X3)/3.
+
+```
+  unbiased:    E(T1) = mu, E(T2) = (2+3-4) mu = mu, both unbiased
+               T3 needs lambda = 1, which makes T3 the sample mean
+  variances:   Var(T1) = 3 sigma^2
+               Var(T2) = (4 + 9 + 16) sigma^2 = 29 sigma^2
+               Var(T3) = sigma^2/3
+  best:        T3
+  consistency: T3 is the sample mean, so it is consistent. T1 has variance 3 sigma^2 for
+               every sample size when the sample size is fixed at three, which is the trap:
+               consistency is a statement about behaviour as n grows
+```
+
+### 9.3 Real life numericals, quick set (ppt5 p022 to p025)
+
+```
+  response times  8 values summing to 1640, point estimate mean = 205 ms, estimator X bar
+  packet success  465 of 500, estimator p hat = X/n, estimate 0.93
+  battery life    n = 25, X bar = 8.4, sigma = 1.5 known, 95 percent interval
+                  8.4 +- 1.96(1.5/5) = 8.4 +- 0.588, so (7.81, 8.99) hours
+```
+
+The battery item uses a confidence interval, which is lecture 25 territory and out of MTE
+scope, but it costs one line and it is given on the deck, so keep the formula
+X bar +- z(sigma / sqrt(n)) in reserve.
+
+## 8. Sampling, standard error and the central limit theorem
+
+### 8.1 Population against sample, and what standard error measures (lms-standard-error-clt p002 to p004)
+
+```
+  population   size N, described by parameters   mu, sigma
+  sample       size n, described by statistics   X bar, s
+  standard error of the mean   SE = sigma / sqrt(n)
+```
+
+### 8.2 Lightbulb standard error (lms-standard-error-clt p005)
+
+sigma = 100 hours.
+
+```
+  n = 25   SE = 100/5  = 20 hours
+  n = 100  SE = 100/10 = 10 hours
+  quadrupling n halves the standard error, verified in the checker run
+```
+
+### 8.3 The three rules and the n = 30 boundary (lms-standard-error-clt p007 to p010)
+
+```
+  centre   mean of sample means equals mu
+  spread   standard deviation of sample means equals sigma / sqrt(n)
+  shape    the sampling distribution approaches normal as n grows
+  rule     any population, n > 30, the sample mean is approximately normal
+           n <= 30 with a normal population, the sample mean is exactly normal
+           n <= 30 with a non normal population, the CLT does not apply
+```
+
+### 8.4 ATM wait times, skewed population (lms-standard-error-clt p011 to p012)
+
+```
+  mu = 4 minutes, sigma = 2, n = 36
+  SE = 2/6 = 0.333333
+  Z = (4.5 - 4)/0.333333 = 1.50
+  P(X bar > 4.5) = 0.0668, so 6.68 percent          slide 6.68 percent  OK
+```
+
+### 8.5 Impurity, the one with the typo (lms-standard-error-clt p013 to p014)
+
+```
+  mu = 4.0 g, sigma = 1.5 g, n = 50, find P(3.5 < X bar < 3.8)
+  SE = 0.212132
+  Z1 = -2.36, Z2 = -0.94   (the slide prints Z2 as -0.4, see reports/09-ERRATA.md item 6)
+  answer 0.1645 by table, 0.1637 exact               slide 0.1644  OK
+```
+
+### 8.6 LED bulbs, heavily skewed (lms-standard-error-clt p015 to p016)
+
+```
+  mu = 50000, sigma = 8000, n = 64
+  SE = 8000/8 = 1000
+  Z = (48000 - 50000)/1000 = -2.00
+  P(X bar < 48000) = 0.0228                          slide 0.0228  OK
+```
+
+### 8.7 Machine life, normal population, small n (lms-standard-error-clt p017 to p018)
+
+```
+  mu = 7 years, sigma = 1 year, n = 9
+  SE = 1/3
+  Z1 = (6.4 - 7)/(1/3) = -1.80, Z2 = (7.2 - 7)/(1/3) = 0.60
+  P(6.4 < X bar < 7.2) = 0.4641 + 0.2257 = 0.6898    slide 0.6898  OK
+```
+
+This one is the template for a paper question: a normal population, a small n where the CLT
+does not even need to be invoked because the population is already normal, and both tails.

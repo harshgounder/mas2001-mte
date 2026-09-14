@@ -60,11 +60,13 @@ risk topic per page of material available.
 
 ## 3. Duplication and overlap found
 
-1. `ppt5-estimation-summary` (26 pages) is contained inside `lms-theory-of-estimation`
-   (40 pages). Pages p001 to p026 of each line up slide for slide, except that the
-   lms version adds p031 to p039 on confidence intervals. Revising one is enough,
-   and the lms version is the superset while the ppt5 version has cleaner worked
-   numericals near p022 to p025.
+1. `ppt5-estimation-summary` (26 pages) and `lms-theory-of-estimation` (40 pages) are the
+   same deck at two trims. Measured by token similarity between every pair of pages, 13 of
+   the 26 ppt5 pages have a match above 0.8 similarity in the theory deck, and the pairs
+   line up on a one page offset (ppt5 p008 matches lms p009 at 1.00). The theory deck is the
+   longer version and adds p031 to p039 on confidence intervals, which are out of MTE scope.
+   Revising one is enough. Read ppt5 for the cleaner worked numericals near p022 to p025,
+   and the theory deck for anything ppt5 dropped.
 2. `~/PS/LMS -Standard Error & Central Limit Theorem.pdf` and its `(1)` sibling are
    byte identical, sha256 e48f4981ed69. Both copies still sit in `~/PS`. Nothing was
    deleted, `sources.yaml` lists the non `(1)` copy once.

@@ -45,10 +45,12 @@ Read `reports/02-MTE-REPORT.md` first. It is the summary and it cites everything
   02  the main report: what is on disk, what is in scope, weak spots, risks, plan
   03  formula sheet, closed book, every line inside MTE scope
   04  question bank, the corpus's own problems with verified answers
-  05  five day plan, 13 to 17 September
-  06  verification record, both layers, with the failures that were caught
+  05  five day plan, 13 to 17 September, plus the 14 September re-pin
+  06  verification record, all three layers, with the failures that were caught
   07  mock MTE paper, 30 marks, same shape as the real one
   08  mock worked solutions, every number computed
+  09  errata found in the source material, at the claim site where possible
+  10  slides vs the MTE syllabus, lecture by lecture, with the two real gaps
   evidence/  raw verification output, copied verbatim
 ```
 

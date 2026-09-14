@@ -1,4 +1,11 @@
 {
+  "lms-maximum-likelihood": {
+    "pages": 16,
+    "chars": 9099,
+    "done": 16,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
   "lms-method-of-moments": {
     "pages": 11,
     "chars": 3559,
@@ -6,10 +13,66 @@
     "flagged": 0,
     "dashes_fixed": 5
   },
-  "ppt3-discrete-prob-dist": {
+  "lms-standard-error-clt": {
+    "pages": 19,
+    "chars": 11249,
+    "done": 19,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "lms-theory-of-estimation": {
+    "pages": 40,
+    "chars": 20137,
+    "done": 40,
+    "flagged": 0,
+    "dashes_fixed": 5
+  },
+  "mas2001-assignment-1": {
+    "pages": 6,
+    "chars": 7548,
+    "done": 6,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "mas2001-assignment-2": {
+    "pages": 4,
+    "chars": 7394,
+    "done": 4,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "mas2001-course-handout": {
     "pages": 7,
-    "chars": 1409,
+    "chars": 14859,
     "done": 7,
+    "flagged": 0,
+    "dashes_fixed": 1
+  },
+  "notes-lecture-series-01-09": {
+    "pages": 147,
+    "chars": 63861,
+    "done": 147,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "ppt3-discrete-prob-dist": {
+    "pages": 28,
+    "chars": 10824,
+    "done": 28,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "ppt4-continuous-prob-dist": {
+    "pages": 44,
+    "chars": 28938,
+    "done": 44,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "ppt5-estimation-summary": {
+    "pages": 26,
+    "chars": 11030,
+    "done": 26,
     "flagged": 0,
     "dashes_fixed": 0
   }

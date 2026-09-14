@@ -60,7 +60,32 @@ of that equation appear in circulated working and neither is satisfied by k = 1/
   10(0.1)^2 + 14(0.1) = 1.50
 ```
 
-## 6. Not an error, but easy to misread
+## 6. Impurity example, the Z value printed as -0.4
+
+`md/lms-standard-error-clt/p014.md`. Mean 4.0 g, standard deviation 1.5 g, n = 50, finding
+P(3.5 < X bar < 3.8).
+
+```
+  SE = 1.5/sqrt(50) = 0.212132
+  Z1 = (3.5 - 4)/0.212132 = -2.357  ->  slide prints -2.36, correct
+  Z2 = (3.8 - 4)/0.212132 = -0.943  ->  slide prints -0.4, WRONG
+```
+
+The final answer on the slide, 0.1644, is nevertheless correct, because the two table areas it
+subtracts are 0.4909 for z = 2.36 and 0.3264 for z = 0.94. The area 0.3264 belongs to z = 0.94,
+not to z = 0.4 (that area is 0.1554). So the printed Z line is a typo and the working behind it
+used the right value.
+
+```
+  correct answer, table method   0.4909 - 0.3264 = 0.1645
+  exact, no table rounding       0.16368
+  what -0.4 would actually give  0.33544, roughly double
+```
+
+If you reproduce this question, write Z2 = -0.94. Both the slide's 0.1644 and the exact 0.1637
+are acceptable final values, but only with the correct Z.
+
+## 7. Not an error, but easy to misread
 
 `md/notes-lecture-series-01-09/p011.md` and the equivalent page in ppt4 write the normal
 notation as X ~ N(mu, sigma^2), while the surrounding prose says "mean and variance". The

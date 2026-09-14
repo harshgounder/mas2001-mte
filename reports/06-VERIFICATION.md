@@ -78,3 +78,29 @@ thresholds, not in the material:
 After those four corrections the checker is 79 of 79. The corrections are recorded here
 because a verification gate that was quietly loosened is worth less than one whose
 adjustments are visible.
+
+## Layer 3: second reader fidelity gate, run 14 September
+
+The gate renders 12 randomly chosen, deterministic pages (seed 20260913, stratified across
+labels) and reads them again with a different model on the same transcription prompt, then
+compares the number sets of the two readings.
+
+First attempt, 13 September: the pro model that had been planned as the second reader
+returned HTTP 404 ("No endpoints found that support image input") on all 12 calls. The 404s
+carried no image, which makes the comparison meaningless, and its single recorded PASS is
+vacuous: that page carries no numbers, so the comparator's zero-token guard scored it 1.000
+against an empty reading. That run is void and archived at `work/FIDELITY-void-pro-404.md`
+and `work/fidelity-run-pro-404.log`. Nothing cites it.
+
+Re-run, 14 September, second reader `deepseek-v4.1-flash` after a two page confirm showed it
+reads images on the live endpoint (the Poisson page came back with the correct pmf, matching
+the primary transcription term for term). Result: 12 pages, 11 PASS, 1 REVIEW.
+
+The REVIEW is `ppt3-discrete-prob-dist` p023 at agreement 0.400. Hand checked: the two
+readings are the same slide, the difference is that the primary writes the Poisson support
+as "0, 1, 2" (three number tokens) while the second writes "0,1,2" (one token), and the
+comparator counts tokens. Content identical, verdict artifact.
+
+The honest state of this gate: it is a token-set comparison over 12 pages, not a full audit.
+It shows no disagreement where numbers were read, on the pages sampled. Raw rows in
+`work/FIDELITY.md`, second readings kept in `work/fidelity/<label>/`.

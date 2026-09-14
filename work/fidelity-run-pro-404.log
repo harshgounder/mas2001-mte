@@ -1,0 +1,25 @@
+vision exit 1 for /home/liebert511/mas2001-mte/work/pages/mas2001-assignment-2/p004.png: HTTP 404: {"error":{"message":"{\"error\":{\"message\":\"No endpoints found that support image input\",\"type\":\"AI_APICallError\",\"param\":{\"error\":\"No endpoints found that support image input\"
+fidelity mas2001-assignment-2 p004: agreement 0.000, figures 0/0, title no, REVIEW
+vision exit 1 for /home/liebert511/mas2001-mte/work/pages/lms-maximum-likelihood/p002.png: HTTP 404: {"error":{"message":"{\"error\":{\"message\":\"No endpoints found that support image input\",\"type\":\"AI_APICallError\",\"param\":{\"error\":\"No endpoints found that support image input\"
+fidelity lms-maximum-likelihood p002: agreement 1.000, figures 0/0, title no, PASS
+vision exit 1 for /home/liebert511/mas2001-mte/work/pages/ppt5-estimation-summary/p020.png: HTTP 404: {"error":{"message":"{\"error\":{\"message\":\"No endpoints found that support image input\",\"type\":\"AI_APICallError\",\"param\":{\"error\":\"No endpoints found that support image input\"
+fidelity ppt5-estimation-summary p020: agreement 0.000, figures 0/0, title no, REVIEW
+vision exit 1 for /home/liebert511/mas2001-mte/work/pages/mas2001-assignment-1/p006.png: HTTP 404: {"error":{"message":"{\"error\":{\"message\":\"No endpoints found that support image input\",\"type\":\"AI_APICallError\",\"param\":{\"error\":\"No endpoints found that support image input\"
+fidelity mas2001-assignment-1 p006: agreement 0.000, figures 0/0, title no, REVIEW
+vision exit 1 for /home/liebert511/mas2001-mte/work/pages/notes-lecture-series-01-09/p100.png: HTTP 404: {"error":{"message":"{\"error\":{\"message\":\"No endpoints found that support image input\",\"type\":\"AI_APICallError\",\"param\":{\"error\":\"No endpoints found that support image input\"
+fidelity notes-lecture-series-01-09 p100: agreement 0.000, figures 0/0, title no, REVIEW
+vision exit 1 for /home/liebert511/mas2001-mte/work/pages/lms-standard-error-clt/p012.png: HTTP 404: {"error":{"message":"{\"error\":{\"message\":\"No endpoints found that support image input\",\"type\":\"AI_APICallError\",\"param\":{\"error\":\"No endpoints found that support image input\"
+fidelity lms-standard-error-clt p012: agreement 0.000, figures 0/0, title no, REVIEW
+vision exit 1 for /home/liebert511/mas2001-mte/work/pages/mas2001-course-handout/p003.png: HTTP 404: {"error":{"message":"{\"error\":{\"message\":\"No endpoints found that support image input\",\"type\":\"AI_APICallError\",\"param\":{\"error\":\"No endpoints found that support image input\"
+fidelity mas2001-course-handout p003: agreement 0.000, figures 0/0, title no, REVIEW
+vision exit 1 for /home/liebert511/mas2001-mte/work/pages/ppt3-discrete-prob-dist/p023.png: HTTP 404: {"error":{"message":"{\"error\":{\"message\":\"No endpoints found that support image input\",\"type\":\"AI_APICallError\",\"param\":{\"error\":\"No endpoints found that support image input\"
+fidelity ppt3-discrete-prob-dist p023: agreement 0.000, figures 0/0, title no, REVIEW
+vision exit 1 for /home/liebert511/mas2001-mte/work/pages/lms-theory-of-estimation/p037.png: HTTP 404: {"error":{"message":"{\"error\":{\"message\":\"No endpoints found that support image input\",\"type\":\"AI_APICallError\",\"param\":{\"error\":\"No endpoints found that support image input\"
+fidelity lms-theory-of-estimation p037: agreement 0.000, figures 0/0, title no, REVIEW
+vision exit 1 for /home/liebert511/mas2001-mte/work/pages/ppt4-continuous-prob-dist/p006.png: HTTP 404: {"error":{"message":"{\"error\":{\"message\":\"No endpoints found that support image input\",\"type\":\"AI_APICallError\",\"param\":{\"error\":\"No endpoints found that support image input\"
+fidelity ppt4-continuous-prob-dist p006: agreement 0.000, figures 1/0, title no, REVIEW
+vision exit 1 for /home/liebert511/mas2001-mte/work/pages/lms-method-of-moments/p002.png: HTTP 404: {"error":{"message":"{\"error\":{\"message\":\"No endpoints found that support image input\",\"type\":\"AI_APICallError\",\"param\":{\"error\":\"No endpoints found that support image input\"
+fidelity lms-method-of-moments p002: agreement 0.000, figures 0/0, title no, REVIEW
+vision exit 1 for /home/liebert511/mas2001-mte/work/pages/mas2001-assignment-2/p001.png: HTTP 404: {"error":{"message":"{\"error\":{\"message\":\"No endpoints found that support image input\",\"type\":\"AI_APICallError\",\"param\":{\"error\":\"No endpoints found that support image input\"
+fidelity mas2001-assignment-2 p001: agreement 0.000, figures 0/0, title no, REVIEW
+RC=0

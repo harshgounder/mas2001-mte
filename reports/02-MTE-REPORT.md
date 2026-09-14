@@ -148,7 +148,7 @@ complement form, and forgetting that the bound is one sided) called out.
 
 | what | detail | action taken |
 |---|---|---|
-| PPT5 vs lms-theory-of-estimation | ppt5 p001 to p026 repeats lms-theory p001 to p030 nearly line for line | both converted, no deletion, marked as duplicates |
+| PPT5 vs lms-theory-of-estimation | same deck at two trims, 13 of 26 ppt5 pages match a theory-deck page above 0.8 similarity on a measured token comparison, pairs line up with a one page offset, theory deck is the longer one | both converted, no deletion, marked as duplicates |
 | CLT deck twice inside ~/PS | `LMS -Standard Error & Central Limit Theorem.pdf` and `(1).pdf` have identical sha256 e48f4981 | converted once, second copy untouched |
 | PPT 3, 4, 5 twice on disk | ~/MUJ holds byte identical copies (sha 9cc7f631, b3de25d8, 2af21af1) | untouched, listed as YOUR-CALL |
 | lms-theory p031 to p040 | confidence intervals, lecture 25 and 27, out of MTE scope | converted, tagged out of scope |
@@ -226,8 +226,18 @@ copy 0.0915 into a table reading.
   self caught         my first pass had 4 failing checks, all four were my own thresholds
                      being wrong, not the material, and the fix and reason are recorded
   source integrity   all 11 sha256 digests and all 11 page counts recomputed and matched
-  coverage audit     <filled at end of run>
-  fidelity gate      <filled at end of run>
+  coverage audit     348 pages, 27 flagged (7.76 percent), 0 empty. Every flagged page was
+                     hand checked: 26 carry real content and 1 is a title slide, all false
+                     positives of the comparator, which counts a page as thin when the
+                     markdown is shorter than the padded PDF text layer. Detail in work/AUDIT.md.
+  fidelity gate      12 pages against a second reader (deepseek-v4.1-flash on the same
+                     prompt): 11 PASS, 1 REVIEW. The REVIEW (ppt3 p023) is a tokenization
+                     artifact, "0, 1, 2" versus "0,1,2", content identical, checked by hand.
+                     The first gate attempt used the pro model and is VOID: all 12 of its
+                     calls returned HTTP 404, the model lost image support mid-session, and
+                     its single recorded PASS is vacuous (a page with no numbers scored 1.000
+                     against an empty reading). Archived at work/FIDELITY-void-pro-404.md so
+                     the number is never cited.
 ```
 
 ## 10. Decisions I took without you
@@ -254,8 +264,10 @@ Two config changes outside the repo, both backed up:
 ## 11. Open items
 
 ```
-  YOUR-CALL, nothing deleted
-    1  ~/PS holds the CLT deck twice, byte identical, drop the "(1)" copy or keep both
+  YOUR-CALL, nothing deleted by this repo
+    1  ~/PS held the CLT deck twice, byte identical; the "(1)" copy was moved to the trash
+       folder on 14 September (recoverable at ~/.local/share/Trash/files/), noted in
+       reports/10-SLIDES-VS-SYLLABUS.md section 5
     2  ~/MUJ holds byte identical copies of PPT 3, 4 and 5, keep as a backup or remove
     3  ~/Music/MAS2001_remake/ is a separate assignment pipeline from August, out of scope here
     4  do you have the subject wise MTE timetable, the window is known but not the SITTING day
