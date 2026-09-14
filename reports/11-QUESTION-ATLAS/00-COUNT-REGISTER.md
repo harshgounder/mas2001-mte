@@ -1,14 +1,14 @@
 # Count register, LOCKED 14 September 2026
 
-MTE scope only. Out of MTE syllabus material excluded entirely (not counted, not to be sorted):
-- lms-maximum-likelihood (16 pages), lms-method-of-moments (11 pages), mas2001-course-handout (no questions)
-- lms-theory p031 to p040 (confidence interval block, lecture 25) carries no questions
+MTE scope only. Everything out of the MTE syllabus is excluded entirely (not counted, not
+to be sorted). Exclusion list at the bottom, with proof that nothing from it leaked in.
 
 Counting rule (fixed, applied everywhere):
-- one item = one question / example / exercise, multi part counts once
-- worked examples count, including computed illustrations of definitions
-- narrative or discussion prompts do not count
-- ppt5 repeats the lms-theory estimation block; the 5 repeated items are removed in the unique column only
+- one item = one question / example / exercise / problem block; multi part counts once
+- counted: labeled problems and examples that derive a result or pose a concrete ask
+- not counted: display examples (definition or concept illustrations), rhetorical prompts,
+  theorem displays with proofs, formula-only slides, non-math illustrations, section
+  headers, figure captions
 
 ## Locked counts
 
@@ -18,16 +18,50 @@ Counting rule (fixed, applied everywhere):
 | 02 ppt3-discrete-prob-dist | 28 | 6 | 6 | |
 | 03 ppt4-continuous-prob-dist | 44 | 7 | 7 | |
 | 04 lms-standard-error-clt | 19 | 5 | 5 | |
-| 05 ppt5-estimation-summary | 26 | 5 | 0 | all 5 repeat in lms-theory |
-| 06 lms-theory-of-estimation | 40 | 7 | 2 | unique: the 2 sufficiency examples |
+| 05 ppt5-estimation-summary | 26 | 5 | 5 | counted here; all 5 also repeated in lms-theory |
+| 06 lms-theory-of-estimation | 40 | 7 | 2 | the 2 unique: sufficiency examples; other 5 repeat ppt5 |
 | teaching subtotal | 304 | 60 | 55 | |
 | assignment 1 | 6 | 24 | 24 | 10 MCQ, 6 short, 4 long, 4 application |
 | assignment 2 | 4 | 28 | 28 | 12 section A, 8 B, 4 C, 4 D |
 | GRAND TOTAL | - | 112 | 107 | |
 
 Boundary flag: the battery 95 percent CI example (ppt5 p024, lms-theory p029) uses lecture 25
-machinery. Kept in because "Point and Interval estimation" is on the MTE syllabus list.
+machinery. Kept in because "Point and Interval estimation" is on the MTE syllabus list itself.
 If dropped: 111 / 106.
+
+## Excluded, out of MTE syllabus (user order, 14 Sep)
+
+| source | pages | status |
+|---|---|---|
+| lms-maximum-likelihood | 16 | out of MTE, not counted, not sorted |
+| lms-method-of-moments | 11 | out of MTE, not counted, not sorted |
+| mas2001-course-handout | 7 | no questions on any page |
+| lms-theory p031 to p040 | 10 | confidence interval block (lecture 25), carries no question items |
+
+Verified: none of these appear in the 112 above. lms-theory's counted 7 items all sit in
+p016 to p029, which is the lectures 19 to 21 estimation block.
+
+## Excluded, not items (in-scope pages with no countable question)
+
+- deck01 p012, p017: non-math illustrations of the statistics definition
+- deck01 p021: discussion prompts to students, no answers exist
+- deck01 p115 to p116: narrative about probability of an exact value
+- deck01 p133, p136: section transition slides
+- ppt4 p017, p020: unlabeled one-line or visual illustrations
+
+## Boundary class (display examples), excluded by default
+
+These are labeled "Example" on the slides but only restate or showcase a definition or
+concept, with no derived problem. Excluded from the 112/107. Listed here so the line is
+visible, not hidden:
+
+- deck01 p023 random experiment examples, p024 sample space examples,
+  p025 mutually exclusive examples plus counter example, p027 independence examples
+- ppt5 p003 and lms-theory p003: terminology examples (one shared block)
+- ppt5 p007 and lms-theory p008: point vs interval comparison values (one shared block)
+
+If you want this class counted too: raw becomes 120, unique becomes 113. Default stays
+112 / 107 unless you say widen.
 
 ## Deck 01 manifest (30 items)
 
@@ -71,5 +105,8 @@ If dropped: 111 / 106.
 
 - every page of all decks read cover to cover in the 14 Sep session
 - counts cross checked by two automated marker sweeps plus manual page by page reconciliation
+- recheck after your "sure?" question: unique column attribution fixed (shared estimation
+  items now counted once under ppt5 so the column sums to 55), exclusion list and boundary
+  class written out explicitly, no other discrepancy found
 - the earlier annex estimate of 23 items for deck 01 was written before the full read;
   the post read number is 30, and 30 is the number that stands
