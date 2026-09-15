@@ -11,9 +11,14 @@ before acting (section 7).
   batch 1         11 sources fully processed: converted (348p), audited, fidelity-gated,
                   counted (112 items / 107 unique), classified, reports 00-10 written
   batch 2         23 sources arrived 15 Sep, listed + hashed in sources.yaml, NOT converted.
-                  The 19-unit processing queue is in reports/12-NEW-BATCH.md.
+                  The 19-unit processing queue is in reports/12-NEW-BATCH.md. U01 NOT started.
   corrections     Chebyshev has slides (S&P L10-11); 14 "not asked" siblings are confirmed
                   asked by real papers; exam format decoded from both MTE papers.
+  round 7         a peer codex audit (15 Sep 14:45) plus my own re-verification added errata
+                  16, 17 and 18, corrected 5.2 and 15, retracted a false duplicate row and
+                  fixed the in-scope drill total to 90. Evidence committed, 24 checks pass.
+                  Its 6 pipeline findings and the 2 stale vision defaults are OPEN, code,
+                  awaiting an explicit go.
   deadline        17 Sep 2025 was last year's MTE date; THIS year's window: Fri 18 to Fri 25
                   Sep 2026. Sitting day per subject not yet known (user knowledge item).
 ```
@@ -62,7 +67,7 @@ SCOPE CORRECTION 15 Sep, read section 6.1 of reports/12-NEW-BATCH.md before U04/
 2024-25 assignment 1 and 2 cover lectures 1-11 and 12-18, which are IN MTE scope. The old
 plan had all of U05 as out-of-scope revision. They are in fact 35 fresh in-scope question
 blocks, and the 2025-26 set adds 55 more (36 of them with printed answers). Total new MTE
-drill from the assignment files: 91 blocks. U05 is promoted ahead of the ETE papers.
+drill from the assignment files: 90 blocks. U05 is promoted ahead of the ETE papers.
 
 ~/PS now holds 34 files, of which 32 are sources.yaml entries (the other two are
 `.directory` and `syllabus.txt`, which is the MTE syllabus in text form). The 36 sources
@@ -125,6 +130,10 @@ batch-2 sources (labels already reserved in sources.yaml).
                                                    # corpus; the count is checked loosely)
   find ~/PS -maxdepth 1 -newermt '2026-09-15 00:00' -type f | wc -l   # 24 arrivals since 15 Sep (23 are batch-2)
   grep -c 'CORRECTED' ~/mas2001-mte/reports/*.md   # the 15 Sep corrections are in place
+  python3 -B ~/mas2001-mte/reports/evidence/verify-audit-round7-20260915.py
+                                                   # expect ALL CHECKS PASS, 24 checks:
+                                                   # errata 16-18, the counts, the false
+                                                   # duplicate row, the Chebyshev text layer
 ```
 
 Note on the extras found during the 15 Sep hygiene pass. `Assignment 2_MAS2001-2.pdf` is
@@ -142,23 +151,36 @@ extra sources are logged in sources.yaml.
 ## 8. Open items inherited
 
 ```
-  YOUR-CALL    1  ~/MUJ byte-identical PPT3/4/5: keep or remove (deletion needs approval)
+  YOUR-CALL    1  ~/MUJ byte-identical PPT3/4/5: keep or remove (deletion needs approval).
+                  CONFIRMED REAL 15 Sep: sha256 of all three match the ~/PS copies exactly
+                  (9cc7f631, b3de25d8, 2af21af1). It is a genuine duplicate set, not a
+                  near-copy.
                2  ~/Music/MAS2001_remake August pipeline: untouched, out of scope
                3  subject-wise MTE sitting day: only the window is known
-               4  mujstella.in watermarks: reseller mark on batch-2 PDFs, nothing to do
+               4  mujstella.in watermarks: reseller mark on batch-2 PDFs, nothing to do.
+                  NOTE 15 Sep: the Chebyshev deck carries a DIFFERENT reseller tag,
+                  MSV1RXZXSVM3TK2VFV6K, which also appears in every batch-2 assignment and
+                  paper text layer. Same class of mark, two different tags, filter both.
   PENDING      5  Google OAuth refresh token dead -> Drive sweep still blocked
-               5b the Chebyshev deck (S&P L10-11) has NO text layer (0 chars, pypdf vector).
-                  Any "read the deck" step needs the vision pass, not the pipeline.
+               5b the Chebyshev deck (S&P L10-11) DOES have a text layer: 3453 non-space
+                  characters, page 8 extracts in full, real embedded fonts, watermark
+                  MSV1RXZXSVM3TK2VFV6K. CORRECTED 15 Sep; item 5b previously said
+                  "0 chars, pypdf vector", which was false (see errata 5.2).
                5c errata 15: the Chebyshev deck's Q3 slide states one distribution and works
-                  another, and its inequality template is mis-specified; the printed variance
-                  and the final bound are internally consistent. Q1 and Q2 are sound and Q2 is
-                  the official MTE 2025-26 Q5. Teach from Q1/Q2, treat Q3 as mis-transcribed.
+                  another (real defect, now proven from the text layer), and page 8's
+                  DISPLAYED template line inverts the inequality. CORRECTED 15 Sep: the
+                  deck's theorem slide states both standard forms correctly, so an earlier
+                  note calling its k-sigma form "not the standard form" was itself wrong
+                  and is retracted. The printed variance and the final bound are internally
+                  consistent. Q1 and Q2 are sound and Q2 is the official MTE 2025-26 Q5.
+                  Teach from Q1/Q2, treat Q3 as mis-transcribed.
                6  the second edition of assignment 1 (asgn-faculty-variant) is internally
                   broken: its own row gives k = 0.0782 while its key prints k = 1/10.
                   Full transcription and a question-by-question comparison are owed at U05
                7  fidelity gate: run again after batch-2 conversion (deepseek reader)
                8  count register update after U04/U05: the in-scope assignment corpus grows
-                  by 91 blocks (15 + 20 + 19 + 36), more than the 52 already counted.
+                  by 90 blocks (15 + 20 + 19 + 36), more than the 52 already counted.
+                  CORRECTED 15 Sep: 90, not 91; 2024-25 A1 has 15 blocks, not 16.
                9  mock paper reshape to real A/B/C format (after U01)
 ```
 
@@ -169,7 +191,7 @@ extra sources are logged in sources.yaml.
   reports/11-QUESTION-ATLAS/     all question analysis (framework, counts, trees, plans)
   reports/02-MTE-REPORT.md       main summary of batch-1 work
   reports/05-FIVE-DAY-PLAN.md    the study plan (will be re-pinned with real format)
-  reports/09-ERRATA.md           15 errata, claim-site recorded
+  reports/09-ERRATA.md           18 errata, claim-site recorded
   md/<label>/pNNN.md             converted slides (batch 1 complete; batch 2 pending)
   work/manifest.jsonl            per-page provenance for everything converted
 ```

@@ -34,7 +34,7 @@ claim in this repo is sha-scoped: the only byte-identical duplicate that actuall
 ### B. Assignments (7 files, + 2 extra sources) - this year's set is new
 
 SCOPE WARNING, added 15 Sep after reading all of these page by page (see section 6.1).
-IN MTE scope: B1's assignment-1 and assignment-2 sections, B2, B3. That is 91 question blocks
+IN MTE scope: B1's assignment-1 and assignment-2 sections, B2, B3. That is 90 question blocks
 of lectures 1 to 18 drill, 36 of them with printed answers, the largest single block of new
 MTE material in the batch. OUT of MTE scope: B1's assignments 3-5, B4, B5, B6, B7 (their
 covers are MLE, MoM, sufficiency, Bayesian, confidence intervals, hypothesis testing,
@@ -93,12 +93,18 @@ F-test, ANOVA = lectures 22 to 36).
     - all ETE and re-sess papers (never seen)
     - 2025-26 assignments 1-5 (this year's set)
     - 2024-25 assignments 1-5 + Episode 2 (last year's set)
-  CHECKED, NOT NEW (byte-identical copies already catalogued):
-    - 2024-2025-Assignment 2.pdf = the batch-1 assignment-2 source file (sha 5ff19731,
-      same bytes, different path; the batch-1 copy lives in ~/Videos)
-    - (an earlier revision claimed three "(1)"/"(2)" paper copies here; recheck 15 Sep found
-      no such files anywhere on disk, so that claim is deleted. Sha-verified duplicates in the
-      whole corpus are one pair, listed above)
+  CHECKED, NOT NEW:
+    - none. CORRECTED 15 Sep: an earlier revision of this list named
+      `2024-2025-Assignment 2.pdf` as "byte-identical to the batch-1 assignment-2 source
+      (sha 5ff19731)". That is FALSE. sha 2024-2025-Assignment 2.pdf = d6dfb6ac, the
+      batch-1 source = 5ff19731, two different files with different text. sources.yaml
+      already lists them as separate labels (`asgn-2024-25-2` and `mas2001-assignment-2`),
+      so this table row was the only site carrying the wrong claim. It also reintroduced a
+      second false "duplicate" into a table whose A12-A14 rows had already been retracted
+      for the same class of error.
+    - the one real byte-identical pair in the whole corpus remains
+      `asgn-copy-2025-26` (`~/PS/Assignment 2_MAS2001-2.pdf`, sha 5ff19731) matching
+      `mas2001-assignment-2` (`~/Videos/Assignment 2_MAS2001-2.pdf`), listed below.
   SAME FAMILY, DIFFERENT EDITION (a second keyed edition, NOT a plain copy):
     - MAS2001-Assignment 1 .pdf carries Dr. Ruchika Mehta as faculty (batch-1 copy is
       Dr. Vivek Singh) AND a different pmf row in long Q2: p(x) = k, 2k, 2k, 3k, 3k, k^2,
@@ -180,18 +186,22 @@ F-test, ANOVA = lectures 22 to 36).
 
 Every assignment file was read on 15 Sep, text layer first (vision where the layer is empty,
 which is only Assignment 3 Episode 2). "Read" means every question stem of every page was
-extracted and inspected; it does NOT mean a full transcription of all 91 blocks, which is
+extracted and inspected; it does NOT mean a full transcription of all 90 blocks, which is
 U04/U05 work. What is actually in them:
 
 Every count below was re-derived from the file itself on 15 Sep by enumerating question
 labels, not estimated. Counts are BLOCKS (a multi-part question counts once), except where
-the row says parts.
+the row says parts. CORRECTED 15 Sep (round 7): the row for 2024-2025-Assignment 1 said 16
+blocks; it is 15 (labels run Q1..Q13, Q15, Q16, there is no Q14 in the file at all). The
+out-of-scope rows for assignments 3 and 5 are marked APPROXIMATE because their letter labels
+(A1, B2, ...) are split across lines by the text layer and a label-count read is not reliable;
+they are out of MTE scope, so no in-scope figure depends on them.
 
 ```
   file                               blocks  parts   layer   content                            MTE
-  2024-2025-Assignment 1                 16    -      good    RVs, cdf, pmf, expectation,
-                                                            Chebyshev. Labels Q1..Q16, with
-                                                            no Q14 in the source at all.     IN (1-11)
+  2024-2025-Assignment 1                 15    -      good    RVs, cdf, pmf, expectation,
+                                                            Chebyshev. Labels Q1..Q13, Q15,
+                                                            Q16, no Q14 in the source.       IN (1-11)
   2024-2025-Assignment 2                 20    32     good    CLT, binomial, Poisson, uniform,
                                                             normal, exp. Q1 is a 12-part
                                                             recall block, Q2..Q20 are
@@ -203,20 +213,24 @@ the row says parts.
   2025-26 set, assignments 3-5           45    -      good    Q22..Q45 continue the combined
                                                             file; MLE, MoM, Bayesian, CI,
                                                             tests, ANOVA                     OUT
-  2024-2025-Assignment 3                 22    -      good    labels A1..A10, B1..B5, C1..C5
-                                                            (no C3 in the extract); MLE, MoM,
-                                                            sufficiency, Bayesian, CI        OUT
+  2024-2025-Assignment 3                 22    -      good    labels A1..A10, B1..B5, C1..C5;
+                                                            APPROXIMATE read (see above);
+                                                            MLE, MoM, sufficiency, Bayesian   OUT
   2024-2025-Assignment 3 Episode 2        2    -      NONE    image-only scan, vision pass
                                                             needed before any claim           OUT
   2024-2025-Assignment 4                 16    -      good    hypothesis testing, Type I/II,
                                                             critical region                  OUT
-  2024-2025-Assignment 5                 15    -      good    labels A1..A10, B1..B5; t-tests,
-                                                            F-test, chi-square, ANOVA        OUT
+  2024-2025-Assignment 5                 15    -      good    labels A1..A10, B1..B5 (the text
+                                                            layer also splits out C1..C5,
+                                                            D1..D3, D5, so the count is
+                                                            APPROXIMATE); t-tests, F-test,
+                                                            chi-square, ANOVA                OUT
 ```
 
-In-scope assignment questions available as MTE drill: 16 + 20 + 19 + 36 = 91 blocks, of which
+In-scope assignment questions available as MTE drill: 15 + 20 + 19 + 36 = 90 blocks, of which
 the 2025-26 assignment 2 supplies 36 WITH printed answers. That is larger than the whole
-batch-1 assignment corpus (52 blocks) and it was not in the repo.
+batch-1 assignment corpus (52 blocks) and it was not in the repo. CORRECTED 15 Sep: the total
+read 91 in earlier revisions because the A1 row said 16.
 
 Overlap check, because a repeat would be worthless work: the 2024-25 assignment 2 and the
 2025-26 set are DIFFERENT questions from the batch-1 assignment 2 already converted. Probed

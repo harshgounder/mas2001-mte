@@ -195,7 +195,8 @@ Short answers, all confirmed against the key by recomputation:
   Four bad oranges              12/19, 32/95, 3/95
   Application 1                 sensor batch, valid pmf, E = 1.2, Var = 0.86
   Application 2                 CDF 0.15, 0.50, 0.80, 1.00
-  Application 3                 battery, mean 3.45, Var 0.9475, sd 0.98
+  Application 3                 battery, mean 3.45, Var 0.9475, sd 0.97 (exact;
+                                the key's chain prints 0.975 then 0.98, see errata 12)
 ```
 
 The two places your own submission departs from the key are analysed in

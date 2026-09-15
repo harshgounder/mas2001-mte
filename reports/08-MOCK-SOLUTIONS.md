@@ -118,8 +118,9 @@ Var(T3) = sigma^2/3              = 0.3333 sigma^2
 All three unbiased estimators have the same expectation, so the efficient one is the one with
 the smallest variance, which is T3. (1 mark)
 
-Note the trap in T4: it has the smallest variance of all four, but it is biased, so it does
-not win the efficiency comparison. Efficiency is only defined among unbiased estimators.
+Note the trap in T4: it is biased, so it does not win the efficiency comparison, and its
+variance (3/4 sigma^2) is in fact larger than T2's and T3's, not smaller. Efficiency is only
+defined among unbiased estimators, so T4 is excluded on bias before variance is even compared.
 
 3. T3 is the sample mean, whose variance is sigma^2/n, which goes to 0 as n grows, while its
    expectation stays at mu. Both sufficient conditions for consistency hold. T1 is a single

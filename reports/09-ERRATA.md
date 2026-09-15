@@ -89,11 +89,29 @@ anything, the row and the key cannot both be right, and k = 0.0782 is what the r
 Action at U05: transcribe the whole variant, compare it question by question against the
 batch-1 edition, and record this disagreement rather than silently merging the two.
 
-### 5.2 The Chebyshev deck has no text layer
+### 5.2 The Chebyshev deck, CORRECTED 15 Sep: it DOES have a usable text layer
 
-`pdftotext` returns 0 characters for all 9 pages (pypdf-produced, pure vector). It cannot be
-read by the normal conversion pipeline as text; it needs the vision pass. Noted because the
-scout had listed this deck as ordinary readable content.
+An earlier revision of this entry said `pdftotext` returns 0 characters for all 9 pages
+("pypdf-produced, pure vector"). That is FALSE and is retracted here. Measured on 15 Sep
+by `reports/evidence/verify-audit-round7-20260915.py`:
+
+```
+  pdftotext -layout, all 9 pages   3453 non-space characters (4089 raw characters)
+  page 8 alone                    extracts in full, the -1,-1,3,5 statement, the
+                                  worked row, E(X^2) = 43/3, sigma^2 = 16/3, the
+                                  mis-specified template, k = 1, the bound 16/3
+  pdffonts                        Times New Roman, Aptos, Cambria Math, all embedded
+                                  real fonts, so NOT a pypdf-produced vector file
+  watermark                       MSV1RXZXSVM3TK2VFV6K, this year's MSV reseller tag,
+                                  not mujstella. Only the title page is watermark-only.
+```
+
+What is true: the text layer is sparse in layout terms and the watermark string sits on
+almost every page, so a plain grep is noisy. That is a readability nuisance, not an absent
+layer. The vision pass over this deck was therefore never required to reach the numbers,
+though it was run anyway (300 dpi, committed at errata 15) and it agrees with the text
+layer. Lesson recorded: a "no text layer" claim is a measurement, run `pdftotext | wc -c`
+before writing it.
 
 
 ## 6. Impurity example, the Z value printed as -0.4
@@ -242,9 +260,26 @@ exact value.
 
 ## 15. Chebyshev deck (arrived 15 Sep), Q3: statement and working disagree
 
-`~/PS/S&P L10-11 Chebyshev's inequality.pdf` p008, read by vision at 300 dpi (the file has no
-text layer at all, see 5.2). Every number below was computed, not eyeballed: the script and
-its raw output are `reports/evidence/verify-errata15-20260915.py` and `.txt`.
+`~/PS/S&P L10-11 Chebyshev's inequality.pdf` p008, read from the text layer and confirmed
+by vision at 300 dpi (CORRECTED 15 Sep: an earlier revision of this entry said the file has
+"no text layer at all"; it does, see 5.2). Every number below was computed, not eyeballed:
+the script and its raw output are `reports/evidence/verify-errata15-20260915.py` and `.txt`,
+and each claim is re-checked in `reports/evidence/verify-audit-round7-20260915.py`.
+
+What the deck actually contains, which the earlier version of this entry got wrong in one
+place: the theorem slide states BOTH standard forms correctly,
+
+```
+  P(|x - mu| >= k)      <= sigma^2 / k^2          (the definition, k in the event)
+  P(|x - mu| >= k*sigma) <= 1 / k^2                (the k-sigma restatement)
+```
+
+so it is not true that the deck "mis-specifies the inequality" in general. The defect is
+narrower and is on the worked slide only: page 8's displayed template line prints the
+reciprocal form `P(|x - mu| >= k) < k^2 / sigma^2` against the event's own k, which is the
+template inversion, and the working below it then correctly uses sigma^2/k^2 = 16/3. An
+earlier note calling the deck's k-sigma form "not the standard form" was itself wrong and is
+retracted.
 
 What the slide does:
 
@@ -264,9 +299,11 @@ Two real defects, both computed:
        worked  (-1,  1, 3, 5)  ->  E(X) = 3,    Var = 16/3 = 5.3333
        The printed E(X) = 3 and sigma^2 = 16/3 belong to the WORKED row. The plus sign in
        the E(X) line gives it away: the slide silently treats the second value as +1.
-  (b)  the inequality is written  P(|x - mu| >= k) < k^2 / sigma^2.
-       The standard form is P(|X - mu| >= k*sigma) <= 1 / k^2: the k inside the event and
-       the k on the right are not the same quantity, and a strict < replaces <=.
+  (b)  page 8's displayed inequality template is written
+       P(|x - mu| >= k) < k^2 / sigma^2.
+       The event's k and the right-hand k are not the same quantity, and a strict <
+       replaces <=. The theorem slide states the correct forms, so this is a
+       transcription slip on the worked slide, not a wrong theorem.
   (c)  k is then obtained by "comparing Chebyshev's inequality and required probability"
        and set to 1, which is not a k-extraction.
 ```
@@ -286,3 +323,67 @@ What I claimed on the first pass and RETRACTED after running it (15 Sep):
 Safe on the same deck: Q1 (E(X)=3, E(X^2)=13, lower bound 21/25) and Q2 (mu=10,
 sigma^2=4: 4/9, 5/9, 21/25, C=10). Q2(iv) is the official MTE 2025-26 Q5 verbatim, 4 marks
 in the scheme. Teach Q1 and Q2; treat Q3 as mis-transcribed and do not quote its row.
+
+## 16. Tube question, printed key part (ii) reads 2/3 where the value is 8/27
+
+Found 15 Sep by the round-7 audit, not previously recorded. The question appears twice, in
+both 2024-25 Assignment 1 Q12 and the 2025-26 combined set Q14, with the same p.d.f. and the
+same printed key. The question text layer is in `~/mas2001-mte-audit-v1/text/asgn-2024-25-1.txt`
+line 101 and `asgn-2025-26-1-5.txt` line 152.
+
+```
+  f(x) = 100 / x^2 for x >= 100, 0 elsewhere
+  P(X < 150)            = 1 - 100/150 = 1/3       (a tube dies inside 150 hours)
+  P(X > 150)            = 2/3                      (a tube survives them)
+
+  printed key:  Ans. 1/27, 2/3, 0.25, 1.7
+  (i)   all three replaced   (1/3)^3 = 1/27         key 1/27   correct
+  (ii)  none replaced        (2/3)^3 = 8/27 = 0.296296   key 2/3  WRONG
+  (iii) P(X<200 | X>150)     = 0.25                  key 0.25   correct
+  (iv)  (2/3)^n = 0.5 -> n = 1.7095 -> 1.7          key 1.7    correct
+```
+
+2/3 is the per-tube survival probability, not the probability that none of three fails. The
+key's author carried the single-tube figure into the three-tube part. Answer (ii) is 8/27.
+
+## 17. 2024-25 Assignment 1, Q16: the probability row sums to 0.9, not 1
+
+Found 15 Sep by the round-7 audit. `~/PS/2024-2025-Assignment 1.pdf`, Q16, text layer at
+`~/mas2001-mte-audit-v1/text/asgn-2024-25-1.txt` line 124.
+
+```
+  x:     1     2     3     4
+  P(x):  0.1   0.2   0.5   0.1        sum = 0.9
+```
+
+Y = X^2 + 2X is then asked for its distribution, CDF, mean and variance. A pmf must sum to
+1, so the row as printed cannot be used as written. The parts that follow cannot be graded
+against a printed key (this file carries no answer key for Q16), so the question is only
+sound if the reader renormalises, which changes every later number. A sweep of all 36 batch-2
+text layers found this as the ONLY valid-pmf row in the corpus that fails to sum to 1, so it
+is an isolated defect, not a layout artefact.
+
+If asked something like this in the paper, state the renormalisation you chose (dividing the
+row by 0.9 gives 1/9, 2/9, 5/9, 1/9) and carry it through, or ask for the corrected row.
+
+## 18. Mock paper B4: the Note claims T4 has the smallest variance, it is third of four
+
+Found 15 Sep by the round-7 audit, in our own material. `reports/08-MOCK-SOLUTIONS.md`,
+section B4.
+
+```
+  Var(T1) = sigma^2     = 1.0000 sigma^2
+  Var(T2) = sigma^2/2   = 0.5000 sigma^2
+  Var(T3) = sigma^2/3   = 0.3333 sigma^2
+  Var(T4) = 3 sigma^2/4 = 0.7500 sigma^2      (T4 = (X1+X2+X3)/2)
+
+  order, smallest first:  T3, T2, T4, T1
+```
+
+The body line on the same page states T3 correctly. The Note below it reads "Note the trap in
+T4: it has the smallest variance of all four, but it is biased", which is false twice over:
+T4 is third of four, and the sentence immediately above it just listed T3 as the smallest.
+The intended trap is real and worth keeping, T4 is biased and therefore excluded from the
+efficiency comparison, but the superlative must be dropped or changed to "larger variance
+than T3 while still biased". A false "smallest variance" line inside our own mock solutions
+is the most dangerous kind of errata: the student has no reason to doubt it.

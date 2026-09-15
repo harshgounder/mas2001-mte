@@ -1,0 +1,88 @@
+==============================================================================
+ERRATA 16: the tube question's printed key, part (ii)
+==============================================================================
+PASS  P(X < 150) per tube                                        got=0.3333333333 want=0.3333333333
+PASS  (i)   all three replaced = (1/3)^3                         got=0.037037037 want=0.037037037
+PASS  (ii)  none replaced      = (2/3)^3                         got=0.2962962963 want=0.2962962963
+      printed key says (ii) = 2/3 = 0.666667; the correct value is 8/27 = 0.296296
+      2/3 is the PER-TUBE survival probability, not the three-tube probability.
+PASS  (iii) P(X<200 | X>150)                                     got=0.25 want=0.25
+PASS  (iv)  n from (2/3)^n = 0.5 rounded                         got=1.7 want=1.7
+
+==============================================================================
+ERRATA 17: 2024-25 Assignment 1, Q16 probability row
+==============================================================================
+PASS  Q16 row as printed sums to                                 got=0.9 want=0.9
+      the row as printed sums to 0.9, a valid pmf needs 1.0
+PASS  rows in the whole corpus that sum to 0.85..0.95            got=1 want=1
+      asgn-2024-25-1.txt line 124 sum 0.9 [0.1, 0.2, 0.5, 0.1]
+
+==============================================================================
+ERRATA 18: mock paper B4, which estimator has the smallest variance
+==============================================================================
+      {'T1': 1.0, 'T2': 0.5, 'T3': 0.3333333333333333, 'T4': 0.75}
+PASS  smallest-variance estimator                                got='T3' want='T3'
+PASS  rank of T4 among the four                                  got=2 want=2
+      the mock's Note line claims T4 has the smallest variance of all four.
+      T4 = 0.75 is third of four; T3 = 0.3333 is the smallest. The body line
+      above it states T3 correctly, so only the Note is wrong.
+
+==============================================================================
+ERRATA 12 extension: the battery SD, exact vs the printed chain
+==============================================================================
+PASS  Var = E(X^2) - mean^2                                      got=0.9475 want=0.9475
+PASS  exact SD sqrt(0.9475) rounds to                            got=0.97 want=0.97
+      04-QUESTION-BANK lists the corpus answer as 'sd 0.98'. The exact SD is
+      0.97340 -> 0.97. 0.98 is the key's second rounding (sqrt of the rounded
+      variance 0.95, then up again). errata 12 describes this; the question
+      bank line contradicts it and must carry the exact value.
+
+==============================================================================
+COUNT CORRECTIONS: block counts re-derived from each file
+==============================================================================
+PASS  2024-25 A1 blocks (repo claims 16)                         got=15 want=15
+      labels: Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q15, Q16 (no Q14 at all)
+PASS  2024-25 A2 blocks (repo claims 20)                         got=20 want=20
+      labels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+PASS  in-scope MTE drill total (repo claims 91)                  got=90 want=90
+      in-scope total = A1 15 + A2 20 + 2025-26 A1 19 + 2025-26 A2 36
+      The out-of-scope files (2024-25 assignments 3, 3-ep2, 4, 5) carry
+      letter labels (A1.., B1..) that the text layer splits inconsistently;
+      their block counts stay as recorded and are marked APPROXIMATE below.
+
+==============================================================================
+DUPLICATE ROW: 2024-2025-Assignment 2.pdf is NOT the batch-1 source
+==============================================================================
+      2024-2025-Assignment 2.pdf           d6dfb6ac7a144efb0ee146d0576431f6b723fecab67a8fdd43ce1a4dcc186779
+      ~/Videos/Assignment 2_MAS2001-2.pdf  5ff197311b6037e1211ccbf2540c02d9340f52ccc3e94bc9c5484d3a2befb18f
+      ~/PS/Assignment 2_MAS2001-2.pdf      5ff197311b6037e1211ccbf2540c02d9340f52ccc3e94bc9c5484d3a2befb18f
+PASS  2024-25 A2 differs from the batch-1 assignment-2 source    got=True want=True
+PASS  the real duplicate pair still matches                      got=True want=True
+PASS  their text layers differ                                   got=True want=True
+      the repo's section-2 table calls them byte-identical, which is false;
+      sources.yaml already lists them as separate labels, so the table is the
+      only site carrying the wrong claim.
+
+==============================================================================
+CHEBYSHEV DECK: the 'no text layer' claim is false
+==============================================================================
+PASS  non-space characters in the deck's text layer are not 0    got=True want=True
+      measured 3453 non-space characters across 9 pages
+PASS  page 8 carries the stated row -1,-1,3,5                    got=True want=True
+PASS  page 8 carries the worked row with +1                      got=True want=True
+PASS  page 8 carries E(X^2) = 43/3                               got=True want=True
+PASS  page 8 carries sigma^2 = 16/3                              got=True want=True
+PASS  the deck is NOT pypdf-produced (real fonts embedded)       got=True want=True
+PASS  the watermark is the MSV tag, not mujstella                got=True want=True
+      errata 5.2 and CONTINUATION item 5b both claim 'pdftotext returns 0
+      characters for all 9 pages (pypdf-produced, pure vector)'. Both wrong.
+
+==============================================================================
+MUJ DUPLICATES: open YOUR-CALL item 1 is confirmed real
+==============================================================================
+      PPT 3 SnP LMS.pdf    MUJ vs PS identical: True
+      PPT 4 SnP LMS.pdf    MUJ vs PS identical: True
+      PPT 5 SnP LMS.pdf    MUJ vs PS identical: True
+
+==============================================================================
+ALL CHECKS PASS

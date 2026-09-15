@@ -196,7 +196,7 @@ Batch 2 (23 files catalogued in `sources.yaml`, plus 2 extra sources, processing
 - 5 slide decks: L1-7, L8-9, **L10-11 Chebyshev (the missing block)**, L12-13, L14-15
 - 6 assignments: 2024-25 series (1,2,3,3-Ep2,4,5), one of which is the image-only scan, plus
   the 2025-26 combined set. All read 15 Sep:
-  the 2024-25 assignments 1 and 2 and the 2025-26 assignments 1 and 2 are IN MTE scope (91
+  the 2024-25 assignments 1 and 2 and the 2025-26 assignments 1 and 2 are IN MTE scope (90
   question blocks, 36 with printed answers); assignments 3 onwards cover lectures 22+ and are
   out of scope. Detail in `reports/12-NEW-BATCH.md` section 6.1
 - 11 papers: MTE 2024-25 + 2025-26 (both with solution schemes), ETE sem 3 and 4 (both
@@ -254,7 +254,8 @@ quietly loosened is worth less than one whose adjustments are visible.
 
 ## 9. Known errata in the source material
 
-15 entries in `reports/09-ERRATA.md`. Highlights:
+18 entries in `reports/09-ERRATA.md`. Highlights (16, 17 and 18 added 15 Sep by the
+round-7 audit):
 
 ```
   insurance example            prints 0.1745, value 0.1755
@@ -270,8 +271,12 @@ quietly loosened is worth less than one whose adjustments are visible.
   assignment 1 app Q3          SD chain rounds twice (0.975/0.98 vs exact 0.97)
   deck bus example             integral bound contradicts its own event
   assignment 2 C3              last-digit rounding (0.8754 vs exact 0.8753)
-  Chebyshev deck Q3            statement row and worked row disagree; inequality template
-                               mis-specified. Variance and final bound are correct, errata 15
+  Chebyshev deck Q3            statement row and worked row disagree; page 8's displayed
+                               template inverts the inequality (the deck's theorem slide is
+                               correct). Variance and final bound are correct, errata 15
+  tube key part (ii)           prints 2/3, value is 8/27, errata 16
+  2024-25 A1 Q16 pmf row       sums to 0.9, not 1, errata 17
+  mock B4 Note                 claims T4 smallest variance, it is third of four, errata 18
   normal notation note         N(mu, sigma^2), second slot is the variancevariance
 ```
 

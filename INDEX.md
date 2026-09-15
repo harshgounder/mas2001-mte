@@ -81,13 +81,17 @@ other tracked file appears below by name.
   06-VERIFICATION.md            verification record, three layers
   07-MOCK-PAPER.md              mock MTE, 30 marks
   08-MOCK-SOLUTIONS.md          mock worked solutions
-  09-ERRATA.md                  15 errata, at the claim site
+  09-ERRATA.md                  18 errata, at the claim site
   10-SLIDES-VS-SYLLABUS.md      lecture-by-lecture slides audit (Chebyshev corrected)
   12-NEW-BATCH.md               THE batch-2 doc: list + 19-unit processing queue + scout findings
   evidence/                     raw verification output
     verify-formula-sheet-20260913.txt  79-check formula and answer-key runner output
     verify-errata15-20260915.py        errata 15 checker, stdlib only, ships with its output
     verify-errata15-20260915.txt       errata 15 raw output (the numbers quoted in errata 15)
+    verify-audit-round7-20260915.py    round-7 checker: errata 16-18, the count corrections,
+                                       the false-duplicate row, the Chebyshev text-layer
+                                       claim, the MUJ duplicates. 24 checks, all pass
+    verify-audit-round7-20260915.txt   round-7 raw output, verbatim
   archive/12-NEW-BATCH-SCOUT-v1.md   superseded by 12-NEW-BATCH.md
 ```
 
@@ -116,4 +120,20 @@ other tracked file appears below by name.
            reports/12-NEW-BATCH.md. START HERE in a new window: queue U01.
   corrections applied 15 Sep: Chebyshev has a deck (S&P L10-11); siblings confirmed by
            real papers (14 items, see 12-NEW-BATCH.md section 6); exam format known now.
+  round-7 corrections applied 15 Sep (second pass, from a peer codex audit plus my own
+           re-verification; evidence committed, 24 checks pass):
+             - errata 16: tube key part (ii) prints 2/3, the value is 8/27
+             - errata 17: 2024-25 A1 Q16 pmf row sums to 0.9, not 1
+             - errata 18: mock B4 Note claims T4 has the smallest variance, it is 3rd of 4
+             - errata 5.2 and 15 corrected: the Chebyshev deck DOES have a text layer
+               (3453 non-space chars), and its theorem slide is correct; only page 8's
+               displayed template is inverted
+             - 12-NEW-BATCH section 2: the claim that 2024-2025-Assignment 2.pdf is
+               byte-identical to the batch-1 assignment-2 is false (sha d6dfb6ac vs
+               5ff19731) and is retracted
+             - in-scope assignment drill is 90 blocks, not 91 (2024-25 A1 is 15, not 16)
+             - 04-QUESTION-BANK battery SD reads 0.97 (exact), not the key's 0.98
+  still open (code, needs an explicit go): 6 pipeline gaps found by the peer harness at
+           ~/mas2001-mte-audit-v1/test_audit.py, and the two vision model defaults in
+           scripts/ still name xiaomi/mimo-v2.5 instead of glm-5.3-flash.
 ```
