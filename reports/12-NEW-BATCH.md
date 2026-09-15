@@ -29,16 +29,37 @@ time, 10-20 pages per unit, nothing skipped.
 
 ### B. Assignments (7 files, + 2 extras) - this year's set is new
 
+SCOPE WARNING, added 15 Sep after reading all of these page by page (see section 6.1).
+IN MTE scope: B1's assignment-1 and assignment-2 sections, B2, B3. That is 90 question blocks
+of lectures 1 to 18 drill, 36 of them with printed answers, the largest single block of new
+MTE material in the batch. OUT of MTE scope: B1's assignments 3-5, B4, B5, B6, B7 (their
+covers are MLE, MoM, sufficiency, Bayesian, confidence intervals, hypothesis testing,
+F-test, ANOVA = lectures 22 to 36).
+
 ```
   B1  2025-2026-S&P_assignments_1-5.pdf                   17   THIS year, combined 1-5
                                                                sections: A memory MCQ, B concept,
                                                                C analytical, D application
-  B2  2024-2025-Assignment 1.pdf                           2
-  B3  2024-2025-Assignment 2.pdf                           2
-  B4  2024-2025-Assignment 3.pdf                           3
-  B5  2024-2025-Assignment 3 Episode 2.pdf                 2   *** IMAGE-ONLY (240 chars): vision pass ***
-  B6  2024-2025-Assignment 4.pdf                           3
-  B7  2024-2025-Assignment 5.pdf                           3
+                                                               IN MTE SCOPE: assignment 1 (19
+                                                               blocks) + assignment 2 (36 blocks,
+                                                               WITH printed answers). Assignments
+                                                               3-5 are lecture 22+ and out of scope.
+  B2  2024-2025-Assignment 1.pdf                           2   IN MTE SCOPE (15 blocks): cover is
+                                                               RVs, cdf, pmf, expectation, Chebyshev
+                                                               = lectures 1-11. NOT a revision file.
+  B3  2024-2025-Assignment 2.pdf                           2   IN MTE SCOPE (20 blocks): cover is
+                                                               CLT, binomial, Poisson, uniform,
+                                                               normal, exponential = lectures 12-18.
+                                                               Also carries the landmark MCQ and
+                                                               the memoryless questions.
+  B4  2024-2025-Assignment 3.pdf                           3   OUT of MTE: cover is MLE, MoM,
+                                                               sufficient statistics, Bayesian,
+                                                               confidence intervals (lectures 22-28)
+  B5  2024-2025-Assignment 3 Episode 2.pdf                 2   *** IMAGE-ONLY (240 chars): vision
+                                                               pass *** OUT of MTE, same block as B4
+  B6  2024-2025-Assignment 4.pdf                           3   OUT of MTE: hypothesis testing, Type I
+                                                               and II errors, critical region (29-30)
+  B7  2024-2025-Assignment 5.pdf                           3   OUT of MTE: t-tests, F-test, ANOVA
 ```
 
 ### C. Decks (5 files) - the reorganized course decks
@@ -107,8 +128,10 @@ time, 10-20 pages per unit, nothing skipped.
   U01    A1+A2+A3+A4: both MTE papers + both schemes           15    NEXT
   U02    A5+A6+A10: ETE S3 x2 + re-sess S3                    6     queued
   U03    A7+A8+A9+A11: ETE S4 x2 + summer + re-sess S4        9     queued
-  U04    B1: 2025-26 assignments 1-5 combined                 17    queued
-  U05    B2..B7: 2024-25 assignments + Episode 2              15    queued
+  U04    B1: 2025-26 assignments 1-5 combined, A1+A2 only     17    queued (skip 3-5, out of scope)
+  U05    B2+B3: 2024-25 assignments 1 and 2 (IN scope)         4    PROMOTED 15 Sep: MTE drill,
+                                                                      ahead of the ETE papers
+  U05b   B4..B7: 2024-25 assignments 3,3-ep2,4,5 (OUT scope)  11    last, revision only
   U06    C3: Chebyshev deck                                    9     queued (critical)
   U07    C4 part 1: L12-13 p1-15                              15    queued
   U08    C4 part 2: L12-13 p16-28                             13    queued
@@ -123,7 +146,7 @@ time, 10-20 pages per unit, nothing skipped.
   U17    C1 part 4: L1-7 p55-72                               18    queued
   U18    C1 part 5: L1-7 p73-90                               18    queued
   U19    C1 part 6: L1-7 p91-108                              18    queued
-  total pages: 288 | 19 units
+  total pages: 288 | 19 units (+ U05b, a split of the old U05: 288 is unchanged)
 ```
 
 ## 4. Per-unit protocol (so nothing is missed)
@@ -148,6 +171,48 @@ time, 10-20 pages per unit, nothing skipped.
   - the MTE 2025-26 paper text layer has re-ordered fragments (about:srcdoc artifacts):
     careful page-order reading needed, not raw grep
 ```
+
+## 6.1 The assignment files, read 15 Sep (NEW, this closes the gap below)
+
+Every assignment file was read page by page on 15 Sep, text layer first, vision pass where
+the layer was empty. What is actually in them:
+
+```
+  file                          blocks  layer text?  content                                    MTE
+  2024-2025-Assignment 1           15   good        RVs, cdf, pmf, expectation, Chebyshev       IN (1-11)
+  2024-2025-Assignment 2           20   good        CLT, binomial, Poisson, normal, exp        IN (12-18)
+  2025-26 set, assignment 1        19   good        probability, RVs, pmf, Chebyshev            IN (1-11)
+  2025-26 set, assignment 2        36   good        binomial..normal, exp, CLT + ANSWERS        IN (12-18)
+  2025-26 set, assignments 3-5     22   good        MLE, MoM, Bayesian, CI, tests, ANOVA        OUT
+  2024-2025-Assignment 3           22   good        MLE, MoM, sufficiency, Bayesian, CI         OUT
+  2024-2025-Assignment 3 Episode 2  2   NONE        image-only scan, vision pass needed         OUT
+  2024-2025-Assignment 4           19   good        hypothesis testing, Type I/II, critical reg OUT
+  2024-2025-Assignment 5           19   good        t-tests, F-test, chi-square, ANOVA          OUT
+```
+
+In-scope assignment questions available as MTE drill: 15 + 20 + 19 + 36 = 90 blocks, of which
+the 2025-26 assignment 2 supplies 36 WITH printed answers. That is larger than the whole
+batch-1 assignment corpus (52 blocks) and it was not in the repo.
+
+Overlap check, because a repeat would be worthless work: the 2024-25 assignment 2 and the
+2025-26 set are DIFFERENT questions from the batch-1 assignment 2 already converted. Probed
+by named stem (800 families, bombs, 520 pages, cellphones, subway, soldiers, Compu World,
+washers, shelf life, bulbs): zero stem overlap with the batch-1 paper. New drill either way.
+
+The landmarks 68.27 / 95.45 / 99.73 and the memoryless property, which batch-1 only ever met
+inside a single MCQ, now have real assignment questions behind them:
+
+```
+  2024-2025-Assignment 2 (i)(xii)   "which continuous distribution follows memoryless"
+  2025-26 set, assignment 2 Q19     repair time, memoryless conditional: at least 10h given >9h
+  2024-2025-Assignment 2 Q15        component survives 10 months given it survived 9
+```
+
+Two queue consequences, both applied:
+- U05 is no longer "out of scope, do not sort". It is 15 to 20 pages of IN-scope MTE drill
+  and should be promoted ahead of the ETE papers.
+- U04 must split: the 2025-26 set is one file carrying assignment 1 (in), assignment 2 (in,
+  with answers) and assignments 3-5 (out). Read A1 and A2, skip 3-5.
 
 ## 6. Scout findings (from the v1 scout, folded in here)
 

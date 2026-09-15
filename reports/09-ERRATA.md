@@ -89,6 +89,13 @@ anything, the row and the key cannot both be right, and k = 0.0782 is what the r
 Action at U05: transcribe the whole variant, compare it question by question against the
 batch-1 edition, and record this disagreement rather than silently merging the two.
 
+### 5.2 The Chebyshev deck has no text layer
+
+`pdftotext` returns 0 characters for all 9 pages (pypdf-produced, pure vector). It cannot be
+read by the normal conversion pipeline as text; it needs the vision pass. Noted because the
+scout had listed this deck as ordinary readable content.
+
+
 ## 6. Impurity example, the Z value printed as -0.4
 
 `md/lms-standard-error-clt/p014.md`. Mean 4.0 g, standard deviation 1.5 g, n = 50, finding
@@ -232,3 +239,26 @@ printed lower limit 3 in the first integral is the slip. There is also a doubled
 Exact e^-5 (1 + 5 + 12.5) computed: P(X > 2) = 1 - P(0) - P(1) - P(2) = 0.875348, so 0.8753.
 The key prints 0.8754 (the sum of three separately rounded terms). Both grade, 0.8753 is the
 exact value.
+
+## 15. Chebyshev deck (arrived 15 Sep), Q3 carries three errors
+
+`~/PS/S&P L10-11 Chebyshev's inequality.pdf` p008, read via vision (the file has no text
+layer at all, see section 5.2). This is the deck that closed the Chebyshev gap, and its
+third worked question is wrong twice:
+
+```
+  (a)  the inequality is written  P(|x - mu| >= k) < k^2 / sigma^2
+       the correct standard form is P(|X - mu| >= k*sigma) <= 1 / k^2
+       the variance and k are swapped, and a strict < replaces <=
+  (b)  k is then set by COMPARING the two sides and concluding k = 1, which is
+       not a k-extraction at all; the honest value is k = 1/sigma = sqrt(3)/4
+  (c)  sigma^2 is computed as 43/3 - 9 = 16/3, but sum x^2 p(x) = 59/3,
+       so the true variance is 32/3
+  (d)  substituting k = 1 gives "upper bound = 16/3", so the printed bound is
+       16/3 = 5.33 for a probability whose exact value is 5/6 = 0.8333
+```
+
+A bound above 1 says nothing, and 5.33 is above 1. Do not memorise anything from that slide.
+What is safe on the same deck: Q1 (E(X)=3, E(X^2)=13, lower bound 21/25, all correct) and
+Q2 (mu=10, sigma^2=4: 4/9, 5/9, 21/25, C=10, all correct and all confirmed by the official
+2025-26 scheme, which awards 4 marks for Q2(iv) as MTE question 5).

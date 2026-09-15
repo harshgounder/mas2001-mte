@@ -81,7 +81,7 @@ other tracked file appears below by name.
   06-VERIFICATION.md            verification record, three layers
   07-MOCK-PAPER.md              mock MTE, 30 marks
   08-MOCK-SOLUTIONS.md          mock worked solutions
-  09-ERRATA.md                  14 errata, at the claim site
+  09-ERRATA.md                  15 errata, at the claim site
   10-SLIDES-VS-SYLLABUS.md      lecture-by-lecture slides audit (Chebyshev corrected)
   12-NEW-BATCH.md               THE batch-2 doc: list + 19-unit processing queue + scout findings
   evidence/                     raw verification output

@@ -154,6 +154,9 @@ Legend:
 
 ### Lectures 10-11: CHEBYSHEV, deck arrived 15 Sep (was: no slides) [~]
 
+CAUTION: the deck's Q3 slide (p008) is broken in three ways, errata 15. Q1 and Q2 are sound.
+Read Q1 and Q2, then use the formula sheet and the mock rather than that slide.
+
 ```
 7.1 statement P(|X-mu| >= k sigma) <= 1/k^2 | complement form >= 1 - 1/k^2
 7.2 distribution-free: only finite mean and variance needed (A1 MCQ 10)

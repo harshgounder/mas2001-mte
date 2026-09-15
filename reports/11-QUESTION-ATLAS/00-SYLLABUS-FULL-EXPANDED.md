@@ -746,7 +746,7 @@ S11 read the ask: at most / at least / between / inclusive / neither / exactly
 S12 draw the curve and mark the area before computing
 
 ================================================================================
-X.  ERRATA MAP (14 entries, full text in reports/09-ERRATA.md)
+X.  ERRATA MAP (15 entries, full text in reports/09-ERRATA.md)
 ================================================================================
 
  1  p3 insurance: 0.1745 printed, 0.1755 correct
@@ -764,6 +764,11 @@ X.  ERRATA MAP (14 entries, full text in reports/09-ERRATA.md)
 12  A1 app 3: sd chain 0.975/0.98; exact 0.9734 -> 0.97
 13  bus example: working bound 3 vs event Y<2; final 0.40 correct; double equals sign
 14  A2 C3: 0.8754 printed, 0.8753 exact
+15  Chebyshev deck p008 (Q3): inequality written k^2/sigma^2, k set by comparing sides
+    (=1), sigma^2 printed 16/3 where sum x^2 p(x) = 59/3 gives 32/3, bound printed 16/3
+    for an event whose exact probability is 5/6. Do not learn from that slide. NOTE: the
+    15 entry index was already used by the notation note before the 15 Sep renumber; the
+    notation note is now item 7
 
 ================================================================================
 Z.  INVENTORY (locked)

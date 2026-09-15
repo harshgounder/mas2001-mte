@@ -48,8 +48,9 @@ Full list with page ranges in reports/12-NEW-BATCH.md section 3. Order:
   U01  MTE 2025-26 paper + scheme + MTE 2024-25 paper + scheme       15p  START HERE
   U02  ETE S3 x2 + re-sess S3                                         6p
   U03  ETE S4 x2 + summer + re-sess S4                                9p
-  U04  2025-26 assignments 1-5 combined                              17p
-  U05  2024-25 assignments + Episode 2 (Ep2 is image-only, vision)   15p
+  U04  2025-26 assignments 1-5 combined, A1+A2 ONLY (~8p in scope)   17p
+  U05  2024-25 assignments 1 and 2  (IN SCOPE, PROMOTED 15 Sep)       4p
+  U05b 2024-25 assignments 3, 3-Ep2, 4, 5 (OUT of MTE scope)         11p  <- do last
   U06  Chebyshev deck (critical, 9p)                                  9p
   U07-U08  L12-13 split (check dup vs ppt3)                       15+13p
   U09-U11  L14-15 split (check dup vs ppt4)                      15+15+14p
@@ -57,7 +58,13 @@ Full list with page ranges in reports/12-NEW-BATCH.md section 3. Order:
   U14-U19  L1-7 split (check overlap vs 147p deck)                 18p x6
 ```
 
-~/PS now holds 33 files: the 36 sources.yaml entries resolve across ~/PS, ~/Videos and
+SCOPE CORRECTION 15 Sep, read section 6.1 of reports/12-NEW-BATCH.md before U04/U05: the
+2024-25 assignment 1 and 2 cover lectures 1-11 and 12-18, which are IN MTE scope. The old
+plan had all of U05 as out-of-scope revision. They are in fact 35 fresh in-scope question
+blocks, and the 2025-26 set adds 55 more (36 of them with printed answers). Total new MTE
+drill from the assignment files: 90 blocks. U05 is promoted ahead of the ETE papers.
+
+~/PS now holds 34 files: the 36 sources.yaml entries resolve across ~/PS, ~/Videos and
 ~/muj-academics, and six of the ~/PS entries are repeats or a second edition (three
 byte-identical paper copies, one byte-identical assignment-2 copy, one second-edition
 assignment 1, plus the batch-1 files themselves). Duplicate repeats are noted in
@@ -135,11 +142,18 @@ copies). All six are logged in sources.yaml.
                3  subject-wise MTE sitting day: only the window is known
                4  mujstella.in watermarks: reseller mark on batch-2 PDFs, nothing to do
   PENDING      5  Google OAuth refresh token dead -> Drive sweep still blocked
+               5b the Chebyshev deck (S&P L10-11) has NO text layer (0 chars, pypdf vector).
+                  Any "read the deck" step needs the vision pass, not the pipeline.
+               5c errata 15: the Chebyshev deck's Q3 slide is broken (bad inequality form,
+                  k set by comparing sides, sigma^2 arithmetic, bound printed 16/3 for an
+                  event whose exact value is 5/6). Q1 and Q2 on the same deck are sound and
+                  Q2 is the official MTE 2025-26 Q5. Teach from Q1/Q2, not Q3.
                6  the second edition of assignment 1 (asgn-faculty-variant) is internally
                   broken: its own row gives k = 0.0782 while its key prints k = 1/10.
                   Full transcription and a question-by-question comparison are owed at U05
                7  fidelity gate: run again after batch-2 conversion (deepseek reader)
-               8  count register update after U04/U05 (assignment counts will grow)
+               8  count register update after U04/U05: the in-scope assignment corpus grows
+                  by 90 blocks (15 + 20 + 19 + 36), more than the 52 already counted.
                9  mock paper reshape to real A/B/C format (after U01)
 ```
 
@@ -150,7 +164,7 @@ copies). All six are logged in sources.yaml.
   reports/11-QUESTION-ATLAS/     all question analysis (framework, counts, trees, plans)
   reports/02-MTE-REPORT.md       main summary of batch-1 work
   reports/05-FIVE-DAY-PLAN.md    the study plan (will be re-pinned with real format)
-  reports/09-ERRATA.md           14 errata, claim-site recorded
+  reports/09-ERRATA.md           15 errata, claim-site recorded
   md/<label>/pNNN.md             converted slides (batch 1 complete; batch 2 pending)
   work/manifest.jsonl            per-page provenance for everything converted
 ```
