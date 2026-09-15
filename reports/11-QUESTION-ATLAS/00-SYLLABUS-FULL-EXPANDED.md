@@ -764,11 +764,11 @@ X.  ERRATA MAP (15 entries, full text in reports/09-ERRATA.md)
 12  A1 app 3: sd chain 0.975/0.98; exact 0.9734 -> 0.97
 13  bus example: working bound 3 vs event Y<2; final 0.40 correct; double equals sign
 14  A2 C3: 0.8754 printed, 0.8753 exact
-15  Chebyshev deck p008 (Q3): inequality written k^2/sigma^2, k set by comparing sides
-    (=1), sigma^2 printed 16/3 where sum x^2 p(x) = 59/3 gives 32/3, bound printed 16/3
-    for an event whose exact probability is 5/6. Do not learn from that slide. NOTE: the
-    15 entry index was already used by the notation note before the 15 Sep renumber; the
-    notation note is now item 7
+15  Chebyshev deck p008 (Q3): states (-1,-1,3,5) but works (-1,1,3,5): E(X)=3 and 16/3
+    fit the latter, the stated row gives 8/3 and 65/9. Inequality written k^2/sigma^2 with
+    k set by "comparing". E(X^2)=43/3, sigma^2=16/3 and the bound 16/3 are internally
+    consistent (recheck 15 Sep retracted two earlier claims). Evidence:
+    reports/evidence/verify-errata15-20260915.py
 
 ================================================================================
 Z.  INVENTORY (locked)

@@ -1,0 +1,39 @@
+STATED row [-1, -1, 3, 5] with p ['1/6', '1/6', '1/6', '1/2']
+   sum p      = 1          valid distribution
+   E(X)       = 8/3 = 2.6667
+   E(X^2)     = 43/3 = 14.3333
+   Var        = 65/9 = 7.2222
+
+WORKED row [-1, 1, 3, 5] with p ['1/6', '1/6', '1/6', '1/2']
+   sum p      = 1          valid distribution
+   E(X)       = 3 = 3.0000
+   E(X^2)     = 43/3 = 14.3333
+   Var        = 16/3 = 5.3333
+
+slide prints:  E(X) = 3, E(X^2) = 43/3, sigma^2 = 16/3, bound = 16/3
+
+E(X) as printed (3) matches the WORKED row: True
+E(X) from the STATED row is 8/3, not 3: True
+E(X^2) = 43/3 under both rows (squaring drops the sign): True
+sigma^2 as printed (16/3) matches the WORKED row: True
+sigma^2 from the STATED row would be 65/9 = 7.2222: True
+
+exact P(|X-3| >= 1) = 1 - P(X=3) = 5/6 = 0.8333
+
+bound = 1/k^2 with k*sigma = 1  =>  bound = sigma^2
+   using the WORKED sigma^2 = 16/3 = 5.3333  -> the slide's 16/3 IS the
+   correct Chebyshev bound for that row
+   using the STATED sigma^2 = 65/9 = 7.2222  -> the bound would be 65/9
+
+is 16/3 above the exact probability 5/6? True  (so the bound holds, but
+it is useless: 5.33 for a probability of 0.83)
+is the bound above 1? True
+
+CONCLUSION: the two real defects on this slide are
+  (1) it STATES (-1,-1,3,5) and WORKS (-1,1,3,5): E(X)=3 only holds for the latter,
+      and the printed sigma^2 = 16/3 inherits that, so the printed variance does not
+      belong to the printed distribution (which would give 65/9).
+  (2) the inequality is written P(|x-mu| >= k) < k^2/sigma^2; the standard form is
+      P(|X-mu| >= k*sigma) <= 1/k^2, so the k inside the event is not the k on the right.
+NOT defects (computed, not assumed): E(X^2) = 43/3 is correct either way, and the
+final 16/3 is the right bound for the row the working uses.

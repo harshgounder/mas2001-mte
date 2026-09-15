@@ -240,25 +240,49 @@ Exact e^-5 (1 + 5 + 12.5) computed: P(X > 2) = 1 - P(0) - P(1) - P(2) = 0.875348
 The key prints 0.8754 (the sum of three separately rounded terms). Both grade, 0.8753 is the
 exact value.
 
-## 15. Chebyshev deck (arrived 15 Sep), Q3 carries three errors
+## 15. Chebyshev deck (arrived 15 Sep), Q3: statement and working disagree
 
-`~/PS/S&P L10-11 Chebyshev's inequality.pdf` p008, read via vision (the file has no text
-layer at all, see section 5.2). This is the deck that closed the Chebyshev gap, and its
-third worked question is wrong twice:
+`~/PS/S&P L10-11 Chebyshev's inequality.pdf` p008, read by vision at 300 dpi (the file has no
+text layer at all, see 5.2). Every number below was computed, not eyeballed: the script and
+its raw output are `reports/evidence/verify-errata15-20260915.py` and `.txt`.
+
+What the slide does:
 
 ```
-  (a)  the inequality is written  P(|x - mu| >= k) < k^2 / sigma^2
-       the correct standard form is P(|X - mu| >= k*sigma) <= 1 / k^2
-       the variance and k are swapped, and a strict < replaces <=
-  (b)  k is then set by COMPARING the two sides and concluding k = 1, which is
-       not a k-extraction at all; the honest value is k = 1/sigma = sqrt(3)/4
-  (c)  sigma^2 is computed as 43/3 - 9 = 16/3, but sum x^2 p(x) = 59/3,
-       so the true variance is 32/3
-  (d)  substituting k = 1 gives "upper bound = 16/3", so the printed bound is
-       16/3 = 5.33 for a probability whose exact value is 5/6 = 0.8333
+  states  X takes  -1, -1, 3, 5   with p = 1/6, 1/6, 1/6, 1/2
+  works   E(X) = -1/6 + 1/6 + 3/6 + 5/2 = 3
+          E(X^2) = 43/3
+          sigma^2 = 43/3 - 9 = 16/3
+          bound = 16/3
 ```
 
-A bound above 1 says nothing, and 5.33 is above 1. Do not memorise anything from that slide.
-What is safe on the same deck: Q1 (E(X)=3, E(X^2)=13, lower bound 21/25, all correct) and
-Q2 (mu=10, sigma^2=4: 4/9, 5/9, 21/25, C=10, all correct and all confirmed by the official
-2025-26 scheme, which awards 4 marks for Q2(iv) as MTE question 5).
+Two real defects, both computed:
+
+```
+  (a)  the stated row and the worked row are different distributions.
+       stated  (-1, -1, 3, 5)  ->  E(X) = 8/3,  Var = 65/9 = 7.2222
+       worked  (-1,  1, 3, 5)  ->  E(X) = 3,    Var = 16/3 = 5.3333
+       The printed E(X) = 3 and sigma^2 = 16/3 belong to the WORKED row. The plus sign in
+       the E(X) line gives it away: the slide silently treats the second value as +1.
+  (b)  the inequality is written  P(|x - mu| >= k) < k^2 / sigma^2.
+       The standard form is P(|X - mu| >= k*sigma) <= 1 / k^2: the k inside the event and
+       the k on the right are not the same quantity, and a strict < replaces <=.
+  (c)  k is then obtained by "comparing Chebyshev's inequality and required probability"
+       and set to 1, which is not a k-extraction.
+```
+
+What I claimed on the first pass and RETRACTED after running it (15 Sep):
+
+```
+  "sigma^2 = 16/3 is an arithmetic error, sum x^2 p(x) = 59/3 so Var = 32/3"
+       FALSE. sum x^2 p(x) = 1/6 + 1/6 + 9/6 + 25/2 = 43/3 exactly, and 43/3 - 9 = 16/3.
+       Both printed values are correct for the row the working uses.
+  "the printed bound 16/3 is wrong"
+       FALSE. The event is |X - 3| >= 1, so k*sigma = 1 and the bound is 1/k^2 = sigma^2.
+       With sigma^2 = 16/3 the correct bound IS 16/3. It is correct and also useless:
+       5.3333 for a probability whose exact value is 1 - P(X=3) = 5/6 = 0.8333.
+```
+
+Safe on the same deck: Q1 (E(X)=3, E(X^2)=13, lower bound 21/25) and Q2 (mu=10,
+sigma^2=4: 4/9, 5/9, 21/25, C=10). Q2(iv) is the official MTE 2025-26 Q5 verbatim, 4 marks
+in the scheme. Teach Q1 and Q2; treat Q3 as mis-transcribed and do not quote its row.

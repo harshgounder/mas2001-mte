@@ -62,13 +62,17 @@ SCOPE CORRECTION 15 Sep, read section 6.1 of reports/12-NEW-BATCH.md before U04/
 2024-25 assignment 1 and 2 cover lectures 1-11 and 12-18, which are IN MTE scope. The old
 plan had all of U05 as out-of-scope revision. They are in fact 35 fresh in-scope question
 blocks, and the 2025-26 set adds 55 more (36 of them with printed answers). Total new MTE
-drill from the assignment files: 90 blocks. U05 is promoted ahead of the ETE papers.
+drill from the assignment files: 91 blocks. U05 is promoted ahead of the ETE papers.
 
-~/PS now holds 34 files: the 36 sources.yaml entries resolve across ~/PS, ~/Videos and
-~/muj-academics, and six of the ~/PS entries are repeats or a second edition (three
-byte-identical paper copies, one byte-identical assignment-2 copy, one second-edition
-assignment 1, plus the batch-1 files themselves). Duplicate repeats are noted in
-reports/12-NEW-BATCH.md section 1 and get a dedup verdict like everything else.
+~/PS now holds 34 files, of which 32 are sources.yaml entries (the other two are
+`.directory` and `syllabus.txt`, which is the MTE syllabus in text form). The 36 sources
+resolve across ~/PS (32), ~/Videos (1) and ~/muj-academics (3). Duplicates, sha-verified on
+15 Sep, are exactly two and no more: `asgn-copy-2025-26` in ~/PS is byte-identical to
+`mas2001-assignment-2` in ~/Videos (sha 5ff197311b60), and `lms-standard-error-clt`'s "(1)"
+twin, moved to the trash on 14 Sep, is byte-identical to it (sha e48f4981ed69). An earlier
+revision of this file claimed three extra paper copies plus an extras count of six; those
+files do not exist on disk and the claim is retracted. `MAS2001-Assignment 1 .pdf` is a
+second EDITION, not a duplicate: different faculty name and a different pmf row.
 
 Per-unit protocol (mandatory, this is how "nothing missed" is enforced): read every page;
 give every question a full entry per reports/11-QUESTION-ATLAS/00-FRAMEWORK.md schema;
@@ -130,9 +134,10 @@ conversion needed); it is NOT the assignment-1 copy (that is sha 2ab4f651), chec
 Mehta (batch-1 copy is Dr. Vivek Singh) AND a different long-Q2 pmf row, p(x) = k, 2k, 2k,
 3k, 3k, k^2, 2k^2, 7k^2 + k, which normalises to 12k + 10k^2 = 1 with root 0.0782, where the
 batch-1 row (0, k, 2k, 2k, 3k, k^2, 2k^2, 7k^2 + k) gives 10k^2 + 9k = 1 with root 1/10. Its
-key column prints different digits, so it is a compare-and-keep at U05, not a dedup. Also in
-~/PS: three byte-identical repeats of papers already listed (one ETE S3 copy, two re-sess S3
-copies). All six are logged in sources.yaml.
+key column prints different digits, so it is a compare-and-keep at U05, not a dedup. An
+earlier revision of this note also claimed three byte-identical paper repeats in ~/PS with
+"(1)" and "(2)" suffixes: those files do not exist on disk and the claim is retracted. Both
+extra sources are logged in sources.yaml.
 
 ## 8. Open items inherited
 
@@ -144,16 +149,16 @@ copies). All six are logged in sources.yaml.
   PENDING      5  Google OAuth refresh token dead -> Drive sweep still blocked
                5b the Chebyshev deck (S&P L10-11) has NO text layer (0 chars, pypdf vector).
                   Any "read the deck" step needs the vision pass, not the pipeline.
-               5c errata 15: the Chebyshev deck's Q3 slide is broken (bad inequality form,
-                  k set by comparing sides, sigma^2 arithmetic, bound printed 16/3 for an
-                  event whose exact value is 5/6). Q1 and Q2 on the same deck are sound and
-                  Q2 is the official MTE 2025-26 Q5. Teach from Q1/Q2, not Q3.
+               5c errata 15: the Chebyshev deck's Q3 slide states one distribution and works
+                  another, and its inequality template is mis-specified; the printed variance
+                  and the final bound are internally consistent. Q1 and Q2 are sound and Q2 is
+                  the official MTE 2025-26 Q5. Teach from Q1/Q2, treat Q3 as mis-transcribed.
                6  the second edition of assignment 1 (asgn-faculty-variant) is internally
                   broken: its own row gives k = 0.0782 while its key prints k = 1/10.
                   Full transcription and a question-by-question comparison are owed at U05
                7  fidelity gate: run again after batch-2 conversion (deepseek reader)
                8  count register update after U04/U05: the in-scope assignment corpus grows
-                  by 90 blocks (15 + 20 + 19 + 36), more than the 52 already counted.
+                  by 91 blocks (15 + 20 + 19 + 36), more than the 52 already counted.
                9  mock paper reshape to real A/B/C format (after U01)
 ```
 

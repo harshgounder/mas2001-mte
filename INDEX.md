@@ -13,7 +13,7 @@ other tracked file appears below by name.
   README.md               what this repo is, layout, pipeline, ground rules
   CONTINUATION.md         new-window entry point: state, queue, next moves
   INDEX.md                this file
-  sources.yaml            36 sources (11 batch 1 + 23 batch 2 + 2 extras), sha256 each
+  sources.yaml            36 sources (11 batch 1 + 23 batch 2 + 2 extra sources), sha256 each
   PROMPT.txt              transcription prompt (runtime, read by scripts)
   .gitignore              work/pages, work/*.png, pycache
 ```

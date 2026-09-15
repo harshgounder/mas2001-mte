@@ -275,9 +275,11 @@ Two config changes outside the repo, both backed up:
        trash is the CLT deck (sha e48f4981), NOT an assignment copy; `Assignment 2_MAS2001-2.pdf`
        is byte-identical to the batch-1 assignment-2 SOURCE (sha 5ff197311b60), which lives in
        ~/Videos, not in ~/muj-academics. Both ~/PS copies are still on disk, nothing deleted.
-    2  ~/PS also gained three byte-identical repeats of papers already listed (one ETE S3
-       copy, two re-sessional S3 copies) and one second edition of assignment 1 (different
-       faculty name, different long-Q2 pmf row); all six extras are in sources.yaml
+    2  RECHECKED 15 Sep: an earlier version of this item claimed three byte-identical paper
+       repeats in ~/PS. No such files exist (searched the whole disk). The real second extra
+       source is `MAS2001-Assignment 1 .pdf`, a second EDITION of assignment 1 (different
+       faculty name, different long-Q2 pmf row), in sources.yaml as `asgn-faculty-variant`.
+       Sha-verified duplicate pairs in the whole corpus: exactly two, both listed above.
     3  ~/MUJ holds byte identical copies of PPT 3, 4 and 5, keep as a backup or remove
     4  ~/Music/MAS2001_remake/ is a separate assignment pipeline from August, out of scope here
     5  do you have the subject wise MTE timetable, the window is known but not the SITTING day

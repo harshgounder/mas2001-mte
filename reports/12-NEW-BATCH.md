@@ -1,11 +1,11 @@
 # New batch inventory and processing queue
 
-Listed 15 September 2026. 23 files in ~/PS, all catalogued. Processing: one unit at a
+Listed 15 September 2026. 23 batch-2 files in ~/PS, all catalogued. Processing: one unit at a
 time, 10-20 pages per unit, nothing skipped.
 
 ## 1. THE LIST
 
-### A. Papers (11 files + 3 extra copies in ~/PS) - highest value (they show what is asked)
+### A. Papers (11 files) - highest value (they show what is asked)
 
 ```
   #   file                                              pages  notes
@@ -21,16 +21,20 @@ time, 10-20 pages per unit, nothing skipped.
   A10 S&P_Re-sess_Sem-3_2025-26.pdf                        2   re-sessional Nov 2025
   A11 S&P_Re-sess_Sem-4_2025-26_mujstella.pdf              2   re-sess variant
   (A5-A11 readable; watermark noise filtered in analysis)
-  A12 S&P_ETE_Sem-3_2025-26 (1).pdf                        2   in sources.yaml, extra duplicate copy
-  A13 S&P_Re-sess_Sem-3_2025-26 (1).pdf                     2   in sources.yaml, extra duplicate copy
-  A14 S&P_Re-sess_Sem-3_2025-26 (2).pdf                     2   in sources.yaml, extra duplicate copy
-  (A12-A14 arrived in the same drop; byte-identical copies of A6 and A10, kept for provenance)
 ```
 
-### B. Assignments (7 files, + 2 extras) - this year's set is new
+Count correction 15 Sep: an earlier revision of this table carried rows A12-A14 for three
+"(1)" and "(2)" paper copies. Those files do not exist, in ~/PS or anywhere on disk, and no
+such sources.yaml entry exists. The rows were wrong and are deleted. Every paper duplicate
+claim in this repo is sha-scoped: the only byte-identical duplicate that actually exists is
+`asgn-copy-2025-26` (`~/PS/Assignment 2_MAS2001-2.pdf`, sha 5ff197311b60) matching
+`mas2001-assignment-2` (`~/Videos/Assignment 2_MAS2001-2.pdf`)
+```
+
+### B. Assignments (7 files, + 2 extra sources) - this year's set is new
 
 SCOPE WARNING, added 15 Sep after reading all of these page by page (see section 6.1).
-IN MTE scope: B1's assignment-1 and assignment-2 sections, B2, B3. That is 90 question blocks
+IN MTE scope: B1's assignment-1 and assignment-2 sections, B2, B3. That is 91 question blocks
 of lectures 1 to 18 drill, 36 of them with printed answers, the largest single block of new
 MTE material in the batch. OUT of MTE scope: B1's assignments 3-5, B4, B5, B6, B7 (their
 covers are MLE, MoM, sufficiency, Bayesian, confidence intervals, hypothesis testing,
@@ -50,8 +54,7 @@ F-test, ANOVA = lectures 22 to 36).
   B3  2024-2025-Assignment 2.pdf                           2   IN MTE SCOPE (20 blocks): cover is
                                                                CLT, binomial, Poisson, uniform,
                                                                normal, exponential = lectures 12-18.
-                                                               Also carries the landmark MCQ and
-                                                               the memoryless questions.
+                                                               Carries the memoryless questions.
   B4  2024-2025-Assignment 3.pdf                           3   OUT of MTE: cover is MLE, MoM,
                                                                sufficient statistics, Bayesian,
                                                                confidence intervals (lectures 22-28)
@@ -93,8 +96,9 @@ F-test, ANOVA = lectures 22 to 36).
   CHECKED, NOT NEW (byte-identical copies already catalogued):
     - 2024-2025-Assignment 2.pdf = the batch-1 assignment-2 source file (sha 5ff19731,
       same bytes, different path; the batch-1 copy lives in ~/Videos)
-    - S&P_ETE_Sem-3_2025-26 (1).pdf and TWO re-sess S3 copies = byte-identical repeats of
-      A6 and A10, so the paper count above is 11 distinct papers, not 14
+    - (an earlier revision claimed three "(1)"/"(2)" paper copies here; recheck 15 Sep found
+      no such files anywhere on disk, so that claim is deleted. Sha-verified duplicates in the
+      whole corpus are one pair, listed above)
   SAME FAMILY, DIFFERENT EDITION (a second keyed edition, NOT a plain copy):
     - MAS2001-Assignment 1 .pdf carries Dr. Ruchika Mehta as faculty (batch-1 copy is
       Dr. Vivek Singh) AND a different pmf row in long Q2: p(x) = k, 2k, 2k, 3k, 3k, k^2,
@@ -174,23 +178,43 @@ F-test, ANOVA = lectures 22 to 36).
 
 ## 6.1 The assignment files, read 15 Sep (NEW, this closes the gap below)
 
-Every assignment file was read page by page on 15 Sep, text layer first, vision pass where
-the layer was empty. What is actually in them:
+Every assignment file was read on 15 Sep, text layer first (vision where the layer is empty,
+which is only Assignment 3 Episode 2). "Read" means every question stem of every page was
+extracted and inspected; it does NOT mean a full transcription of all 91 blocks, which is
+U04/U05 work. What is actually in them:
+
+Every count below was re-derived from the file itself on 15 Sep by enumerating question
+labels, not estimated. Counts are BLOCKS (a multi-part question counts once), except where
+the row says parts.
 
 ```
-  file                          blocks  layer text?  content                                    MTE
-  2024-2025-Assignment 1           15   good        RVs, cdf, pmf, expectation, Chebyshev       IN (1-11)
-  2024-2025-Assignment 2           20   good        CLT, binomial, Poisson, normal, exp        IN (12-18)
-  2025-26 set, assignment 1        19   good        probability, RVs, pmf, Chebyshev            IN (1-11)
-  2025-26 set, assignment 2        36   good        binomial..normal, exp, CLT + ANSWERS        IN (12-18)
-  2025-26 set, assignments 3-5     22   good        MLE, MoM, Bayesian, CI, tests, ANOVA        OUT
-  2024-2025-Assignment 3           22   good        MLE, MoM, sufficiency, Bayesian, CI         OUT
-  2024-2025-Assignment 3 Episode 2  2   NONE        image-only scan, vision pass needed         OUT
-  2024-2025-Assignment 4           19   good        hypothesis testing, Type I/II, critical reg OUT
-  2024-2025-Assignment 5           19   good        t-tests, F-test, chi-square, ANOVA          OUT
+  file                               blocks  parts   layer   content                            MTE
+  2024-2025-Assignment 1                 16    -      good    RVs, cdf, pmf, expectation,
+                                                            Chebyshev. Labels Q1..Q16, with
+                                                            no Q14 in the source at all.     IN (1-11)
+  2024-2025-Assignment 2                 20    32     good    CLT, binomial, Poisson, uniform,
+                                                            normal, exp. Q1 is a 12-part
+                                                            recall block, Q2..Q20 are
+                                                            problems.                        IN (12-18)
+  2025-26 set, assignment 1              19    -      good    probability, RVs, pmf, Chebyshev
+                                                            (Q1 is an 11-part MCQ block)     IN (1-11)
+  2025-26 set, assignment 2              36    -      good    binomial..normal, exp, CLT, ALL
+                                                            WITH PRINTED ANSWERS             IN (12-18)
+  2025-26 set, assignments 3-5           45    -      good    Q22..Q45 continue the combined
+                                                            file; MLE, MoM, Bayesian, CI,
+                                                            tests, ANOVA                     OUT
+  2024-2025-Assignment 3                 22    -      good    labels A1..A10, B1..B5, C1..C5
+                                                            (no C3 in the extract); MLE, MoM,
+                                                            sufficiency, Bayesian, CI        OUT
+  2024-2025-Assignment 3 Episode 2        2    -      NONE    image-only scan, vision pass
+                                                            needed before any claim           OUT
+  2024-2025-Assignment 4                 16    -      good    hypothesis testing, Type I/II,
+                                                            critical region                  OUT
+  2024-2025-Assignment 5                 15    -      good    labels A1..A10, B1..B5; t-tests,
+                                                            F-test, chi-square, ANOVA        OUT
 ```
 
-In-scope assignment questions available as MTE drill: 15 + 20 + 19 + 36 = 90 blocks, of which
+In-scope assignment questions available as MTE drill: 16 + 20 + 19 + 36 = 91 blocks, of which
 the 2025-26 assignment 2 supplies 36 WITH printed answers. That is larger than the whole
 batch-1 assignment corpus (52 blocks) and it was not in the repo.
 
@@ -199,18 +223,23 @@ Overlap check, because a repeat would be worthless work: the 2024-25 assignment 
 by named stem (800 families, bombs, 520 pages, cellphones, subway, soldiers, Compu World,
 washers, shelf life, bulbs): zero stem overlap with the batch-1 paper. New drill either way.
 
-The landmarks 68.27 / 95.45 / 99.73 and the memoryless property, which batch-1 only ever met
-inside a single MCQ, now have real assignment questions behind them:
+The memoryless property, which batch-1 met only inside one MCQ plus one question part, now
+has real worked questions behind it. Verified by grep on 15 Sep (corrected: an earlier draft
+of this paragraph also claimed the 68.27/95.45/99.73 landmarks were covered here. They are
+NOT: that string appears in NO batch-2 file. The landmark MCQ sits in the BATCH-1 assignment
+2, which is the `mas2001-assignment-2` source in ~/Videos and its byte-identical twin in ~/PS,
+nothing else. Claim retracted.)
 
 ```
-  2024-2025-Assignment 2 (i)(xii)   "which continuous distribution follows memoryless"
-  2025-26 set, assignment 2 Q19     repair time, memoryless conditional: at least 10h given >9h
-  2024-2025-Assignment 2 Q15        component survives 10 months given it survived 9
+  2024-2025-Assignment 2 Q1(xii)  "Which continuous distribution follows memoryless property"
+  2024-2025-Assignment 2 Q15      component survives 10 months given it survived 9 (0.6065)
+  2025-26 set, assignment 2 Q19   repair: at least 10h given more than 9h (0.6065)
+  2025-26 set, assignment 2 Q20   P(X < 1 | X < 2) for exponential mean 2 (0.5679)
 ```
 
 Two queue consequences, both applied:
-- U05 is no longer "out of scope, do not sort". It is 15 to 20 pages of IN-scope MTE drill
-  and should be promoted ahead of the ETE papers.
+- U05 is no longer "out of scope, do not sort". It is 4 pages (both files) of IN-scope MTE
+  drill and is promoted ahead of the ETE papers.
 - U04 must split: the 2025-26 set is one file carrying assignment 1 (in), assignment 2 (in,
   with answers) and assignments 3-5 (out). Read A1 and A2, skip 3-5.
 

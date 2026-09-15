@@ -154,8 +154,10 @@ Legend:
 
 ### Lectures 10-11: CHEBYSHEV, deck arrived 15 Sep (was: no slides) [~]
 
-CAUTION: the deck's Q3 slide (p008) is broken in three ways, errata 15. Q1 and Q2 are sound.
-Read Q1 and Q2, then use the formula sheet and the mock rather than that slide.
+CAUTION: the deck's Q3 slide (p008) states one distribution and works another (E(X)=3 and
+sigma^2=16/3 belong to -1,1,3,5; the stated -1,-1,3,5 gives 8/3 and 65/9), and its inequality
+template is mis-specified. Both printed values and its final bound are internally correct for
+the row it works. See errata 15. Q1 and Q2 are sound; read those and then the formula sheet.
 
 ```
 7.1 statement P(|X-mu| >= k sigma) <= 1/k^2 | complement form >= 1 - 1/k^2

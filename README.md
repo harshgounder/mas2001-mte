@@ -191,21 +191,21 @@ Batch 1 (11 sources, 348 pages, fully converted):
 | `mas2001-assignment-1` | 6 | question paper + official answer key |
 | `mas2001-assignment-2` | 4 | second problem set |
 
-Batch 2 (23 files + 2 extras, catalogued in `sources.yaml`, processing queued):
+Batch 2 (23 files catalogued in `sources.yaml`, plus 2 extra sources, processing queued):
 
 - 5 slide decks: L1-7, L8-9, **L10-11 Chebyshev (the missing block)**, L12-13, L14-15
-- 7 assignments: 2024-25 series (1,2,3,3-Ep2,4,5), 2025-26 combined 1-5. All read 15 Sep:
-  the 2024-25 assignments 1 and 2 and the 2025-26 assignments 1 and 2 are IN MTE scope (90
+- 6 assignments: 2024-25 series (1,2,3,3-Ep2,4,5), one of which is the image-only scan, plus
+  the 2025-26 combined set. All read 15 Sep:
+  the 2024-25 assignments 1 and 2 and the 2025-26 assignments 1 and 2 are IN MTE scope (91
   question blocks, 36 with printed answers); assignments 3 onwards cover lectures 22+ and are
   out of scope. Detail in `reports/12-NEW-BATCH.md` section 6.1
 - 11 papers: MTE 2024-25 + 2025-26 (both with solution schemes), ETE sem 3 and 4 (both
-  years), summer, re-sessional (both semesters)
-- 2 extras: `Assignment 2_MAS2001-2.pdf` (byte-identical to the batch-1 assignment-2
-  source, different sha from the batch-1 assignment-1 copy) and `MAS2001-Assignment 1 .pdf`
-  (a second edition of assignment 1: different faculty name and a different pmf row in
-  long Q2, normalising to 12k + 10k^2 = 1 instead of 9k + 10k^2 = 1)
-- 3 further arrivals are byte-identical repeats of papers already listed (one ETE S3
-  copy and two re-sessional S3 copies), catalogued for provenance only
+  years), summer, re-sessional (both semesters). 2 of the 11 are mark schemes, so 9 papers.
+- 2 extra sources: `Assignment 2_MAS2001-2.pdf` (byte-identical to the batch-1 assignment-2
+  source at sha 5ff197311b60) and `MAS2001-Assignment 1 .pdf` (a second EDITION of assignment 1:
+  different faculty name, and a different pmf row in long Q2 that normalises to
+  12k + 10k^2 = 1 instead of 9k + 10k^2 = 1, see errata 5.1)
+- no further paper duplicates exist: every paper in ~/PS is a distinct file (sha-checked)
 
 ---
 
@@ -270,7 +270,8 @@ quietly loosened is worth less than one whose adjustments are visible.
   assignment 1 app Q3          SD chain rounds twice (0.975/0.98 vs exact 0.97)
   deck bus example             integral bound contradicts its own event
   assignment 2 C3              last-digit rounding (0.8754 vs exact 0.8753)
-  Chebyshev deck Q3            broken 3 ways, bound printed 16/3 for P = 5/6, do not learn
+  Chebyshev deck Q3            statement row and worked row disagree; inequality template
+                               mis-specified. Variance and final bound are correct, errata 15
   normal notation note         N(mu, sigma^2), second slot is the variancevariance
 ```
 

@@ -250,7 +250,9 @@ sources:
     topic: "batch 2, 15 Sep 2026"
     sha256: "5647c90a0fa701c5e05beff814b77a8027bf8963949c707727e65cff1acf0228"
 
-# Batch 2 extras: two files that appeared in ~/PS alongside the batch.
+# Batch 2 extras: two files that appeared in ~/PS alongside the batch. NOT paper copies:
+# an earlier revision of the docs claimed three extra paper copies, sha-verified 15 Sep as
+# non-existent. The only byte-identical duplicates are the two listed under their labels.
 # asgn-copy-2025-26 is byte-identical to the batch-1 mas2001-assignment-2 source: same
 # sha 5ff197311b60, different path (the batch-1 copy sits in ~/Videos). Provenance only.
 # VERIFIED 15 Sep: it is NOT identical to the batch-1 assignment-1 source (2ab4f651), the
