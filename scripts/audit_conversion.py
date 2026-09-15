@@ -20,6 +20,7 @@ import re
 import subprocess
 import sys
 from collections import Counter
+from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 VISION = pathlib.Path.home() / ".local" / "bin" / "vision"
@@ -31,7 +32,8 @@ AUDIT_MD = WORK_ROOT / "AUDIT.md"
 FIDELITY_ROOT = WORK_ROOT / "fidelity"
 FIDELITY_MD = WORK_ROOT / "FIDELITY.md"
 
-DEFAULT_FIDELITY_MODEL = "xiaomi/mimo-v2.5-pro"
+# user directive 2026-09-15: glm-5.3-flash on ollama-cloud
+DEFAULT_FIDELITY_MODEL = "glm-5.3-flash"
 DEFAULT_SEED = 20260913
 
 BANNED_MARKERS = ("example.com", "](http", "https://")
@@ -46,6 +48,10 @@ PDFTOTEXT_TIMEOUT_S = 120
 
 def log(message):
     print(message, file=sys.stderr, flush=True)
+
+
+def utc_now():
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
 def page_name(page):
@@ -369,22 +375,55 @@ def write_audit_markdown(records):
 
 
 def numeric_tokens(text):
+    """Numeric tokens with sign. A leading - or + counts as a sign only when
+    it sits at line start, after =, an opening bracket, or a separator, so a
+    dash used as punctuation ("3 - 4") is not read as minus 4."""
     tokens = []
-    for match in NUM_RE.finditer(text):
-        tokens.append(match.group(0).replace(",", ""))
+    pattern = re.compile(r"[+-]?[ \t]*\d[\d,]*(?:\.\d+)?")
+    for match in pattern.finditer(text):
+        raw = match.group(0)
+        sign = ""
+        digits = raw.lstrip("+- \t")
+        if raw[0] in "+-":
+            prefix = text[: match.start()]
+            last = prefix.rstrip()
+            if not last or last[-1] in "=([{\n\t:+-*/>":
+                sign = "-" if raw[0] == "-" else ""
+        tokens.append(sign + digits.replace(",", ""))
     return tokens
 
 
+class Agreement(float):
+    """Agreement value with a reason string for the no-comparison outcomes."""
+
+    def __new__(cls, value, reason=""):
+        obj = super().__new__(cls, value)
+        obj.reason = reason
+        return obj
+
+
+NO_NUMERIC = "primary has no numeric tokens"
+NO_SECOND = "second reading is empty"
+
+
 def numeric_agreement(primary, second):
+    """Fraction of primary numeric tokens present in the second reading.
+
+    Returns an Agreement: a float, so callers can compare it to a threshold,
+    with .reason set when there is nothing to compare (empty second reading,
+    or a primary with no numeric tokens). Never returns 1.0 in those cases.
+    """
     primary_counts = Counter(numeric_tokens(primary))
     second_counts = Counter(numeric_tokens(second))
+    if not (second or "").strip():
+        return Agreement(0.0, NO_SECOND)
     total = sum(primary_counts.values())
     if total == 0:
-        return 1.0
+        return Agreement(0.0, NO_NUMERIC)
     matched = 0
     for token, count in primary_counts.items():
         matched += min(count, second_counts.get(token, 0))
-    return matched / total
+    return Agreement(matched / total)
 
 
 def choose_pages(converted, count, seed):
@@ -438,6 +477,35 @@ def call_vision(png_path, prompt, model, max_tokens):
     return (proc.stdout or "").strip()
 
 
+def fidelity_stamp_path(label):
+    return FIDELITY_ROOT / label / "_model.json"
+
+
+def read_fidelity_stamp(label):
+    """Returns the model id recorded for this label, or None if absent/bad."""
+    path = fidelity_stamp_path(label)
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    model = data.get("model")
+    return model if isinstance(model, str) and model else None
+
+
+def write_fidelity_stamp(label, model):
+    stamp = {"model": model, "written": utc_now()}
+    write_text_atomic(fidelity_stamp_path(label), json.dumps(stamp, ensure_ascii=False) + "\n")
+
+
+def archive_fidelity_stamp(label, model):
+    """Keep the old stamp of a superseded model under a suffixed name."""
+    path = fidelity_stamp_path(label)
+    if path.is_file():
+        write_text_atomic(path.with_name("_model.%s.json" % model.replace("/", "_")), path.read_text(encoding="utf-8"))
+
+
 def run_fidelity(args):
     config, _sources = load_config()
     pages_root = ROOT / config["page_dir"]
@@ -451,41 +519,62 @@ def run_fidelity(args):
         primary_path = MD_ROOT / label / (page_name(page) + ".md")
         second_path = FIDELITY_ROOT / label / (page_name(page) + ".md")
         primary = read_text(primary_path)
-        if second_path.is_file():
+        stamped = read_fidelity_stamp(label)
+        cache_ok = stamped == args.fidelity_model
+        if second_path.is_file() and cache_ok:
             second = read_text(second_path)
         else:
+            if second_path.is_file() and stamped is not None:
+                archive_fidelity_stamp(label, stamped)
             png_path = pages_root / label / (page_name(page) + ".png")
             second = call_vision(png_path, prompt, args.fidelity_model, config["max_tokens"])
             if second:
                 write_text_atomic(second_path, second + "\n")
+                write_fidelity_stamp(label, args.fidelity_model)
 
         agreement = numeric_agreement(primary, second)
         primary_figures = count_figure_lines(primary)
         second_figures = count_figure_lines(second)
         second_title = any(line.startswith("## ") for line in second.splitlines())
-        verdict = "PASS" if agreement >= 0.8 else "REVIEW"
+        if agreement.reason:
+            verdict = "NO_SECOND_READING" if agreement.reason == NO_SECOND else "REVIEW"
+            print(
+                "fidelity %s p%03d: no comparison (%s), figures %d/%d, title %s, %s"
+                % (
+                    label,
+                    page,
+                    agreement.reason,
+                    primary_figures,
+                    second_figures,
+                    "yes" if second_title else "no",
+                    verdict,
+                )
+            )
+        else:
+            verdict = "PASS" if agreement >= 0.8 else "REVIEW"
+            print(
+                "fidelity %s p%03d: agreement %.3f, figures %d/%d, title %s, %s"
+                % (
+                    label,
+                    page,
+                    agreement,
+                    primary_figures,
+                    second_figures,
+                    "yes" if second_title else "no",
+                    verdict,
+                )
+            )
         rows.append(
             {
                 "label": label,
                 "page": page,
                 "agreement": agreement,
+                "reason": agreement.reason,
                 "primary_figures": primary_figures,
                 "second_figures": second_figures,
                 "second_title": second_title,
                 "verdict": verdict,
             }
-        )
-        print(
-            "fidelity %s p%03d: agreement %.3f, figures %d/%d, title %s, %s"
-            % (
-                label,
-                page,
-                agreement,
-                primary_figures,
-                second_figures,
-                "yes" if second_title else "no",
-                verdict,
-            )
         )
 
     write_fidelity_markdown(rows)
@@ -496,19 +585,22 @@ def write_fidelity_markdown(rows):
     out = []
     out.append("# Fidelity gate")
     out.append("")
-    out.append("| label | page | numeric agreement | figures primary | figures second | second title | verdict |")
-    out.append("|---|---|---|---|---|---|---|")
+    out.append("| label | page | numeric agreement | figures primary | figures second | second title | verdict | reason |")
+    out.append("|---|---|---|---|---|---|---|---|")
     for row in rows:
+        agreement = row["agreement"]
+        agreement_cell = "n/a" if agreement.reason else "%.3f" % agreement
         out.append(
-            "| %s | %d | %.3f | %d | %d | %s | %s |"
+            "| %s | %d | %s | %d | %d | %s | %s | %s |"
             % (
                 row["label"],
                 row["page"],
-                row["agreement"],
+                agreement_cell,
                 row["primary_figures"],
                 row["second_figures"],
                 "yes" if row["second_title"] else "no",
                 row["verdict"],
+                row["reason"],
             )
         )
     out.append("")

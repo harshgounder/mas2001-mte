@@ -22,7 +22,8 @@ import time
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 VISION = pathlib.Path.home() / ".local" / "bin" / "vision"
-DEFAULT_MODEL = "xiaomi/mimo-v2.5"
+# user directive 2026-09-15: glm-5.3-flash on ollama-cloud
+DEFAULT_MODEL = "glm-5.3-flash"
 
 BACKOFF_S = (2, 6, 18)
 MAX_ATTEMPTS = 4
@@ -229,6 +230,15 @@ def call_vision(png_path, prompt, model, max_tokens):
     return proc.returncode, proc.stdout, proc.stderr
 
 
+def _read_status(returncode, err):
+    """Status for a non-empty read: truncated beats exit code beats ok."""
+    if TRUNCATED_MARKER in err:
+        return "truncated"
+    if returncode != 0:
+        return "exit_%d" % returncode
+    return "ok"
+
+
 def transcribe(png_path, prompt, model, base_tokens):
     text = ""
     status = "empty"
@@ -260,7 +270,7 @@ def transcribe(png_path, prompt, model, base_tokens):
                     out2, err2 = "", "exception: %s" % exc
                 if len(out2) > len(first_text):
                     text = out2
-                    status = "truncated" if TRUNCATED_MARKER in err2 else "ok"
+                    status = _read_status(returncode, err2)
                     note = err2
                 else:
                     text = first_text
@@ -268,7 +278,7 @@ def transcribe(png_path, prompt, model, base_tokens):
                     note = first_note
                 break
             text = out
-            status = "truncated" if TRUNCATED_MARKER in err else "ok"
+            status = _read_status(returncode, err)
             note = err
             break
 
@@ -316,14 +326,25 @@ def make_record(label, page, status, attempts, latency_s, chars, note, model, ba
     }
 
 
-def is_done(md_path):
-    return md_path.is_file() and md_path.stat().st_size > 0
+def is_done(md_path, record=None):
+    """Done means non-empty markdown AND the latest manifest record says ok."""
+    if not (md_path.is_file() and md_path.stat().st_size > 0):
+        return False
+    if record is None:
+        return False
+    return record.get("status") == "ok"
 
 
-def process_page(label, page, pdf, dpi, prompt, model, max_tokens, force):
+def page_done(label, page, latest, md_root):
+    return is_done(md_root / label / (page_filename(page) + ".md"), latest.get((label, page)))
+
+
+def process_page(label, page, pdf, dpi, prompt, model, max_tokens, force, latest=None):
     png_path = PAGEROOT / label / (page_filename(page) + ".png")
     md_path = OUT / label / (page_filename(page) + ".md")
-    if not force and is_done(md_path):
+    if latest is None:
+        latest = read_manifest_latest()
+    if not force and page_done(label, page, latest, OUT):
         return {"page": page, "ran": False, "done": True, "banned": False, "truncated": False}
 
     started = time.monotonic()
@@ -370,8 +391,7 @@ def label_summary(label, total, latest):
     dashes = 0
     truncated = 0
     for page in range(1, total + 1):
-        md_path = OUT / label / (page_filename(page) + ".md")
-        if is_done(md_path):
+        if page_done(label, page, latest, OUT):
             done += 1
             try:
                 if has_dash(md_path.read_text(encoding="utf-8", errors="replace")):
@@ -449,6 +469,12 @@ def selected_pages(total, limit):
     return pages
 
 
+class convert_test_harness:
+    """Test hook: tests set _root to redirect every repo write."""
+
+    _root = None
+
+
 def main(argv):
     global WORK_ROOT, MANIFEST, PAGEROOT, OUT
 
@@ -459,6 +485,12 @@ def main(argv):
     MANIFEST = WORK_ROOT / "manifest.jsonl"
     PAGEROOT = ROOT / config["page_dir"]
     OUT = ROOT / config["out_dir"]
+    if convert_test_harness._root is not None:
+        base = convert_test_harness._root
+        WORK_ROOT = base / "work"
+        MANIFEST = WORK_ROOT / "manifest.jsonl"
+        PAGEROOT = base / config["page_dir"]
+        OUT = base / config["out_dir"]
 
     dpi = args.dpi if args.dpi is not None else config["dpi"]
     workers = args.workers if args.workers is not None else config["workers"]
@@ -486,20 +518,28 @@ def main(argv):
         WORK_ROOT.mkdir(parents=True, exist_ok=True)
 
     runnable = []
+    skipped = []
     for src in sources:
         reason = verify_source(src)
         if reason is not None:
             log("%s: SKIPPED, %s" % (src.get("label"), reason))
+            skipped.append((src.get("label"), reason))
             continue
         runnable.append(src)
 
     if args.dry_run:
+        if skipped:
+            for label, reason in skipped:
+                print("%s: SKIPPED, %s" % (label, reason))
+            print("dry run: %d skipped source(s)" % len(skipped))
+            return 1
+        latest = read_manifest_latest()
         total_pending = 0
         for src in runnable:
             label = src["label"]
             total = source_page_count(src)
             pages = selected_pages(total, args.limit)
-            pending = [p for p in pages if not is_done(OUT / label / (page_filename(p) + ".md"))]
+            pending = [p for p in pages if not page_done(label, p, latest, OUT)]
             total_pending += len(pending)
             done = len(pages) - len(pending)
             if pending:
@@ -519,7 +559,7 @@ def main(argv):
         pending = [
             page
             for page in pages
-            if args.force or not is_done(OUT / label / (page_filename(page) + ".md"))
+            if args.force or not page_done(label, page, latest, OUT)
         ]
         if pending:
             pdf = pathlib.Path(src["path"])
@@ -535,6 +575,7 @@ def main(argv):
                         args.model,
                         config["max_tokens"],
                         args.force,
+                        latest,
                     ): page
                     for page in pending
                 }
@@ -562,6 +603,11 @@ def main(argv):
     print_table(rows)
     print("wall time: %.1fs" % wall_s)
     write_summary(rows, wall_s)
+    if skipped:
+        for label, reason in skipped:
+            print("%s: SKIPPED, %s" % (label, reason))
+        print("%d skipped source(s)" % len(skipped))
+        return 1
     return 0
 
 
