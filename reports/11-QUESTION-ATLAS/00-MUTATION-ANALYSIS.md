@@ -227,7 +227,9 @@ on the machine this session.
   5  CWS quizzes (30 marks, in-class): none on disk. The two assignments are the
      only setter-authored instruments we hold. Ask for quiz papers if any survive
   6  past MTE papers: none on disk; Google Drive sweep blocked (OAuth dead). FLAG
-  7  the [H] blocks: all eight stay first priority (no slides at all)
+  7  the [H] blocks: seven stay first priority (no slides at all); Chebyshev's deck
+     arrived 15 Sep so it moved out of the [H] class but keeps priority (it is asked
+     in both MTE papers and in Assignment 1)
   8  one-side Chebyshev variant: P(X - mu >= c) <= sigma^2 / (sigma^2 + c^2), the
      one-sided form. The corpus uses the two-sided form only. The one-sided form is
      a real adjacency; keep in sheet as a footnote

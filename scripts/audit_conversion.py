@@ -8,7 +8,7 @@ Two modes:
 * --fidelity N: pick N converted pages across labels, transcribe them again
   with a second vision model, and compare the two readings.
 
-Standard library only. See BRIEF-003-audit-and-fidelity.md.
+Standard library only. See process/BRIEF-003-audit-and-fidelity.md.
 """
 
 import argparse

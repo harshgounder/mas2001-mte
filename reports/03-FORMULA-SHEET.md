@@ -112,10 +112,10 @@ Both facts show up as one mark sub questions.
 
 ---
 
-## E. Chebyshev's inequality (MTE lectures 10 and 11, NO source slides)
+## E. Chebyshev's inequality (MTE lectures 10 and 11; deck S&P L10-11 arrived 15 Sep)
 
-This is the only MTE topic with no teaching material in the corpus. See
-`reports/01-COVERAGE-MAP.md` section 2 for the evidence.
+(The 15 September batch closed the old gap. The deck carries the theorem, the k-sigma
+restatement, the complement form and two worked questions; sheet and bank remain the drill.)
 
 ```
 P(|X - mu| >= k sigma) <= 1 / k^2                 k > 0

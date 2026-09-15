@@ -18,7 +18,7 @@ warm, because every question in the paper is 2 or 3 of these stacked:
       -> random variables, pmf/cdf (L3-6)
           -> expectation + variance (L7)
               -> [INDEPENDENCE RULES OF RVs]  (L8-9, hidden, do not skip)
-                  -> [CHEBYSHEV]              (L10-11, hidden, no slides)
+                  -> [CHEBYSHEV]              (L10-11, deck exists as of 15 Sep)
                   -> distributions (L12-16)
                       -> sampling + standard error (L17)
                           -> CLT (L18)
@@ -27,11 +27,12 @@ warm, because every question in the paper is 2 or 3 of these stacked:
 
 ## Stage 0, hidden blocks first, 2.5 hours total
 
-These carry marks in every past graded set and have no slides. Do them while fresh.
+These carry marks in every past graded set. Chebyshev's deck arrived 15 Sep (S&P L10-11); the
+rest still have no slides. Do them all while fresh.
 
 ```
 0.1  CHEBYSHEV, 75 min
-     read: sheet section E, bank section 6, mock B1 with its solution
+     read: S&P L10-11 deck (theory), then sheet section E, bank section 6, mock B1
      drill: k from interval (60/80 mu 70 sd 5 -> k 2 -> 3/4)
             tail vs complement (the 1/9 vs 8/9 fork)
             sum of dice (find Var = 35/6 first, then k, bound 35/54)

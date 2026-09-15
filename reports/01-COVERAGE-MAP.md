@@ -17,7 +17,7 @@ page of `ppt4-continuous-prob-dist`, which is `md/ppt4-continuous-prob-dist/p023
 | 7 | expectation of a discrete rv | `notes-lecture-series-01-09` | p088-p094 | yes |
 | 8-9 | variance, shortcut formula, rules of variance | `notes-lecture-series-01-09` | p095-p111 | yes |
 | 3-6 | continuous rv, pdf, cdf, expectation, variance | `notes-lecture-series-01-09` | p112-p147 | yes |
-| 10-11 | Chebyshev's inequality | NONE | none | **GAP** |
+| 10-11 | Chebyshev's inequality | YES (arrived 15 Sep) | S&P L10-11 deck |
 | 12 | binomial distribution | `ppt3-discrete-prob-dist` | p001-p018 | yes |
 | 13 | Poisson distribution | `ppt3-discrete-prob-dist` | p019-p028 | yes |
 | 14 | uniform (continuous) | `ppt4-continuous-prob-dist` | p001-p006 | yes |
@@ -35,12 +35,13 @@ page of `ppt4-continuous-prob-dist`, which is `md/ppt4-continuous-prob-dist/p023
 | n/a | problem practice | `mas2001-assignment-1` | p001-p006 | yes, practice |
 | n/a | problem practice | `mas2001-assignment-2` | p001-p004 | yes, practice |
 
-## 2. The Chebyshev gap
+## 2. The Chebyshev gap (CORRECTED 15 Sep: deck arrived)
 
-Lectures 10 and 11 are Chebyshev's inequality, 2 of 21 MTE lectures, and the topic is
-named in `~/PS/syllabus.txt` line 8. It has no teaching slides anywhere in the corpus.
+Lectures 10 and 11 are Chebyshev's inequality, 2 of 21 MTE lectures. Status history: the
+initial batch had no teaching slides for it anywhere; the 15 September batch added
+`S&P L10-11 Chebyshev's inequality.pdf` (9 pages). The gap is closed.
 
-Evidence, exhaustive:
+Evidence, exhaustive (old batch):
 
 ```
 grep -ril 'chebyshev' work/text/
@@ -51,12 +52,13 @@ grep -ril 'chebyshev' work/text/
 
 In the 147 page deck the word appears once, in the syllabus listing on p009, and never
 as taught content. So the topic is examinable, is on the MTE syllabus, is used by
-Assignment 1 question 5, and has no slide to revise from.
+Assignment 1 and by both past MTE papers, and, as of 15 September, has its own deck
+(`S&P L10-11`, 9 pages) to revise from.
 
-Handling: `reports/03-FORMULA-SHEET.md` covers it in full, and
+Handling: read `S&P L10-11`; `reports/03-FORMULA-SHEET.md` covers it in full, and
 `reports/04-QUESTION-BANK.md` adds worked problems, including the two variants the
-course uses (bound on a sum of dice, bound on a binomial tail). Treat it as the highest
-risk topic per page of material available.
+course uses (bound on a sum of dice, bound on a binomial tail). Still the highest
+marks-per-page topic in the syllabus.
 
 ## 3. Duplication and overlap found
 
@@ -101,6 +103,6 @@ Order of value per page of reading, MTE only:
 3. `lms-standard-error-clt` p001 to p018 for standard error and the CLT.
 4. `ppt5-estimation-summary` for the estimation block, with `lms-theory-of-estimation`
    p022 to p030 for the extra worked numericals.
-5. Chebyshev has no source, so it reads from the formula sheet and question bank only.
+5. Chebyshev: read `S&P L10-11` (arrived 15 Sep), then the formula sheet and question bank.
 
 Total MTE-relevant pages: 136 + 28 + 43 + 18 + 26 = 251, plus 7 handout pages.

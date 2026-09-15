@@ -139,7 +139,7 @@ Time units must match the rate units. The paper will most likely mix minutes and
 
 ---
 
-## 6. Chebyshev, no slides exist for this topic
+## 6. Chebyshev (deck: S&P L10-11, arrived 15 Sep; old-batch note below)
 
 Three shapes are enough. All values computed.
 

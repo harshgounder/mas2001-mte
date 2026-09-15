@@ -121,3 +121,39 @@ time, 10-20 pages per unit, nothing skipped.
   - the MTE 2025-26 paper text layer has re-ordered fragments (about:srcdoc artifacts):
     careful page-order reading needed, not raw grep
 ```
+
+## 6. Scout findings (from the v1 scout, folded in here)
+
+The first read already established these. Kept because they change prior conclusions.
+
+```
+  CHEBYSHEV HAS SLIDES AFTER ALL (the old "zero slides" claim was old-batch only):
+    C3 (L10-11) carries the theorem, the k-sigma restatement, the complement form and
+    two worked questions. Its Q2 (mu=10, sigma^2=4, find C with P(|X-10|>=C)<=0.04)
+    is literally MTE 2025-26 Q5, same numbers. The deck is the source.
+
+  PAPERS CONFIRM SIBLINGS (14 items previously flagged "not asked" that ARE asked):
+    Var(X-2Y) via independent Poissons .............. MTE 2024-25 B1
+    E(XY)=E(X)E(Y) MCQ ............................... Re-sess 2025-26 QA1
+    Chebyshev find-C inverse ......................... MTE 2025-26 Q5 + C3 Q2
+    Chebyshev bound vs actual probability ............ MTE 2024-25 B3
+    exponential interval P(a<T<b) .................... MTE 2024-25 B2
+    uniform wait-time story (train) .................. MTE 2024-25 B4
+    normal sample-mean n=9 (exact normal) ............ MTE 2025-26 Q7
+    sufficiency concept MCQ .......................... MTE 2025-26 A3
+    consistency with bias formula .................... Re-sess 2025-26 QA2
+    SE direction MCQ ................................. Re-sess 2025-26 QA3
+    Chebyshev statement-spotting MCQ ................. MTE 2024-25 QA3
+    k from E(X), E(X^2) first ........................ C3 Q1 style
+    Var(2X-5Y) linear combination .................... 2025-26 assignment Q11
+    exponential mean/var in one problem .............. MTE 2024-25 B2
+
+  EXAM FORMAT (from the actual papers, both years):
+    30 marks, 90 minutes, all compulsory, calculator allowed,
+    "missing data may be assumed suitably" (the official re-skin licence)
+    Sections: A = MCQs (2 marks each), B = 4-mark problems, C = 8-mark combined
+    useful z and phi values are PRINTED in the paper
+
+  WATERMARK NOTE: mujstella.in fragments are reseller watermarks on THIS year's PDFs;
+  same content as the course PDFs, the watermark is not course content.
+```

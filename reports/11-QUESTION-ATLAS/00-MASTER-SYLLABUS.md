@@ -7,9 +7,10 @@ every number quoted was recomputed on the machine.
 Legend:
 ```
   [+]  taught on slides AND used by questions, named in the syllabus
-  [~]  used by questions, sits inside the topic, NOT named in the syllabus list
-  [H]  used by questions but no slide teaches it (hidden)
-  [!]  used AND already graded in assignment 1 or 2
+  [~]  used by questions, sits INSIDE the topic, NOT named in the MTE syllabus list
+  [H]  used by questions but NO slide taught it (as of the old batch); Chebyshev left
+       this class on 15 Sep when S&P L10-11 arrived
+  [!]  already graded in assignment 1 or 2
   refs deck = notes-lecture-series-01-09 | p3 = ppt3 | p4 = ppt4 | clt = standard-error-clt
        p5 = ppt5 | lt = lms-theory-of-estimation
   item IDs (D1-x, A1-x, A2-x) come from 00-COUNT-REGISTER.md
@@ -25,7 +26,7 @@ Legend:
 | 4 | Probability mass and density functions, Cumulative distribution functions | 5-6 | FULL | deck p063 to p087, p112 to p139 |
 | 5 | Expectation of random variables | 7 | FULL | deck p088 to p094, p140 to p147 |
 | 6 | Expectation of random variables, Independent random variables | 8-9 | HALF | deck p095 to p111: expectation+variance yes, independent-rv rules [H] |
-| 7 | Chebyschev's inequality | 10-11 | NONE | no slide anywhere; sheet E + bank 6 + mock B1 |
+| 7 | Chebyschev's inequality | 10-11 | YES (new batch) | S&P L10-11 deck (9p), CORRECTED 15 Sep; sheet E + bank 6 + mock B1 remain the drill |
 | 8 | Binomial distribution | 12 | FULL | p3 p001 to p018 |
 | 9 | Poisson distribution | 13 | FULL | p3 p019 to p028 |
 | 10 | Uniform distribution (Continuous) | 14 | FULL | p4 p001 to p006 |
@@ -150,7 +151,7 @@ Legend:
 6.3 linearity contrast [+] E(X+Y)=E(X)+E(Y) always, no independence needed (sheet line 94)
 ```
 
-### Lectures 10-11: CHEBYSHEV, no slides at all [H][!]
+### Lectures 10-11: CHEBYSHEV, deck arrived 15 Sep (was: no slides) [~]
 
 ```
 7.1 statement P(|X-mu| >= k sigma) <= 1/k^2 | complement form >= 1 - 1/k^2
@@ -161,7 +162,7 @@ Legend:
 7.6 lower bound for counts interval (600 throws: k=2.19, 19/24, A1 short 6)
 7.7 proportion framing in reverse (marks: at least 75 percent, A1 app 4)
 7.8 applicability statement (A1 MCQ 5, MCQ 10)
-graded 5 times, zero slides. sources: sheet E, bank section 6, mock B1.
+graded 5 times, deck arrived 15 Sep (S&P L10-11). sources: deck, sheet E, bank section 6, mock B1.
 ```
 
 ### Lecture 12: binomial (p3 p001 to p018)
@@ -291,7 +292,8 @@ graded 5 times, zero slides. sources: sheet E, bank section 6, mock B1.
 
 ```
 [H] independence rules of rvs (E(XY), Var(X+Y), Var(X-Y))     feeds 4 downstream areas
-[H] Chebyshev entire topic                                    5 graded uses
+    Chebyshev entire topic LEFT THIS CLASS 15 Sep: S&P L10-11 deck arrived; still
+    priority (asked in A1, MTE 2024-25, MTE 2025-26)
 [H] memoryless property                                       2 graded uses
 [H] landmarks 68.27/95.45/99.73                               1 graded use
 [H] expected count N x P rule                                 graded + slide usage

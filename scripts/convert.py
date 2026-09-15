@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Convert PDF slide decks into per-page markdown with a vision model.
 
-Resumable, parallel, standard library only. See BRIEF-001-conversion-pipeline.md.
+Resumable, parallel, standard library only. See process/BRIEF-001-conversion-pipeline.md.
 
 The pipeline reads sources.yaml and PROMPT.txt at runtime, renders each page to
 a PNG with pdftoppm, and shells out to the existing vision CLI for transcription.

@@ -13,7 +13,7 @@ Goal: know exactly what the paper can ask, and close the one hole that has no so
 1. Read `reports/00-SCOPE-AND-EXAM-FACTS.md` and `reports/01-COVERAGE-MAP.md`. 20 minutes.
    Outcome: you can say out loud which lectures are in scope (1 to 21) and which are not (22+).
 2. Read `reports/03-FORMULA-SHEET.md` end to end. 40 minutes. Do not memorise yet, just map.
-3. Chebyshev block, since it has no slides anywhere. `reports/03-FORMULA-SHEET.md` section E
+3. Chebyshev block, since the deck is short and the topic is cheap marks. `reports/03-FORMULA-SHEET.md` section E
    then `reports/04-QUESTION-BANK.md` section 6. 60 minutes. Re-derive the dice bound 35/54
    and the 19/24 bound by hand without looking.
 4. Reproduce the two Chebyshev bounds from memory on blank paper. 20 minutes.
@@ -101,7 +101,7 @@ remain before the window opens on Friday 18: tonight, then Tuesday, Wednesday an
 
 Tonight, 3 hours, covers what Day 0 and Day 1 were for:
 
-1. Chebyshev block, first, because it has no source anywhere. `reports/03-FORMULA-SHEET.md`
+1. Chebyshev block. `S&P L10-11` deck (arrived 15 Sep), then `reports/03-FORMULA-SHEET.md`
    section E, then `reports/04-QUESTION-BANK.md` section 6. 60 minutes. Re-derive the dice
    bound 35/54 and the 19/24 bound on paper without looking. Gate: write both forms of the
    inequality from memory and say why it needs no distributional assumption.
@@ -141,7 +141,7 @@ before the formula sheet drill.
 
 ## Order of priority if a day collapses
 
-1. Chebyshev, because it has no source and is guaranteed cheap marks when known.
+1. Chebyshev, because it is guaranteed cheap marks when known (deck arrived 15 Sep, S&P L10-11).
 2. Binomial and Poisson closed forms plus the exponential rate trap.
 3. Standard error and the CLT, the whole of lectures 17 and 18 is usually one clean question.
 4. Normal standardisation in both directions.

@@ -21,7 +21,8 @@ so B is a subset of A. Source: `md/notes-lecture-series-01-09/p050.md`.
 Source: `md/notes-lecture-series-01-09/p031.md` to `p040.md`.
 
 **A5.** Option 2, any distribution with finite mean and finite variance. That is exactly what
-makes it useful and exactly why there are no slides for it in the corpus, because it is
+makes it useful and exactly why there were no slides for it in the old batch (the 15 Sep
+batch added S&P L10-11 with full proofs), because it is
 distribution-free. Source: `reports/03-FORMULA-SHEET.md` section E.
 
 **A6.** Option 3, 1/6. Six ordered pairs give a sum of 7 out of 36, so 6/36 = 1/6.

@@ -20,7 +20,7 @@ counted as teaching slides. Page by page source of truth: `reports/01-COVERAGE-M
 | 5-6 | PMF, PDF, CDF | yes | deck p063-p087, continuous cdf at p130 |
 | 7 | Expectation of random variables | yes | deck p088-p094, continuous side p140-p147 |
 | 8-9 | Expectation of random variables, independent random variables | half | expectation and variance p095-p111; the independence rules have NO slides, see 2.2 |
-| 10-11 | Chebyshev's inequality | NO | no teaching slide anywhere, see 2.1 |
+| 10-11 | Chebyshev's inequality | YES (new batch) | S&P L10-11 deck, 9p; CORRECTED 15 Sep, see 2.1 |
 | 12 | Binomial distribution | yes | ppt3 p001-p018 |
 | 13 | Poisson distribution | yes | ppt3 p019-p028 |
 | 14 | Uniform distribution | yes | ppt4 p001-p006 |
@@ -31,15 +31,21 @@ counted as teaching slides. Page by page source of truth: `reports/01-COVERAGE-M
 | 19 | Theory of Estimation: parameter, statistic, point and interval estimation | yes | ppt5 p001-p007 |
 | 20-21 | Characteristics of a good estimator | yes | ppt5 p008-p021 and lms-theory p001-p030 |
 
-Count: of the 21 MTE lectures, 17 have full teaching slides on disk, lectures 8-9 are half
-covered (the expectation and variance rules exist, the independence rules do not), and
-lectures 10 and 11 have no slides at all.
+Count: of the 21 MTE lectures, 18 have full teaching slides on disk (Chebyshev moved from
+NO to YES on 15 September when the L10-11 deck arrived), and lectures 8-9 are half
+covered (the expectation and variance rules exist, the independence rules do not).
 
-## 2. The two gaps
+## 2. The gaps (re-audited 15 September)
 
-### 2.1 Chebyshev's inequality, lectures 10-11: no slides anywhere
+### 2.1 Chebyshev's inequality, lectures 10-11: CORRECTED, the deck arrived
 
-Every hit for `cheb` in the corpus is one of three kinds:
+The 15 September batch added `~/PS/S&P L10-11 Chebyshev's inequality.pdf` (9 pages):
+theorem statement, the sigma-version restatement, the complement form, and two worked
+questions (Q1: E(X)=3, E(X^2)=13 lower bound for P(-2<X<8) = 21/25; Q2: mu=10, sigma^2=4,
+four parts including find-C which is MTE 2025-26 Q5 verbatim).
+
+What the old batch showed, kept for the record: every `cheb` hit across the original 11
+sources was one of three kinds:
 
 ```
   deck p009                 syllabus contents list, one line, never taught in the deck
@@ -48,12 +54,11 @@ Every hit for `cheb` in the corpus is one of three kinds:
   (the assembled copies repeat the same lines)
 ```
 
-No slide defines the inequality, proves it or works an example. The topic is named in
-`~/PS/syllabus.txt` line 8, tagged MTE in the lecture plan, and Assignment 1 already gave it
-five items in the graded set: two MCQs (p002 questions 5 and 10), two short-answer problems
-(p003 questions 5 and 6, the dice bound 35/54 and the 600-throw bound 19/24), and the marks
-application (p006 question 4). This repo carries it in three places instead:
-`03-FORMULA-SHEET.md` section E, `04-QUESTION-BANK.md` section 6, and mock question B1.
+The topic is named in `~/PS/syllabus.txt` line 8, tagged MTE in the lecture plan, and
+Assignment 1 gave it five items in the graded set. Past papers confirm it further: MTE
+2024-25 QA3 (statement MCQ) and QB3 (bound vs actual), MTE 2025-26 Q5 (the find-C). Slides
+now exist; `03-FORMULA-SHEET.md` section E, `04-QUESTION-BANK.md` section 6, and mock B1
+remain the drill.
 
 ### 2.2 Independent random variables, second half of lectures 8-9: no slides
 

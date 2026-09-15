@@ -1,6 +1,7 @@
 # MTE topic flow: what leads to what
 
-Built 14 September 2026. Companion to 00-TOPIC-TREE.md. This file draws the edges between
+Built 14 September 2026. Companion to the v1 tree (now at `archive/00-TOPIC-TREE-v1.md`,
+superseded by `00-MASTER-SYLLABUS.md`). This file draws the edges between
 topics: prerequisites, cross-links, and the broken links (edges the questions walk that no
 slide teaches).
 
@@ -140,4 +141,5 @@ Legend:
 T1 intro, T2 probability foundations, T3 random variables, T4 pmf/pdf/cdf, T5 expectation,
 T6 variance and independent rvs, T7 Chebyshev, T8 binomial, T9 Poisson, T10 uniform,
 T11 normal, T12 exponential, T13 sampling and standard error, T14 CLT, T15 estimation
-basics, T16 estimator properties. Full detail in 00-TOPIC-TREE.md.
+basics, T16 estimator properties. Full detail in `archive/00-TOPIC-TREE-v1.md` and the
+current master at `00-MASTER-SYLLABUS.md`.

@@ -43,8 +43,8 @@ writing, private GitHub remote created at the end of the run.
   mas2001-mte/
     README.md                  what this repo is
     sources.yaml               11 sources, absolute paths, page counts, sha256, topic
-    PROMPT.txt                 the transcription prompt, versioned
-    BRIEF-001..003             the briefs handed to opencode for the pipeline
+    PROMPT.txt                 the transcription prompt, versioned (runtime file, stays at root)
+    process/BRIEF-001..003     the briefs handed to opencode for the pipeline
     scripts/
       convert.py               render page to png, read it with vision, cache and manifest
       assemble.py              per page markdown into one document per deck
@@ -108,7 +108,7 @@ succeeded twice on retry. That failure mode is why the pipeline retries three ti
   lecture   2        probability terminology .............. deck p012 to p022
   lectures  3 to 6   events, sample space, RVs, PMF/PDF/CDF  deck p023 to p062
   lectures  7 to 9   expectation, variance ................. deck p063 to p111
-  lectures 10, 11    Chebyshev ............................. GAP, see 5.3
+  lectures 10, 11    Chebyshev ............................. deck, see 5.3 (corrected 15 Sep)
   lecture  12        Binomial .............................. ppt3 p001 to p018
   lecture  13        Poisson ............................... ppt3 p019 to p028
   lecture  14        Uniform ............................... ppt4 p001 to p006
@@ -127,10 +127,16 @@ at maximum likelihood. The expectation that PS is the whole subject comes from t
 not from its contents. The missing block is the heaviest MTE block by lecture count, 10 of the
 21 lectures, and it is only in the 147 page deck.
 
-### 5.3 Chebyshev has no slides
+### 5.3 Chebyshev: CORRECTED 15 September, the deck exists
 
-Chebyshev's inequality is lectures 10 and 11 in the MTE scope. Searching the text layer of all
-11 sources, the string appears in exactly three places:
+This section originally said Chebyshev had no slides. That was true of the first source batch
+only. The 15 September batch (`~/PS/S&P L10-11 Chebyshev's inequality.pdf`, 9 pages) carries
+the theorem, the k-sigma restatement, the complement form, and two worked questions. Its Q2
+(mu=10, sigma^2=4, find C with P(|X-10| >= C) <= 0.04) is MTE 2025-26 question 5 with the
+same numbers.
+
+What the old batch showed, kept for the record: across the 11 original sources the string
+appeared in exactly three places, all non-teaching:
 
 ```
   notes-lecture-series-01-09 : one line in the course contents list, never taught
@@ -138,11 +144,9 @@ Chebyshev's inequality is lectures 10 and 11 in the MTE scope. Searching the tex
   mas2001-assignment-1       : the question that uses it
 ```
 
-There is no deck slide for it in any source on disk, and no past paper on disk either. It is
-examinable, it already appeared in your Assignment 1 in two parts, and it is the one topic
-where this repo cannot hand you source slides. `reports/03-FORMULA-SHEET.md` section E and the
-mock paper B1 cover it, with the three standard errors (the sign of the inequality, the
-complement form, and forgetting that the bound is one sided) called out.
+Chebyshev is examinable, appeared in Assignment 1 twice, in MTE 2024-25 (statement MCQ +
+bound-vs-actual), in MTE 2025-26 (find-C), and now has its own deck in the new batch. Read
+`S&P L10-11` for it; `reports/03-FORMULA-SHEET.md` section E and mock B1 remain the drill.
 
 ### 5.4 Duplication found
 
@@ -200,8 +204,8 @@ copy 0.0915 into a table reading.
 
 | risk | why it matters | mitigation |
 |---|---|---|
-| No past MTE paper on disk, and the Drive check failed | the exact paper pattern is unknown, only the style is | mock paper built from the observed assignment pattern |
-| Chebyshev has no slides | examinable, previously asked, no source to read | formula sheet plus two worked parts in the mock |
+| No past MTE paper on disk at build time (SUPERSEDED 15 Sep: both years + schemes arrived) | the exact paper pattern was unknown at first build | the 15 Sep batch fixed this; see reports/12-NEW-BATCH.md |
+| Chebyshev had no slides (FIXED 15 Sep: S&P L10-11 deck arrived) | was examinable with no source to read | read S&P L10-11; formula sheet plus mock B1 remain the drill |
 | Days 14, 15, 16 also carry four other courses | revision time is not the whole day | plan budgets 4 to 5 focused hours per day |
 | The 147 page deck has a thin text layer (264 chars per page) | skim reading it on paper hides the maths | converted pages carry the maths in LaTeX, read those |
 | MoM and MLE are in ~/PS but out of the paper | easy to burn a day on two non examinable decks | both tagged out of scope in the coverage map |
