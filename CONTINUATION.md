@@ -110,8 +110,9 @@ batch-2 sources (labels already reserved in sources.yaml).
   python3 -c "import sys; sys.path.insert(0,'~/mas2001-mte/scripts'); from convert import
     parse_sources_yaml; _, s = parse_sources_yaml(open('~/mas2001-mte/sources.yaml').read());
     print(len(s))"                                  # expect 36 (11 + 23 batch-2 + 2 extras)
-  ls ~/PS | wc -l                                  # 33 files total in ~/PS
-  find ~/PS -maxdepth 1 -newermt '2026-09-15 00:00' -type f | wc -l   # 23 batch-2 arrival
+  ls ~/PS | wc -l                                  # 34 files in ~/PS (33 belong to this repo's
+                                                   # corpus; the count is checked loosely)
+  find ~/PS -maxdepth 1 -newermt '2026-09-15 00:00' -type f | wc -l   # 24 arrivals since 15 Sep (23 are batch-2)
   grep -c 'CORRECTED' ~/mas2001-mte/reports/*.md   # the 15 Sep corrections are in place
 ```
 
