@@ -393,6 +393,7 @@ def label_summary(label, total, latest):
     for page in range(1, total + 1):
         if page_done(label, page, latest, OUT):
             done += 1
+            md_path = OUT / label / (page_filename(page) + ".md")
             try:
                 if has_dash(md_path.read_text(encoding="utf-8", errors="replace")):
                     dashes += 1
@@ -527,13 +528,17 @@ def main(argv):
             continue
         runnable.append(src)
 
+    # One manifest read per run, shared by the dry-run branch, the processing
+    # loop, and process_page. The re-read after the loop (below) picks up
+    # records this run appended, for the per-label summary.
+    latest = read_manifest_latest()
+
     if args.dry_run:
         if skipped:
             for label, reason in skipped:
                 print("%s: SKIPPED, %s" % (label, reason))
             print("dry run: %d skipped source(s)" % len(skipped))
             return 1
-        latest = read_manifest_latest()
         total_pending = 0
         for src in runnable:
             label = src["label"]
@@ -590,7 +595,7 @@ def main(argv):
                         )
                         append_manifest(record)
 
-        latest = read_manifest_latest()
+        latest = read_manifest_latest()  # re-read: sees rows this run wrote
         stats = label_summary(label, len(pages), latest)
         rows.append(dict(label=label, **stats))
         print(

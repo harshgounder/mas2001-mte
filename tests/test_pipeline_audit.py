@@ -338,6 +338,32 @@ class RealRunSkipChecks(unittest.TestCase):
                     result = convert.main([])
         self.assertNotEqual(result, 0)
 
+    def test_real_run_with_pending_page_does_not_crash(self):
+        """A verified source with a pending page must run main() to completion.
+
+        The skip test above never reaches the processing loop (its only source is
+        skipped), so it cannot see a NameError inside that loop. This one drives a
+        source that PASSES verification and has one pending page, which is the
+        shape every real conversion run has.
+        """
+        config = dict(dpi=110, max_tokens=100, workers=1, page_dir='work/pages', out_dir='md')
+        with tempfile.TemporaryDirectory(prefix='mas2001-real-pending-') as tmp:
+            root = Path(tmp)
+            source_pdf = root / 'deck.pdf'
+            source_pdf.write_bytes(b'%PDF-1.4 stub\n')
+            (root / 'PROMPT.txt').write_text('prompt\n')
+            sources = [dict(label='deck', path=str(source_pdf), pages='1')]
+            with patch.object(convert, 'load_config', return_value=(config, sources)), \
+                 patch.object(convert, 'ROOT', root), \
+                 patch.object(convert.convert_test_harness, '_root', root), \
+                 patch.object(convert, 'source_page_count', return_value=1), \
+                 patch.object(convert, 'process_page', return_value={'page': 1, 'ran': True, 'done': False, 'banned': False, 'truncated': False}), \
+                 patch.object(convert.time, 'sleep'):
+                buf_out, buf_err = io.StringIO(), io.StringIO()
+                with contextlib.redirect_stdout(buf_out), contextlib.redirect_stderr(buf_err):
+                    result = convert.main([])
+        self.assertEqual(result, 0, 'a clean run of one pending page must exit 0, got %r' % result)
+
 
 if __name__ == '__main__':
     unittest.main()
