@@ -40,7 +40,7 @@ Legend:
    EXPECT   VARIANCE
     |        | + INDEPENDENCE RULES OF RVs [H][!]
     |        |
-    |        +---------------> T7  CHEBYSHEV [H][!]   (needs mu + sigma)
+    |        +---------------> T7  CHEBYSHEV [~]   (needs mu + sigma; deck arrived 15 Sep)
     |        |
     v        v
    T13  SAMPLING + STANDARD ERROR   (SE = sigma/sqrt(n), needs T6)
@@ -85,10 +85,10 @@ Legend:
     +--> T14  every CLT question           SE derivation
     +--> T16  Var(linear combinations)     ppt5/lms comparisons
 
-   T7   Chebyshev entire topic [H]
+   T7   Chebyshev (deck arrived 15 Sep; was [H] in the old batch)
     |
     +--> A1 MCQ 5, MCQ 10  +  A1 short 5 (35/54), short 6 (19/24)  +  A1 app 4 (75%)
-         total: 5 graded uses, zero slides
+         + MTE 2024-25 QA3/QB3 + MTE 2025-26 Q5: graded 8+ uses, deck now exists
 
    T12H memoryless property
     +--> A2 MCQ Q5      +--> A2 section C Q1

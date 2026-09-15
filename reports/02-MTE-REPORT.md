@@ -14,8 +14,8 @@ the whole of probability theory, random variables, expectation, variance and the
 work, exist only inside a 147 page deck sitting in `~/muj-academics/handouts/`. Sit the paper
 with `~/PS` alone and two thirds of the syllabus is unread.
 
-Two named MTE lectures, 10 and 11, have no slide content anywhere in the corpus. Details in
-section 5.3.
+Two named MTE lectures, 10 and 11, had no slide content anywhere in the old batch; the 15
+Sep batch closed that with the S&P L10-11 deck. Details in section 5.3.
 
 ## 2. The exam
 

@@ -9,8 +9,9 @@ Legend:
 ```
   [+]  taught on slides AND used by questions, named in the syllabus
   [~]  used by questions, sits inside the topic, NOT named in the syllabus list
-  [H]  used by questions but no slide teaches it
-  [!]  already graded in assignment 1 or 2
+  [H]  used by questions but no slide teaches it (the old-batch state; Chebyshev left
+       this class on 15 Sep when S&P L10-11 arrived)
+  [!]  already graded in assignment 1 or 2 (batch 2 added: past papers and past assignments)
   deck = notes-lecture-series-01-09 (147 pp) | p3 = ppt3 | p4 = ppt4 | clt = CLT deck
   p5 = ppt5 | lt = lms-theory | D1-x = deck item ID from the count register
 ```
@@ -376,7 +377,7 @@ L8-9  EXPECTATION + INDEPENDENT RANDOM VARIABLES  (deck p095 to p111)
     6.3.3 used in A1 short 5 to get k and the 35/54 bound
 
 ================================================================================
-L10-11  CHEBYSHEV'S INEQUALITY  (no slides anywhere)  [H][!]
+L10-11  CHEBYSHEV'S INEQUALITY  (deck arrived 15 Sep, was the missing block)
 ================================================================================
 
 7.1 the statement and both forms
@@ -412,7 +413,9 @@ L10-11  CHEBYSHEV'S INEQUALITY  (no slides anywhere)  [H][!]
     7.8.1 A1 MCQ 5: which inequality gives an upper bound on deviation from the mean:
           Chebyshev
     7.8.2 A1 MCQ 10: applicable to any distribution with finite mean and variance
-7.9 sources: formula sheet section E, question bank section 6, mock B1. Five graded uses.
+7.9 sources: deck S&P L10-11 (arrived 15 Sep), formula sheet section E, question bank
+    section 6, mock B1. Graded: 5x in assignment 1 + MTE 2024-25 (QA3, QB3) + MTE
+    2025-26 (Q5) + 2025-26 assignment Q5 = 9+ uses.
 
 ================================================================================
 L12  BINOMIAL DISTRIBUTION  (p3 p001 to p018)

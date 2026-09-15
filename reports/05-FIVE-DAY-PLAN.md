@@ -8,7 +8,7 @@ Reading refs are files in this repo. `md/<label>.md` is the assembled document,
 
 ## Day 0, today, Sunday 13 September (evening, 3 hours)
 
-Goal: know exactly what the paper can ask, and close the one hole that has no source.
+Goal: know exactly what the paper can ask, and close the one hole that had no source (Chebyshev; the deck has since arrived).
 
 1. Read `reports/00-SCOPE-AND-EXAM-FACTS.md` and `reports/01-COVERAGE-MAP.md`. 20 minutes.
    Outcome: you can say out loud which lectures are in scope (1 to 21) and which are not (22+).
