@@ -226,7 +226,9 @@ on the machine this session.
      play, that is an unbounded source. No copy on disk. FLAG
   5  CWS quizzes (30 marks, in-class): none on disk. The two assignments are the
      only setter-authored instruments we hold. Ask for quiz papers if any survive
-  6  past MTE papers: none on disk; Google Drive sweep blocked (OAuth dead). FLAG
+  6  past MTE papers: ARRIVED 15 Sep (both years + both solution schemes + 5 ETE + 2
+     re-sess papers). The Drive sweep item is moot for MTE purposes; the papers
+     confirmed 14 previously-hypothetical siblings. See reports/12-NEW-BATCH.md
   7  the [H] blocks: seven stay first priority (no slides at all); Chebyshev's deck
      arrived 15 Sep so it moved out of the [H] class but keeps priority (it is asked
      in both MTE papers and in Assignment 1)
