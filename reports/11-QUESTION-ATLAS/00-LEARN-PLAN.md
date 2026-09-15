@@ -27,8 +27,9 @@ warm, because every question in the paper is 2 or 3 of these stacked:
 
 ## Stage 0, hidden blocks first, 2.5 hours total
 
-These carry marks in every past graded set. Chebyshev's deck arrived 15 Sep (S&P L10-11); the
-rest still have no slides. Do them all while fresh.
+These carry marks in every past graded set. Chebyshev's deck arrived 15 Sep (S&P L10-11). The
+rest have no teaching slide in batch 1, and the batch-2 decks are still unconverted, so their
+status stays unconfirmed until the U12 to U19 dedup pass. Do them all while fresh.
 
 ```
 0.1  CHEBYSHEV, 75 min

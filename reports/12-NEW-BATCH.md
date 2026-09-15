@@ -5,7 +5,7 @@ time, 10-20 pages per unit, nothing skipped.
 
 ## 1. THE LIST
 
-### A. Papers (13 files) - highest value (they show what is actually asked)
+### A. Papers (11 files + 3 extra copies in ~/PS) - highest value (they show what is asked)
 
 ```
   #   file                                              pages  notes
@@ -21,9 +21,13 @@ time, 10-20 pages per unit, nothing skipped.
   A10 S&P_Re-sess_Sem-3_2025-26.pdf                        2   re-sessional Nov 2025
   A11 S&P_Re-sess_Sem-4_2025-26_mujstella.pdf              2   re-sess variant
   (A5-A11 readable; watermark noise filtered in analysis)
+  A12 S&P_ETE_Sem-3_2025-26 (1).pdf                        2   in sources.yaml, extra duplicate copy
+  A13 S&P_Re-sess_Sem-3_2025-26 (1).pdf                     2   in sources.yaml, extra duplicate copy
+  A14 S&P_Re-sess_Sem-3_2025-26 (2).pdf                     2   in sources.yaml, extra duplicate copy
+  (A12-A14 arrived in the same drop; byte-identical copies of A6 and A10, kept for provenance)
 ```
 
-### B. Assignments (11 files) - this year's set is new
+### B. Assignments (7 files, + 2 extras) - this year's set is new
 
 ```
   B1  2025-2026-S&P_assignments_1-5.pdf                   17   THIS year, combined 1-5
@@ -65,12 +69,35 @@ time, 10-20 pages per unit, nothing skipped.
     - all ETE and re-sess papers (never seen)
     - 2025-26 assignments 1-5 (this year's set)
     - 2024-25 assignments 1-5 + Episode 2 (last year's set)
+  CHECKED, NOT NEW (byte-identical copies already catalogued):
+    - 2024-2025-Assignment 2.pdf = the batch-1 assignment-2 source file (sha 5ff19731,
+      same bytes, different path; the batch-1 copy lives in ~/Videos)
+    - S&P_ETE_Sem-3_2025-26 (1).pdf and TWO re-sess S3 copies = byte-identical repeats of
+      A6 and A10, so the paper count above is 11 distinct papers, not 14
+  SAME FAMILY, DIFFERENT EDITION (a second keyed edition, NOT a plain copy):
+    - MAS2001-Assignment 1 .pdf carries Dr. Ruchika Mehta as faculty (batch-1 copy is
+      Dr. Vivek Singh) AND a different pmf row in long Q2: p(x) = k, 2k, 2k, 3k, 3k, k^2,
+      2k^2, 7k^2 + k, which normalises to 12k + 10k^2 = 1 (root 0.0782), against the
+      batch-1 row 0, k, 2k, 2k, 3k, k^2, 2k^2, 7k^2 + k (10k^2 + 9k = 1, root 1/10).
+      Its key column carries different digits. Treat it as a second edition to compare at
+      U05, not as a duplicate; a vision pass on its key column is mandatory there.
   NEW ORGANIZATION / CONTENT MIX (verify page by page during processing):
     - L1-7, L8-9 (may contain re-arranged + updated versions of old material)
   MOSTLY DUPLICATE OF OLD DECKS (verify during processing):
     - L12-13 (~79 percent pages match ppt3)
     - L14-15 (~87 percent pages match ppt4)
   the dedup pass used text fingerprints; final verdict per page happens in processing
+
+  TWO MARKS TO SETTLE IN THE DECKS (open, must be resolved at U12/U13):
+    both are [H] hidden blocks in batch 1, and both decks are near-unreadable text-wise
+    (L8-9: 8456 chars over 37 pages, a slide deck, not a prose deck; L1-7: 24521 over 108).
+    A grep of their text layers finds no "independent random variable" and no
+    E(XY) / Var(X+Y) restatement, and L1-7's slide titles stop at set theory and events.
+    If either deck is what its filename claims, the independence-rules [H] retires and
+    three atlas files need a line. If not, it confirms the [H] for a converted source.
+    The [H] for memoryless (A2 Q5 + A2 C1) and the landmarks 68.27 / 95.45 / 99.73
+    (A2 A11) is CONFIRMED already: a full grep of the 348 converted pages finds those
+    numbers only inside the assignment paper that asks them, never on a teaching slide.
 ```
 
 ## 3. PROCESSING QUEUE (one unit at a time, 10-20 pages per unit)
@@ -96,7 +123,7 @@ time, 10-20 pages per unit, nothing skipped.
   U17    C1 part 4: L1-7 p55-72                               18    queued
   U18    C1 part 5: L1-7 p73-90                               18    queued
   U19    C1 part 6: L1-7 p91-108                              18    queued
-  total pages: 283 | 19 units
+  total pages: 288 | 19 units
 ```
 
 ## 4. Per-unit protocol (so nothing is missed)

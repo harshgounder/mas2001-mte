@@ -2,6 +2,11 @@
 
 Built 15 September 2026. If a file is not on this list, it does not exist (audit rule).
 
+Coverage rule: the 348 `md/<label>/pNNN.md` page files are covered by their directory line,
+and `work/text/<label>.txt` plus `work/fidelity/<label>/pNNN.md` are covered by their
+directory lines and by `work/manifest.jsonl`, so they are not listed one by one. Every
+other tracked file appears below by name.
+
 ## Root
 
 ```
@@ -56,6 +61,8 @@ Built 15 September 2026. If a file is not on this list, it does not exist (audit
   AUDIT.md, FIDELITY.md, SUMMARY.md        run outputs, all batch 1
   FIDELITY-void-pro-404.md                the void first fidelity attempt (archived reason)
   fidelity-run-deepseek.log               the real fidelity run (11 PASS + 1 REVIEW)
+  fidelity-run-pro-404.log                the void pro-model run log (nothing cites it)
+  fidelity/<label>/pNNN.md                the 12 second-reader readings, kept per page
   run-full-1.log, run-resume-verify.log   conversion run logs
   atlas-census.jsonl      the 348-page question-marker census (atlas input)
   archive/                superseded logs (fidelity-run-void-original.log)
@@ -74,10 +81,11 @@ Built 15 September 2026. If a file is not on this list, it does not exist (audit
   06-VERIFICATION.md            verification record, three layers
   07-MOCK-PAPER.md              mock MTE, 30 marks
   08-MOCK-SOLUTIONS.md          mock worked solutions
-  09-ERRATA.md                  15 errata, at the claim site
+  09-ERRATA.md                  14 errata, at the claim site
   10-SLIDES-VS-SYLLABUS.md      lecture-by-lecture slides audit (Chebyshev corrected)
   12-NEW-BATCH.md               THE batch-2 doc: list + 19-unit processing queue + scout findings
   evidence/                     raw verification output
+                                (verify-formula-sheet-20260913.txt = the 79-check run)
   archive/12-NEW-BATCH-SCOUT-v1.md   superseded by 12-NEW-BATCH.md
 ```
 
@@ -94,6 +102,7 @@ Built 15 September 2026. If a file is not on this list, it does not exist (audit
   00-LEARN-PLAN.md           the staged study plan (Stage 0-7)
   01-deck-lec01-09.md        deck-01 entries (D1-Q001, D1-Q002 written; census done)
   evidence/                  pixel-forensics crops for the bus-example errata
+                             (p127-f-digit-crop.png, p129-f-line-crop.png)
   archive/00-TOPIC-TREE-v1.md    superseded by 00-MASTER-SYLLABUS.md
 ```
 

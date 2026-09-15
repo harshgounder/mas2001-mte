@@ -52,13 +52,42 @@ Read p041 and ignore the p040 wording. The example on p043 uses it correctly.
 
 The question paper itself is self consistent once you notice that P(X = 0) is zero, which
 makes the normalisation 9k + 10k^2 = 1 with exact root k = 1/10. Both a 12k and a 14k version
-of that equation appear in circulated working and neither is satisfied by k = 1/10.
+of that equation appear in circulated working and neither is satisfied by k = 1/10. The 12k
+form is no longer a mystery: it is what the second edition of this paper prints (see 5.1).
 
 ```
   10(0.1)^2 + 9(0.1)  = 1.00   correct
   10(0.1)^2 + 12(0.1) = 1.30
   10(0.1)^2 + 14(0.1) = 1.50
 ```
+
+### 5.1 Addendum, VERIFIED 15 Sep: the second edition of this paper is broken
+
+`~/PS/MAS2001-Assignment 1 .pdf` (in `sources.yaml` as `asgn-faculty-variant`, queued for
+U05) is a second edition of this same paper, not a re-typed copy. Read three ways on the
+machine, all agreeing: `pdftotext -layout`, `pdftotext -bbox` coordinates, and a vision pass
+over the rendered page.
+
+```
+  x:     0   1    2    3    4    5     6      7
+  p(x):  k   2k   2k   3k   3k   k^2   2k^2   7k^2 + k      <- P(X=0) is k, not 0
+  sum    12k + 10k^2 = 1   ->   k = 0.078233   (10k^2 + 12k - 1 = 0)
+
+  its own key column prints  k = 1/10
+  check:  12(0.1) + 10(0.1)^2 = 1.30, not 1.00   -> the printed key does NOT satisfy its
+                                                   own table
+  its own key column prints  P(X > 6) = 81/100 and P(X >= 6) = 91/100
+  from the row, 11k + k^2 = 0.8667 and 9k^2 + k = 0.1333   -> neither matches
+```
+
+Contrast, and this is the point: the batch-1 edition (`md/mas2001-assignment-1/p004.md`,
+Dr. Vivek Singh) carries the row 0, k, 2k, 2k, 3k, k^2, 2k^2, 7k^2 + k, sums to
+10k^2 + 9k = 1, has the exact root k = 1/10, and its key (81/100, 19/100, c = 4) checks out.
+That edition is internally consistent; the second edition is not. If the variant ever grades
+anything, the row and the key cannot both be right, and k = 0.0782 is what the row says.
+
+Action at U05: transcribe the whole variant, compare it question by question against the
+batch-1 edition, and record this disagreement rather than silently merging the two.
 
 ## 6. Impurity example, the Z value printed as -0.4
 
@@ -84,6 +113,13 @@ used the right value.
 
 If you reproduce this question, write Z2 = -0.94. Both the slide's 0.1644 and the exact 0.1637
 are acceptable final values, but only with the correct Z.
+
+## 7. Not an error, but easy to misread
+
+`md/notes-lecture-series-01-09/p011.md` and the equivalent page in ppt4 write the normal
+notation as X ~ N(mu, sigma^2), while the surrounding prose says "mean and variance". The
+second parameter is the variance, not the standard deviation. The assignment paper uses
+variance as well (mean 70, variance 25, so sigma = 5).
 
 ## 8. ppt4 p030 figure prints sigma = 10 under mu = 8
 
@@ -196,10 +232,3 @@ printed lower limit 3 in the first integral is the slip. There is also a doubled
 Exact e^-5 (1 + 5 + 12.5) computed: P(X > 2) = 1 - P(0) - P(1) - P(2) = 0.875348, so 0.8753.
 The key prints 0.8754 (the sum of three separately rounded terms). Both grade, 0.8753 is the
 exact value.
-
-## 15. Not an error, but easy to misread
-
-`md/notes-lecture-series-01-09/p011.md` and the equivalent page in ppt4 write the normal
-notation as X ~ N(mu, sigma^2), while the surrounding prose says "mean and variance". The
-second parameter is the variance, not the standard deviation. The assignment paper uses
-variance as well (mean 70, variance 25, so sigma = 5).

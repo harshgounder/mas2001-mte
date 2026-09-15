@@ -271,12 +271,18 @@ Two config changes outside the repo, both backed up:
   YOUR-CALL, nothing deleted by this repo
     1  ~/PS held the CLT deck twice, byte identical; the "(1)" copy was moved to the trash
        folder on 14 September (recoverable at ~/.local/share/Trash/files/), noted in
-       reports/10-SLIDES-VS-SYLLABUS.md section 5
-    2  ~/MUJ holds byte identical copies of PPT 3, 4 and 5, keep as a backup or remove
-    3  ~/Music/MAS2001_remake/ is a separate assignment pipeline from August, out of scope here
-    4  do you have the subject wise MTE timetable, the window is known but not the SITTING day
+       reports/10-SLIDES-VS-SYLLABUS.md section 5. CORRECTED 15 Sep: the "(1)" copy in the
+       trash is the CLT deck (sha e48f4981), NOT an assignment copy; `Assignment 2_MAS2001-2.pdf`
+       is byte-identical to the batch-1 assignment-2 SOURCE (sha 5ff197311b60), which lives in
+       ~/Videos, not in ~/muj-academics. Both ~/PS copies are still on disk, nothing deleted.
+    2  ~/PS also gained three byte-identical repeats of papers already listed (one ETE S3
+       copy, two re-sessional S3 copies) and one second edition of assignment 1 (different
+       faculty name, different long-Q2 pmf row); all six extras are in sources.yaml
+    3  ~/MUJ holds byte identical copies of PPT 3, 4 and 5, keep as a backup or remove
+    4  ~/Music/MAS2001_remake/ is a separate assignment pipeline from August, out of scope here
+    5  do you have the subject wise MTE timetable, the window is known but not the SITTING day
   follow up
-    5  the Google OAuth refresh token is dead (400 on refresh, expired 2026-08-13), so a live
+    6  the Google OAuth refresh token is dead (400 on refresh, expired 2026-08-13), so a live
        Drive sweep for newer MAS2001 material was not possible, re-auth and re-check
-    6  the PPT5 and lms-theory duplication could be collapsed to one document later
+    7  the PPT5 and lms-theory duplication could be collapsed to one document later
 ```

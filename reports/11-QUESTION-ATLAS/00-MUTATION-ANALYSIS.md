@@ -229,9 +229,11 @@ on the machine this session.
   6  past MTE papers: ARRIVED 15 Sep (both years + both solution schemes + 5 ETE + 2
      re-sess papers). The Drive sweep item is moot for MTE purposes; the papers
      confirmed 14 previously-hypothetical siblings. See reports/12-NEW-BATCH.md
-  7  the [H] blocks: seven stay first priority (no slides at all); Chebyshev's deck
-     arrived 15 Sep so it moved out of the [H] class but keeps priority (it is asked
-     in both MTE papers and in Assignment 1)
+  7  the [H] blocks: six stay first priority in batch 1 (independence rules, memoryless,
+     landmarks, N x P, geometric mean, hypergeometric mean); Chebyshev's deck arrived
+     15 Sep so it moved out of the [H] class but keeps priority (asked in both MTE
+     papers and in Assignment 1). The batch-2 decks L1-7 and L8-9 are unconverted, so a
+     dedup pass at U12 to U19 may retire some of the six
   8  one-side Chebyshev variant: P(X - mu >= c) <= sigma^2 / (sigma^2 + c^2), the
      one-sided form. The corpus uses the two-sided form only. The one-sided form is
      a real adjacency; keep in sheet as a footnote

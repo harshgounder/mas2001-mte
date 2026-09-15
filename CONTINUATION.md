@@ -57,6 +57,12 @@ Full list with page ranges in reports/12-NEW-BATCH.md section 3. Order:
   U14-U19  L1-7 split (check overlap vs 147p deck)                 18p x6
 ```
 
+~/PS now holds 33 files: the 36 sources.yaml entries resolve across ~/PS, ~/Videos and
+~/muj-academics, and six of the ~/PS entries are repeats or a second edition (three
+byte-identical paper copies, one byte-identical assignment-2 copy, one second-edition
+assignment 1, plus the batch-1 files themselves). Duplicate repeats are noted in
+reports/12-NEW-BATCH.md section 1 and get a dedup verdict like everything else.
+
 Per-unit protocol (mandatory, this is how "nothing missed" is enforced): read every page;
 give every question a full entry per reports/11-QUESTION-ATLAS/00-FRAMEWORK.md schema;
 give every page a dedup verdict vs the existing corpus (NEW / DUPLICATE / UPDATED); update
@@ -67,7 +73,7 @@ schemes, Assignment 3 Episode 2) need a vision pass, no skipping.
 
 ```
   1  read this file, INDEX.md, reports/12-NEW-BATCH.md (10 min)
-  2  verify claims: git log --oneline -5, sources.yaml parses (34 sources), repo clean
+  2  verify claims: git log --oneline -5, sources.yaml parses (36 sources), repo clean
   3  U01: process the four MTE documents (15 pages, one at a time) -> log -> commit
   4  U02..U06 in order; stop after each unit for user review if the user is present
   5  after the papers + assignments + Chebyshev deck: rebuild the atlas type space with
@@ -109,10 +115,16 @@ batch-2 sources (labels already reserved in sources.yaml).
   grep -c 'CORRECTED' ~/mas2001-mte/reports/*.md   # the 15 Sep corrections are in place
 ```
 
-Note on the two extras found during the 15 Sep hygiene pass: `Assignment 2_MAS2001-2.pdf`
-is byte-identical to batch-1's assignment-2 source (provenance kept, no conversion needed);
-`MAS2001-Assignment 1 .pdf` is a faculty variant of assignment 1 (same questions, faculty
-name differs: Dr. Ruchika Mehta vs Dr. Vivek Singh). Both are logged in sources.yaml.
+Note on the extras found during the 15 Sep hygiene pass. `Assignment 2_MAS2001-2.pdf` is
+byte-identical to batch-1's assignment-2 source (sha 5ff197311b60, provenance kept, no
+conversion needed); it is NOT the assignment-1 copy (that is sha 2ab4f651), checked 15 Sep.
+`MAS2001-Assignment 1 .pdf` is a second edition of assignment 1: faculty name Dr. Ruchika
+Mehta (batch-1 copy is Dr. Vivek Singh) AND a different long-Q2 pmf row, p(x) = k, 2k, 2k,
+3k, 3k, k^2, 2k^2, 7k^2 + k, which normalises to 12k + 10k^2 = 1 with root 0.0782, where the
+batch-1 row (0, k, 2k, 2k, 3k, k^2, 2k^2, 7k^2 + k) gives 10k^2 + 9k = 1 with root 1/10. Its
+key column prints different digits, so it is a compare-and-keep at U05, not a dedup. Also in
+~/PS: three byte-identical repeats of papers already listed (one ETE S3 copy, two re-sess S3
+copies). All six are logged in sources.yaml.
 
 ## 8. Open items inherited
 
@@ -122,9 +134,12 @@ name differs: Dr. Ruchika Mehta vs Dr. Vivek Singh). Both are logged in sources.
                3  subject-wise MTE sitting day: only the window is known
                4  mujstella.in watermarks: reseller mark on batch-2 PDFs, nothing to do
   PENDING      5  Google OAuth refresh token dead -> Drive sweep still blocked
-               6  fidelity gate: run again after batch-2 conversion (deepseek reader)
-               7  count register update after U04/U05 (assignment counts will grow)
-               8  mock paper reshape to real A/B/C format (after U01)
+               6  the second edition of assignment 1 (asgn-faculty-variant) is internally
+                  broken: its own row gives k = 0.0782 while its key prints k = 1/10.
+                  Full transcription and a question-by-question comparison are owed at U05
+               7  fidelity gate: run again after batch-2 conversion (deepseek reader)
+               8  count register update after U04/U05 (assignment counts will grow)
+               9  mock paper reshape to real A/B/C format (after U01)
 ```
 
 ## 9. Key file map (quick)
@@ -134,7 +149,7 @@ name differs: Dr. Ruchika Mehta vs Dr. Vivek Singh). Both are logged in sources.
   reports/11-QUESTION-ATLAS/     all question analysis (framework, counts, trees, plans)
   reports/02-MTE-REPORT.md       main summary of batch-1 work
   reports/05-FIVE-DAY-PLAN.md    the study plan (will be re-pinned with real format)
-  reports/09-ERRATA.md           15 errata, claim-site recorded
+  reports/09-ERRATA.md           14 errata, claim-site recorded
   md/<label>/pNNN.md             converted slides (batch 1 complete; batch 2 pending)
   work/manifest.jsonl            per-page provenance for everything converted
 ```

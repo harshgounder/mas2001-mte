@@ -147,7 +147,7 @@ mas2001-mte/
 | `06-VERIFICATION.md` | three verification layers, the failures that were caught, adjustments visible | trust audit |
 | `07-MOCK-PAPER.md` | 30-mark mock in the real format | self-test |
 | `08-MOCK-SOLUTIONS.md` | every number computed and cross-checked against a slide | after the mock |
-| `09-ERRATA.md` | 15 errors found in the source material, each with the computed value | before memorising anything |
+| `09-ERRATA.md` | 14 errors found in the source material, each with the computed value | before memorising anything |
 | `10-SLIDES-VS-SYLLABUS.md` | lecture-by-lecture slides audit (8-9 half, 10-11 corrected 15 Sep) | coverage questions |
 | `12-NEW-BATCH.md` | batch 2: 23 files catalogued, 19-unit processing queue, quality traps | batch 2 work |
 
@@ -164,7 +164,7 @@ pattern is known, not guessed.
 | `00-COUNT-REGISTER.md` | the locked counts: 112 items, 107 unique, exclusions explicit, deck 01 manifest of all 30 items |
 | `00-SYLLABUS-FULL-EXPANDED.md` | every topic down to atomic facts, with page refs, values, traps (770 lines) |
 | `00-MASTER-SYLLABUS.md` | the master map: scope table, hidden layer, errata map, inventory recap |
-| `00-TOPIC-TREE.md`, `00-TOPIC-FLOW.md` | the v1 tree and the flow art (prerequisite edges, broken links, composite question map) |
+| `archive/00-TOPIC-TREE-v1.md`, `00-TOPIC-FLOW.md` | the v1 tree and the flow art (prerequisite edges, broken links, composite question map) |
 | `00-TYPE-SPACE-AUDIT.md` | every question TYPE per topic: asked vs sibling vs hypothetical, with a self-audit |
 | `00-MUTATION-ANALYSIS.md` | what changes make a new question type: radical vs incidental, the M0-M4 scale, new type nodes |
 | `00-LEARN-PLAN.md` | the staged learn order (what after what), with gates per stage |
@@ -194,10 +194,15 @@ Batch 1 (11 sources, 348 pages, fully converted):
 Batch 2 (23 files + 2 extras, catalogued in `sources.yaml`, processing queued):
 
 - 5 slide decks: L1-7, L8-9, **L10-11 Chebyshev (the missing block)**, L12-13, L14-15
-- 11 assignments: 2024-25 series (1,2,3,3-Ep2,4,5), 2025-26 combined 1-5
-- 13 papers: MTE 2024-25 + 2025-26 (both with solution schemes), ETE sem 3 and 4 (both
+- 7 assignments: 2024-25 series (1,2,3,3-Ep2,4,5), 2025-26 combined 1-5
+- 11 papers: MTE 2024-25 + 2025-26 (both with solution schemes), ETE sem 3 and 4 (both
   years), summer, re-sessional (both semesters)
-- 2 extras: a byte-identical assignment copy (provenance) and a faculty variant
+- 2 extras: `Assignment 2_MAS2001-2.pdf` (byte-identical to the batch-1 assignment-2
+  source, different sha from the batch-1 assignment-1 copy) and `MAS2001-Assignment 1 .pdf`
+  (a second edition of assignment 1: different faculty name and a different pmf row in
+  long Q2, normalising to 12k + 10k^2 = 1 instead of 9k + 10k^2 = 1)
+- 3 further arrivals are byte-identical repeats of papers already listed (one ETE S3
+  copy and two re-sessional S3 copies), catalogued for provenance only
 
 ---
 
@@ -246,7 +251,7 @@ quietly loosened is worth less than one whose adjustments are visible.
 
 ## 9. Known errata in the source material
 
-15 entries in `reports/09-ERRATA.md`. Highlights:
+14 entries in `reports/09-ERRATA.md`. Highlights:
 
 ```
   insurance example            prints 0.1745, value 0.1755

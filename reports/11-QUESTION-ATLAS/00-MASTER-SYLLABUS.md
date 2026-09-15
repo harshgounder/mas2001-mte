@@ -8,8 +8,9 @@ Legend:
 ```
   [+]  taught on slides AND used by questions, named in the syllabus
   [~]  used by questions, sits INSIDE the topic, NOT named in the MTE syllabus list
-  [H]  used by questions but NO slide taught it (as of the old batch); Chebyshev left
-       this class on 15 Sep when S&P L10-11 arrived
+  [H]  used by questions but no batch-1 slide taught it; Chebyshev left this class on
+       15 Sep 2026 (S&P L10-11 deck). Batch-2 decks L1-7 and L8-9 are unconverted, so
+       these marks stay provisional until the U12 to U19 dedup pass
   [!]  already graded in assignment 1 or 2
   refs deck = notes-lecture-series-01-09 | p3 = ppt3 | p4 = ppt4 | clt = standard-error-clt
        p5 = ppt5 | lt = lms-theory-of-estimation
@@ -348,7 +349,6 @@ graded 5 times, deck arrived 15 Sep (S&P L10-11). sources: deck, sheet E, bank s
    event (Y < 2); the final 2/5 = 0.4 is correct for Y < 2 or Y > 6 (0.08 + 0.32), and the
    printed bound 3 would give 0.5. Also a doubled equals sign on that line.
 14 A2 C3 minor: exact 0.87535 -> 0.8753; key prints 0.8754 (sum of rounded terms)
-15 notation note (was 7): N(mu, sigma^2) wording
 ```
 
 ## 6. Inventory recap

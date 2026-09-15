@@ -251,9 +251,15 @@ sources:
     sha256: "5647c90a0fa701c5e05beff814b77a8027bf8963949c707727e65cff1acf0228"
 
 # Batch 2 extras: two files that appeared in ~/PS alongside the batch.
-# asgn-copy-2025-26 is byte-identical to the batch-1 mas2001-assignment-2 source.
-# asgn-faculty-variant is near-identical content (4125 vs 4122 normalised chars), the
-# difference is the faculty name (Dr. Ruchika Mehta vs Dr. Vivek Singh). Faculty variant.
+# asgn-copy-2025-26 is byte-identical to the batch-1 mas2001-assignment-2 source: same
+# sha 5ff197311b60, different path (the batch-1 copy sits in ~/Videos). Provenance only.
+# VERIFIED 15 Sep: it is NOT identical to the batch-1 assignment-1 source (2ab4f651), the
+# two are different documents.
+# asgn-faculty-variant is a second EDITION of assignment 1, not a re-typed copy: faculty
+# name differs (Dr. Ruchika Mehta vs Dr. Vivek Singh) AND the long Q2 pmf row differs
+# (k, 2k, 2k, 3k, 3k, k^2, 2k^2, 7k^2 + k -> 12k + 10k^2 = 1, root 0.0782) against the
+# batch-1 row (0, k, 2k, 2k, 3k, k^2, 2k^2, 7k^2 + k -> 10k^2 + 9k = 1, root 1/10).
+# Compare, do not dedup, at U05; its key column needs a vision pass.
 
   - label: asgn-copy-2025-26
     path: "/home/liebert511/PS/Assignment 2_MAS2001-2.pdf"

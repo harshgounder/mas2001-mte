@@ -9,8 +9,9 @@ Legend:
 ```
   [+]  taught on slides AND used by questions, named in the syllabus
   [~]  used by questions, sits inside the topic, NOT named in the syllabus list
-  [H]  used by questions but no slide teaches it (the old-batch state; Chebyshev left
-       this class on 15 Sep when S&P L10-11 arrived)
+  [H]  used by questions but no batch-1 slide teaches it (Chebyshev left this class on
+       15 Sep 2026 when S&P L10-11 arrived; batch-2 L1-7 and L8-9 are unconverted, so
+       these marks are provisional until the U12 to U19 dedup pass)
   [!]  already graded in assignment 1 or 2 (batch 2 added: past papers and past assignments)
   deck = notes-lecture-series-01-09 (147 pp) | p3 = ppt3 | p4 = ppt4 | clt = CLT deck
   p5 = ppt5 | lt = lms-theory | D1-x = deck item ID from the count register
@@ -536,7 +537,7 @@ L15  NORMAL DISTRIBUTION  (p4 p007 to p037)
 11.1 the density and its shape
     11.1.1 f(x) = 1/(sigma sqrt(2pi)) exp(-(x-mu)^2 / 2 sigma^2) [p012]
     11.1.2 parameters mu and sigma^2; notation X ~ N(mu, sigma^2) (the second slot is
-          VARIANCE, easy to misread, errata 15)
+          VARIANCE, easy to misread, errata 7)
     11.1.3 symmetry; mean = median = mode = mu; tails never touch [p008]
     11.1.4 many normals via mu and sigma [p010, p011]
 11.2 standardization [p019, p028]
@@ -745,14 +746,15 @@ S11 read the ask: at most / at least / between / inclusive / neither / exactly
 S12 draw the curve and mark the area before computing
 
 ================================================================================
-X.  ERRATA MAP (15 entries, full text in reports/09-ERRATA.md)
+X.  ERRATA MAP (14 entries, full text in reports/09-ERRATA.md)
 ================================================================================
 
  1  p3 insurance: 0.1745 printed, 0.1755 correct
  2  p3 die sets: 0.549 printed, 0.5499 correct
  3  A1 key truncates 0.0915 (correct 0.0916)
  4  p4 p040 inverts lambda wording
- 5  A1 long 2 normalisation 9k + 10k^2 = 1, root 1/10
+ 5  A1 long 2 normalisation 9k + 10k^2 = 1, root 1/10 (see 5.1: the untracked second
+    edition prints a different row, 12k + 10k^2 = 1, and a key that does not satisfy it)
  6  clt impurity Z: -0.4 printed, -0.94 correct
  7  notation note: N(mu, sigma^2) is variance
  8  p4 p030 figure: sigma = 10 printed, 5.0 correct
@@ -762,7 +764,6 @@ X.  ERRATA MAP (15 entries, full text in reports/09-ERRATA.md)
 12  A1 app 3: sd chain 0.975/0.98; exact 0.9734 -> 0.97
 13  bus example: working bound 3 vs event Y<2; final 0.40 correct; double equals sign
 14  A2 C3: 0.8754 printed, 0.8753 exact
-15  notation note (2nd): variance slot in N()
 
 ================================================================================
 Z.  INVENTORY (locked)

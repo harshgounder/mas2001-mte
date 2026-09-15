@@ -10,7 +10,7 @@ Legend:
 ```
   -->   prerequisite / leads to
   <==>  strong cross-link (a question jumps between them)
-  [H]   hidden node or hidden subtopic (no slide exists)
+  [H]   hidden node or hidden subtopic (no teaching slide in the converted batch 1)
   [!]   already graded in assignment 1 or 2
   [~]   used by questions, not named in the MTE syllabus list
 ```
@@ -76,7 +76,7 @@ Legend:
    every shelf item also needs T2 counting + T5/T6 for its mean/variance questions
 ```
 
-## Diagram C: broken links (questions use these; no slide teaches them)
+## Diagram C: broken links (questions use these; no batch-1 slide teaches them)
 
 ```
    T6H  independence rules of rvs (E(XY), Var(X+Y))
