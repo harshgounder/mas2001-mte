@@ -85,7 +85,9 @@ other tracked file appears below by name.
   10-SLIDES-VS-SYLLABUS.md      lecture-by-lecture slides audit (Chebyshev corrected)
   12-NEW-BATCH.md               THE batch-2 doc: list + 19-unit processing queue + scout findings
   evidence/                     raw verification output
-                                (verify-formula-sheet-20260913.txt = the 79-check run)
+    verify-formula-sheet-20260913.txt  79-check formula and answer-key runner output
+    verify-errata15-20260915.py        errata 15 checker, stdlib only, ships with its output
+    verify-errata15-20260915.txt       errata 15 raw output (the numbers quoted in errata 15)
   archive/12-NEW-BATCH-SCOUT-v1.md   superseded by 12-NEW-BATCH.md
 ```
 
