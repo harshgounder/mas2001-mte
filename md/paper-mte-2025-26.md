@@ -38,7 +38,7 @@ $$\int_{-\infty}^{\infty} f(x)dx = .......$$
 
 **Correct option is: 1**
 
-For more material and PYQs, checkout website and MUJstella app on Playstore
+For more material and PYQs, checkout [domain omitted by repository policy] website and MUJstella app on Playstore
 
 page:1
 
@@ -48,7 +48,7 @@ page:1
 
 MAS2001
 
-For more materials visit our website and Materials app on Playstore
+For more material and PYQs, checkout [domain omitted by repository policy] website and MUJstella app on Playstore
 
 3) A statistic is sufficient for a parameter if
 
@@ -92,10 +92,10 @@ page:2 of 3
 
 MAS2001
 
-[illegible]
+For more material and PYQs, checkout [domain omitted by repository policy] website and MUJstella app on Playstore
 
 -----End-----
 
-3 of 3, 15-06-2025, 12:24
+3 of 3, 15-09-2025, 12:24
 
 page:3

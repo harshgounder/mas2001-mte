@@ -17,7 +17,7 @@ page of `ppt4-continuous-prob-dist`, which is `md/ppt4-continuous-prob-dist/p023
 | 7 | expectation of a discrete rv | `notes-lecture-series-01-09` | p088-p094 | yes |
 | 8-9 | variance, shortcut formula, rules of variance | `notes-lecture-series-01-09` | p095-p111 | yes |
 | 3-6 | continuous rv, pdf, cdf, expectation, variance | `notes-lecture-series-01-09` | p112-p147 | yes |
-| 10-11 | Chebyshev's inequality | YES (arrived 15 Sep) | S&P L10-11 deck |
+| 10-11 | Chebyshev's inequality | `sp-l10-11-chebyshev` | p001-p009 | yes |
 | 12 | binomial distribution | `ppt3-discrete-prob-dist` | p001-p018 | yes |
 | 13 | Poisson distribution | `ppt3-discrete-prob-dist` | p019-p028 | yes |
 | 14 | uniform (continuous) | `ppt4-continuous-prob-dist` | p001-p006 | yes |
@@ -69,9 +69,9 @@ marks-per-page topic in the syllabus.
    longer version and adds p031 to p039 on confidence intervals, which are out of MTE scope.
    Revising one is enough. Read ppt5 for the cleaner worked numericals near p022 to p025,
    and the theory deck for anything ppt5 dropped.
-2. `~/PS/LMS -Standard Error & Central Limit Theorem.pdf` and its `(1)` sibling are
-   byte identical, sha256 e48f4981ed69. Both copies still sit in `~/PS`. Nothing was
-   deleted, `sources.yaml` lists the non `(1)` copy once.
+2. `~/PS/LMS -Standard Error & Central Limit Theorem.pdf` and its former `(1)` sibling are
+   byte identical, sha256 e48f4981ed69. The sibling was moved to Trash on 14 September;
+   `sources.yaml` lists the retained copy once.
 3. `~/MUJ/` holds byte identical copies of PPT 3, 4 and 5 (sha256 9cc7f631, b3de25d8,
    2af21af1). Same content, second location on disk.
 4. `notes-lecture-series-01-09` is Devore-derived for the RV and distribution theory
@@ -105,4 +105,6 @@ Order of value per page of reading, MTE only:
    p022 to p030 for the extra worked numericals.
 5. Chebyshev: read `S&P L10-11` (arrived 15 Sep), then the formula sheet and question bank.
 
-Total MTE-relevant pages: 136 + 28 + 43 + 18 + 26 = 251, plus 7 handout pages.
+Batch-1 teaching-page total for this reading route: 136 + 28 + 43 + 18 + 26 = 251.
+Add the 9-page Chebyshev deck for 260 teaching pages, plus 7 handout pages. This route does
+not add the overlapping estimation deck or practice papers, so it is not a corpus total.

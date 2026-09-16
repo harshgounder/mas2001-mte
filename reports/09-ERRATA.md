@@ -387,3 +387,60 @@ The intended trap is real and worth keeping, T4 is biased and therefore excluded
 efficiency comparison, but the superlative must be dropped or changed to "larger variance
 than T3 while still biased". A false "smallest variance" line inside our own mock solutions
 is the most dangerous kind of errata: the student has no reason to doubt it.
+
+## 19. 2024-25 MTE QA2: the scheme marks B, but the CDF is option D
+
+`md/paper-mte-2024-25/p001.md` gives
+
+```
+  f(x) = x       for 0 < x <= 1
+         2 - x   for 1 <= x <= 2
+```
+
+For `1 <= x <= 2`, the CDF must include all mass accumulated before 1:
+
+```
+  F(x) = integral_0^1 t dt + integral_1^x (2-t) dt
+       = 1/2 + 2x - x^2/2 - 3/2
+       = 2x - x^2/2 - 1
+```
+
+That is option D. It also passes both endpoint checks, `F(1) = 1/2` and `F(2) = 1`.
+The solution scheme on `md/paper-mte-2024-25-scheme/p001.md` marks QA2 as B. Option B
+equals 3/2 at x = 1 and 2 at x = 2, so it cannot be a CDF. Use D.
+
+## 20. 2025-26 MTE scheme Q4: the displayed integration bounds contradict the support
+
+`md/paper-mte-2025-26-scheme/p001.md` prints the normalization and expectation integrals
+from negative infinity to infinity, but the question defines the density only on `0 < x < 4`.
+The scheme then evaluates the polynomial using 0 and 4, which is why its constants are right.
+
+The valid written setup is:
+
+```
+  k integral_0^4 x^3(4-x)^2 dx = 1
+  E(X) = k integral_0^4 x^4(4-x)^2 dx
+  E(X^2) = k integral_0^4 x^5(4-x)^2 dx
+```
+
+The printed values `k = 15/1024`, `E(X) = 16/7`, `E(X^2) = 40/7`, and
+`Var(X) = 24/49` are consistent with those finite bounds. The defect is in the displayed
+bounds, not the final arithmetic.
+
+## 21. 2025-26 MTE scheme Q8(ii): the last expectation inequality drops theta squared
+
+`md/paper-mte-2025-26-scheme/p004.md` correctly reaches
+
+```
+  Var(t) = E(t^2) - theta^2 != 0
+```
+
+but the next source line prints `E(t^2) != 0`. That does not follow. Adding `theta^2` to
+both sides gives the required result:
+
+```
+  E(t^2) != theta^2
+```
+
+That corrected relation proves `t^2` is a biased estimator of `theta^2`. The repository
+transcription preserves the source's wrong line; use the correction above when studying.

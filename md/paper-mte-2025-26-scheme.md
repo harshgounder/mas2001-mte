@@ -84,7 +84,7 @@ $$= 0.4641 + 0.2257 = 0.6898 \quad (1)$$
 
 **Q.8**
 
-**(1)** Assuming that the number of mistakes per page $X$ follows Poisson distribution with parameter $\lambda$. Probability of making no mistake in a page is $= P(0) = e^{-\lambda}$ (1)
+**(i)** Assuming that the number of mistakes per page $X$ follows Poisson distribution with parameter $\lambda$. Probability of making no mistake in a page is $= P(0) = e^{-\lambda}$ (1)
 
 If less than 1% of the letters are rejected, then more than 99% of the letters are accepted, i.e. the probability of making no mistake in a page is at least $= 0.99$
 
@@ -99,7 +99,7 @@ $$\Rightarrow \quad -p(200 \times 0.4346) \geq -0.0044$$
 
 $$\Rightarrow \quad p \leq \frac{0.0044}{86.92} = 0.0000506 \qquad (1)$$
 
-**(2)** The day's work of 20 letters of 200 words each is accepted, when there is no mistake in any of the $n = 20 \times 200 = 4000$ words. Assuming Poisson distribution probability of no mistake in the day's work $= e^{-\lambda}$ where $\lambda = np = 4000p$. We want to find $p$ such that
+**(ii)** The day's work of 20 letters of 200 words each is accepted, when there is no mistake in any of the $n = 20 \times 200 = 4000$ words. Assuming Poisson distribution probability of no mistake in the day's work $= e^{-\lambda}$ where $\lambda = np = 4000p$. We want to find $p$ such that (1)
 
 $$\therefore \quad e^{-4000p} = 0.90 \;\Rightarrow\; -4000p(\log 2.72) = \log(0.90)$$
 
@@ -111,9 +111,9 @@ page:3
 
 ---
 
-## Q8 (11)
+## Q8 (ii)
 
-Top right corner: 6 (4)
+Top right corner: Page 4
 
 We have $V(t) = E(t-\theta)^2$ (red pen: arrow to circled 1)
 
@@ -123,6 +123,6 @@ $$= E(t^2) - \theta^2$$ (red pen: arrow to circled 1)
 
 Since $\mathrm{var}(t) \neq 0$ we have $E(t^2) - \theta^2 \neq 0$
 
-i.e. $E(t^2) \neq \theta^2$ (red pen: circled mark, illegible)
+i.e. $E(t^2) \neq 0$ (red pen: circled 1)
 
 Thus $t^2$ is a biased estimator of $\theta^2$. (red pen: arrow to circled 1)
