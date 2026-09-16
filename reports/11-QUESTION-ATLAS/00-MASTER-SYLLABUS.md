@@ -359,7 +359,8 @@ graded 5 times, deck arrived 15 Sep (S&P L10-11). sources: deck, sheet E, bank s
 ## 6. Inventory recap
 
 ```
-teaching items 60 (55 unique) | assignments 52 | total 112 items, 107 unique
+teaching items 60 (55 unique) | assignments 52 | U01 past papers 16 |
+total through U01 128 items, 123 unique
 per deck: deck01 30, p3 6, p4 7, clt 5, p5 5, lt 7 (5 repeat p5, 2 unique)
 excluded out of MTE: MLE 16 pages, MoM 11 pages, handout 7 pages, lt CI block 10 pages
 ```

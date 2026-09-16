@@ -774,6 +774,7 @@ X.  ERRATA MAP (15 entries, full text in reports/09-ERRATA.md)
 Z.  INVENTORY (locked)
 ================================================================================
 
-teaching items 60 (55 unique) | assignments 52 | total 112, 107 unique
+teaching items 60 (55 unique) | assignments 52 | U01 past papers 16 |
+total through U01 128, 123 unique
 deck01 30 | p3 6 | p4 7 | clt 5 | p5 5 | lt 7 (2 unique)
 excluded: MLE 16 pp, MoM 11 pp, handout 7 pp, lt CI block 10 pp

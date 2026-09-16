@@ -92,6 +92,8 @@ other tracked file appears below by name.
                                        the false-duplicate row, the Chebyshev text-layer
                                        claim, the MUJ duplicates. 24 checks, all pass
     verify-audit-round7-20260915.txt   round-7 raw output, verbatim
+    verify-u01-atlas-20260916.py       U01 schema, count and numeric checker
+    verify-u01-atlas-20260916.txt      U01 checker output, verbatim
   archive/12-NEW-BATCH-SCOUT-v1.md   superseded by 12-NEW-BATCH.md
 ```
 
@@ -99,7 +101,7 @@ other tracked file appears below by name.
 
 ```
   00-FRAMEWORK.md            entry schema, taxonomy definitions, method
-  00-COUNT-REGISTER.md       locked counts: 112 items / 107 unique (batch 1), manifests
+  00-COUNT-REGISTER.md       running counts: 128 / 123 unique through U01; batch-1 baseline 112 / 107
   00-MASTER-SYLLABUS.md      the master tree: topics, hidden layers, errata map
   00-SYLLABUS-FULL-EXPANDED.md   deepest tree, atomic facts, all 21 lecture slots
   00-TOPIC-FLOW.md           prerequisite edges, cross-links, broken links, composites
@@ -107,6 +109,7 @@ other tracked file appears below by name.
   00-TYPE-SPACE-AUDIT.md     full method inventory per topic + sibling matrix
   00-LEARN-PLAN.md           the staged study plan (Stage 0-7)
   01-deck-lec01-09.md        deck-01 entries (D1-Q001, D1-Q002 written; census done)
+  02-u01-mte-papers.md       all 16 top-level questions from both MTE papers
   evidence/                  pixel-forensics crops for the bus-example errata
                              (p127-f-digit-crop.png, p129-f-line-crop.png)
   archive/00-TOPIC-TREE-v1.md    superseded by 00-MASTER-SYLLABUS.md
