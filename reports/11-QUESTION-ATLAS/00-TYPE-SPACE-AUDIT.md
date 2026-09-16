@@ -80,7 +80,7 @@ Targets: classify discrete/continuous, build pmf from an experiment, function of
   [X] Var(sum of dice) used inside Chebyshev (A1 short 5)
   [S] E(XY) vs E(X)E(Y) as an MCQ or short: NOT asked but the sheet teaches the rule.
       MCQ: "if X, Y independent, E(XY) = ?" trivial; better: given E(X),E(Y), find E(XY).
-  [S] Var(X - Y) = Var(X) + Var(Y) explicit: not asked; sibling of Var(sum).
+  [X] Var(X - 2Y) for independent Poisson variables: MTE 2024-25 QB1, answer 14.
   [S] Var(aX + bY) linear combination: taught in estimator block (p5 p021),
       asked implicitly. standalone ask not present.
   [S] independence check via joint vs product pmf: not asked.
@@ -92,7 +92,7 @@ Targets: classify discrete/continuous, build pmf from an experiment, function of
   [X] tail form with sum of dice (A1 short 5: 35/54)
   [X] counts interval (A1 short 6: 19/24)
   [X] applicability MCQ x2 (A1 MCQ 5, 10)
-  [S] reverse: "given at least p proportion, how wide is the interval": mock teaches.
+  [X] reverse: given a tail bound, solve the interval width: MTE 2025-26 Q5, c=10.
   [S] two-sided vs one-sided variant: one-sided bound sigma^2/(sigma^2 + c^2) NOT asked;
       sheet footnote recommended.
   [S] compare bound to actual (A1 short 5 asks "compare": present, [C])
@@ -128,8 +128,8 @@ N x P [X], E/Var [X], MCQ formulas [X], nesting [X].
   [S] P(X > mu + 2sigma) style landmark arithmetic: sibling of A2 A11. not asked.
   For exponential: pdf/cdf [X], memoryless [X/2 uses], conditional [X], units [X],
       survival [X], mean [X].
-  [S] P(a < T < b) interval: P(1<T<2), lambda=.5 -> 0.2387 (verified). NOT asked.
-      direct sibling of survival and conditional. LIKELY exam shape.
+  [X] P(a < T < b) interval: MTE 2024-25 QB2 asks 7 to 12 minutes at rate 1/4.
+      Answer $e^{-7/4}-e^{-3}=0.123987$.
   [S] E(T) or Var(T) standalone from lambda: E=2 for lambda=.5 asked implicitly in B5.
   [S] min of two exponentials: rate doubles, P(min>1) = e^-1 = 0.3679 (verified).
       NOT asked. classic adjacency, low-med risk.
@@ -150,7 +150,7 @@ N x P [X], E/Var [X], MCQ formulas [X], nesting [X].
 ```
   [X] vocabulary [X], point estimate [X], p-hat [X], CI compute [X/boundary],
   [X] unbiasedness check [X], lambda-forcing [X], consistency [X], efficiency compare [X],
-  [X] sufficiency [X/lt only], protocol [X].
+  [X] sufficiency [X, direct MTE 2025-26 Q3], protocol [X].
   [S] MSE comparison ("which has smaller MSE"): new node [H]. MSE(T4)=25.75 vs Var(T3)=.33
       verified. sheet has MSE = Var + Bias^2.
   [S] relative efficiency as a ratio: (5/9)/(1/5) = 2.7778 = 25/9 (verified). not asked.
@@ -166,9 +166,9 @@ N x P [X], E/Var [X], MCQ formulas [X], nesting [X].
   ----------------------------------------------------------------------------------
   pens P(X=k), tail, zero       pens P(2<=X<=4) two-sided interval           HIGH
   normal two-unknown C2         normal ONE-unknown (mu from one percentile)  HIGH
-  exp survival / conditional    exp P(a<T<b) interval                        HIGH
+  exp survival / conditional    exp interval CONFIRMED by MTE 2024-25 QB2    ASKED
   CLT mean impurity             CLT SUM interval (sd = sqrt(n) sigma)        MED-HIGH
-  Var(sum of dice)              Var(difference of dice) same value           MED
+  Var(sum of dice)              Var(X-2Y) CONFIRMED by MTE 2024-25 QB1       ASKED
   E(X), E(X^2) chain            E of capped/|X| payoff                      MED
   geometric E = 1/p             geometric Var or P(N<=k)                     MED
   hypergeometric mean           hypergeometric full pmf                      MED
@@ -213,12 +213,12 @@ Highest-value siblings to drill before the exam:
 ```
   1  normal one-unknown recovery (easy version of C2)
   2  binomial two-sided interval (pens 2..4 = 0.3367)
-  3  exponential interval P(a<T<b)
-  4  CLT for a sum (sqrt(n) sigma)
-  5  discrete conditional P(X=k | X>=j)
-  6  min-n design (binomial, CLT)
-  7  geometric Var / tail
-  8  independence check question
-  9  MSE comparison
- 10  Var(X - Y)
+  3  CLT for a sum (sqrt(n) sigma)
+  4  discrete conditional P(X=k | X>=j)
+  5  min-n design (binomial, CLT)
+  6  geometric Var / tail
+  7  independence check question
+  8  MSE comparison
+  9  Poisson between-values probability
+ 10  valid-cdf check
 ```

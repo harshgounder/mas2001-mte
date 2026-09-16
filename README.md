@@ -166,7 +166,7 @@ pattern is known, not guessed.
 | file | what it is |
 |---|---|
 | `00-FRAMEWORK.md` | the entry schema (19 fields) and every taxonomy defined (Bloom revised, Webb DOK, MATH groups, SOLO, GAISE, Smith+Stein, variation theory, AIG radical/incidental) |
-| `00-COUNT-REGISTER.md` | the locked counts: 112 items, 107 unique, exclusions explicit, deck 01 manifest of all 30 items |
+| `00-COUNT-REGISTER.md` | running count through U01: 128 items, 123 unique; batch-1 baseline remains 112/107 |
 | `00-SYLLABUS-FULL-EXPANDED.md` | every topic down to atomic facts, with page refs, values, traps (770 lines) |
 | `00-MASTER-SYLLABUS.md` | the master map: scope table, hidden layer, errata map, inventory recap |
 | `archive/00-TOPIC-TREE-v1.md`, `00-TOPIC-FLOW.md` | the v1 tree and the flow art (prerequisite edges, broken links, composite question map) |
