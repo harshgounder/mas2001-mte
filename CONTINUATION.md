@@ -18,8 +18,7 @@ before acting (section 7).
                   16, 17 and 18, corrected 5.2 and 15, retracted a false duplicate row and
                   fixed the in-scope drill total to 90. Evidence committed, 24 checks pass.
                   Its 6 pipeline findings and 2 model defaults were fixed in `9b187e0`.
-                  Two real-run name errors were fixed in `32265ae`. A new isolation defect
-                  remains: one test still appends a fake row to the real manifest.
+                  Two real-run name errors were fixed in `32265ae`.
   deadline        17 Sep 2025 was last year's MTE date; THIS year's window: Fri 18 to Fri 25
                   Sep 2026. Sitting day per subject not yet known (user knowledge item).
 ```

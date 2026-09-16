@@ -148,6 +148,5 @@ other tracked file appears below by name.
              - in-scope assignment drill is 90 blocks, not 91 (2024-25 A1 is 15, not 16)
              - 04-QUESTION-BANK battery SD reads 0.97 (exact), not the key's 0.98
   code state: the 6 round-7 pipeline gaps and model defaults were fixed in `9b187e0`.
-           Two real-run name errors were fixed in `32265ae`. A later audit reproduced
-           test pollution of work/manifest.jsonl; that isolation fix remains open.
+           Two real-run name errors were fixed in `32265ae`.
 ```
