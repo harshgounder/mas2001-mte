@@ -1,0 +1,10 @@
+asset_id,claimed_identity,verified_identity,path_outside_repo,bytes,sha256,text_state,provenance_use
+EXT-001,Devore 9e textbook,Devore 9e textbook,/home/liebert511/mas2001-devore/Devore-Book-9e.pdf,7919667,501c554a1a283bc8a5fa185685531df4c014514bfd7efaf87c8402cdb1d07c11,full text extracted,reference only
+EXT-002,Devore 9e solutions manual,Devore 9e solutions manual,/home/liebert511/mas2001-devore/Devore-Solutions-Manual-9e.pdf,4477417,4c53edd2c1b62056abbf43c3fef0bc985a796e2c1e15e562a62c91298d507afc,full text extracted,reference only
+EXT-003,Gupta and Kapoor Fundamentals of Mathematical Statistics,Gupta and Kapoor Fundamentals of Mathematical Statistics,/home/liebert511/mas2001-devore/sources/G-K-Fundamentals-Math-Stat.pdf,53079594,8bb34a542140b50071676521c6a8adf2eed0abcb4e7ef7756fd1c4b502edcc7f,full text extracted,reference only
+EXT-004,Gupta and Kapoor archive scan,Gupta and Kapoor archive scan,/home/liebert511/mas2001-devore/sources/G-K-archive-scan.pdf,13312116,af4f989c465885cd5aaadd91493a3111491ac9a35ebaafcaa73f7e2d56b7609d,weak text layer,reference only
+EXT-005,Hogg and Tanis 9e,Hogg Tanis and Zimmerman Probability and Statistical Inference 9e,/home/liebert511/mas2001-devore/sources/Hogg-Tanis-Probability-Statistical-Inference-9e.pdf,4637484,3681a093d50281b95d47064e17b6e20a2b381e14b00f163be8b9292148d9b88c,full text extracted,reference only
+EXT-006,Goon Gupta and Dasgupta volume 1,Goon Gupta and Dasgupta volume 1,/home/liebert511/mas2001-devore/sources/GGD-Outline-Statistical-Theory-Vol1.pdf,24453845,45009622545452d095e71d868003a112173fb060d843e33b238cb13e2faed12a,OCR running,reference only
+EXT-007,Palaniammal Probability and Random Variables,Davenport Probability and Random Processes,/home/liebert511/mas2001-devore/sources/Davenport-Probability-and-Random-Processes.pdf,28686738,804e142654738787253c85ed827c33126966fe2706d0661b4b4edf824418f279,OCR complete under corrected identity,reference only
+EXT-008,Sundarapandian Probability Statistics and Queuing Theory,not acquired,,0,,absent,none
+EXT-009,Palaniammal Probability and Random Variables,not acquired,,0,,absent,none

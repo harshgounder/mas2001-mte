@@ -1,0 +1,31 @@
+block_id,label,page_start,page_end,summary,count_basis,mte_scope,provenance_status,source_candidate,evidence
+L17-01,sp-l1-7,31,31,faculty computer setup selection,Q2,IN,exact-text lead,Devore,deck wording matched in local Devore text
+L17-02,sp-l1-7,33,33,basketball starting-lineup counting,Q3,IN,exact-text lead,Devore Section 2.1 Exercise 1,local Devore text and prior independent confirmations
+L17-03,sp-l1-7,35,35,digital camera memory-card conditional probability,labeled example,IN,exact-text lead,Devore,visual slide inspection and local Devore text
+L17-04,sp-l1-7,39,39,rare-disease diagnostic-test Bayes probability,labeled example,IN,exact-text lead,Devore,visual slide inspection and local Devore text
+L17-05,sp-l1-7,54,54,gas-station pumps pmf probabilities,labeled example 1 of 2,IN,exact match,Devore Example 2.3,visual slide inspection and local Devore text
+L17-06,sp-l1-7,54,54,pmf table with k and CDF questions,labeled example 2 of 2,IN,open,unknown,no exact source identifier recorded yet
+L17-07,sp-l1-7,55,55,automobile cylinder-count pmf,labeled example,IN,exact-text lead,Devore,visual slide inspection and local Devore text
+L17-08,sp-l1-7,58,58,county planning forms pmf,labeled example,IN,exact match,Devore Chapter 3 Exercise 14,local Devore text plus web exercise index
+L17-09,sp-l1-7,60,60,flashlight batteries until two acceptable,labeled example,IN,exact-text lead,Devore,visual slide inspection and local Devore text
+L17-10,sp-l1-7,68,68,computer-board inspection outcomes,EX label,IN,exact-text lead,Devore,visual slide inspection and local Devore text
+L17-11,sp-l1-7,70,70,maximum of two fair dice pmf and CDF,EX label,IN,exact-text lead,Devore,visual slide inspection and local Devore text
+L17-12,sp-l1-7,73,73,prove CDF is nondecreasing,EX label,IN,exact-text lead,Devore,visual slide inspection and local Devore text
+L17-13,sp-l1-7,82,82,pmf on minus 3 6 9 with transformed expectation,EX label,IN,open,unknown,no exact source identifier recorded yet
+L89-01,sp-l8-9,17,17,two-bus uniform waiting-time pdf,EX image,IN,exact match,Devore Chapter 4 Exercise 8,visual slide inspection plus local and web exercise index
+L89-02,sp-l8-9,29,29,CDF to density and interval probability,question text,IN,open,unknown,no exact source identifier recorded yet
+L89-03,sp-l8-9,32,32,kidney-treatment hospitalization expectation,EX label,IN,probable exact-text lead,Devore,deck wording resembles Devore exercise and needs exact identifier
+L89-04,sp-l8-9,36,36,Pareto moments and existence conditions,EX image,IN,probable exact-text lead,Devore Exercise 10,slide itself says introduced in Exercise 10
+L1213-01,sp-l12-13-discrete,3,5,exactly three heads in five coin tosses,worked example,IN,open,unknown,no exact source identifier recorded yet
+L1213-02,sp-l12-13-discrete,13,16,twelve pens with ten percent defective,problem statement and solution,IN,family lead,Gupta and Kapoor defective-product family,exact twelve-pen version not found in current text sources
+L1213-03,sp-l12-13-discrete,17,18,irregular die even outcomes in ten throws,Problem 2 and solution,IN,open,unknown,no exact source identifier recorded yet
+L1213-04,sp-l12-13-discrete,25,25,Poisson relation P1 equals 0.2 P2,Example 1,IN,open,unknown,no exact source identifier recorded yet
+L1213-05,sp-l12-13-discrete,26,26,Poisson calls with exactly two in each of five minutes,Example 2,IN,open,unknown,no exact source identifier recorded yet
+L1213-06,sp-l12-13-discrete,27,27,life-insurance claims Poisson approximation,Example 3,IN,open,unknown,no exact source identifier recorded yet
+L1415-01,sp-l14-15-continuous,6,6,uniform distribution from 2 to 6,labeled example,IN,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slide
+L1415-02,sp-l14-15-continuous,26,26,standard normal probability below 2,labeled example,IN,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slide
+L1415-03,sp-l14-15-continuous,27,27,standard normal probability below minus 2,labeled example,IN,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slide
+L1415-04,sp-l14-15-continuous,29,31,normal N 8 5 probability below 8.6,prompt and worked solution,IN,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slides
+L1415-05,sp-l14-15-continuous,32,33,normal N 8 5 probability above 8.6,prompt and worked solution,IN,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slides
+L1415-06,sp-l14-15-continuous,35,37,normal N 8 5 lower twenty-percent cutoff,prompt and worked solution,IN,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slides
+L1415-07,sp-l14-15-continuous,42,43,exponential interarrival under three minutes at fifteen per hour,prompt and worked solution,IN,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slides
