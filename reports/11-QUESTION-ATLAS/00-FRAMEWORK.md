@@ -15,6 +15,7 @@ MTE question pattern becomes visible instead of guessed.
   05 estimation (ppt5+lms)   05-estimation.md              pending
   06 assignments 1 and 2     (later, per your instruction) pending
   07 mock and question bank cross-check (later)            pending
+  U01 two MTE papers              02-u01-mte-papers.md      COMPLETE (16 blocks)
 ```
 
 Out of MTE scope decks (lms-method-of-moments, lms-maximum-likelihood) get a compact
@@ -79,4 +80,6 @@ sweep at the end, not full entries, unless you say otherwise.
   14 Sep: framework written. Deck 01 census done (annex in 01-deck-lec01-09.md), entries
           D1-Q001 and D1-Q002 written and machine-verified. Resume marker: next entry D1-Q003
           (basketball lineup, slides p048-p049).
+  16 Sep: U01 completed separately: 16 top-level blocks, 16 new exact items, all schema
+          fields filled in `02-u01-mte-papers.md`; running count 128 / 123 unique.
 ```

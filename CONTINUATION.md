@@ -10,15 +10,15 @@ before acting (section 7).
   repo            ~/mas2001-mte, github.com/harshgounder/mas2001-mte (PRIVATE), branch master
   batch 1         11 sources fully processed: converted (348p), audited, fidelity-gated,
                   counted (112 items / 107 unique), classified, reports 00-10 written
-  batch 2         23 sources arrived 15 Sep, listed + hashed in sources.yaml, NOT converted.
-                  The 19-unit processing queue is in reports/12-NEW-BATCH.md. U01 NOT started.
+  batch 2         23 sources arrived 15 Sep and are listed in sources.yaml. U01's four MTE
+                  documents are converted: 15 pages across 4 labels. U02-U19 are not converted.
   corrections     Chebyshev has slides (S&P L10-11); 14 "not asked" siblings are confirmed
                   asked by real papers; exam format decoded from both MTE papers.
   round 7         a peer codex audit (15 Sep 14:45) plus my own re-verification added errata
                   16, 17 and 18, corrected 5.2 and 15, retracted a false duplicate row and
                   fixed the in-scope drill total to 90. Evidence committed, 24 checks pass.
-                  Its 6 pipeline findings and the 2 stale vision defaults are OPEN, code,
-                  awaiting an explicit go.
+                  Its 6 pipeline findings and 2 model defaults were fixed in `9b187e0`.
+                  Two real-run name errors were fixed in `32265ae`.
   deadline        17 Sep 2025 was last year's MTE date; THIS year's window: Fri 18 to Fri 25
                   Sep 2026. Sitting day per subject not yet known (user knowledge item).
 ```
@@ -50,7 +50,7 @@ says "no slides" for Chebyshev, it is stale: report it.
 Full list with page ranges in reports/12-NEW-BATCH.md section 3. Order:
 
 ```
-  U01  MTE 2025-26 paper + scheme + MTE 2024-25 paper + scheme       15p  START HERE
+  U01  MTE 2025-26 paper + scheme + MTE 2024-25 paper + scheme       15p  CONVERTED
   U02  ETE S3 x2 + re-sess S3                                         6p
   U03  ETE S4 x2 + summer + re-sess S4                                9p
   U04  2025-26 assignments 1-5 combined, A1+A2 ONLY (~8p in scope)   17p
@@ -90,7 +90,7 @@ schemes, Assignment 3 Episode 2) need a vision pass, no skipping.
 ```
   1  read this file, INDEX.md, reports/12-NEW-BATCH.md (10 min)
   2  verify claims: git log --oneline -5, sources.yaml parses (36 sources), repo clean
-  3  U01: process the four MTE documents (15 pages, one at a time) -> log -> commit
+  3  finish U01 analysis: atlas entries, dedup verdicts and count register update
   4  U02..U06 in order; stop after each unit for user review if the user is present
   5  after the papers + assignments + Chebyshev deck: rebuild the atlas type space with
      CONFIRMED vs HYPOTHETICAL siblings (00-TYPE-SPACE-AUDIT.md gets the real evidence)
@@ -99,8 +99,8 @@ schemes, Assignment 3 Episode 2) need a vision pass, no skipping.
      now known), 07-MOCK-PAPER (reshape to the real A/B/C format), and 13-PROCESSING log
 ```
 
-New files expected: `reports/13-PROCESSING-LOG.md` (created at U01), `md/` entries for
-batch-2 sources (labels already reserved in sources.yaml).
+`reports/13-PROCESSING-LOG.md` records U01 conversion and review state. New `md/` entries
+are still expected for U02-U19; their labels are already reserved in sources.yaml.
 
 ## 6. Rules that bind this repo (do not relearn the hard way)
 
@@ -192,7 +192,7 @@ extra sources are logged in sources.yaml.
   reports/11-QUESTION-ATLAS/     all question analysis (framework, counts, trees, plans)
   reports/02-MTE-REPORT.md       main summary of batch-1 work
   reports/05-FIVE-DAY-PLAN.md    the study plan (will be re-pinned with real format)
-  reports/09-ERRATA.md           18 errata, claim-site recorded
-  md/<label>/pNNN.md             converted slides (batch 1 complete; batch 2 pending)
+  reports/09-ERRATA.md           21 errata, claim-site recorded
+  md/<label>/pNNN.md             converted pages (batch 1 complete; U01 complete; U02-U19 pending)
   work/manifest.jsonl            per-page provenance for everything converted
 ```

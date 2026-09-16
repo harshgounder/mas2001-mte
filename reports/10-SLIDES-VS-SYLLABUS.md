@@ -31,9 +31,10 @@ counted as teaching slides. Page by page source of truth: `reports/01-COVERAGE-M
 | 19 | Theory of Estimation: parameter, statistic, point and interval estimation | yes | ppt5 p001-p007 |
 | 20-21 | Characteristics of a good estimator | yes | ppt5 p008-p021 and lms-theory p001-p030 |
 
-Count: of the 21 MTE lectures, 18 have full teaching slides on disk (Chebyshev moved from
-NO to YES on 15 September when the L10-11 deck arrived), and lectures 8-9 are half
-covered (the expectation and variance rules exist, the independence rules do not).
+Count: of the 21 MTE lectures, 18 examined lectures have full teaching slides on disk,
+lectures 8-9 are half covered, and lecture 1 is an administrative introduction rather than
+examined content. Counting that administrative deck as slide coverage gives 19 fully covered
+lecture slots, 2 half-covered slots, and all 21 slots accounted for.
 
 ## 2. The gaps (re-audited 15 September)
 

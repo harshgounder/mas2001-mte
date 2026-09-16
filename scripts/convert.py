@@ -193,6 +193,10 @@ def render_page(pdf, page, dpi, png_path):
             stale.unlink()
         except OSError:
             pass
+    try:
+        png_path.unlink()
+    except OSError:
+        pass
     cmd = [
         "pdftoppm",
         "-r", str(dpi),
@@ -203,17 +207,18 @@ def render_page(pdf, page, dpi, png_path):
         str(prefix),
     ]
     proc = subprocess.run(cmd, capture_output=True, text=True, timeout=RENDER_TIMEOUT_S)
-    produced = sorted(prefix.parent.glob(prefix.name + "-*.png"))
-    if produced:
-        os.replace(produced[0], png_path)
-        for extra in produced[1:]:
-            try:
-                extra.unlink()
-            except OSError:
-                pass
-    if not png_path.is_file():
+    if proc.returncode != 0:
         note = (proc.stderr or proc.stdout or "").strip()
         raise RuntimeError("pdftoppm failed for page %d: %s" % (page, note or "no output"))
+    produced = sorted(prefix.parent.glob(prefix.name + "-*.png"))
+    if not produced:
+        raise RuntimeError("pdftoppm failed for page %d: no output image" % page)
+    os.replace(produced[0], png_path)
+    for extra in produced[1:]:
+        try:
+            extra.unlink()
+        except OSError:
+            pass
 
 
 def call_vision(png_path, prompt, model, max_tokens):
@@ -263,14 +268,14 @@ def transcribe(png_path, prompt, model, base_tokens):
                 first_text = out
                 first_note = err
                 try:
-                    _, out2, err2 = call_vision(png_path, prompt, model, tokens * 2)
+                    returncode2, out2, err2 = call_vision(png_path, prompt, model, tokens * 2)
                     out2 = (out2 or "").strip()
                     err2 = (err2 or "").strip()
                 except Exception as exc:
-                    out2, err2 = "", "exception: %s" % exc
+                    returncode2, out2, err2 = -1, "", "exception: %s" % exc
                 if len(out2) > len(first_text):
                     text = out2
-                    status = _read_status(returncode, err2)
+                    status = _read_status(returncode2, err2)
                     note = err2
                 else:
                     text = first_text
@@ -361,11 +366,11 @@ def process_page(label, page, pdf, dpi, prompt, model, max_tokens, force, latest
     text, status, attempts, note = transcribe(png_path, prompt, model, max_tokens)
     latency = time.monotonic() - started
     banned = bool(text) and is_banned(text)
-    if text:
+    if status == "ok" and text:
         write_text_atomic(md_path, text + "\n")
     record = make_record(label, page, status, attempts, latency, len(text), note, model, banned, png_path)
     append_manifest(record)
-    return {"page": page, "ran": True, "done": bool(text), "banned": banned, "truncated": status == "truncated"}
+    return {"page": page, "ran": True, "done": status == "ok" and bool(text), "banned": banned, "truncated": status == "truncated"}
 
 
 def read_manifest_latest():
@@ -566,6 +571,7 @@ def main(argv):
             for page in pages
             if args.force or not page_done(label, page, latest, OUT)
         ]
+        run_done = set()
         if pending:
             pdf = pathlib.Path(src["path"])
             with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as executor:
@@ -587,7 +593,9 @@ def main(argv):
                 for future in concurrent.futures.as_completed(futures):
                     page = futures[future]
                     try:
-                        future.result()
+                        result = future.result()
+                        if result and result.get("done"):
+                            run_done.add(page)
                     except Exception as exc:
                         log("%s p%03d: unexpected error: %s" % (label, page, exc))
                         record = make_record(
@@ -597,6 +605,10 @@ def main(argv):
 
         latest = read_manifest_latest()  # re-read: sees rows this run wrote
         stats = label_summary(label, len(pages), latest)
+        for page in run_done:
+            if not page_done(label, page, latest, OUT):
+                stats["done"] += 1
+        stats["failed"] = len(pages) - stats["done"]
         rows.append(dict(label=label, **stats))
         print(
             "%s: %d pages, %d done, %d failed, %d banned, %d truncated"
@@ -612,6 +624,8 @@ def main(argv):
         for label, reason in skipped:
             print("%s: SKIPPED, %s" % (label, reason))
         print("%d skipped source(s)" % len(skipped))
+        return 1
+    if any(row["failed"] > 0 for row in rows):
         return 1
     return 0
 

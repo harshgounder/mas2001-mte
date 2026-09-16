@@ -73,12 +73,13 @@ root n.
 
 ## Day 4, Thursday 17 September (4.5 hours)
 
-Goal: estimation block, then a full timed paper, then fix what the paper exposes.
+Goal: estimation block, then a closed-book content drill, then fix what the drill exposes.
 
 1. `md/ppt5-estimation-summary.md` all 26 pages. 90 minutes. Then
    `md/lms-theory-of-estimation.md` p022 to p030 for the extra worked numericals only.
 2. Sit `reports/07-MOCK-PAPER-v2.md` closed book, 90 minutes, no formula sheet. Mark it with
-   the worked solutions in `reports/08-MOCK-SOLUTIONS-v2.md`.
+   the worked solutions in `reports/08-MOCK-SOLUTIONS-v2.md`. The v1 files remain a content
+   drill only; their old section weights do not match the real papers.
 3. Spend the rest of the day on whatever the mock exposed. Re-derive every formula you
    failed to recall. 90 minutes.
 
@@ -121,10 +122,10 @@ Tuesday 15 September: Day 2 as written above, unchanged (continuous rv block, bi
 Poisson).
 Wednesday 16 September: Day 3 as written above, unchanged (uniform, normal, exponential,
 standard error, CLT). This is the heaviest day; protect it.
-Thursday 17 September: Day 4 as written above, unchanged (estimation block, then the mock
-closed book, then repair what it exposes).
+Thursday 17 September: Day 4 as written above, unchanged (estimation block, then the content
+drill closed book, then repair what it exposes).
 
-Checkpoint on Thursday after the mock: 24 or more out of 30 means stay the course. 18 to 23
+Checkpoint on Thursday after the content drill: 24 or more out of 30 means stay the course. 18 to 23
 means Friday morning goes to the weak block only, no new material. Below 18 means the weak
 block is almost certainly the units 1 and 2 deck or the CLT, and Friday morning goes there
 before the formula sheet drill.
