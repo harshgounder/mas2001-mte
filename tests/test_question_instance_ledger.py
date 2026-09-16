@@ -24,6 +24,7 @@ EXPECTED_GROUP_COUNTS = {
     "teaching": 60,
     "chebyshev": 3,
     "assignments-2025": 52,
+    "assignments-2025-bundle": 119,
     "mte": 16,
     "ete": 97,
     "assignments-2024": 125,
@@ -40,6 +41,11 @@ EXPECTED_SOURCE_COUNTS = {
     "L10-11-chebyshev-deck": 3,
     "assignment-2025-26-1": 24,
     "assignment-2025-26-2": 28,
+    "assignment-2025-26-bundle-1": 19,
+    "assignment-2025-26-bundle-2": 36,
+    "assignment-2025-26-bundle-3": 25,
+    "assignment-2025-26-bundle-4": 21,
+    "assignment-2025-26-bundle-5": 18,
     "paper-mte-2024-25": 8,
     "paper-mte-2025-26": 8,
     "E24S3": 15,
@@ -100,19 +106,19 @@ class RealLedgerChecks(unittest.TestCase):
     def setUpClass(cls):
         cls.rows = ledger.generate_rows(REPO)
 
-    def test_exact_total_of_383(self):
-        self.assertEqual(len(self.rows), 383)
-        self.assertEqual(ledger.TOTAL_INSTANCES, 383)
+    def test_exact_total_of_502(self):
+        self.assertEqual(len(self.rows), 502)
+        self.assertEqual(ledger.TOTAL_INSTANCES, 502)
 
     def test_exact_group_counts(self):
         counts = Counter(row["corpus_group"] for row in self.rows)
         self.assertEqual(dict(counts), EXPECTED_GROUP_COUNTS)
-        self.assertEqual(sum(counts.values()), 383)
+        self.assertEqual(sum(counts.values()), 502)
 
     def test_exact_source_counts(self):
         counts = Counter(row["source_label"] for row in self.rows)
         self.assertEqual(dict(counts), EXPECTED_SOURCE_COUNTS)
-        self.assertEqual(sum(counts.values()), 383)
+        self.assertEqual(sum(counts.values()), 502)
 
     def test_instance_ids_are_unique(self):
         ids = [row["instance_id"] for row in self.rows]
@@ -239,12 +245,62 @@ class PlaceholderHonestyChecks(unittest.TestCase):
             real_text(ledger.MTE_REL),
             real_text(ledger.DECK_REL),
             "",
+            real_text(ledger.BUNDLE_REL),
         )
         deck01 = [r for r in fallback if r["source_label"] == "notes-lecture-series-01-09"]
         self.assertEqual(len(deck01), 30)
         self.assertTrue(all(r["description_state"] == "pending" for r in deck01))
         self.assertTrue(all(r["summary"] == "" for r in deck01))
         self.assertEqual(ledger.validate_rows(fallback), [])
+
+    def test_existing_383_rows_are_preserved(self):
+        original = [
+            r
+            for r in self.rows
+            if r["corpus_group"] != "assignments-2025-bundle"
+        ]
+        self.assertEqual(len(original), 383)
+        counts = Counter(r["corpus_group"] for r in original)
+        self.assertEqual(
+            dict(counts),
+            {
+                "teaching": 60,
+                "chebyshev": 3,
+                "assignments-2025": 52,
+                "mte": 16,
+                "ete": 97,
+                "assignments-2024": 125,
+                "four-decks": 30,
+            },
+        )
+
+    def test_bundle_group_is_119_resolved_rows(self):
+        bundle = [
+            r for r in self.rows if r["corpus_group"] == "assignments-2025-bundle"
+        ]
+        self.assertEqual(len(bundle), 119)
+        for row in bundle:
+            self.assertEqual(row["description_state"], "resolved")
+            self.assertTrue(row["summary"])
+            self.assertEqual(row["scope"], "in-scope")
+            self.assertEqual(row["provenance_verdict"], "unsearched")
+            self.assertTrue(row["instance_id"].startswith("asgnbundle-"))
+
+    def test_bundle_group_pages_stay_in_assignment_ranges(self):
+        ranges = {
+            "assignment-2025-26-bundle-1": (1, 4),
+            "assignment-2025-26-bundle-2": (5, 8),
+            "assignment-2025-26-bundle-3": (9, 11),
+            "assignment-2025-26-bundle-4": (12, 14),
+            "assignment-2025-26-bundle-5": (15, 17),
+        }
+        bundle = [
+            r for r in self.rows if r["corpus_group"] == "assignments-2025-bundle"
+        ]
+        for row in bundle:
+            low, high = ranges[row["source_label"]]
+            self.assertTrue(low <= int(row["page_start"]) <= high, row["instance_id"])
+            self.assertTrue(low <= int(row["page_end"]) <= high, row["instance_id"])
 
 
 class StructuredParsingChecks(unittest.TestCase):
@@ -392,7 +448,7 @@ class MainChecks(unittest.TestCase):
             out = pathlib.Path(tmp) / "question-instance-ledger.csv"
             self.assertEqual(ledger.main(["--output", str(out)]), 0)
             self.assertTrue(out.is_file())
-            self.assertEqual(len(out.read_text(encoding="utf-8").splitlines()), 384)
+            self.assertEqual(len(out.read_text(encoding="utf-8").splitlines()), 503)
             self.assertEqual(ledger.main(["--check", "--output", str(out)]), 0)
             out.write_text(
                 out.read_text(encoding="utf-8").replace("gross", "stale", 1),
