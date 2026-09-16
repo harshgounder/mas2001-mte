@@ -37,7 +37,19 @@ LEDGER = S2 + "reports/evidence/question-instance-ledger.csv"
 REPORT = S2 + "reports/evidence/wave-a-sweep-20260916.json"
 
 FROZEN_GROUPS = {"mte", "four-decks"}   # human-researched, never touched
-FROZEN_IDS = {"cheb-Q1", "cheb-Q2"}     # report 20 has these; Q3 is errata-15
+FROZEN_IDS = set()                      # chebyshev rows are machine-searched
+
+# Scope correction, evidence in reports/18-CORPUS-ACCOUNTING.md and the source
+# texts. The 2024-25 assignment 3, 4 and 5 cover estimation theory (MLE, method
+# of moments, Bayesian), hypothesis testing (t-test, F-test, type I/II errors)
+# and ANOVA. None of those are on the MTE syllabus, so those rows are marked OUT
+# rather than left pending. Rows are never deleted; this only relabels scope.
+SCOPE_OUT = {
+    "assignment-2024-25-3": "OUT",
+    "assignment-2024-25-3-ep2": "OUT",
+    "assignment-2024-25-4": "OUT",
+    "assignment-2024-25-5": "OUT",
+}
 
 CORPORA = {
     "G&K-Fundamentals": DEV + "corpus-text/G-K-Fundamentals-Math-Stat.txt",
@@ -45,6 +57,60 @@ CORPORA = {
     "GGD-Vol1":         DEV + "corpus-text/GGD-Vol1-OCR-OCR.txt",
     "Davenport":        DEV + "corpus-text/Davenport-OCR.txt",
 }
+
+# full statement text per ETE row id (the sweep searched the short summary
+# before, which is why 60 ETE rows looked unsearched). Keyed without the
+# "ete-" prefix.
+ETE_BLOCKS = DEV + "ete-blocks.json"
+
+# rows whose summary is a short manifest label; the searchable statement text
+# comes from here instead, keyed by instance_id.
+EXTRA_TEXT = {}
+try:
+    _ete = json.load(open(ETE_BLOCKS, encoding="utf-8"))
+    for k, v in _ete.items():
+        EXTRA_TEXT["ete-" + k] = v
+        # the summer paper dump numbers items without the Q (E25SUM-1) while
+        # the ledger ids carry it (ete-E25SUM-Q1); register both forms.
+        m = re.match(r"^(.+)-(\d+)$", k)
+        if m:
+            EXTRA_TEXT["ete-%s-Q%s" % (m.group(1), m.group(2))] = v
+except Exception:
+    pass
+
+
+def page_text(label, start, end):
+    """Pull the md conversion for a page range (teaching rows carry page refs)."""
+    out = []
+    try:
+        a, b = int(start), int(end)
+    except (TypeError, ValueError):
+        return ""
+    for n in range(a, b + 1):
+        f = S2 + "md/" + label + ("/p%03d.md" % n)
+        if os.path.exists(f):
+            out.append(open(f, encoding="utf-8", errors="ignore").read())
+    return "\n".join(out)
+
+
+# ETE paper prefix -> converted paper directory
+ETE_PAPER = {
+    "E24S3": "paper-ete-s3-2024-25", "E25S3": "paper-ete-s3-2025-26",
+    "E24S4": "paper-ete-s4-2024-25", "E25S4": "paper-ete-s4-2025-26",
+    "R25S3": "paper-resess-s3-2025-26", "R25S4": "paper-resess-s4-2025-26",
+    "E25SUM": "paper-ete-summer-2025-26",
+}
+
+
+def paper_text(prefix):
+    d = ETE_PAPER.get(prefix)
+    if not d:
+        return ""
+    p = S2 + "md/" + d
+    if not os.path.isdir(p):
+        return ""
+    return "\n".join(open(os.path.join(p, f), encoding="utf-8", errors="ignore").read()
+                     for f in sorted(os.listdir(p)) if f.endswith(".md"))
 
 # marker candidates, tried in order; the first that reproduces the declared
 # count exactly is used for backfill.
@@ -238,25 +304,60 @@ def main(argv):
         if group in FROZEN_GROUPS or iid in FROZEN_IDS:
             frozen += 1
             continue
+        if label in SCOPE_OUT:
+            r["scope"] = SCOPE_OUT[label]
         text = r["summary"].strip()
+        # if the summary is a short manifest label, prefer the full statement
+        # text from the block dump, or the converted pages, so the sweep has
+        # real content to match.
+        extra = EXTRA_TEXT.get(iid, "")
+        if not extra and r["page_start"]:
+            extra = page_text(label, r["page_start"], r["page_end"])
+        if len(tokens(text)) < 6 and len(tokens(extra)) > len(tokens(text)):
+            text = extra
         toks = tokens(text)
         g = list(dict.fromkeys(grams(toks, 5)))
         if not g:
             r["provenance_verdict"] = "unsearched"
+            r["provenance_source"] = ""
+            r["evidence_locator"] = (r["evidence_locator"] or "").split(";")[0].strip()
             continue
+        # a phrase only counts as evidence when it hits the claimed source and
+        # NOT the other corpora. generic statistics phrasing appears in every
+        # book, so requiring distinctiveness kills the false strong/family hits.
+        per_corpus = {name: [x for x in g if x in gs] for name, gs in corpora.items()}
+        distinctive = {
+            name: [x for x in hits
+                   if not any(x in gs2 for n2, gs2 in corpora.items() if n2 != name)]
+            for name, hits in per_corpus.items()
+        }
         best, bn, bph = None, 0, []
-        for name, gs in corpora.items():
-            hits = [x for x in g if x in gs]
+        for name, hits in distinctive.items():
             if len(hits) > bn:
                 best, bn, bph = name, len(hits), hits
+        # also keep the strongest even if shared, for the open case
+        shared_best, sbn = None, 0
+        for name, hits in per_corpus.items():
+            if len(hits) > sbn:
+                shared_best, sbn = name, len(hits)
         v = verdict(bn, len(g))
+        if v == "open" and sbn >= 6:
+            v = "family"          # shared phrasing only: a family signal, not a source
+            best, bph = shared_best, per_corpus[shared_best][:4]
         r["provenance_verdict"] = v
-        if best and v not in ("open", "unsearched"):
+        # fresh locator each run so evidence cannot accumulate across passes
+        base = (r["evidence_locator"] or "").split(";")[0].strip()
+        if v not in ("open", "unsearched") and best:
             r["provenance_source"] = best
-        if bph:
-            base = (r["evidence_locator"] or "").split(";")[0].strip()
-            r["evidence_locator"] = base + " ; " + (best or "") + ": " + \
+            r["evidence_locator"] = base + " ; " + best + ": " + \
                 " | ".join(" ".join(x) for x in bph[:4])
+        elif v == "family" and best:
+            r["provenance_source"] = (r["provenance_source"] or "").split(";")[0].strip()
+            r["evidence_locator"] = base + " ; family(" + best + "): " + \
+                " | ".join(" ".join(x) for x in bph[:3])
+        else:
+            r["provenance_source"] = ""
+            r["evidence_locator"] = base
         swept += 1
 
     by_v = collections.Counter(r["provenance_verdict"] for r in rows)

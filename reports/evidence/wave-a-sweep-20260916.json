@@ -1,16 +1,16 @@
 {
   "rows": 383,
-  "descriptions_filled": 101,
-  "rows_swept": 136,
-  "rows_frozen": 48,
+  "descriptions_filled": 0,
+  "rows_swept": 218,
+  "rows_frozen": 46,
   "desc_state": {
     "resolved": 274,
     "pending": 109
   },
   "by_verdict": {
-    "unsearched": 201,
-    "open": 130,
-    "family": 9,
+    "open": 209,
+    "unsearched": 119,
+    "family": 10,
     "CONCEPT": 5,
     "FAMILY": 1,
     "VERBATIM": 1,
@@ -20,7 +20,7 @@
     "RESKIN + CIRCULATING": 2,
     "DECK": 1,
     "MIXED": 1,
-    "strong": 3,
+    "strong": 5,
     "verbatim": 2,
     "exact-text lead": 9,
     "exact match": 3,
@@ -30,12 +30,11 @@
   },
   "by_group": {
     "teaching": {
-      "unsearched": 57,
-      "open": 3
+      "open": 30,
+      "unsearched": 30
     },
     "chebyshev": {
-      "unsearched": 2,
-      "open": 1
+      "open": 3
     },
     "assignments-2025": {
       "open": 42,
@@ -54,12 +53,14 @@
       "MIXED": 1
     },
     "ete": {
-      "unsearched": 60,
-      "open": 37
+      "unsearched": 7,
+      "open": 86,
+      "strong": 2,
+      "family": 2
     },
     "assignments-2024": {
-      "open": 39,
-      "family": 5,
+      "open": 40,
+      "family": 4,
       "strong": 3,
       "verbatim": 2,
       "unsearched": 76
@@ -79,14 +80,9 @@
     "lms-standard-error-clt": "none",
     "ppt5-estimation-summary": "none",
     "lms-theory-of-estimation": "none",
-    "L10-11-chebyshev-deck": "Qn",
     "assignment-2025-26-1": "Qn",
-    "assignment-2025-26-2": "Qn",
-    "assignment-2024-25-1": "Qn",
-    "assignment-2024-25-2": "n_dot",
     "assignment-2024-25-3": "none",
     "assignment-2024-25-3-ep2": "none",
-    "assignment-2024-25-4": "n_dot",
     "assignment-2024-25-5": "none"
   },
   "count_mismatches": [
@@ -103,10 +99,7 @@
     "four-decks",
     "mte"
   ],
-  "frozen_ids": [
-    "cheb-Q1",
-    "cheb-Q2"
-  ],
+  "frozen_ids": [],
   "corpora": {
     "G&K-Fundamentals": 191264,
     "Hogg-Tanis-9e": 109481,
