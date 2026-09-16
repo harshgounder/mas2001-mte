@@ -8,11 +8,13 @@ every other place the same skeleton appears in our materials.
 Status legend: TRACED (source identified), PARTIAL (family identified, exact book or
 exercise open), OPEN (still hunting).
 
-Note on the Palaniammal scan on disk: its own running header reads "Probability and Random
-Processes", while the course decks cite "Probability and Random Variables" (PHI Learning).
-Same author, different title; the cited title is not yet located. OCR is running on the
-scan in hand; if the pens or telephone item is absent there, "Probability and Random
-Variables" remains a target.
+Correction on the "Palaniammal" scan: the file obtained from archive.org (item
+in.ernet.dli.2015.136274, whose page suggests Palaniammal) is actually Davenport,
+"Probability and Random Processes: An Introduction for Applied Scientists and Engineers"
+(its own running headers, chapter set and 1960s references identify it). Probes for pens,
+telephone, insurance, subway, 21/25 all return zero in its OCR, so it is irrelevant to our
+items. Palaniammal's cited titles (Probability and Random Variables; Probability and Random
+Processes, PHI) remain unlocated; ResearchGate and Academia.edu copies are gated.
 
 Provenance pack (this report plus siblings, all on branch audit/provenance-accounting):
 16 source provenance and confirmations, 17 ETE intake, 18 corpus accounting, 19 skeleton
@@ -82,8 +84,8 @@ ledger.
 | Devore 9e + solutions manual | FULL TEXT on disk, diffed |
 | Gupta and Kapoor (FMS) | FULL TEXT on disk (college mirror), diffed; 13+ item matches |
 | Hogg Tanis Zimmerman 9e | FULL TEXT on disk, diffed |
-| Palaniammal, Probability and Random Processes | scan on disk, OCR RUNNING |
-| GGD, Outline of Statistical Theory Vol 1 | scan on disk, OCR queued after Palaniammal |
+| Palaniammal, Probability and Random Processes | the archive copy turned out to be Davenport (see correction); genuine copies gated (ResearchGate, Academia) |
+| GGD, Outline of Statistical Theory Vol 1 | scan on disk, OCR RUNNING (started 17:18) |
 | Feller Vol 1 | gated on archive.org (lending 401) and Scribd |
 | Mc Clave, Statistics for Business and Economics | gated (archive lending; slides carry its style, L14-15 deck) |
 | Sundarapandian | gated (Scribd, ResearchGate); not on archive.org |
