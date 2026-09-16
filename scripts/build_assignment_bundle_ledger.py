@@ -49,14 +49,16 @@ assignments are not in this run, so no 2024 match is asserted.
 
 scope is one of:
 
-    in-scope      assignments 1 and 2, plus the lecture 19 to 21 items in assignment 3
-    out-of-scope  MLE, method of moments, Bayesian and CI mechanics in assignment 3,
-                  plus assignments 4 and 5
+    in-scope      assignments 1 and 2, plus seven lecture 19 to 21 items in assignment 3
+    boundary      seven confidence-interval construction items in assignment 3
+    out-of-scope  MLE, method of moments, Bayesian, and other post-MTE items in
+                  assignment 3, plus assignments 4 and 5
 
 Counts:
 
-    in-scope      63
-    out-of-scope  56
+    in-scope      62
+    boundary       7
+    out-of-scope  50
     total         119
 
 Usage:
@@ -131,6 +133,7 @@ EXTRACTION_REVIEWED = "text_layout_reviewed"
 MATCH_STATUS = "not_assessed"
 
 SCOPE_IN_SCOPE = "in-scope"
+SCOPE_BOUNDARY = "boundary"
 SCOPE_OUT_OF_SCOPE = "out-of-scope"
 
 ASSIGNMENT_3_IN_SCOPE = {
@@ -138,14 +141,24 @@ ASSIGNMENT_3_IN_SCOPE = {
     "A6",
     "A7",
     "A9",
-    "A10",
     "B3",
     "C2",
     "D5",
 }
 
-EXPECTED_IN_SCOPE_TOTAL = 63
-EXPECTED_OUT_OF_SCOPE_TOTAL = 56
+ASSIGNMENT_3_BOUNDARY = {
+    "A10",
+    "B4",
+    "B5",
+    "C3",
+    "C4",
+    "D2",
+    "D4",
+}
+
+EXPECTED_IN_SCOPE_TOTAL = 62
+EXPECTED_BOUNDARY_TOTAL = 7
+EXPECTED_OUT_OF_SCOPE_TOTAL = 50
 
 REVIEWED_SUMMARIES = {
     "asgnbundle-3-A05": "True or false: if sample statistic t is an unbiased estimator of population parameter theta, then t squared is also an unbiased estimator of theta squared.",
@@ -243,6 +256,8 @@ def scope_for(assignment, item_label):
         return SCOPE_IN_SCOPE
     if assignment == 3 and item_label in ASSIGNMENT_3_IN_SCOPE:
         return SCOPE_IN_SCOPE
+    if assignment == 3 and item_label in ASSIGNMENT_3_BOUNDARY:
+        return SCOPE_BOUNDARY
     return SCOPE_OUT_OF_SCOPE
 
 
@@ -651,16 +666,36 @@ def validate_rows(rows):
                 "wrong scope %r on %s" % (row["scope"], row["item_id"])
             )
     in_scope_count = sum(1 for row in rows if row["scope"] == SCOPE_IN_SCOPE)
+    boundary_count = sum(1 for row in rows if row["scope"] == SCOPE_BOUNDARY)
     out_of_scope_count = sum(1 for row in rows if row["scope"] == SCOPE_OUT_OF_SCOPE)
     if in_scope_count != EXPECTED_IN_SCOPE_TOTAL:
         problems.append(
             "in-scope count: expected %d got %d"
             % (EXPECTED_IN_SCOPE_TOTAL, in_scope_count)
         )
+    if boundary_count != EXPECTED_BOUNDARY_TOTAL:
+        problems.append(
+            "boundary count: expected %d got %d"
+            % (EXPECTED_BOUNDARY_TOTAL, boundary_count)
+        )
     if out_of_scope_count != EXPECTED_OUT_OF_SCOPE_TOTAL:
         problems.append(
             "out-of-scope count: expected %d got %d"
             % (EXPECTED_OUT_OF_SCOPE_TOTAL, out_of_scope_count)
+        )
+    reviewed_ids = {
+        row["item_id"]
+        for row in rows
+        if row["extraction_state"] == EXTRACTION_REVIEWED
+    }
+    if reviewed_ids != set(REVIEWED_SUMMARIES):
+        problems.append("reviewed item manifest does not match generated rows")
+    recovered_count = sum(
+        1 for row in rows if row["extraction_state"] == EXTRACTION_RECOVERED
+    )
+    if recovered_count:
+        problems.append(
+            "recovered row count: expected 0 got %d" % recovered_count
         )
     return problems
 

@@ -51,8 +51,8 @@ compaction artifacts, so it is not a count of 679 distinct research actions.
 - `reports/evidence/assignment-bundle-ledger-20260916.csv`: the exact 119-item ledger for
   the 17-page 2025-26 assignment bundle (assignments 1 to 5), with item id, section, label,
   order, page span, statement, extraction state, structural candidate, match status,
-  2024-locator slot, evidence locator, and scope. The item-level split is 63 in-scope and
-  56 out-of-scope. Seventeen layout-split statements carry reviewed summaries.
+  2024-locator slot, evidence locator, and scope. The item-level split is 62 in-scope, 7
+  boundary, and 50 out-of-scope. Seventeen layout-split statements carry reviewed summaries.
 - Report 17: 97 ETE blocks with scope verdicts. This is an intake ledger, not a completed
   provenance ledger.
 

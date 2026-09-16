@@ -349,7 +349,7 @@ def parse_assignment_bundle_rows(csv_text):
             continue
         order = (record.get("order") or "").strip()
         scope = (record.get("scope") or "").strip()
-        if scope not in ("in-scope", "out-of-scope"):
+        if scope not in ("in-scope", "boundary", "out-of-scope"):
             raise ValueError(
                 "invalid scope %r on %s" % (scope, item_id)
             )
@@ -627,6 +627,34 @@ def validate_rows(rows):
             {value for value in ids if ids.count(value) > 1}
         )
         problems.append("duplicate instance_id(s): %s" % duplicates)
+
+    bundle_rows = [
+        row for row in rows if row["corpus_group"] == "assignments-2025-bundle"
+    ]
+    bundle_scope_counts = {}
+    bundle_source_scope_counts = {}
+    for row in bundle_rows:
+        scope = row["scope"]
+        bundle_scope_counts[scope] = bundle_scope_counts.get(scope, 0) + 1
+        key = (row["source_label"], scope)
+        bundle_source_scope_counts[key] = bundle_source_scope_counts.get(key, 0) + 1
+    expected_bundle_scopes = {"in-scope": 62, "boundary": 7, "out-of-scope": 50}
+    if bundle_scope_counts != expected_bundle_scopes:
+        problems.append(
+            "bundle scope counts: expected %r got %r"
+            % (expected_bundle_scopes, bundle_scope_counts)
+        )
+    expected_bundle_source_scopes = {
+        ("assignment-2025-26-bundle-1", "in-scope"): 19,
+        ("assignment-2025-26-bundle-2", "in-scope"): 36,
+        ("assignment-2025-26-bundle-3", "in-scope"): 7,
+        ("assignment-2025-26-bundle-3", "boundary"): 7,
+        ("assignment-2025-26-bundle-3", "out-of-scope"): 11,
+        ("assignment-2025-26-bundle-4", "out-of-scope"): 21,
+        ("assignment-2025-26-bundle-5", "out-of-scope"): 18,
+    }
+    if bundle_source_scope_counts != expected_bundle_source_scopes:
+        problems.append("bundle source and scope mapping is wrong")
 
     for row in rows:
         if row["description_state"] == DESCRIPTION_PENDING:

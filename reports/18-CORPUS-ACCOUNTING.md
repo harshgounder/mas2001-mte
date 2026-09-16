@@ -72,11 +72,12 @@ remains unenumerated.
 distribution sets #1 and #2, 35 blocks, plus estimation-property parts of #3) + the 30
 blocks from the four decks read tonight (all four decks are MTE-syllabus material)
 = roughly 250 to 260 gross usable instances before the bundle. The bundle scope split is
-now exact at item level: 63 in-scope instances and 56 out-of-scope instances. Assignments
-1 and 2 contribute 55 in-scope rows. Assignment 3 contributes 8 in-scope rows on
-unbiasedness, consistency, efficiency, standard error and sufficiency; its other 17 rows
-use MLE, method of moments, Bayesian estimation or confidence-interval mechanics and are
-out of scope. Assignments 4 and 5 contribute the other 39 out-of-scope rows. The 63 are
+now exact at item level: 62 in-scope instances, 7 boundary instances, and 50 out-of-scope
+instances. Assignments 1 and 2 contribute 55 in-scope rows. Assignment 3 contributes 7
+in-scope rows on unbiasedness, consistency, efficiency, standard error, and sufficiency;
+7 confidence-interval construction rows sit on the stated boundary; its other 11 rows use
+MLE, method of moments, Bayesian estimation, or other post-MTE material and are out of
+scope. Assignments 4 and 5 contribute the other 39 out-of-scope rows. The 62 strict in-scope rows are
 not added to the running figure because their overlap with the existing 52 assignment rows
 and the 2024-25 sets has not been mapped. The
 unique-content count remains pending.

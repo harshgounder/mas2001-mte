@@ -87,8 +87,10 @@ split, and cautious year-over-year reuse wording before merge.
    the 10 teaching-note chapters.
 4. Verify every “no slide” and “hidden” label against the full source page ledger, not only the
    converted text search.
-5. Repair PR 14 before merge: scope must be 80 in-scope and 39 out-of-scope, and the 17
-   layout-recovered summaries need manual review.
+5. PR 14 now uses item-level scope: 62 in-scope, 7 boundary, and 50 out-of-scope.
+   Assignment 3 is mixed: 7 items fit lectures 19 to 21, 7 confidence-interval construction
+   items sit on the boundary, and 11 use MLE, method of moments, Bayesian estimation, or
+   other post-MTE material. Its 17 layout-split summaries have manual overrides.
 6. Continue broad source searching for the rain plus binomial composite, the pens problem,
    and the remaining open four-deck blocks. Similarity is a lead until the originating source
    or a strong family match is established.

@@ -33,8 +33,9 @@ EXPECTED_SOURCE_COUNTS = {
 }
 
 EXPECTED_SCOPE_COUNTS = {
-    "in-scope": 63,
-    "out-of-scope": 56,
+    "in-scope": 62,
+    "boundary": 7,
+    "out-of-scope": 50,
 }
 
 EXPECTED_PAGE_RANGES = {
@@ -81,14 +82,16 @@ class RealLedgerChecks(unittest.TestCase):
 
     def test_scope_field_is_present(self):
         for row in self.rows:
-            self.assertIn(row["scope"], ("in-scope", "out-of-scope"))
+            self.assertIn(row["scope"], ("in-scope", "boundary", "out-of-scope"))
 
     def test_scope_totals(self):
         in_scope = sum(1 for row in self.rows if row["scope"] == "in-scope")
+        boundary = sum(1 for row in self.rows if row["scope"] == "boundary")
         out_of_scope = sum(1 for row in self.rows if row["scope"] == "out-of-scope")
         self.assertEqual(in_scope, EXPECTED_SCOPE_COUNTS["in-scope"])
+        self.assertEqual(boundary, EXPECTED_SCOPE_COUNTS["boundary"])
         self.assertEqual(out_of_scope, EXPECTED_SCOPE_COUNTS["out-of-scope"])
-        self.assertEqual(in_scope + out_of_scope, 119)
+        self.assertEqual(in_scope + boundary + out_of_scope, 119)
 
     def test_assignments_1_and_2_are_in_scope(self):
         for row in self.rows:
@@ -103,19 +106,23 @@ class RealLedgerChecks(unittest.TestCase):
     def test_assignment_3_has_item_level_scope(self):
         subset = [row for row in self.rows if row["assignment"] == 3]
         in_scope = {row["item_label"] for row in subset if row["scope"] == "in-scope"}
+        boundary = {row["item_label"] for row in subset if row["scope"] == "boundary"}
         out_of_scope = {
             row["item_label"] for row in subset if row["scope"] == "out-of-scope"
         }
         self.assertEqual(in_scope, bundle.ASSIGNMENT_3_IN_SCOPE)
-        self.assertEqual(len(out_of_scope), 17)
+        self.assertEqual(boundary, bundle.ASSIGNMENT_3_BOUNDARY)
+        self.assertEqual(len(out_of_scope), 11)
         self.assertFalse(in_scope & out_of_scope)
+        self.assertFalse(in_scope & boundary)
+        self.assertFalse(boundary & out_of_scope)
 
     def test_scope_for_uses_item_level_boundary(self):
         self.assertEqual(bundle.scope_for(3, "A5"), "in-scope")
-        self.assertEqual(bundle.scope_for(3, "A10"), "in-scope")
+        self.assertEqual(bundle.scope_for(3, "A10"), "boundary")
         self.assertEqual(bundle.scope_for(3, "B3"), "in-scope")
         self.assertEqual(bundle.scope_for(3, "A1"), "out-of-scope")
-        self.assertEqual(bundle.scope_for(3, "B4"), "out-of-scope")
+        self.assertEqual(bundle.scope_for(3, "B4"), "boundary")
         self.assertEqual(bundle.scope_for(3, "D3"), "out-of-scope")
 
     def test_item_ids_are_unique(self):

@@ -285,8 +285,9 @@ class PlaceholderHonestyChecks(unittest.TestCase):
             self.assertEqual(row["provenance_verdict"], "unsearched")
             self.assertTrue(row["instance_id"].startswith("asgnbundle-"))
         scopes = Counter(row["scope"] for row in bundle)
-        self.assertEqual(scopes["in-scope"], 63)
-        self.assertEqual(scopes["out-of-scope"], 56)
+        self.assertEqual(scopes["in-scope"], 62)
+        self.assertEqual(scopes["boundary"], 7)
+        self.assertEqual(scopes["out-of-scope"], 50)
 
     def test_bundle_group_pages_stay_in_assignment_ranges(self):
         ranges = {
@@ -315,7 +316,7 @@ class PlaceholderHonestyChecks(unittest.TestCase):
         self.assertEqual(by_source["assignment-2025-26-bundle-2"], {"in-scope"})
         self.assertEqual(
             by_source["assignment-2025-26-bundle-3"],
-            {"in-scope", "out-of-scope"},
+            {"in-scope", "boundary", "out-of-scope"},
         )
         self.assertEqual(by_source["assignment-2025-26-bundle-4"], {"out-of-scope"})
         self.assertEqual(by_source["assignment-2025-26-bundle-5"], {"out-of-scope"})
@@ -404,6 +405,14 @@ class StructuredParsingChecks(unittest.TestCase):
         self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0]["scope"], "in-scope")
 
+    def test_parse_bundle_accepts_boundary_scope(self):
+        csv_text = (
+            "item_id,source_label,order,page_start,page_end,summary,scope,evidence_locator\n"
+            'b1,src-1,1,1,1,summary,boundary,loc\n'
+        )
+        rows = ledger.parse_assignment_bundle_rows(csv_text)
+        self.assertEqual(rows[0]["scope"], "boundary")
+
     def test_parse_bundle_header_without_scope_raises(self):
         csv_text = (
             "item_id,source_label,order,page_start,page_end,summary,evidence_locator\n"
@@ -444,6 +453,16 @@ class ValidationChecks(unittest.TestCase):
         problems = ledger.validate_rows(rows)
         self.assertTrue(any("unknown group" in p for p in problems))
         self.assertTrue(any("teaching" in p for p in problems))
+
+    def test_validate_flags_bundle_scope_drift(self):
+        rows = [dict(row) for row in self.rows]
+        for row in rows:
+            if row["corpus_group"] == "assignments-2025-bundle":
+                row["scope"] = "out-of-scope"
+                break
+        problems = ledger.validate_rows(rows)
+        self.assertTrue(any("bundle scope counts" in p for p in problems))
+        self.assertTrue(any("bundle source and scope mapping" in p for p in problems))
 
 
 class CheckChecks(unittest.TestCase):
