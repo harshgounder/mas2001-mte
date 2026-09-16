@@ -1,5 +1,74 @@
 # 11 BEYOND SLIDES: what is asked but never taught
 
+## THE HIDDEN LAYER, CONNECTED TO THE COURSE
+
+```
+                        THE SYLLABUS (what is taught)
+   ┌──────────────────────────────────────────────────────────────┐
+   │ T2  T3  T4  T5  T6  T7  T8  T9  T10  T11  T12  T13  T14 ...  │
+   └──────────────────────────────────────────────────────────────┘
+        │   │   │   │   │   │                              │
+        │   │   │   │   │   └──────────────┐               │
+        │   │   │   │   └──────┐           │               │
+        │   │   │   └─┐        │           │               │
+        ▼   ▼   ▼     ▼        ▼           ▼               ▼
+   ┌──────────────────────────────────────────────────────────────┐
+   │                    THE HIDDEN LAYER (asked, not taught)      │
+   │  H1 indep rules   H2 Chebyshev   H3 memoryless              │
+   │  H4 landmarks     H5 N x P       H6 geometric 1/p           │
+   │  H7 hypergeometric H8 two tables                             │
+   └──────────────────────────────────────────────────────────────┘
+        │   │   │   │   │   │   │   │
+        ▼   ▼   ▼   ▼   ▼   ▼   ▼   ▼
+   ┌──────────────────────────────────────────────────────────────┐
+   │              THE PAPERS (where they are asked)               │
+   │  A1 MCQ5, A1 short5, A1 short6, A1 app4, A1 long3, A1 short4 │
+   │  A2 MCQ5, A2 MCQ11, A2 B4, A2 C1, A2 D1                      │
+   │  MTE24 QA3 QB3, MTE25 Q5/Q3, ETE S3+S4 both years           │
+   └──────────────────────────────────────────────────────────────┘
+```
+
+## THE COST-BENEFIT OF DRILLING THE HIDDEN LAYER
+
+```
+   TIME INVESTED vs MARKS AT RISK
+
+   45 min │████████████████████  H2 Chebyshev    (9+ graded uses)
+   25 min │██████████            H1 indep rules  (gates 4 topics)
+   15 min │██████                H8 table conv   (every normal)
+   10 min │████                  H3 memoryless   (2 uses)
+   10 min │████                  H5 N x P        (repeated)
+    5 min │██                    H6 geometric
+    5 min │██                    H7 hypergeom
+    5 min │██                    H4 landmarks
+          └────────────────────────────────────────────────
+            ≈ 1h45 total, and it is the least-taught part
+            of the syllabus that the papers keep asking.
+```
+
+## THE INDEPENDENCE RULES DRAWN (H1, the highest-value)
+
+```
+   INDEPENDENT X, Y:
+   ┌─────────────────────────────────────────────────────┐
+   │  E(XY)     = E(X) · E(Y)        needs INDEPENDENCE   │
+   │  Var(X+Y)  = Var(X) + Var(Y)    needs INDEPENDENCE   │
+   │  Var(X-Y)  = Var(X) + Var(Y)    the minus STAYS PLUS│
+   │  E(X+Y)    = E(X) + E(Y)        ALWAYS, no condition │
+   └─────────────────────────────────────────────────────┘
+
+   downstream uses:
+        Var(sum of two dice) = 35/12 + 35/12 = 35/6
+             └─▶ feeds the Chebyshev 35/54 bound
+        Var(X̄) = σ²/n  = this rule applied n times
+             └─▶ feeds the CLT standard error
+        Var(T) for estimator comparison
+             └─▶ the 6-8 mark estimation question
+        Poisson additivity: Poi(λ1) + Poi(λ2) = Poi(λ1+λ2)
+
+   without H1, HALF the estimation block is unreachable.
+```
+
 Eight items carry marks in every graded set we hold but have NO teaching slide in the converted
 batch. They are the day-one priority: cheapest marks on the paper, and prerequisites for the
 later topics. This file is the full treatment of each.

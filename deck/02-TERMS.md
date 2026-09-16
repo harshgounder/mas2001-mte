@@ -1,5 +1,67 @@
 # 02 TERMS: every term, exact meaning, the trap in each
 
+## THE TERM MAP (how the words connect)
+
+```
+                    SAMPLE SPACE S
+                          │
+                    ┌─────▼─────┐
+                    │  EVENTS   │  subsets of S
+                    └─────┬─────┘
+          ┌───────────────┼───────────────┐
+          ▼               ▼               ▼
+    mutually          independent      conditional
+    exclusive         P(A∩B)=P(A)P(B)  P(A|B)=P(A∩B)/P(B)
+    A∩B=∅                              │
+          │                            └──> BAYES (swap the condition)
+          └──> "not the same as independent"  <- THE classic trap
+                          │
+                    ┌─────▼─────┐
+                    │ RANDOM    │  a FUNCTION S -> R
+                    │ VARIABLE  │
+                    └─────┬─────┘
+              ┌───────────┴───────────┐
+              ▼                       ▼
+         DISCRETE                 CONTINUOUS
+         ┌────────┐               ┌────────┐
+         │ pmf p(x)│              │ pdf f(x)│
+         │ Σ = 1  │               │ ∫ = 1   │
+         └───┬────┘               └───┬─────┘
+             └───────────┬───────────┘
+                         ▼
+                    ┌────────┐
+                    │  cdf   │  F(x)=P(X≤x), both cases
+                    │ F(x)   │  non-decreasing, 0→1
+                    └───┬────┘
+                        │
+              ┌─────────┴─────────┐
+              ▼                   ▼
+         EXPECTATION          VARIANCE
+         E(X) centre          Var(X) spread
+         linear ALWAYS        transform a²Var
+         E(XY) needs indep    Var(X+Y) needs indep
+              └────────┬─────────┘
+                       ▼
+              ┌─────────────────┐
+              │ the three       │
+              │ parameters      │
+              │ μ     σ²     σ  │
+              └─────────────────┘
+```
+
+## THE "WORDS THAT DECIDE MARKS" CHEAT
+
+```
+   exactly k      ──▶ P(X = k)              point
+   at least k     ──▶ P(X ≥ k) = 1-P(X≤k-1) tail, boundary INCLUDED
+   more than k    ──▶ P(X > k) = 1-P(X≤k)   tail, boundary EXCLUDED
+   at most k      ──▶ P(X ≤ k) = F(k)       cdf
+   less than k    ──▶ P(X < k) = F(k-1)     cdf, step back one
+   none           ──▶ P(X = 0)
+   at least one   ──▶ 1 - P(X=0)
+   expected no.   ──▶ N x P     (a COUNT, not a probability)
+```
+
 Read with the theory. Each entry is: the term, what it exactly means, and the trap or the
 reason the term matters. Terms are grouped by topic.
 

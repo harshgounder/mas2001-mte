@@ -1,5 +1,89 @@
 # 07 PATTERNS: how the setters mutate questions
 
+## THE MUTATION TREE (intent vs incidentals)
+
+```
+                        A QUESTION
+                             │
+             ┌───────────────┴───────────────┐
+             ▼                               ▼
+      ┌──────────────┐               ┌────────────────┐
+      │  INTENT      │               │  INCIDENTALS   │
+      │  (RADICAL)   │               │  (SURFACE)     │
+      ├──────────────┤               ├────────────────┤
+      │ distribution │               │ numbers        │
+      │ the ask      │               │ names          │
+      │ solve path   │               │ units          │
+      │              │               │ story dressing │
+      └──────┬───────┘               └────────┬───────┘
+             │                                │
+       STAYS THE SAME                  CHANGES CONSTANTLY
+       when reskinned                  (this is the M0 operator)
+```
+
+## THE FIVE OPERATORS AS A TREE
+
+```
+              ┌─────────────────┐
+              │ M0 RE-SKIN      │  numbers/names/units/story
+              │ TYPE UNCHANGED  │  <- ~90% of what the setters do
+              └─────────────────┘
+              ┌─────────────────┐
+              │ M1 INVERT       │  swap given <-> asked
+              │ NEW NODE        │  x->P  becomes  P->x
+              └─────────────────┘
+              ┌─────────────────┐
+              │ M2 RE-CONDITION │  flip a structural condition
+              │ NEW NODE        │  replace/no-replace, n<30 vs n≥30
+              └─────────────────┘
+              ┌─────────────────┐
+              │ M3 RE-TARGET    │  same setup, different target
+              │ NEW NODE        │  P(=k)->P(≤k)->P(>k)->conditional
+              └─────────────────┘
+              ┌─────────────────┐
+              │ M4 COMPOSE      │  nest two models / chain
+              │ ALWAYS NEW      │  Poisson per min then binomial
+              └─────────────────┘
+```
+
+## THE NINE SLOTS AS A 3x3 GRID
+
+```
+   ┌───────────────┬───────────────┬───────────────┐
+   │ 1 POINT       │ 2 TAIL        │ 3 INTERVAL    │
+   │ P(X=k)        │ P(X>k)        │ P(a≤X≤b)      │
+   ├───────────────┼───────────────┼───────────────┤
+   │ 4 MOMENTS     │ 5 PARAMS      │ 6 INVERSE     │
+   │ E, Var        │ recover λ,p   │ x for given P │
+   ├───────────────┼───────────────┼───────────────┤
+   │ 7 COUNT       │ 8 CONDITIONAL │ 9 COMPOSE     │
+   │ N x P         │ P(A|B)        │ nest two      │
+   └───────────────┴───────────────┴───────────────┘
+
+   every question in every paper we hold is one cell, one distribution.
+```
+
+## THE VALUE-DELTA IDEA, DRAWN
+
+```
+   the skeleton (a textbook question)
+   ┌────────────────────────────────────┐
+   │ exponential, mean 5, find P(X>12)  │
+   └────────────────────────────────────┘
+                    │
+     ┌──────────────┼──────────────┬──────────────┐
+     ▼              ▼              ▼              ▼
+  mean 5        mean 6         mean 4        mean 3
+  (G&K orig)   (reskin)       (reskin)      (our paper)
+     │              │              │              │
+     └──────────────┴──────────────┴──────────────┘
+                    │
+          SAME solve path every time.
+          Only the number moved.
+
+   -> know the RADICAL cold, and the story changing costs nothing.
+```
+
 The course does not write new questions. It takes a skeleton from a textbook, reskins the
 story, and sometimes flips the target. This file is the mutation system, the value deltas we
 have actually seen, the new question types the system implies, and the siblings one mutation

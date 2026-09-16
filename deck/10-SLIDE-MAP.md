@@ -1,5 +1,54 @@
 # 10 SLIDE MAP: every page to topic to question
 
+## THE SLIDE MAP AS A PICTURE
+
+```
+   notes-lecture-series-01-09  (147 pages)
+
+   p001├──p011  INTRO (no questions)
+   p012├──p022  what statistics is
+   p023├──p030  experiments, sample space, events
+   p031├──p040  set algebra, Venn, axioms
+   p041├──p050  ┌── D1-1 tournament
+                ├── D1-2 laptops
+                ├── D1-3 basketball
+                └── D1-4 camera
+   p051├──p062  D1-5 .. D1-10   (Bernoulli, coins, dice, geometric, car)
+   p063├──p087  D1-11 .. D1-18  (pmf, cdf, boards, dice max, proof)
+   p088├──p094  D1-19 .. D1-21  (E, E[aX+b], the p094 triple)
+   p095├──p111  D1-22 .. D1-25  (freezer, magazine, f=2x, cond)
+   p112├──p139  D1-26 .. D1-28  (bus triangle, cdf exercise, F->f)
+   p140└──p147  D1-29, D1-30    (hospital, Pareto)
+
+   ppt3 (28pp)  ═══ p001-018 BINOMIAL ═══ p019-028 POISSON
+   ppt4 (44pp)  ═══ p001-006 UNIFORM ═══ p007-037 NORMAL ═══ p038-043 EXP
+   clt  (19pp)  ═══ p001-005 SAMPLING ═══ p006-018 CLT
+   ppt5 (26pp)  ═══ p001-021 ESTIMATION ═══ p022-025 numerics
+   lms-th (40pp)═══ p001-030 in scope ═══ p031-040 OUT (skip)
+```
+
+## WHICH SLIDE CARRIES WHICH EXAMINABLE ITEM
+
+```
+   ┌─────────────────────┬──────────────────────────┐
+   │ the exam asks...    │ the slide that teaches it │
+   ├─────────────────────┼──────────────────────────┤
+   │ event probability   │ notes p041-p050           │
+   │ pmf / cdf build     │ notes p063-p087           │
+   │ E and Var           │ notes p088-p111           │
+   │ continuous pdf/cdf  │ notes p112-p147           │
+   │ binomial            │ ppt3 p001-p018            │
+   │ Poisson             │ ppt3 p019-p028            │
+   │ uniform             │ ppt4 p001-p006            │
+   │ normal              │ ppt4 p007-p037            │
+   │ exponential         │ ppt4 p038-p043            │
+   │ SE and CLT          │ clt p001-p018             │
+   │ estimation          │ ppt5 p001-p021            │
+   │ Chebyshev           │ L10-11 deck (NOT notes!)  │
+   │ everything in H1-H8 │ NOTHING (the hidden layer)│
+   └─────────────────────┴──────────────────────────┘
+```
+
 Page refs are the pipeline page numbers (md/<label>/pNNN.md), which match the PDF page order.
 
 ## notes-lecture-series-01-09 (147 pages) = lectures 1 to 9

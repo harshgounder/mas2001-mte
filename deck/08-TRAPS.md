@@ -1,5 +1,109 @@
 # 08 TRAPS: every trap and every source errata
 
+## THE TRAPS AS A GAUNTLET
+
+```
+   a question walks through and each trap tries to catch it:
+
+   START ──▶ ┌──────────────────┐
+             │ 1 exclusive vs   │  "are these independent?"
+             │   independent    │  -> exclusive is NOT independent
+             └────────┬─────────┘
+                      ▼
+             ┌──────────────────┐
+             │ 2 E(XY) needs    │  E(X+Y) does NOT, E(XY) DOES
+             │   independence   │
+             └────────┬─────────┘
+                      ▼
+             ┌──────────────────┐
+             │ 3 Var(X-Y) adds  │  the minus stays PLUS
+             └────────┬─────────┘
+                      ▼
+             ┌──────────────────┐
+             │ 4 the a-1 rule   │  integer rv: F(b)-F(a-1)
+             └────────┬─────────┘
+                      ▼
+             ┌──────────────────┐
+             │ 5 variance slot  │  N(μ,σ²) -> sqrt it
+             └────────┬─────────┘
+                      ▼
+             ┌──────────────────┐
+             │ 6 φ vs F table   │  decide BEFORE substituting
+             └────────┬─────────┘
+                      ▼
+             ┌──────────────────┐
+             │ 7 rate vs mean   │  λ is a rate, 1/λ is a time
+             └────────┬─────────┘
+                      ▼
+             ┌──────────────────┐
+             │ 8 unit mismatch  │  convert first
+             └────────┬─────────┘
+                      ▼
+             ┌──────────────────┐
+             │ 9 inverse's last │  convert z back to X
+             │   step           │
+             └────────┬─────────┘
+                      ▼
+             ┌──────────────────┐
+             │ 10 N x P, not P  │  expected COUNT
+             └────────┬─────────┘
+                      ▼
+                    ANSWER
+```
+
+## THE ERRATA, BY WHERE THEY LIVE
+
+```
+   ┌──────────────────────┬───────────────────────────────┐
+   │ SOURCE               │ ERRATA                        │
+   ├──────────────────────┼───────────────────────────────┤
+   │ ppt3 (binomial/Poiss)│ E1 insurance 0.1745->0.1755   │
+   │                      │ E2 die count 0.549->0.5499    │
+   ├──────────────────────┼───────────────────────────────┤
+   │ ppt4 (continuous)    │ E4 rate/mean wording p040     │
+   │                      │ E8 figure σ=10 -> use 5       │
+   ├──────────────────────┼───────────────────────────────┤
+   │ notes deck           │ E13 bus integral bound 3 vs 2 │
+   ├──────────────────────┼───────────────────────────────┤
+   │ clt deck             │ E6 impurity Z2 -0.4 -> -0.94  │
+   ├──────────────────────┼───────────────────────────────┤
+   │ assignments          │ E3 0.0915->0.0916             │
+   │                      │ E5 second edition broken      │
+   │                      │ E9 0.5679->0.6225             │
+   │                      │ E10 mean 37.5->37.2           │
+   │                      │ E11 0.808->0.80               │
+   │                      │ E12 sd 0.975->0.97            │
+   │                      │ E14 0.8754->0.8753            │
+   │                      │ E16 tube 2/3 -> 8/27          │
+   │                      │ E17 row sums to 0.9           │
+   ├──────────────────────┼───────────────────────────────┤
+   │ Chebyshev deck       │ E15 Q3 slide mis-stated       │
+   ├──────────────────────┼───────────────────────────────┤
+   │ MTE schemes          │ E19 CDF option B -> D         │
+   │                      │ E20 infinite bounds -> 0..4   │
+   │                      │ E21 E(t²)≠0 -> E(t²)≠θ²       │
+   ├──────────────────────┼───────────────────────────────┤
+   │ OUR OWN mock         │ E18 "T4 smallest var" FALSE   │
+   └──────────────────────┴───────────────────────────────┘
+```
+
+## THE 10-TRAP NIGHT LIST, AS A CHECKLIST
+
+```
+   NIGHT BEFORE THE PAPER:
+
+   □ 1 exclusive vs independent        can state the difference in one line
+   □ 2 E(XY) needs independence       vs E(X+Y) always
+   □ 3 Var(X-Y) = Var(X)+Var(Y)       the minus stays plus
+   □ 4 P(a≤X≤b) = F(b)-F(a-1)         integer rv only
+   □ 5 N(μ,σ²) second slot is VAR     sqrt before z
+   □ 6 φ(z) area-from-0 vs F(z) cum   decide first
+   □ 7 λ rate, 1/λ mean               exponential
+   □ 8 convert units FIRST            15/hr with 3 min
+   □ 9 X = μ + zσ                     the inverse's last step
+   □ 10 expected count = N x P        not P
+```
+
 Two sections. First the concept traps (mistakes the QUESTIONS are built to catch). Then the
 source errata (numbers printed wrong in the slides and keys, with the correct value).
 

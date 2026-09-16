@@ -1,5 +1,67 @@
 # 05 DISTRIBUTIONS: all five, all slots, all values
 
+## THE NINE SLOTS, VISUALISED (every distribution)
+
+```
+   a distribution is a SHAPE, and the exam asks 9 questions of it:
+
+        f(x)│  ╱‾╲
+            │ ╱   ╲
+        ┌───┼─┴───┴─┼───┐
+        │ 1 │  2    │ 3 │  1 point P(X=k)
+        │   │  2    │   │  2 tail  P(X≥k)
+        │   │       │   │  3 interval
+        └───┴───────┴───┘
+            │
+        ┌───▼───────────────────────┐
+        │ 4 moments  E, Var         │
+        │ 5 params   recover λ, p   │
+        │ 6 inverse  x for a given P│
+        │ 7 count    N x P          │
+        │ 8 cond     P(A|B)         │
+        │ 9 compose  nest two models│
+        └───────────────────────────┘
+```
+
+## THE DISTRIBUTION FAMILY TREE
+
+```
+                 PROBABILITY DISTRIBUTIONS
+                           │
+       ┌───────────────────┴───────────────────┐
+       │                                       │
+   DISCRETE                               CONTINUOUS
+       │                                       │
+   ┌───┴────┐                    ┌─────────┬────┴────┬──────────┐
+   │        │                    │         │         │          │
+BINOMIAL POISSON            UNIFORM   NORMAL   EXPONENTIAL
+ B(n,p)   Poi(λ)              U(a,b)  N(μ,σ²)     Exp(λ)
+   │        ▲
+   │        │  n→∞, p→0, np=λ
+   └────────┘
+   (Poisson is the binomial LIMIT)
+```
+
+## MEAN vs VARIANCE, EVERY DISTRIBUTION
+
+```
+                       MEAN            VARIANCE
+   ┌─────────────────┬───────────────┬──────────────────┐
+   │ B(n,p)          │ np            │ npq              │
+   │ Poi(λ)          │ λ             │ λ       ← SAME!  │
+   │ U(a,b)          │ (a+b)/2       │ (b-a)²/12        │
+   │ N(μ,σ²)         │ μ             │ σ²      ← square │
+   │ Exp(λ)          │ 1/λ           │ 1/λ²    ← recip  │
+   └─────────────────┴───────────────┴──────────────────┘
+
+   the memory hooks:
+     binomial  ->  np and npq  (the q is the only extra)
+     Poisson   ->  ONE parameter does both jobs
+     uniform   ->  span² / 12
+     normal    ->  second slot is VARIANCE, square-root it
+     exponential -> reciprocal pair: rate in, time out
+```
+
 For each distribution: what it models, the setup, pmf/pdf, cdf, mean, variance, sd, the
 standardisation if any, the table if any, and every question slot the corpus has used. The
 slot names are the same nine in every table so you can see the pattern (full pattern logic in

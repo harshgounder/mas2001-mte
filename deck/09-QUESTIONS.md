@@ -1,5 +1,71 @@
 # 09 QUESTIONS: the tagged MTE question inventory
 
+## THE QUESTION INVENTORY AS A GRID
+
+```
+                    the two MTE papers (16 blocks)
+   ┌──────┬──────────────────────────────────────────────┐
+   │ M24  │ A1 A2 A3 B1 B2 B3 B4 C1(OPEN)                │
+   │ M25  │ Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8                      │
+   └──────┴──────────────────────────────────────────────┘
+        15 of 16 traced    1 open (the composite C1)
+
+                    assignments (A1 + A2 = 52 blocks)
+   ┌──────┬──────────────────────────────────────────────┐
+   │ A1   │ 10 MCQ  6 short  4 long  4 application       │
+   │ A2   │ 12 A  8 B  4 C  4 D                          │
+   └──────┴──────────────────────────────────────────────┘
+
+                    the teaching decks (60 blocks)
+   ┌──────────┬───────────────────────────────────────────┐
+   │ notes    │ 30 blocks (D1-1 .. D1-30)                  │
+   │ ppt3     │ 6   ppt4  │ 7   clt  │ 5   ppt5  │ 5       │
+   │ lms-th   │ 7 (2 unique)                               │
+   └──────────┴───────────────────────────────────────────┘
+
+                    re-teach decks (30 blocks, pass 2)
+   ┌──────────┬───────────────────────────────────────────┐
+   │ L1-7     │ 13    L8-9  │ 4    L12-13 │ 6   L14-15 │ 7 │
+   └──────────┴───────────────────────────────────────────┘
+```
+
+## THE SLOT COVERAGE MAP (what is asked vs what is one mutation away)
+
+```
+                  SLOT:  1  2  3  4  5  6  7  8  9
+                         pt tl iv mo pa in ct cd co
+   ┌─────────────┬──────────────────────────────────┐
+   │ BINOMIAL    │  X  X  S  X  X  S  X  S  S       │
+   │ POISSON     │  X  X  .  X  X  .  X  .  X       │
+   │ UNIFORM     │  X  X  X  X  S  S  .  .  S       │
+   │ NORMAL      │  X  X  X  X  X  X  X  .  X       │
+   │ EXPONENTIAL │  X  X  X  X  X  .  .  X  X       │
+   └─────────────┴──────────────────────────────────┘
+     X = asked in our corpus
+     S = a sibling, one mutation away, NOT yet asked  <- risk
+     . = no evidence
+
+   the S cells are where the next paper can surprise you.
+   the four highest-risk siblings: normal one-unknown,
+   binomial interval, CLT-for-a-sum, discrete conditional.
+```
+
+## PROVENANCE TRUTH, VISUALISED
+
+```
+   383 rows (502 with the bundle)    what we know
+
+   ████████████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░
+   │◀──────── 337 / 456 unsearched ────────▶│◀─ 37 ─▶│◀─9─▶│
+   │                                        │ traced │open │
+   └────────────────────────────────────────┴────────┴─────┘
+                                             │
+                              ┌──────────────┴───────────────┐
+                              ▼                              ▼
+                     20 named/verbatim                12 lead only
+                      5 concept check                 (exact id open)
+```
+
 Every MTE-scope question block we hold, tagged by distribution, slot (the nine in 07-PATTERNS),
 and where it lives. This is the drill list. "In scope" means lectures 1-21.
 

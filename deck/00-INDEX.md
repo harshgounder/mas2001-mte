@@ -1,5 +1,86 @@
 # 00 INDEX: the map
 
+## THE WHOLE FOLDER AS A MAP
+
+```
+                         MAS2001 MTE ULTRA DECK
+                                 │
+        ┌────────────────────────┼────────────────────────┐
+        │                        │                        │
+   ┌────▼─────┐            ┌─────▼──────┐          ┌──────▼──────┐
+   │ NOTES/   │            │ REFERENCE  │          │  STUDY      │
+   │ (learn)  │            │ (lookup)   │          │  (do)       │
+   └────┬─────┘            └─────┬──────┘          └──────┬──────┘
+        │                        │                        │
+   11 files, full          cheatsheet, terms,      LEARN-ORDER,
+   slide rewrites          methods, numbers,       drill set,
+   10 chapters             patterns, traps,        exam mechanics
+                           distributions
+        │                        │                        │
+        └────────────────────────┼────────────────────────┘
+                                 ▼
+                        READ IN THIS ORDER:
+                        1. notes/00-NOTES-INDEX
+                        2. notes/01 .. notes/10
+                        3. reference as you solve
+                        4. reports/11-.../00-LEARN-ORDER
+```
+
+## THE COURSE SPINE, TOP TO BOTTOM
+
+```
+   T1 course intro (not examined)
+    │
+   T2 probability foundations  ──── counting engine ──┐
+    │        sets, events, axioms, C(n,r)             │
+    ▼                                                 │
+   T3 random variables                                │
+    │        discrete | continuous | Bernoulli        │
+    ▼                                                 │
+   T4 pmf / pdf / cdf  ◀─────────────────────────────┘
+    │
+    ├──────────┬──────────┐
+    ▼          ▼          ▼
+   T5         T6      distribution shelf
+   EXPECTATION VARIANCE  │
+    │          │     ┌───┴────┬────────┬────────┐
+    │          │     ▼        ▼        ▼        ▼
+    │      T6H indep T8 BINOM T9 POIS T10-12 CONT
+    │      E(XY)                  │      unif/norm/exp
+    │          │                  │
+    │          ▼                  │
+    │      T7 CHEBYSHEV ◀─────────┘
+    │          │
+    ▼          ▼
+   T13 SAMPLING + STANDARD ERROR  (SE = σ/√n, needs T6)
+    │
+    ▼
+   T14 CLT  ◀── T11 normal supplies the destination
+    │
+    ▼
+   T15 ESTIMATION BASICS  (point vs interval)
+    │
+    ▼
+   T16 ESTIMATOR PROPERTIES  (unbiased/consistent/efficient)
+```
+
+## THE HIDDEN LAYER, ON THE SPINE
+
+```
+   the nodes the slides UNDER-TAUGHT but the papers ASK:
+
+   T6 ──[H1 independence rules]──▶ T7, T14, T16   <- gates 3 topics
+   T7 ──[H2 Chebyshev]───────────▶ graded 9+ times
+   T12 ─[H3 memoryless]──────────▶ A2 MCQ5, A2 C1
+   T11 ─[H4 68/95/99.7]──────────▶ A2 MCQ11
+   T5 ──[H5 N x P count]─────────▶ A1 app, A2 B4, A2 D1
+   T3 ──[H6 geometric 1/p]───────▶ A1 short4
+   T3 ──[H7 hypergeometric nK/N]─▶ A1 long3
+   T11 ─[H8 two table conventions]▶ every normal/CLT numeric
+
+   = the cheapest marks on the paper. See notes/10 + 11-BEYOND-SLIDES.
+```
+
 ## 1. What the MTE is
 
 ```

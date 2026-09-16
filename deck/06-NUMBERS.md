@@ -1,5 +1,60 @@
 # 06 NUMBERS: constants, table values, landmarks, identities
 
+## THE NUMBER LINE OF EVERY PROBABILITY YOU WILL WRITE
+
+```
+   0 ──────────────────────────────────────────────────── 1
+   │        │         │         │        │          │
+   e^-10    e^-5     e^-4      e^-2    e^-1        near 1
+   4.5e-5  .0067    .0183     .1353   .3679      (.9772, .9987)
+   rare ─────────────────────────────────────────▶ common
+
+   the four e-values to have instantly:
+        e^-1 = 0.3679        e^-2 = 0.1353
+        e^-4 = 0.01832       e^-5 = 0.006738      e^-10 = 4.54e-5
+```
+
+## THE STANDARD NORMAL TABLE AS A PICTURE
+
+```
+   Φ(z)
+   1.0 │                              ╭────
+       │                          ╭───╯
+   0.84│                      ╭───╯  0.8413 at z=1.0
+       │                  ╭───╯
+   0.50│          ╭───────╯   <- 0.5000 at z=0
+       │      ╭───╯
+   0.02│ ╭────╯  <- 0.0228 at z=-2.0
+       └─┬────────┬──────┬───────┬──▶ z
+        -2       0      1.0     2.0
+
+   values to have cold:
+     z=0.12 -> .5478      z=0.84 -> .7995      z=1.00 -> .8413
+     z=1.50 -> .9332      z=1.96 -> .9750      z=2.00 -> .9772
+     z=2.36 -> .9909      z=2.58 -> .9950      z=3.00 -> .9987
+
+   -2.36 / -0.94 pair (impurity):  .4909 - .3264 = .1645
+```
+
+## THE THREE CHEBYSHEV THRESHOLDS, DRAWN
+
+```
+   1/k²
+   1.0 │█
+       │█
+   .25 │█ █
+       │█ █
+   .11 │█ █ █
+       │█ █ █
+   .06 │█ █ █ █
+       │█ █ █ █
+   .01 │█ █ █ █  .  .  .  █
+       └─┬─┬─┬─┬──────────┬──▶ k
+         1 2 3 4          10
+
+   k=2 -> 3/4      k=3 -> 8/9      k=4 -> 15/16
+```
+
 Every number that can appear, with what it is and where it comes from. Grouped so you can
 find one fast.
 

@@ -1,5 +1,64 @@
 # 04 METHODS: solving path per question type
 
+## THE MASTER DECISION TREE
+
+```
+                       A QUESTION
+                            │
+           ┌────────────────┴────────────────┐
+           │                                 │
+     named distribution                not a distribution
+           │                                 │
+     ┌─────┴─────┐                    ┌──────┴──────┐
+     ▼           ▼                    ▼             ▼
+  DISCRETE   CONTINUOUS          event prob    estimation
+     │           │                    │             │
+  ┌──┴──┐     ┌──┴──┬──────┐     ┌────┴────┐   ┌────┴────┐
+  ▼     ▼     ▼     ▼      ▼     ▼         ▼   ▼         ▼
+ bino poiss unif norm  exp    counting  cond  compare  point/
+  │     │     │    │     │       │        │   est'rs   interval
+  └─────┴─────┴────┴─────┘       │        │      │        │
+         │                        C(n,r)  P(A|B) unbiased  X̄, CI
+         ▼                                  first
+   WHICH SLOT?                                 │
+   ┌───────────────────────────────────────┐   ▼
+   │ 1 point    2 tail    3 interval       │  variances
+   │ 4 moments  5 params  6 inverse        │   │
+   │ 7 count    8 cond    9 compose        │   ▼
+   └───────────────────────────────────────┘  name the
+         │                                     winner
+         ▼
+   apply the formula, then CHECK:
+        □ support correct?
+        □ boundary word matched?
+        □ units matched?
+        □ exact value kept to the end?
+        □ did they ask for the estimator AND the estimate?
+```
+
+## THE THREE CHECK LOOPS AFTER ANY ANSWER
+
+```
+      ┌─────────────────────────────────────┐
+      │  1. SUPPORT                        │
+      │     is the value inside the range? │
+      │     a density is 0 outside support │
+      └──────────────────┬──────────────────┘
+                         ▼
+      ┌─────────────────────────────────────┐
+      │  2. BOUNDARY                       │
+      │     at least vs more than          │
+      │     F(b)-F(a) vs F(b)-F(a-1)       │
+      └──────────────────┬──────────────────┘
+                         ▼
+      ┌─────────────────────────────────────┐
+      │  3. SANITY                         │
+      │     probability in [0,1]?          │
+      │     variance >= 0?                 │
+      │     0.5499 not 0.549?              │
+      └─────────────────────────────────────┘
+```
+
 Every method here is the one the course teaches, plus the fastest valid alternative. Each
 entry: when to use it, the steps, and the alternate with its tradeoff.
 

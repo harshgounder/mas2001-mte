@@ -1,5 +1,82 @@
 # 01 CHEATSHEET: everything, one pass
 
+## THE WHOLE PAPER AS ONE FLOWCHART
+
+```
+   read the question
+         │
+   ┌─────▼──────────────────────────────────────────────┐
+   │ IS IT A NAMED DISTRIBUTION?                        │
+   └─────┬──────────────────────────────┬───────────────┘
+        YES                            NO
+         │                              │
+   ┌─────▼─────────────┐          ┌─────▼──────────────┐
+   │ DISCRETE?         │          │ event probability  │
+   │  binomial  poisson│          │ conditional?       │
+   │ CONTINUOUS?       │          │ independence?      │
+   │  uniform normal   │          │ counting?          │
+   │  exponential      │          └─────┬──────────────┘
+   └─────┬─────────────┘                │
+         │                        set algebra + C(n,r)
+   ┌─────▼─────────────────────┐
+   │ WHICH SLOT? (9 slots)     │
+   │ 1 point   2 tail          │
+   │ 3 interval 4 moments      │
+   │ 5 params  6 inverse       │
+   │ 7 count   8 conditional   │
+   │ 9 compose                 │
+   └─────┬─────────────────────┘
+         │
+   ┌─────▼──────────────┐
+   │ apply the formula  │
+   │ check: support ·   │
+   │ boundary word ·    │
+   │ units · exact value│
+   └────────────────────┘
+```
+
+## THE FIVE DISTRIBUTIONS AT A GLANCE
+
+```
+   DISCRETE                        CONTINUOUS
+   ┌───────────────┐               ┌──────────────────────┐
+   │ BINOMIAL      │               │ UNIFORM              │
+   │ np , npq      │               │ (a+b)/2 , (b-a)²/12  │
+   │ ┌─┐ ┌─┐       │               │ ┌──────────┐         │
+   │ │█│ │█│       │               │ │          │         │
+   │ └─┘ └─┘       │               │ └──────────┘         │
+   ├───────────────┤               ├──────────────────────┤
+   │ POISSON       │               │ NORMAL               │
+   │ λ , λ         │               │ μ , σ²               │
+   │ █╲            │               │      ╱‾╲             │
+   │ █ ▲╲___       │               │    ╱     ╲           │
+   ├───────────────┤               ├──────────────────────┤
+   │ (mean=var!)   │               │ EXPONENTIAL          │
+   │               │               │ 1/λ , 1/λ²           │
+   │               │               │ █╲                   │
+   │               │               │ █ ▲╲___              │
+   └───────────────┘               └──────────────────────┘
+```
+
+## CHEBYSHEV, ONE PICTURE
+
+```
+   P(|X-μ| ≥ kσ) ≤ 1/k²
+
+        ╱‾╲
+       ╱   ╲
+   ▓▓▓╯     ╰▓▓▓          ▓ = the tail event (bounded)
+   ──┬───┬───┬──
+    -kσ  μ  +kσ
+   ┌────┬──────┬──────┐
+   │ k  │ tail │centre│
+   ├────┼──────┼──────┤
+   │ 2  │ .25  │ .75  │
+   │ 3  │ .111 │ .889 │
+   │ 4  │ .0625│ .9375│
+   └────┴──────┴──────┘
+```
+
 Closed book paper. This page is the whole exam in formulas. Read it daily, last thing at night.
 
 ## A. Probability

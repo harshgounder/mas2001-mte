@@ -1,47 +1,71 @@
-# MAS2001 MTE ultra deck
+# MAS2001 MTE ultra deck: notes + reference
 
-The complete study pack for the MAS2001 Statistics and Probability mid term. Every topic on
-the MTE syllabus, every question type that has appeared in any paper we hold, everything that
-is asked but never taught on a slide, every term, every method, every pattern of mutation,
-every number and what it means, every trap.
-
-This folder is self contained. It assumes you know nothing and it ends at the point where you
-can answer any MTE question and say why the answer is that shape.
-
-Built 16 September 2026 from the repo evidence layers (reports 03, 04, 09, the atlas, the
-instance ledgers). Nothing here is invented; every value traces to a source page or a computed
-check.
-
-## The files, in reading order
+Two things live here:
 
 ```
-  file                    what it is                                    when to read
-  00-INDEX.md             the map: what is where, and the learning order  first
-  01-CHEATSHEET.md        one page, everything, for the last hour         last, then daily
-  02-TERMS.md             every term, exact meaning, the trap in each     with the theory
-  03-LINGUISTICS.md       question wording decoder: phrase -> what it asks  before every drill
-  04-METHODS.md           method per question type, with a decision tree   while solving
-  05-DISTRIBUTIONS.md     the five distributions, all slots, all values    after the theory read
-  06-NUMBERS.md           every constant, table value, landmark, identity  reference
-  07-PATTERNS.md          how the setters mutate questions, value deltas    after two papers
-  08-TRAPS.md             every trap and every source errata               before every mock
-  09-QUESTIONS.md         the tagged MTE question inventory                 before every drill
-  10-SLIDE-MAP.md         every slide page -> topic -> question             during the read
-  11-BEYOND-SLIDES.md     what is asked but not taught (the hidden layer)  day one, priority
-  12-DRILL.md             the practice set with worked answers              after the mock
-  13-EXAM-MECHANICS.md    paper format, marks, time budget, scoring        the night before
+   notes/      THE ACTUAL NOTES. every slide rewritten as something you
+               read and learn from. 11 files, lecture by lecture.
+               you do NOT need to open a PDF to study from this.
+
+   (this dir)  THE REFERENCE LAYER. cheatsheet, terms, wording decoder,
+               methods, distributions, numbers, mutations, traps,
+               questions, slide map, hidden layer, drill, exam mechanics.
+               these are the lookup cards you use WHILE solving.
 ```
 
-## How this deck relates to what already exists
+## Read order
 
-It does not replace the repo reports, it supersedes the deck role in one place. The old
-`reports/07-MOCK-PAPER.md` and `reports/08-MOCK-SOLUTIONS.md` stay (the mock is a timed
-artifact, this deck is the reference). The formula sheet `reports/03` and the question bank
-`reports/04` stay as the verified working; this deck restates their content in study form and
-adds the layers they do not carry (linguistics, patterns, terms, slide map, hidden layer).
+```
+   1.  notes/00-NOTES-INDEX.md        the map of the notes
+   2.  notes/01 .. notes/10           read in order, lecture by lecture
+   3.  this dir, as you solve          cheatsheet, methods, traps on hand
+   4.  ../reports/11-QUESTION-ATLAS/00-LEARN-ORDER.md
+                                       the measured day-by-day schedule
+   5.  12-DRILL.md                    the practice set
+   6.  13-EXAM-MECHANICS.md           format, marks, last-hour list
+```
 
-## The one rule this deck holds
+## Everything is visual
 
-Every claim here is traceable. Where a number is printed wrong on a slide or in a key, the
-errata file says so and gives the computed value. Where a source is unverified (the pens,
-rain and kx^3(4-x)^2 questions have open provenance) the deck says open, it does not pretend.
+Every file carries ASCII diagrams: trees, flowcharts, density-curve sketches, step plots,
+Venn diagrams, decision trees, tables. Plain text so it renders anywhere and never breaks.
+
+## The one-line summary of each file
+
+```
+   reference (this dir)
+    README.md            this map
+    00-INDEX.md          the exam, the 16 syllabus lines, the topic tree, the order
+    01-CHEATSHEET.md     the whole paper in formulas + the master flowchart
+    02-TERMS.md          every term, exact meaning, its trap + the term map
+    03-LINGUISTICS.md    wording -> ask -> method + the decoder flowchart
+    04-METHODS.md        solving path per question type + the master decision tree
+    05-DISTRIBUTIONS.md  the 5 distributions, all 9 slots, all values
+    06-NUMBERS.md        every constant, z-values, landmarks, exact-vs-rounded
+    07-PATTERNS.md       the mutation system + the value-delta log + siblings
+    08-TRAPS.md          20 concept traps + all 21 source errata
+    09-QUESTIONS.md      the tagged question inventory + provenance truth
+    10-SLIDE-MAP.md      every slide page -> topic -> question
+    11-BEYOND-SLIDES.md  the 8 hidden items (asked but never taught)
+    12-DRILL.md          50 practice items with answers, as a 7-rung ladder
+    13-EXAM-MECHANICS.md format, time budget, what earns marks, last-hour list
+
+   notes/
+    00-NOTES-INDEX.md            the course map
+    01-probability-foundations   lecture 2, notes p012-p050
+    02-random-variables          notes p051-p062
+    03-pmf-and-cdf               notes p063-p087
+    04-expectation-and-variance  notes p088-p111
+    05-continuous-rv             notes p112-p147
+    06-binomial-poisson          ppt3, lectures 12-13
+    07-uniform-normal-exponential ppt4, lectures 14-16
+    08-sampling-and-clt          lms-standard-error-clt, lectures 17-18
+    09-estimation                ppt5 + lms-theory, lectures 19-21
+    10-chebyshev-and-hidden      Chebyshev deck + the hidden layer
+```
+
+## Grounding
+
+Every number traces to a source page in the repo, or to a computed check. Where a slide prints
+a wrong value, the notes give the CORRECT value and mark the slide's error inline. The open
+provenance items (pens, rain, kx^3(4-x)^2) are labelled open, not claimed.

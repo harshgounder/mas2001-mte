@@ -1,5 +1,83 @@
 # 03 LINGUISTICS: the question wording decoder
 
+## THE DECODER FLOWCHART
+
+```
+   READ THE QUESTION
+        │
+        ├─── is there a story word? ───────────────────────────┐
+        │    (calls, arrivals, lifetime, trials, equally likely)│
+        │                                                       │
+        │                          ┌────────────────────────────┘
+        │                          ▼
+        │              "calls/rare per unit"  -> POISSON
+        │              "n trials, success"    -> BINOMIAL
+        │              "waiting/lifetime"     -> EXPONENTIAL
+        │              "equally likely"       -> UNIFORM
+        │              "normally distributed" -> NORMAL
+        │              "the average of n"     -> CLT + SE
+        │
+        └─── if NO story word -> event probability
+                 │
+                 ├── "given that"        -> conditional P(A|B)
+                 ├── "at least one"      -> complement
+                 ├── "how many ways"     -> counting C(n,r)
+                 └── "are they independent" -> the product test
+                          │
+                          ▼
+                 NOW read the BOUNDARY word
+                 at least / more than / exactly / at most
+                          │
+                          ▼
+                 NOW read the UNIT (min? hr? days?)
+                          │
+                          ▼
+                 NOW read what is ASKED for
+                 probability / expectation / variance / a parameter
+```
+
+## THE BOUNDARY-WORD MACHINE
+
+```
+   number line with the boundary:
+
+   ... k-1     k      k+1 ...
+       │       │       │
+       │       │       │
+   P(X≤k-1)  P(X=k) P(X≥k+1)
+   ┌──────────────────────────────────────────┐
+   │ "at least k"  = includes k = 1 - P(X≤k-1) │
+   │ "more than k" = excludes k = 1 - P(X≤k)   │
+   │ "at most k"   = includes k = F(k)         │
+   │ "less than k" = excludes k = F(k-1)       │
+   └──────────────────────────────────────────┘
+
+   for a CONTINUOUS rv these boundaries do NOT matter (P(X=k)=0)
+   for a DISCRETE rv they are worth marks
+```
+
+## THE UNIT TRAP, DRAWN
+
+```
+   15 per HOUR,  find P(gap < 3 MINUTES)
+
+        rate in HOURS              time in MINUTES
+        ┌───────────┐              ┌───────────┐
+        │ λ = 15/hr │              │ t = 3 min │
+        └───────────┘              └───────────┘
+              │                          │
+              └──────────┬───────────────┘
+                         ▼
+              CONVERT ONE TO MATCH THE OTHER
+                         │
+                   t = 3/60 = 0.05 hr
+                         │
+                         ▼
+              1 - e^{-(15)(0.05)} = 0.5276
+
+   NEVER substitute a rate and a time in different units.
+```
+
 The setters reuse a small vocabulary. Almost every wording maps to a fixed ask and a fixed
 method. This file is the map from phrase to ask. Read it before a drill pass.
 
