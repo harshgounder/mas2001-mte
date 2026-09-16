@@ -1,4 +1,46 @@
 {
+  "asgn-2024-25-1": {
+    "pages": 2,
+    "chars": 5287,
+    "done": 2,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "asgn-2024-25-2": {
+    "pages": 2,
+    "chars": 5884,
+    "done": 2,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "asgn-2024-25-3": {
+    "pages": 3,
+    "chars": 5332,
+    "done": 3,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "asgn-2024-25-3-ep2": {
+    "pages": 2,
+    "chars": 5020,
+    "done": 2,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "asgn-2024-25-4": {
+    "pages": 3,
+    "chars": 5108,
+    "done": 3,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "asgn-2024-25-5": {
+    "pages": 3,
+    "chars": 6197,
+    "done": 3,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
   "lms-maximum-likelihood": {
     "pages": 16,
     "chars": 9099,
