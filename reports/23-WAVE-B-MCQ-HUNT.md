@@ -44,3 +44,25 @@ One of five located. The other four need either:
 
 Wave B is not blocked, just unfinished. A focused fetch of the three MCQ-bank
 category pages is the clean next move.
+
+## Second pass (tighter queries)
+
+Chebyshev false-statement MCQ: four query shapes tried (literal option text, "is useful for"
+phrasing, coefficient-of-skewness phrasing, mcqmate topic page fetched directly). All returned
+generic theory pages or nothing. The mcqmate probability-and-statistics topic page (178 KB,
+fetched) contains no Chebyshev, sufficiency, skewness or kurtosis text.
+
+## Cross-agent collision note (hotspot)
+
+This whole lane-C sweep was reverted on the shared PR10 branch by the parallel lane-A/B worker
+(commit e0e429e, "revert: remove unverified provenance sweep from PR 10"). That revert removed
+scripts/sweep_provenance.py, the enriched ledger, the three wave reports and the M25-Q2 upgrade
+from branch audit/provenance-accounting.
+
+Lane C is now isolated: branch lane-c/provenance-sweep (pushed, 0f16452) carries the full set.
+Before more lane-C work lands, the orchestrator should decide the merge order: lane C is a
+DERIVED layer (builder -> canonical ledger -> sweep -> enriched ledger), so it should land after
+lane A/B settle, not interleaved with them.
+
+hotspot: reports/evidence/question-instance-ledger.csv - two workers editing one generated file
+on one branch; the canonical/derived split exists precisely to stop this.
