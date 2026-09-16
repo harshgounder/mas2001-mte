@@ -1,8 +1,11 @@
 # Mock MTE paper, MAS2001 Statistics and Probability
 
-30 marks, closed book, 90 minutes. Same weighting as the real mid term (30 marks out of 100,
-from the official course handout). Scope is lectures 1 to 21 only, the same scope the real
-paper uses.
+30 marks, closed book, 90 minutes. Scope is lectures 1 to 21.
+
+**FORMAT WARNING, added 16 September:** this mock predates the arrival of the two real MTE
+papers. Its 10 one-mark MCQs plus four 5-mark questions do not match either paper. Both real
+papers use three 2-mark Section A questions, four 4-mark Section B questions, and one 8-mark
+Section C block. Use this file as a content drill only, not as a paper-format simulation.
 
 Sit it before reading `reports/08-MOCK-SOLUTIONS.md`. Answers to every numeric value in the
 solutions file were computed and checked, not taken from memory.
@@ -132,7 +135,7 @@ T4 = (X1 + X2 + X3) / 2
 
 ---
 
-## Marking guide for self assessment
+## Provisional marking guide for this content drill
 
 ```
   24 to 30     ready, keep the formula sheet warm and sit the paper

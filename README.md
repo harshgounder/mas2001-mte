@@ -67,7 +67,7 @@ reports/10-SLIDES-VS-SYLLABUS.md  # lecture by lecture: what exists, what is mis
 
 # drilling
 reports/04-QUESTION-BANK.md  # the corpus's own problems, verified answers
-reports/07-MOCK-PAPER.md     # 30-mark mock, sit it closed book
+reports/07-MOCK-PAPER.md     # legacy 30-mark content drill; format warning inside
 reports/08-MOCK-SOLUTIONS.md # every number computed
 
 # the deep map (the "no ambiguity" files)
@@ -148,7 +148,7 @@ mas2001-mte/
 | `04-QUESTION-BANK.md` | the corpus's own problems with verified answers, organised by distribution | drilling |
 | `05-FIVE-DAY-PLAN.md` | the day-by-day plan from 13 Sep, plus the 14 Sep evening re-pin | planning |
 | `06-VERIFICATION.md` | three verification layers, the failures that were caught, adjustments visible | trust audit |
-| `07-MOCK-PAPER.md` | 30-mark mock in the real format | self-test |
+| `07-MOCK-PAPER.md` | legacy 30-mark content drill; its section weights do not match the real papers | self-test only |
 | `08-MOCK-SOLUTIONS.md` | every number computed and cross-checked against a slide | after the mock |
 | `09-ERRATA.md` | 21 errors or source defects, each with the computed correction | before memorising anything |
 | `10-SLIDES-VS-SYLLABUS.md` | lecture-by-lecture slides audit (8-9 half, 10-11 corrected 15 Sep) | coverage questions |

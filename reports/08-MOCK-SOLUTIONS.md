@@ -145,5 +145,6 @@ different constants.
 ```
 
 If B1 part 2 came out as 8/9, if B3 part 3 stopped at z without converting back to X, or if
-B4 selected T4, those are the three errors this paper is designed to expose. Fix those three
-and the paper pattern is covered.
+B4 selected T4, those are the three errors this drill is designed to expose. Fix those three
+and those content traps are covered. The section pattern is not the real MTE pattern; see the
+warning at the top of `reports/07-MOCK-PAPER.md`.
