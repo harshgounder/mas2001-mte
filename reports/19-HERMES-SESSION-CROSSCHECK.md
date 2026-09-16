@@ -43,6 +43,10 @@ compaction artifacts, so it is not a count of 679 distinct research actions.
 - `reports/evidence/external-source-inventory-20260916.csv`: hash-locked external reference
   assets, verified identities, text state, and explicit absent rows for Palaniammal and
   Sundarapandian.
+- `reports/evidence/question-instance-ledger.csv`: 383 gross question instances. Each row
+  has a stable id, corpus group, source label, order, description state, scope, provenance
+  state, source field, locator, family-id slot, and gross status. The 210 rows whose
+  descriptions have not yet been extracted are marked pending with blank summaries.
 - Report 17: 97 ETE blocks with scope verdicts. This is an intake ledger, not a completed
   provenance ledger.
 
@@ -61,11 +65,12 @@ honestly, instead of borrowing files from another checkout.
 
 ## Remaining work, with no completion claim
 
-1. finish the GGD OCR, search it and Davenport under their correct identities, and acquire
-   verified Palaniammal and Sundarapandian sources;
+1. acquire verified Palaniammal and Sundarapandian sources; GGD and Davenport OCR are
+   complete, and their first signature sweep did not identify an exact open MTE source;
 2. rebuild the ETE extraction so all 97 ids are present before source matching;
 3. enumerate the 17-page 2025-26 assignment bundle exactly;
-4. create one row per question instance across the full 383-plus corpus;
+4. replace the 210 pending descriptions in the 383-row instance ledger, then add exact
+   rows for the still-unenumerated 2025-26 assignment bundle;
 5. attach a source locator, URL, or explicit unresolved status to every question row;
 6. deduplicate by content family only after every instance has an evidence-backed family id;
 7. merge the worktree-safe test-harness correction in PR 13.

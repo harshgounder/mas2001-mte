@@ -106,7 +106,7 @@ slide is the immediate origin).
 | M24-B2 | phone speech exponential, parameter 1/4 | RESKIN | G&K chapter 5 exercise 10, "lady speaks on the telephone" f(x)=Ae^(-x/5) [Shivaji Univ 1990]; mean 5 changed to 4 |
 | M24-B3 | U(-1,1) Chebyshev bound versus actual | RESKIN | G&K exercise 15(b) with interval (-1,3), bound 1/4, exact 0; interval changed to (-1,1) |
 | M24-B4 | trains every 15 min, 4 AM, arrival 9:00-9:30 | FAMILY + CIRCULATING | G&K subway example (uniform wait on (0,30), answer 1/3); the 4 AM form circulates on StudyX, Gauthmath, Transtutors |
-| M24-C1 | rainfall N(2.6, 34.5) four parts + binomial week; binomial mean 5/3 part | OPEN | not in Devore / G&K / H&T text; candidates: Palaniammal, Sundarapandian (OCR running), or a bank |
+| M24-C1 | rainfall N(2.6, 34.5) four parts + binomial week; binomial mean 5/3 part | OPEN | not found in Devore, G&K, H&T, Davenport OCR, or GGD volume 1 OCR; verified Palaniammal and Sundarapandian texts are absent, so their contents have not been searched |
 | M25-Q1 | density integral MCQ | CONCEPT | axiom of total mass |
 | M25-Q2 | Poisson mean e MCQ | CONCEPT | substitution drill |
 | M25-Q3 | sufficiency MCQ | CONCEPT | H&T section 6.7, sufficient statistics |
@@ -136,10 +136,11 @@ Web evidence for the two follow-up corrections:
 
 ## Next phase (the ledger)
 
-1. OCR of GGD volume one is running in the background. The completed Davenport OCR may
-   be searched under its correct identity. Acquire verified Palaniammal and Sundarapandian
-   texts before using either name for attribution, then run the same diff for the pen problem, rain set, kx^3(4-x)^2 and the
-   remaining ETE items.
+1. GGD volume one and Davenport OCR are complete. A signature sweep found generic
+   rainfall and fountain-pen material in GGD, but no exact open MTE signature in either
+   text. Acquire verified Palaniammal and Sundarapandian texts before using either name
+   for attribution, then run the same comparison for the pen problem, rain set,
+   kx^3(4-x)^2 and the remaining ETE items.
 2. Run the same block-by-block sweep for the 97 ETE / summer / re-sess blocks (first pass
    already shows Chebyshev, subway, pens, E(X) table and CLT overlaps).
 3. Web hunt the still-open items (C1 rain set, Q4 density, bread-machine book, 5/3
