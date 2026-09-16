@@ -17,8 +17,9 @@ items. Palaniammal's cited titles (Probability and Random Variables; Probability
 Processes, PHI) remain unlocated; ResearchGate and Academia.edu copies are gated.
 
 Provenance pack (this report plus siblings, all on branch audit/provenance-accounting):
-16 source provenance and confirmations, 17 ETE intake, 18 corpus accounting, 19 skeleton
-ledger.
+16 source provenance and confirmations, 17 ETE intake, 18 corpus accounting, 19 Hermes
+session cross-check and correction register, 20 skeleton ledger (this report; renumbered
+from 19 when the cross-check line landed in the merge of 16 Sep).
 
 ## MTE skeletons (16 blocks, from the evening sweep)
 
@@ -36,10 +37,10 @@ ledger.
 | S10 | Density integral equals 1 recognition | M25-Q1 | definitional | - |
 | S11 | Poisson pmf with mean = e, substitute | M25-Q2 | definitional drill | - |
 | S12 | Sufficiency definition | M25-Q3 | H&T 6.7 concept | - |
-| S13 | Density k x^a (c - x)^b on (0, c), find k, mean, variance | M25-Q4, k x^3 (4-x)^2 | OPEN (inverse of the G&K 5.3 k-form) | - |
+| S13 | Density k x^a (c - x)^b on (0, c), find k, mean, variance | M25-Q4, k x^3 (4-x)^2 | ABES Institute sample paper Q6(b) (cross-check); originating book still open | sample asks standard deviation, paper asks variance |
 | S14 | Chebyshev, mean and variance given, find constant C for bound p | M25-Q5, 10, 4, 0.04 | L10-11 deck Q2(iv); family = G&K Chebyshev block | VERBATIM vs deck |
 | S15 | Telephone exponential with mean m, ask two time probabilities | M25-Q6, mean 3 | same as S05 (G&K ch5#10) | theta 5 to 3; also circulates as a numbered StudyX item |
-| S16 | Machine life ~ N(7, 1), sample n=9, probability average in window | M25-Q7, 7y, sd 1, n=9, 6.4-7.2 | bread-making machine classic (circulating; exact book open) | machine name dropped |
+| S16 | Machine life ~ N(7, 1), sample n=9, probability average in window | M25-Q7, 7y, sd 1, n=9, 6.4-7.2 | Walpole, Myers, Myers, Ye, Probability and Statistics for Engineers and Scientists, Problem 8.25 (cross-check verified; Chegg and Vaia copies confirm the number) | "bread-making" dropped; same 7, 1, 9, 6.4, 7.2 values |
 | S17 | Typist letters Poisson application, two conditions | M25-Q8(i) | circulating: Bartleby, StudyX, Studocu Poisson notes; found inside an exam compilation (CourseHero 229513024) | exact book open |
 | S18 | t unbiased for theta, show t^2 biased for theta^2 | M25-Q8(ii) | G&K estimation chapter exercise 6 | VERBATIM |
 
@@ -57,6 +58,24 @@ ledger.
 | S26 | Chebyshev inverse: P(-2<X<8) >= 21/25 find E, Var | asgn-24-25 #1 Q5; ETE B1; Chebyshev deck Q1 | G&K (sigma=2, k=2.5) |
 | S27 | Chebyshev inverse: P(4<X<16) >= 24/25 find E, Var | ETE S4 24-25 B3 | G&K family (variant) |
 | S28 | Pens 10% defective, box of 12, exactly/at least/none | deck L12-13; ETE S3 25-26 B2; assignments | OPEN; confirmed circulating (askfilo x2, StudyX x2, Chegg); candidates: Palaniammal or Sundarapandian |
+
+## Round 4 additions (cross-check merge + same-evening G&K matches)
+
+- Cross-check (report 19 line) closed two opens: M25-Q7 = Walpole Problem 8.25;
+  M25-Q4 = ABES Institute sample paper Q6(b). Both folded into the table above.
+- G&K "Example 7.26": six coins tossed 6,400 times, Poisson approximation = assignment
+  2024-25 #2, Q6, word for word.
+- G&K "Example 7.30": Poisson variate with P(X=2) = 9P(X=4) + 90P(X=6) = assignment
+  2024-25 #2, Q1(iv) (G&K then asks the skewness coefficient; our version asks mean and
+  variance).
+- G&K chapter 8 exercise: soldiers' heights, mean 68.22, variance 10.8, over six feet in
+  a regiment of 1,000 = assignment 2024-25 #2, Q12, word for word (same phi table values
+  printed).
+- Cross-check corrections now live in report 16 and report 18 (superseding the earlier
+  lines): 383 gross instances, 646-page corpus ledger, deck block count 30, and the
+  originality language removed where it outran the evidence. The machine-readable layers
+  (corpus page ledger, deck block ledger, question instance ledger, external source
+  inventory) are in reports/evidence/ on this branch.
 
 ## Value-delta log (the mutation evidence)
 
@@ -102,5 +121,7 @@ close them: Palaniammal (both titles, gated everywhere), Sundarapandian (gated),
 and Mc Clave (lending-only). Status stays OPEN with the class noted.
 
 ---
-Ledger v0.1, 16 Sep evening. Grows as hunts close. Evidence lives in report 16; counts in
-report 18.
+Ledger v0.2, 16 Sep late evening (renumbered to 20; cross-check line merged). Grows as
+hunts close. Evidence lives in report 16; counts in report 18; machine-readable layers in
+reports/evidence/ (corpus page ledger, deck block ledger, question instance ledger,
+external source inventory).
