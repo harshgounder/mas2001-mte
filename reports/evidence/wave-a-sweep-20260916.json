@@ -1,6 +1,6 @@
 {
   "rows": 383,
-  "descriptions_filled": 0,
+  "descriptions_filled": 101,
   "rows_swept": 218,
   "rows_frozen": 46,
   "desc_state": {
@@ -11,12 +11,13 @@
     "open": 209,
     "unsearched": 119,
     "family": 10,
-    "CONCEPT": 5,
+    "CONCEPT": 4,
     "FAMILY": 1,
     "VERBATIM": 1,
     "RESKIN": 3,
     "FAMILY + CIRCULATING": 1,
     "OPEN": 1,
+    "CIRCULATING": 1,
     "RESKIN + CIRCULATING": 2,
     "DECK": 1,
     "MIXED": 1,
@@ -42,12 +43,13 @@
       "unsearched": 6
     },
     "mte": {
-      "CONCEPT": 5,
+      "CONCEPT": 4,
       "FAMILY": 1,
       "VERBATIM": 1,
       "RESKIN": 3,
       "FAMILY + CIRCULATING": 1,
       "OPEN": 1,
+      "CIRCULATING": 1,
       "RESKIN + CIRCULATING": 2,
       "DECK": 1,
       "MIXED": 1
@@ -80,9 +82,14 @@
     "lms-standard-error-clt": "none",
     "ppt5-estimation-summary": "none",
     "lms-theory-of-estimation": "none",
+    "L10-11-chebyshev-deck": "Qn",
     "assignment-2025-26-1": "Qn",
+    "assignment-2025-26-2": "Qn",
+    "assignment-2024-25-1": "Qn",
+    "assignment-2024-25-2": "n_dot",
     "assignment-2024-25-3": "none",
     "assignment-2024-25-3-ep2": "none",
+    "assignment-2024-25-4": "n_dot",
     "assignment-2024-25-5": "none"
   },
   "count_mismatches": [
