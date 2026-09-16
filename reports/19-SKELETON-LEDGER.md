@@ -8,6 +8,16 @@ every other place the same skeleton appears in our materials.
 Status legend: TRACED (source identified), PARTIAL (family identified, exact book or
 exercise open), OPEN (still hunting).
 
+Note on the Palaniammal scan on disk: its own running header reads "Probability and Random
+Processes", while the course decks cite "Probability and Random Variables" (PHI Learning).
+Same author, different title; the cited title is not yet located. OCR is running on the
+scan in hand; if the pens or telephone item is absent there, "Probability and Random
+Variables" remains a target.
+
+Provenance pack (this report plus siblings, all on branch audit/provenance-accounting):
+16 source provenance and confirmations, 17 ETE intake, 18 corpus accounting, 19 skeleton
+ledger.
+
 ## MTE skeletons (16 blocks, from the evening sweep)
 
 | # | skeleton (structure) | our version | source | value deltas |
