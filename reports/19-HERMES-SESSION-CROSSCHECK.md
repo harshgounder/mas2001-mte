@@ -46,18 +46,18 @@ compaction artifacts, so it is not a count of 679 distinct research actions.
 - Report 17: 97 ETE blocks with scope verdicts. This is an intake ledger, not a completed
   provenance ledger.
 
-## Pipeline defects found while checking the new ledger
+## Test-harness defect found while checking the new ledger
 
-The new page-ledger tests pass 34 of 34. The inherited `tests/test_pipeline_audit.py`
-suite currently fails four of 34 tests:
+The new page-ledger tests pass 34 of 34. An initial run of
+`tests/test_pipeline_audit.py` appeared to expose four production failures, but that result
+was false: the test hardcoded `/home/liebert511/mas2001-mte` and silently imported code
+from a different worktree. The four production fixes already exist on `master`.
 
-1. a failed forced render can reuse a stale final PNG;
-2. a failed page can let a real run exit zero;
-3. provider-error text can overwrite verified markdown;
-4. a truncation retry can ignore the second process exit code.
-
-These failures are reproducible on commit `5976d5d`. They predate the page-ledger files
-and need a separate code fix through opencode.
+PR 13 changes the harness to resolve its own repository and makes the gitignored page PNG
+root explicit through `MTE_PAGE_ROOT`. With the existing artifact directory supplied, all
+34 pipeline tests pass while importing production modules from the tested worktree. A
+clean worktree without the artifact directory now fails only the image-presence check,
+honestly, instead of borrowing files from another checkout.
 
 ## Remaining work, with no completion claim
 
@@ -68,7 +68,7 @@ and need a separate code fix through opencode.
 4. create one row per question instance across the full 383-plus corpus;
 5. attach a source locator, URL, or explicit unresolved status to every question row;
 6. deduplicate by content family only after every instance has an evidence-backed family id;
-7. fix and retest the four pipeline failure-semantics defects.
+7. merge the worktree-safe test-harness correction in PR 13.
 
 External book and web text remains a reference layer only. Nothing from those sources is
 to be copied into `md/` or the course question bank.
