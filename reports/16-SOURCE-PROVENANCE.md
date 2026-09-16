@@ -83,6 +83,28 @@ word in the course material and in the named source.
 - Palaniammal and Sundarapandian PDFs on disk are scans without a text layer; OCR is
   queued. Devore 8e mirrors refused (403); the 9e text serves the diff.
 
+## Round 3 confirmations (same evening, assignment and ETE items)
+
+- G&K "Example 5.3": the electric cable problem, p.d.f. f(x) = 6x(1-x) on (0,1), check
+  pdf / find b with P(X<b) = P(X>b) = assignment 2024-25 #1, Q3, and re-sessional S4 C1.
+- G&K "Example 7.24": the car hire firm with two cars, Poisson demands mean 1.5, neither
+  car used and demand refused = assignment 2024-25 #2, Q11, and re-sessional S3 B2.
+- G&K chapter 8 exercise set: "In a normal distribution, 31% of the items are under 45 and
+  8% are over 64. Find the mean and variance" = assignment 2024-25 #2, Q17, and ETE S4
+  2024-25 B4 (G&K prints a companion variant on the same page).
+- G&K "Example 5.13": bakery sales density (bread, hundreds of pounds) shares the chapter
+  with the telephone, cable and radio-tube examples, the family source of the deck's
+  continuous-distribution items.
+- ETE sweep status: all seven papers segmented (82 auto-blocks; the manual enumeration
+  stands at 97). Distinctive ETE blocks now mapped: 21/25 and 24/25 Chebyshev inverses
+  (G&K), subway (G&K example), cable (G&K 5.3), car hire (G&K 7.24), normal 31/45 (G&K
+  chapter 8), pens (deck and assignment family, source pending OCR), E(X) -3/6/9 table
+  (deck family across assignment and summer paper); the testing-topic blocks (t, F,
+  chi-square, ANOVA) sit outside MTE scope and carry standard textbook forms.
+- Still open: the pens problem book, the rain set N(2.6, 34.5), kx^3(4-x)^2, the
+  ax^2+bx mean-0.5 block, the 5/3 binomial block. OCR of Palaniammal and GGD volume one is
+  running; a fresh sweep follows when the text lands.
+
 ## MTE block-by-block provenance (v0, evening of 16 Sep)
 
 All sixteen MTE blocks (2024-25 and 2025-26) have been run against the extracted full texts
