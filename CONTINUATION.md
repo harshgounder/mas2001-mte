@@ -116,6 +116,16 @@ are still expected for U02-U19; their labels are already reserved in sources.yam
     where ETE papers touch lecture 22+ content for later planning.
   - watermark caveat: batch-2 PDFs carry mujstella.in reseller watermarks; filter during
     extraction, they are not course content.
+  - vision lane (16 Sep): the tool default is gpt-5.6-luna on commandcode. The glm-5.3-flash
+    route (ollama-cloud) is dead for chat: HTTP 401 on a minimal POST, re-probed 16 Sep. Any
+    conversion run must pass --model gpt-5.6-luna until that lane returns.
+  - handwritten re-reads: render at 300 dpi or higher and always prompt "transcribe exactly,
+    do not correct, even if the math looks wrong". Permissive prompts silently repair the
+    source (a permissive 150 dpi read flipped the 2025 scheme's i.e. line from 0 to
+    theta-squared; the anti-correction reads settled it; full log in
+    reports/evidence/u01-second-reader-20260916.md).
+  - marking-scheme re-reads: luna drops red margin marks unless the prompt demands them.
+    Ask for every red pen mark on scheme pages explicitly.
 ```
 
 ## 7. Verification checklist (run before trusting anything)
@@ -128,7 +138,7 @@ are still expected for U02-U19; their labels are already reserved in sources.yam
     print(len(s))"                                  # expect 36 (11 + 23 batch-2 + 2 extras)
   ls ~/PS | wc -l                                  # 34 files in ~/PS (33 belong to this repo's
                                                    # corpus; the count is checked loosely)
-  find ~/PS -maxdepth 1 -newermt '2026-09-15 00:00' -type f | wc -l   # 24 arrivals since 15 Sep (23 are batch-2)
+  find ~/PS -maxdepth 1 -newermt '2026-09-15 00:00' -type f | wc -l   # 23 arrivals since 15 Sep (recounted 16 Sep; the earlier "24" was not reproducible)
   grep -c 'CORRECTED' ~/mas2001-mte/reports/*.md   # the 15 Sep corrections are in place
   python3 -B ~/mas2001-mte/reports/evidence/verify-audit-round7-20260915.py
                                                    # expect ALL CHECKS PASS, 24 checks:
