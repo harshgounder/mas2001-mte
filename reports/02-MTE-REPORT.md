@@ -8,11 +8,10 @@ to a file in this repo or to a command whose output is recorded in `reports/evid
 The mid term window opens Friday 18 September and closes Friday 25 September 2026. The paper
 is 30 marks, closed book, and covers lectures 1 to 21 of the official lecture plan.
 
-The material on disk was not enough on its own. `~/PS` holds the four estimation and limit
-theorem decks plus the two distribution decks, which is lectures 12 to 21. Lectures 2 to 11,
-the whole of probability theory, random variables, expectation, variance and the Chebyshev
-work, exist only inside a 147 page deck sitting in `~/muj-academics/handouts/`. Sit the paper
-with `~/PS` alone and two thirds of the syllabus is unread.
+The original `~/PS` batch was not enough on its own. Its estimation, limit-theorem and
+distribution decks cover lectures 12 to 21. Lectures 2 to 9, probability theory through
+expectation and variance, exist in a 147 page deck under `~/muj-academics/handouts/`.
+Lectures 10 to 11 now have their own 9-page Chebyshev deck in `~/PS`, added on 15 September.
 
 Two named MTE lectures, 10 and 11, had no slide content anywhere in the old batch; the 15
 Sep batch closed that with the S&P L10-11 deck. Details in section 5.3.
@@ -113,7 +112,7 @@ succeeded twice on retry. That failure mode is why the pipeline retries three ti
   lecture  13        Poisson ............................... ppt3 p019 to p028
   lecture  14        Uniform ............................... ppt4 p001 to p006
   lecture  15        Normal ................................ ppt4 p007 to p037
-  lecture  16        Exponential ........................... ppt4 p038 to p044
+  lecture  16        Exponential ........................... ppt4 p038 to p043
   lectures 17, 18    sampling, standard error, CLT .......... lms-standard-error-clt, 19 pages
   lectures 19 to 21  estimation, estimator properties ...... ppt5 p001 to p026, lms-theory p001 to p030
 ```
@@ -153,23 +152,23 @@ bound-vs-actual), in MTE 2025-26 (find-C), and now has its own deck in the new b
 | what | detail | action taken |
 |---|---|---|
 | PPT5 vs lms-theory-of-estimation | same deck at two trims, 13 of 26 ppt5 pages match a theory-deck page above 0.8 similarity on a measured token comparison, pairs line up with a one page offset, theory deck is the longer one | both converted, no deletion, marked as duplicates |
-| CLT deck twice inside ~/PS | `LMS -Standard Error & Central Limit Theorem.pdf` and `(1).pdf` have identical sha256 e48f4981 | converted once, second copy untouched |
+| CLT deck twice inside ~/PS at discovery | `LMS -Standard Error & Central Limit Theorem.pdf` and `(1).pdf` have identical sha256 e48f4981 | converted once; `(1)` moved to Trash on 14 Sep and remains recoverable |
 | PPT 3, 4, 5 twice on disk | ~/MUJ holds byte identical copies (sha 9cc7f631, b3de25d8, 2af21af1) | untouched, listed as YOUR-CALL |
 | lms-theory p031 to p040 | confidence intervals, lecture 25 and 27, out of MTE scope | converted, tagged out of scope |
 
 ### 5.5 Where the marks are
 
-Two independent signals line up. The tools that appear across the corpora most often are the
-binomial mass function, the normal table with standardisation, and Chebyshev tails. The
-Assignment 1 paper that was actually graded leans the same way: binomial in the short section,
-Chebyshev twice, a normal proportion question, and a hypergeometric draw.
+The converted slides and assignments emphasize the binomial mass function, normal
+standardisation, and Chebyshev tails. The two past MTE papers now give the stronger format
+evidence: both use three 2-mark Section A questions, four 4-mark Section B questions, and one
+8-mark Section C block. The 2025 Section C block is split 5+3 within question 8.
 
 ```
-  question style      where it appears                        weight signal
-  MCQ                 assignment 1 section A, 10 items        1 mark each, expect 10 of 30
-  short answer        6 items in assignment 1                 2 to 3 marks each
-  worked numeric      pens, die, telephone, insurance, ATM    the long answers
-  application/word    assignment 1 section B, 4 items         interpretation marks
+  question style      past-paper structure                     marks
+  Section A           3 short or MCQ items                     3 x 2 = 6
+  Section B           4 worked questions                       4 x 4 = 16
+  Section C           1 combined question                      8
+  total                                                        30
 ```
 
 ## 6. Your own answers, checked against the official key
@@ -274,7 +273,8 @@ Two config changes outside the repo, both backed up:
        reports/10-SLIDES-VS-SYLLABUS.md section 5. CORRECTED 15 Sep: the "(1)" copy in the
        trash is the CLT deck (sha e48f4981), NOT an assignment copy; `Assignment 2_MAS2001-2.pdf`
        is byte-identical to the batch-1 assignment-2 SOURCE (sha 5ff197311b60), which lives in
-       ~/Videos, not in ~/muj-academics. Both ~/PS copies are still on disk, nothing deleted.
+       ~/Videos, not in ~/muj-academics. The assignment duplicate remains in both locations;
+       the CLT `(1)` sibling is in Trash, not `~/PS`.
     2  RECHECKED 15 Sep: an earlier version of this item claimed three byte-identical paper
        repeats in ~/PS. No such files exist (searched the whole disk). The real second extra
        source is `MAS2001-Assignment 1 .pdf`, a second EDITION of assignment 1 (different
