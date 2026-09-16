@@ -20,10 +20,10 @@
         └────────────────────────┼────────────────────────┘
                                  ▼
                         READ IN THIS ORDER:
-                        1. notes/00-NOTES-INDEX
-                        2. notes/01 .. notes/10
-                        3. reference as you solve
-                        4. reports/11-.../00-LEARN-ORDER
+                        1. 14-MASTER-STUDY-ORDER
+                        2. notes/00-NOTES-INDEX
+                        3. notes/01 .. notes/10
+                        4. reference as you solve
 ```
 
 ## THE COURSE SPINE, TOP TO BOTTOM
@@ -90,7 +90,7 @@
   shape       Section A MCQ (a few marks each), Section B short answers,
               Section C longer. All compulsory.
   closed book so the sheet below must be in your head
-  no calculators beyond arithmetic, so numbers are chosen to be clean
+  calculator is allowed on both supplied MTE papers
 ```
 
 ## 2. The 16 syllabus lines and where each is taught
@@ -170,13 +170,19 @@ Full per-question sequencing: `../reports/11-QUESTION-ATLAS/00-LEARN-ORDER.md`.
 ## 5. The counts you can trust (as of 16 Sep 2026)
 
 ```
-  instances in the ledger            383 pushed, 502 once the 119-item bundle lands
-  traced with a source               37   (20 named/verbatim, 12 lead only, 5 concept check)
-  open (verdict logged, no source)    9   (1 MTE composite C1, 8 four-deck blocks)
-  unsearched                         337 / 456
-  5 of 5 distributions covered, 0 of 502 rows carry a content family id yet
-  papers on disk                     15   (2 MTE + 2 schemes + 5 ETE + 2 re-sess + 1 summer)
+  base branch ledger                 383 instances
+  assignment-bundle addition         119 instances on PR 14
+  combined enumerated total          502 instances after PR 14 is merged
+  MTE source/family leads             10 of 16 blocks
+  MTE generic concept checks           5 of 16 blocks
+  MTE open composite                   1 of 16 blocks
+  content family ids                   0 of 502 rows, dedup remains unfinished
+  exam papers on disk                 10   (2 MTE + 5 ETE + 2 re-sess + 1 summer)
+  marking schemes on disk              2   (kept separate from exam-paper count)
 ```
+
+The 16 MTE blocks have all been searched. “Searched” is not the same as “traced”. A generic
+definition match is not evidence that a question was copied from a particular source.
 
 ## 6. The hidden layer, one line each (full detail in 11)
 

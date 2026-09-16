@@ -185,8 +185,8 @@ reason the term matters. Terms are grouped by topic.
   statistic             a number computed from the sample (Xbar, S, p-hat).
   sampling distribution the distribution of a statistic over repeated samples.
   standard error        the standard deviation of that sampling distribution. SE = sigma/sqrt(n).
-  CLT                   for n>=30 the SAMPLE MEAN is approximately normal, whatever the shape of
-                        the population. TRAP: it is about the MEAN, not about single values.
+  CLT                   as n grows, the SAMPLE MEAN approaches normality under the theorem's
+                        conditions. n>=30 is a course heuristic, not a universal cutoff.
   exact vs approx       a normal population gives an exactly normal Xbar at ANY n. This is the
                         fallback when a question uses a small n.
   sqrt-n rule           quadruple n, halve SE. The answer to "how large a sample".
@@ -204,8 +204,8 @@ reason the term matters. Terms are grouped by topic.
   efficient             smallest variance AMONG THE UNBIASED. TRAP: a biased estimator can have
                         a smaller variance and still lose, it is disqualified first.
   relative efficiency   Var(T2)/Var(T1). Bigger than 1 means T1 is more efficient.
-  sufficient            the estimator keeps all the information about theta in the sample.
-                        Neyman-Fisher factorisation is the test.
+  sufficient            given the statistic, the conditional sample distribution does not
+                        depend on theta. Neyman-Fisher factorisation is the usual test here.
   MSE                   Var + Bias^2. The honest score when bias is allowed to compete.
   n-1                   the sample variance divides by n-1, not n, to be unbiased. The reason is
                         that deviations are measured from Xbar, which already used the data.

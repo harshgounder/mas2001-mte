@@ -90,7 +90,7 @@ slot names are the same nine in every table so you can see the pattern (full pat
   5 params    p from P(X=5)=2P(X=4) -> 5/8              ppt3 p017-018
   6 inverse   smallest n for a guarantee                NOT asked, high risk
   7 count     N x P, 10000 sets x (3/8)^10 = 0.5499     ppt3 p018
-  8 conditional  P(X=k | X>=j)                          A2 B5 variant used elsewhere
+  8 conditional  P(X=k | X>=j)                          sibling drill, not an A2 B5 item
   9 compose   Poisson per minute then binomial over 5   ppt3 p026
 ```
 
@@ -141,7 +141,7 @@ slot names are the same nine in every table so you can see the pattern (full pat
   4 moments   E=(a+b)/2, Var=(b-a)^2/12                A2 A4
   5 params    solve a,b from mean and variance         A2 A10 variant
   6 inverse   K such that P(X<K)=p                     NOT asked, medium risk
-  9 compose   two uniforms -> triangular Y=X+Y          notes p126
+  9 compose   sum of two stated uniforms                notes p126 example
 ```
 
 ## 4. Normal, X ~ N(mu, sigma^2)

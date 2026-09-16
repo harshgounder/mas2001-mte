@@ -60,7 +60,8 @@
    │ N x P         │ P(A|B)        │ nest two      │
    └───────────────┴───────────────┴───────────────┘
 
-   every question in every paper we hold is one cell, one distribution.
+   many distribution questions fit one cell. Foundations, Chebyshev, estimation,
+   and mixed questions need their own method families.
 ```
 
 ## THE VALUE-DELTA IDEA, DRAWN
@@ -84,18 +85,18 @@
    -> know the RADICAL cold, and the story changing costs nothing.
 ```
 
-The course does not write new questions. It takes a skeleton from a textbook, reskins the
-story, and sometimes flips the target. This file is the mutation system, the value deltas we
-have actually seen, the new question types the system implies, and the siblings one mutation
-away. Read it after you have done two papers; it turns the paper into a pattern you recognise.
+Many confirmed questions reuse textbook or circulating skeletons, often with changed values or
+stories. That does not prove that every question is copied, or that future questions must reuse
+known structures. This file records confirmed value changes, candidate mutation patterns, and
+nearby siblings worth practising.
 
 ## 1. The two layers of a question
 
 ```
   INTENT      the deep structure: which distribution, which ask, which solve path.
               This is the RADICAL. It does not change when the story changes.
-  INCIDENTALS the numbers, names, units, story dressing, which slot the answer is asked in.
-              This is the SURFACE. It NEVER changes the type.
+  INCIDENTALS the numbers, names, units, and story dressing. These often leave the type fixed,
+              but unit or support changes can alter the mathematics, so recheck the model.
 ```
 
 That single split is the whole system. When a question looks new, find its radical: if the
@@ -155,10 +156,9 @@ radical is old, it is an old question wearing a costume.
   soldiers 68.22          G&K ch8 family                               M0
 ```
 
-Pattern: nearly all mutations are M0 (reskin). M3 (retarget) appears once in the confirmed
-set. M4 (compose) is rarer still. So the highest-value prep is: know the radicals cold and be
-ready for the story to change, because the story almost always changes and the radical almost
-never does.
+Pattern in the currently confirmed source matches: M0 reskins dominate. M3 appears once in
+that confirmed set and M4 is less common. This is a study priority, not a claim about all 502
+instances or a guarantee about a future paper.
 
 ## 5. The nine slots (the template every distribution shares)
 
@@ -174,8 +174,8 @@ never does.
   slot 9  composition    nest two models
 ```
 
-Every question in every paper is one of these nine, on one of the five distributions. That is
-the whole exam space. (The per-distribution coverage grid is in 05-DISTRIBUTIONS.md.)
+These nine slots cover the main distribution questions. Probability foundations, Chebyshev,
+estimation, and mixed-model questions sit outside this grid. See 04-METHODS.md for those paths.
 
 ## 6. New type nodes the radical analysis generates (be ready for these)
 

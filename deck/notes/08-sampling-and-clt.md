@@ -115,21 +115,22 @@
       1. CENTRE   mean of the sample means = μ       (μ_X̄ = μ)
       2. SPREAD   sd of the sample means = σ/√n      (σ_X̄ = σ/√n)
       3. SHAPE    as n increases the shape becomes normal;
-                  n ≥ 30 is "safe"
+                  n ≥ 30 is the course rule of thumb
 ```
 
 ## 6. THE THREE CASES - the applicability conditions (p008)
 
 ```
   ╔═══════════════════════════════════════════════════════════════╗
-  ║  1. ANY population, n > 30                                     ║
-  ║        -> sample means ~ Normal(μ, σ/√n), APPROXIMATELY        ║
+  ║  1. NON-NORMAL population, large n                              ║
+  ║        -> sample means may be approximately Normal(μ, σ/√n)     ║
+  ║        n ≥ 30 is the course heuristic, not a theorem cutoff     ║
   ║                                                                ║
   ║  2. n ≤ 30 AND the population IS normal                        ║
   ║        -> sample means are EXACTLY Normal(μ, σ/√n)             ║
   ║                                                                ║
-  ║  3. n ≤ 30 AND the population is NOT normal                    ║
-  ║        -> CANNOT APPLY THE CLT. Say so and stop.               ║
+  ║  3. Small n AND the population is NOT normal                    ║
+  ║        -> do not assume a normal approximation without evidence ║
   ╚═══════════════════════════════════════════════════════════════╝
 ```
 
@@ -142,14 +143,15 @@
               ┌─────┴─────┐
              YES          NO
               │            │
-         USE IT AT       is n > 30?
-         ANY n             ┌───┴───┐
-          (exact)         YES      NO
+         USE IT AT       is n large enough for
+         ANY n           this population shape?
+          (exact)          ┌───┴───┐
+                          YES      NO
               │            │        │
               └──────┬─────┘        │
                      ▼              ▼
-              CLT applies      CLT does NOT
-              (approx)         apply, stop
+              CLT approx       justify another
+              may be used      method or do not approximate
 ```
 
 ## 7. The visual proof (p010a-p010b)
@@ -264,7 +266,7 @@
   ║  n = 9 IS BELOW 30, BUT THE QUESTION SAYS THE POPULATION IS    ║
   ║  NORMAL. That is case 2: the sample mean is EXACTLY normal.    ║
   ║  So we can still use the table. The word "normal" in the       ║
-  ║  question is the escape hatch from the n≥30 rule.              ║
+  ║  question gives an exact result, so no n≥30 heuristic is needed.║
   ╚═══════════════════════════════════════════════════════════════╝
 
    the two tails added:
@@ -285,9 +287,9 @@
    │ SE of a proportion │ √(p(1-p)/n)                        │
    │ Z for a mean       │ (X̄ - μ)/(σ/√n)                     │
    │ Z for a single obs │ (X - μ)/σ         <- NOT the same! │
-   │ n >= 30            │ CLT applies (approx)               │
+   │ n >= 30            │ course heuristic for CLT approx    │
    │ n < 30, normal pop │ exact normal                       │
-   │ n < 30, non-normal │ CLT does NOT apply                 │
+   │ n < 30, non-normal │ normal approx needs justification  │
    └────────────────────┴───────────────────────────────────┘
 ```
 

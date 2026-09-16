@@ -80,22 +80,23 @@ source gives an exact value.
 ## Normal
 
 ```
-  D21  N(8,5). P(X<8.6).               ans Z=0.12, 0.5478
-  D22  N(8,5). P(X>8.6).               ans 1 - 0.5478 = 0.4522
-  D23  N(8,5). Find x for P(X<x)=0.20. ans Z=-0.8416, x = 8 - 4.208 = 3.792
+  D21  mu=8, sd=5. P(X<8.6).               ans Z=0.12, 0.5478
+  D22  mu=8, sd=5. P(X>8.6).               ans 1 - 0.5478 = 0.4522
+  D23  mu=8, sd=5. Find x for P(X<x)=0.20. ans Z=-0.8416, x = 8 - 4.208 = 3.792
   D24  Marks: pass 40 = 46 percent, distinction 75 = 9 percent. Find mu, sigma.
        ans sigma = 28.2, mu = 37.2
   D25  Same, re-exam cutoff at the 24 percent lower tail.   ans 30.4
   D26  N(100,50^2), X=200. Find Z.     ans 2.0
 ```
 
-## Exponential
+## Exponential and related continuous models
 
 ```
   D27  15/hour. P(gap < 3 min).        ans 0.05 hr, 1-e^-0.75 = 0.5276
   D28  15/hour. Mean gap.              ans 4 minutes
   D29  Mean 2. P(X<1 | X<2).           ans 0.6225
-  D30  f(x)= x e^-x/3 / 9, P(X>12).    ans 5e^-4 = 0.0916
+  D30  Gamma-shaped pdf f(x)=x e^(-x/3)/9, P(X>12). ans 5e^-4 = 0.0916
+       This is not an exponential density, even though its tail calculation uses e.
   D31  Memoryless: P(T>8 | T>5).       ans P(T>3) = e^-3lambda
 ```
 
@@ -129,7 +130,8 @@ source gives an exact value.
        Find lambda, unbiased set, variances, best, and comment on consistency.
        ans lambda=1; all unbiased; Var 3, 29, 1/3 sigma^2; best T3; T3 is the sample mean
            so it is consistent
-  D44  n=25, Xbar=8.4, sigma=1.5, 95 percent interval.    ans 8.4 +- 0.588 = (7.81, 8.99)
+  D44  OUT OF MTE SCOPE: n=25, Xbar=8.4, sigma=1.5, 95 percent interval.
+       ans 8.4 +- 0.588 = (7.81, 8.99)
   D45  Response times sum 1640, n=8. Point estimate.      ans 205 ms
   D46  465 of 500 packets succeed. Point estimate of p.   ans 0.93
 ```

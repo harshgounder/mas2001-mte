@@ -10,7 +10,7 @@
    │    scope    lectures 1 to 21                          │
    │    sections A (MCQ)  B (short)  C (long)               │
    │    ALL compulsory, no choice                          │
-   │    CLOSED BOOK, no formula sheet                       │
+   │    CLOSED BOOK, calculator allowed                     │
    └───────────────────────────────────────────────────────┘
 ```
 
@@ -29,8 +29,8 @@
              │ check and sweep for missed parts    7 min
   90 min ────┘
 
-   RULE: the estimator-comparison question is the standard
-   6-to-8 mark item. Budget for it. Do not let the MCQs starve it.
+   This split is a practice budget for the supplied 90-minute format.
+   Section C is an 8-mark combined block in both supplied papers, but its topic can change.
 ```
 
 ## 3. What earns marks (from the schemes)
@@ -81,7 +81,7 @@
    ├──┤ 3. write the three Chebyshev thresholds: 3/4, 8/9, 15/16
    ├──┤ 4. write the hidden set: memoryless, landmarks, N x P, 1/p, nK/N
    ├──┤ 5. read the 10-item trap list
-   └──┘ 6. no new material. nothing below lecture 22. no MLE, no MoM.
+   └──┘ 6. no new material. nothing after lecture 21. no MLE, no MoM.
 ```
 
 ## 6. Confidence map (honest)
@@ -94,11 +94,11 @@
                                    exponential conditional, composition
    WATCH      ████████              the hidden set H1-H8 if not drilled,
                                    min-n siblings, MSE comparison
-   SAFEST BET ████████████████████  the MTE paper skeletons (15 of 16
-                                   traced): those patterns REPEAT
+   SAFEST BET ████████████████████  the 16 MTE paper skeletons: all searched,
+                                   10 source/family leads, 5 concept checks, 1 open
 ```
 
-## 7. Sources this deck draws on (all in the repo)
+## 7. Sources this deck draws on
 
 ```
    reports/03-FORMULA-SHEET.md    the verified closed forms
@@ -107,7 +107,7 @@
    reports/16,17,18,19,20         provenance, intake, accounting, cross-check
    reports/11-QUESTION-ATLAS/     topic universe, learn order, type space, mutations
    md/                            the converted slides and papers
-   ~/mas2001-devore/corpus-text/  the batch-2 deck texts and the OCR books
+   ~/mas2001-devore/corpus-text/  external reference text and OCR, outside the repo
 ```
 
 ## 8. The deck folder map, one more time
@@ -130,6 +130,7 @@
    │ 11-BEYOND-SLIDES.md  the 8 hidden items               │
    │ 12-DRILL.md        50 practice items                  │
    │ 13-EXAM-MECHANICS.md  this file                       │
+   │ 14-MASTER-STUDY-ORDER.md current order and gates       │
    ├──────────────────────────────────────────────────────┤
    │ notes/             THE ACTUAL NOTES (11 files)        │
    │   00-NOTES-INDEX   the map                            │

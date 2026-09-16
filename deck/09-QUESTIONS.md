@@ -8,7 +8,7 @@
    │ M24  │ A1 A2 A3 B1 B2 B3 B4 C1(OPEN)                │
    │ M25  │ Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8                      │
    └──────┴──────────────────────────────────────────────┘
-        15 of 16 traced    1 open (the composite C1)
+      10 source/family leads   5 concept checks   1 open composite
 
                     assignments (A1 + A2 = 52 blocks)
    ┌──────┬──────────────────────────────────────────────┐
@@ -53,18 +53,23 @@
 ## PROVENANCE TRUTH, VISUALISED
 
 ```
-   383 rows (502 with the bundle)    what we know
+   enumeration state
 
-   ████████████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░
-   │◀──────── 337 / 456 unsearched ────────▶│◀─ 37 ─▶│◀─9─▶│
-   │                                        │ traced │open │
-   └────────────────────────────────────────┴────────┴─────┘
-                                             │
-                              ┌──────────────┴───────────────┐
-                              ▼                              ▼
-                     20 named/verbatim                12 lead only
-                      5 concept check                 (exact id open)
+   base ledger                383  ███████████████████████████████
+   assignment bundle PR 14    119  ██████████
+                              ---
+   combined                   502
+
+   MTE evidence state, 16 blocks
+
+   source or family lead       10  ██████████
+   generic concept check        5  █████
+   open composite               1  █
 ```
+
+The 502 count measures enumerated question instances, not unique questions and not sourced
+questions. No content-family ids have been assigned yet, so corpus-wide deduplication and
+source attribution remain open work.
 
 Every MTE-scope question block we hold, tagged by distribution, slot (the nine in 07-PATTERNS),
 and where it lives. This is the drill list. "In scope" means lectures 1-21.
@@ -72,11 +77,11 @@ and where it lives. This is the drill list. "In scope" means lectures 1-21.
 The nine slots: 1 point, 2 tail, 3 interval, 4 moments, 5 parameter, 6 inverse, 7 count,
 8 conditional, 9 compose.
 
-## A. The two MTE papers (16 blocks, 15 traced, 1 open)
+## A. The two MTE papers (16 blocks, evidence states kept separate)
 
 ```
   id        source page      question                                  dist      slot  status
-  M24-A1    mte 2024 p001    concept: standard bank skeleton            -          -    traced
+  M24-A1    mte 2024 p001    Poisson transform concept                  Poi        4    generic concept
   M24-A2    mte 2024 p001    triangular density, mean, variance        contin    4+5  traced G&K 8-1-5
   M24-A3    mte 2024 p001    Chebyshev forms, pick the false ones      Cheb       -    concept
   M24-B1    mte 2024 p001    Var(X-2Y), lambda 2, mu 3, answer 14      Poisson   4    VERBATIM G&K
@@ -86,11 +91,11 @@ The nine slots: 1 point, 2 tail, 3 interval, 4 moments, 5 parameter, 6 inverse, 
   M24-C1    mte 2024 p002    rain N(2.6,34.5) + 5/3 binomial week      Normal+Bin 9   OPEN (composite)
   M25-Q1    mte 2025 p001    axiom of total mass                       prob       -    concept
   M25-Q2    mte 2025 p001    substitution drill                        prob       -    concept
-  M25-Q3    mte 2025 p001    sufficient statistics MCQ                 Est        -    H&T 6.7
+  M25-Q3    mte 2025 p001    sufficient statistics MCQ                 Est        -    concept cross-check
   M25-Q4    mte 2025 p001    density kx^3(4-x)^2, find k, mean, var    contin     4+5  ABES sample (asks SD)
   M25-Q5    mte 2025 p001    Chebyshev find c, mu 10, var 4, bound .04  Cheb     6    deck L10-11 Q2(iv)
   M25-Q6    mte 2025 p001    exponential reskin, mean 5 -> 3           Exp        4    G&K ch5 ex10 reskin
-  M25-Q7    mte 2025 p001    bread-making machine life                 Exp        4    Walpole P&S 8.25
+  M25-Q7    mte 2025 p001    machine life sample mean, n=9             Normal     3    Walpole P&S 8.25
   M25-Q8    mte 2025 p002    (i) Poisson notes (ii) estimation chapter  Poi+Est    9    mixed
 ```
 
@@ -116,15 +121,15 @@ The nine slots: 1 point, 2 tail, 3 interval, 4 moments, 5 parameter, 6 inverse, 
   A1 app3    battery E=3.45, Var=0.9475, sd=0.97          discrete   4
   A1 app4    marks Chebyshev, 75 percent                  Cheb       9
   A2 A2      binomial moments                              Bin        4
-  A2 A3      Poisson                                                          1
+  A2 A3      Poisson                                      Poi        1
   A2 A4      uniform E, Var                              Unif       4
-  A2 A7      Poisson                                                                
+  A2 A7      Poisson                                      Poi        see source
   A2 A9      binomial max successes                      Bin        4
   A2 A10     uniform parameters                          Unif       5
   A2 A11     normal 68/95/99.7 landmarks                 Normal(no slide!) 4
   A2 A12     Poisson additivity                          Poi(no slide!) 9
   A2 B1      Poisson rejected P(X>=4)=0.2424             Poi        2
-  A2 B2      uniform B2                                  
+  A2 B2      uniform                                      Unif       see source
   A2 B3      normal interval 45-62                       Normal     3
   A2 B4      5000 batteries N x P                        Normal     7
   A2 B5      exponential conditional 0.6225              Exp(no slide! 8)   8
@@ -159,7 +164,7 @@ The nine slots: 1 point, 2 tail, 3 interval, 4 moments, 5 parameter, 6 inverse, 
         E on -3/6/9)
   L8-9   4 blocks: L89-01..L89-04 (bus pdf, CDF-to-density [OPEN], kidney E(Y), Pareto)
   L12-13 6 blocks: L1213-01..06 (5-coin [OPEN], pens, irregular die, Poisson x3 [one OPEN])
-  L14-15 7 blocks: L1415-01..07 (uniform, two normal, two N(8,5), inverse cutoff, exponential
+  L14-15 7 blocks: L1415-01..07 (uniform, normal with mean 8 and sd 5, inverse cutoff, exponential
         McClave)
 ```
 
@@ -175,16 +180,18 @@ The nine slots: 1 point, 2 tail, 3 interval, 4 moments, 5 parameter, 6 inverse, 
   L1213-04 Poisson relation P1 = 0.2 P2              four-deck, open
   L1213-05 Poisson calls exactly two each minute     four-deck, open
   L1213-06 life-insurance Poisson approximation      four-deck, open
-  (the pens question's source is OPEN: G&K family of 18, our version 12 pens)
+  (the pens question circulates in several versions, but its originating source is OPEN)
 ```
 
 ## F. Provenance state (honest, as of 16 Sep)
 
 ```
-  37 of 383 rows carry a source or family verdict. Of those:
-    20 are named source or verbatim (strong)
-    12 are leads only, the exact exercise id still open
-     5 are concept checks (definitions, derivable from any text, not really provenance)
-  9 open, 337 unsearched. The MTE paper set itself is 15 of 16 traced.
-  No row carries a content family id yet, so the dedup is not finished.
+  Enumeration: 383 rows on this branch, plus 119 assignment-bundle rows on PR 14.
+  Combined after merge: 502 gross instances.
+
+  MTE evidence: 10 source or family leads, 5 generic concept checks, 1 open composite.
+  A concept check confirms mathematical type, not copying or source provenance.
+
+  Corpus-wide source matching is incomplete. No row carries a content family id yet, so
+  neither the unique-question count nor a corpus-wide sourced percentage is known.
 ```

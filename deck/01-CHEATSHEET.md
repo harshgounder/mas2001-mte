@@ -172,10 +172,11 @@ Closed book paper. This page is the whole exam in formulas. Read it daily, last 
   SE of the mean      sigma_Xbar = sigma / sqrt(n)
   SE estimate         S / sqrt(n)
   SE of a proportion  sqrt( p(1-p)/n )
-  CLT  n>=30 any population:  Xbar ~ N(mu, sigma^2/n) approx
+  CLT  as n grows: Xbar ~ N(mu, sigma^2/n) approximately, under the theorem's conditions
        Z = (Xbar - mu)/(sigma/sqrt(n))
   exact, not approx, when the population itself is normal (any n)
-  n<30 and population not normal: CLT does NOT apply
+  n>=30 is the course rule of thumb, not a universal theorem cutoff
+  for small n and a non-normal population, normal approximation needs justification
   sum of n draws ~ N(n mu, n sigma^2)
   quadruple n -> halve the SE   (sqrt rule)
 ```
@@ -188,7 +189,8 @@ Closed book paper. This page is the whole exam in formulas. Read it daily, last 
   consistent   converges in probability; sufficient pair E->theta, Var->0
   efficient    smallest variance AMONG UNBIASED
   relative efficiency of T1 vs T2 = Var(T2)/Var(T1)
-  sufficient   uses all information in the sample (Neyman-Fisher)
+  sufficient   conditional sample distribution given the statistic is parameter-free;
+               Neyman-Fisher factorisation is the usual test in this course
   MSE = Var + Bias^2
   Xbar: unbiased, Var = sigma^2/n, consistent
   S^2 = sum(Xi-Xbar)^2/(n-1): unbiased for sigma^2   (the n-1 matters)

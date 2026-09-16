@@ -92,7 +92,8 @@ method. This file is the map from phrase to ask. Read it before a drill pass.
   "fewer than k"                             P(X < k)                 cdf at k-1 (discrete)
   "none" / "no" / "zero of them"             P(X = 0)                 single pmf term
   "at least one"                             P(X >= 1)                complement, 1 - P(X=0)
-  "between a and b"                          P(a<X<b)                 F(b)-F(a), watch a-1
+  "between a and b"                          P(a<X<b)                 continuous: F(b)-F(a)
+                                                                        integer: F(b-1)-F(a)
   "not more than ... apart"                  |X - c| <= d             interval then probability
   "within k of the mean"                     |X-mu| <= k              interval or Chebyshev
   "deviates by at least k"                   |X-mu| >= k              Chebyshev tail form
@@ -153,11 +154,11 @@ method. This file is the map from phrase to ask. Read it before a drill pass.
 
 ```
   "independent"          opens the product rule E(XY)=E(X)E(Y), Var(X+Y)=Var(X)+Var(Y)
-  "not independent"      closes them, must use covariance (out of scope) so the question
-                         cannot ask the product rule
+  "not independent"      do not factor E(XY) or drop covariance without more information.
+                         A joint distribution or a stated covariance can still make it solvable.
   "population is normal" opens the exact-Xbar fallback at any n
   "large sample" / "n=50, n=40"  opens CLT with an approximate answer
-  "small sample, non-normal"     CLT does NOT apply, say so
+  "small sample, non-normal"     do not assume a normal approximation without justification
   "known sigma"          use sigma/sqrt(n) directly
   "sample standard deviation"    use S/sqrt(n)
   "rate"                 Poisson or exponential, never a mean

@@ -82,9 +82,8 @@ find one fast.
   Poi(2)  E = Var = 2,  sd = 1.4142
   Poi(10) E = Var = 10
   U(2,6)  E = 4,  Var = 4/3 = 1.3333
-  N(8,5)  E = 8,  Var = 5 (note: the "5" in N(8,5) is the VARIANCE if written sigma^2,
-          but this deck's numbers mu=8 sigma=5 are used with sigma = 5 in the arithmetic,
-          CHECK the convention on the page, errata 8)
+  source example: mean 8, sd 5. The source writes N(8,5), but its arithmetic treats 5 as
+          sigma, not sigma^2. To avoid the ambiguity, write mu=8, sigma=5, or N(8,25).
   Exp(l)  E = 1/l,  Var = 1/l^2
   Exp mean 2  -> l = 1/2
 ```
@@ -137,7 +136,7 @@ find one fast.
   calls nesting         32 e^-10 = 0.0014528
   Poisson ratio         l = 10, P(X=0) = 4.54e-5
   uniform U(2,6)        P(3<X<5) 0.50
-  normal N(8,5)         P(X<8.6) 0.5478   P(X>8.6) 0.4522   inverse 20 percent 3.792
+  normal mu=8, sd=5     P(X<8.6) 0.5478   P(X>8.6) 0.4522   inverse 20 percent 3.792
   two-unknown normal    sigma 28.2, mu 37.2, cutoff 30.4  (errata 10)
   exponential 15/hr     P(T<3 min) 0.5276
   exponential mean 2    P(X<1|X<2) 0.6225  (slide 0.5679 wrong, errata 9)

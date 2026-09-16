@@ -16,13 +16,15 @@ Two things live here:
 ## Read order
 
 ```
-   1.  notes/00-NOTES-INDEX.md        the map of the notes
-   2.  notes/01 .. notes/10           read in order, lecture by lecture
-   3.  this dir, as you solve          cheatsheet, methods, traps on hand
-   4.  ../reports/11-QUESTION-ATLAS/00-LEARN-ORDER.md
-                                       the measured day-by-day schedule
-   5.  12-DRILL.md                    the practice set
-   6.  13-EXAM-MECHANICS.md           format, marks, last-hour list
+   1.  14-MASTER-STUDY-ORDER.md        the current order and checkpoints
+   2.  notes/00-NOTES-INDEX.md         the map of the notes
+   3.  notes/01 .. notes/10            read in order, lecture by lecture
+   4.  this dir, as you solve          cheatsheet, methods, traps on hand
+   5.  12-DRILL.md                     the practice set
+   6.  13-EXAM-MECHANICS.md            format, marks, last-hour list
+
+   older measured schedule:
+       ../reports/11-QUESTION-ATLAS/00-LEARN-ORDER.md
 ```
 
 ## Everything is visual
@@ -49,6 +51,7 @@ Venn diagrams, decision trees, tables. Plain text so it renders anywhere and nev
     11-BEYOND-SLIDES.md  the 8 hidden items (asked but never taught)
     12-DRILL.md          50 practice items with answers, as a 7-rung ladder
     13-EXAM-MECHANICS.md format, time budget, what earns marks, last-hour list
+    14-MASTER-STUDY-ORDER.md the current study order and gates
 
    notes/
     00-NOTES-INDEX.md            the course map
@@ -66,6 +69,7 @@ Venn diagrams, decision trees, tables. Plain text so it renders anywhere and nev
 
 ## Grounding
 
-Every number traces to a source page in the repo, or to a computed check. Where a slide prints
-a wrong value, the notes give the CORRECT value and mark the slide's error inline. The open
-provenance items (pens, rain, kx^3(4-x)^2) are labelled open, not claimed.
+Numerical answers are either copied from a named source page or recomputed in the audit.
+Known slide and key errors are marked inline. Provenance is a separate question: a correct
+answer does not prove where a question came from. See `09-QUESTIONS.md` and reports 16, 19,
+and 20 for the evidence states and open source searches.

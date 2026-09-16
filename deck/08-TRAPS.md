@@ -145,10 +145,11 @@ source errata (numbers printed wrong in the slides and keys, with the correct va
      binomial, set l = np, not the exact binomial.
  18  LARGE SAMPLE LANGUAGE. "The mean of a sample of n" divides by the STANDARD ERROR, not by
      sigma. A single observation uses sigma.
- 19  CLT CONDITIONS. A non-normal population with n<30 does NOT get the CLT. If the question
-     does this, the correct answer is to say it does not apply.
+ 19  CLT CONDITIONS. n>=30 is the course heuristic, not a universal theorem cutoff. For a
+     small non-normal population, do not assume the normal approximation without checking
+     shape and tail behaviour.
  20  NORMAL POPULATION FALLBACK. A normal population is exactly normal at any n, so a small-n
-     question is fine if the population is stated normal. This is the escape hatch.
+     question is fine if the population is stated normal. No large-n heuristic is needed.
 ```
 
 ## Part 2: source errata (the slides and keys print these wrong)

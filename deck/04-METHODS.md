@@ -246,11 +246,13 @@ entry: when to use it, the steps, and the alternate with its tradeoff.
 
 ```
   when   "the sample mean is approximately normal", n listed, population shape unknown
-  steps  1 check n >= 30, or the population is normal
+  steps  1 if the population is normal, Xbar is exactly normal; otherwise assess whether n and
+           the population shape make the CLT approximation reasonable
          2 Xbar ~ N(mu, sigma^2/n), so Z = (Xbar - mu)/(sigma/sqrt(n))
          3 read the table as a normal
   alternate  for a SUM not a mean, the sum is N(n mu, n sigma^2), sigma scales by sqrt(n) not n
-  traps  n<30 with a non-normal population: the CLT does not apply, say so and stop
+  traps  n<30 with a non-normal population: do not use the normal approximation automatically
+         n>=30 is the course heuristic, not a theorem boundary
          a normal population is exact at any n, this is the fallback for small-n questions
          (errata 6: impurity Z2 = -0.94, the slide prints -0.4)
 ```

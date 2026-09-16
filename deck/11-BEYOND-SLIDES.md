@@ -69,9 +69,9 @@
    without H1, HALF the estimation block is unreachable.
 ```
 
-Eight items carry marks in every graded set we hold but have NO teaching slide in the converted
-batch. They are the day-one priority: cheapest marks on the paper, and prerequisites for the
-later topics. This file is the full treatment of each.
+These eight items are asked in the held graded material but are missing, lightly treated, or
+easy to overlook in the main converted teaching decks. They are high-value review items and
+several are prerequisites for later topics.
 
 ## H1. Independence rules of random variables
 
