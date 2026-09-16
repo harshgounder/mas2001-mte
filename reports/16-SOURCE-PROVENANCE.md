@@ -54,14 +54,44 @@ conversation", "15-minute intervals", "pen manufactured" do not appear in Devore
 items point at the other cited texts; acquisition of those PDFs is in flight (background
 download job), after which the same local diff will run.
 
+## Round 2 confirmations (16 Sep, evening pass)
+
+All found by local text diff against the acquired full texts. Each match below is word for
+word in the course material and in the named source.
+
+- G&K "Example 6.18": the man with n keys problem = assignment 2024-25 #1, Q15.
+- G&K "Example 5.16": radio tube with p.d.f. 100/x^2 for x >= 100 = assignment 2024-25
+  #1, Q12.
+- G&K "Example 6.48": a symmetric die thrown 600 times, lower bound for 80 to 120 sixes =
+  assignment 2024-25 #1, Q10 (G&K also carries a 720-throw variant as an exercise).
+- G&K uniform-distribution example: subway trains every half hour from midnight to six,
+  wait at least twenty minutes, X uniform on (0, 30), answer 1/3 = assignment 2024-25 #2,
+  Q9 and ETE S3 2025-26 C1(b).
+- G&K: sigma = 2, Chebyshev with k = 2.5 gives P(-2 < X < 8) >= 21/25 = the Chebyshev
+  deck's Q1 and the ETE S3 2024-25 B1 family.
+- G&K exercise 15(b): compare the upper bound of P{|X - E(X)| >= 2 sqrt(V(X))} with the
+  exact probability for X uniform on (-1, 3). Bound 1/4, exact 0. This is the skeleton of
+  MTE 2024-25 QB3, whose version uses (-1, 1).
+- G&K "manufacturer claims that at most 10 per cent of his product is defective, 18 units
+  inspected" = the pens-problem family. The pens version (12 pens, box) was not found in
+  the G&K text; candidates: Palaniammal or Sundarapandian.
+- L1-7 deck: Q2 (computers of six faculty members) and Q3 (basketball lineup) are Devore
+  exercises, word for word; the deck's own references page prints Devore 8e as Text Book.
+- L12-13 deck references page prints: Gupta and Kapoor; Palaniammal; Sundarapandian.
+  L14-15 deck adds Mc Clave, Statistics for Business and Economics, whose slide style and
+  copyright line the L14-15 examples carry (uniform 2 to 6, N(8,5), exponential 15/hr).
+- Palaniammal and Sundarapandian PDFs on disk are scans without a text layer; OCR is
+  queued. Devore 8e mirrors refused (403); the 9e text serves the diff.
+
 ## Next phase (the ledger)
 
-1. Acquire Gupta and Kapoor, Palaniammal, Sundarapandian texts; run the same keyword and
-   signature-phrase diff.
+1. OCR the Palaniammal and Sundarapandian scans, then run the same signature diff.
 2. Enumerate every question of the corpus into a block-level ledger (id, source file,
-   scope verdict, provenance verdict with evidence line).
+   scope verdict, provenance verdict with evidence line). The corpus accounting in report
+   18 supplies the block counts; the ledger adds the per-block provenance column.
 3. For each un-matched question, run skeleton search (same wording, different constants)
    against the source texts and then the web, and record the family it belongs to.
 
 ---
-Report 16, added 16 Sep 2026. Status: v0, receipts verified the same day.
+Report 16, added 16 Sep 2026. v0.1 (same day): round-2 source confirmations appended.
+
