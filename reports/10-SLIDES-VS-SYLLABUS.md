@@ -57,7 +57,7 @@ sources was one of three kinds:
 The topic is named in `~/PS/syllabus.txt` line 8, tagged MTE in the lecture plan, and
 Assignment 1 gave it five items in the graded set. Past papers confirm it further: MTE
 2024-25 QA3 (statement MCQ) and QB3 (bound vs actual), MTE 2025-26 Q5 (the find-C). Slides
-now exist; `03-FORMULA-SHEET.md` section E, `04-QUESTION-BANK.md` section 6, and mock B1
+now exist; `03-FORMULA-SHEET.md` section E, `04-QUESTION-BANK.md` section 6, and mock v2 Q4
 remain the drill.
 
 ### 2.2 Independent random variables, second half of lectures 8-9: no slides

@@ -146,7 +146,7 @@ appeared in exactly three places, all non-teaching:
 
 Chebyshev is examinable, appeared in Assignment 1 twice, in MTE 2024-25 (statement MCQ +
 bound-vs-actual), in MTE 2025-26 (find-C), and now has its own deck in the new batch. Read
-`S&P L10-11` for it; `reports/03-FORMULA-SHEET.md` section E and mock B1 remain the drill.
+`S&P L10-11` for it; `reports/03-FORMULA-SHEET.md` section E and mock v2 Q4 remain the drill.
 
 ### 5.4 Duplication found
 
@@ -205,7 +205,7 @@ copy 0.0915 into a table reading.
 | risk | why it matters | mitigation |
 |---|---|---|
 | No past MTE paper on disk at build time (SUPERSEDED 15 Sep: both years + schemes arrived) | the exact paper pattern was unknown at first build | the 15 Sep batch fixed this; see reports/12-NEW-BATCH.md |
-| Chebyshev had no slides (FIXED 15 Sep: S&P L10-11 deck arrived) | was examinable with no source to read | read S&P L10-11; formula sheet plus mock B1 remain the drill |
+| Chebyshev had no slides (FIXED 15 Sep: S&P L10-11 deck arrived) | was examinable with no source to read | read S&P L10-11; formula sheet plus mock v2 Q4 remain the drill |
 | Days 14, 15, 16 also carry four other courses | revision time is not the whole day | plan budgets 4 to 5 focused hours per day |
 | The 147 page deck has a thin text layer (264 chars per page) | skim reading it on paper hides the maths | converted pages carry the maths in LaTeX, read those |
 | MoM and MLE are in ~/PS but out of the paper | easy to burn a day on two non examinable decks | both tagged out of scope in the coverage map |
@@ -216,8 +216,8 @@ copy 0.0915 into a table reading.
   read this, then
     reports/03-FORMULA-SHEET.md      the closed book sheet, memorise it
     reports/05-FIVE-DAY-PLAN.md      day by day, with page refs into md/
-    reports/07-MOCK-PAPER.md         sit it before reading 08
-    reports/08-MOCK-SOLUTIONS.md     after the mock, check the three designed traps
+    reports/07-MOCK-PAPER-v2.md      sit it before reading its solutions
+    reports/08-MOCK-SOLUTIONS-v2.md  verified answers and mark allocation
     reports/01-COVERAGE-MAP.md       which deck page covers which lecture
     md/<label>.md                    the decks themselves, one file per deck
 ```

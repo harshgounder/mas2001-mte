@@ -181,7 +181,8 @@ extra sources are logged in sources.yaml.
                8  count register update after U04/U05: the in-scope assignment corpus grows
                   by 90 blocks (15 + 20 + 19 + 36), more than the 52 already counted.
                   CORRECTED 15 Sep: 90, not 91; 2024-25 A1 has 15 blocks, not 16.
-               9  mock paper reshape to real A/B/C format (after U01)
+               9  DONE 16 Sep: mock v2 uses the real 3x2, 4x4, 8-mark A/B/C structure.
+                  The original mock remains as the v1 content drill.
 ```
 
 ## 9. Key file map (quick)

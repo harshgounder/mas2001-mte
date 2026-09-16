@@ -67,8 +67,8 @@ reports/10-SLIDES-VS-SYLLABUS.md  # lecture by lecture: what exists, what is mis
 
 # drilling
 reports/04-QUESTION-BANK.md  # the corpus's own problems, verified answers
-reports/07-MOCK-PAPER.md     # 30-mark mock, sit it closed book
-reports/08-MOCK-SOLUTIONS.md # every number computed
+reports/07-MOCK-PAPER-v2.md     # 30-mark mock in the real A/B/C structure
+reports/08-MOCK-SOLUTIONS-v2.md # verified solutions and mark allocation
 
 # the deep map (the "no ambiguity" files)
 reports/11-QUESTION-ATLAS/00-SYLLABUS-FULL-EXPANDED.md  # every topic to atomic facts
@@ -145,8 +145,9 @@ mas2001-mte/
 | `04-QUESTION-BANK.md` | the corpus's own problems with verified answers, organised by distribution | drilling |
 | `05-FIVE-DAY-PLAN.md` | the day-by-day plan from 13 Sep, plus the 14 Sep evening re-pin | planning |
 | `06-VERIFICATION.md` | three verification layers, the failures that were caught, adjustments visible | trust audit |
-| `07-MOCK-PAPER.md` | 30-mark mock in the real format | self-test |
-| `08-MOCK-SOLUTIONS.md` | every number computed and cross-checked against a slide | after the mock |
+| `07-MOCK-PAPER-v2.md` | 30-mark mock in the real 3x2, 4x4, 8-mark structure | self-test |
+| `08-MOCK-SOLUTIONS-v2.md` | verified solutions and mark allocation for mock v2 | after mock v2 |
+| `07-MOCK-PAPER.md`, `08-MOCK-SOLUTIONS.md` | retained v1 content drill with the old section weights | archive reference |
 | `09-ERRATA.md` | 15 errors found in the source material, each with the computed value | before memorising anything |
 | `10-SLIDES-VS-SYLLABUS.md` | lecture-by-lecture slides audit (8-9 half, 10-11 corrected 15 Sep) | coverage questions |
 | `12-NEW-BATCH.md` | batch 2: 23 files catalogued, 19-unit processing queue, quality traps | batch 2 work |

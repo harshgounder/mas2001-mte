@@ -77,8 +77,8 @@ Goal: estimation block, then a full timed paper, then fix what the paper exposes
 
 1. `md/ppt5-estimation-summary.md` all 26 pages. 90 minutes. Then
    `md/lms-theory-of-estimation.md` p022 to p030 for the extra worked numericals only.
-2. Sit `reports/07-MOCK-PAPER.md` closed book, 90 minutes, no formula sheet. Mark it with
-   the worked solutions in `reports/08-MOCK-SOLUTIONS.md`.
+2. Sit `reports/07-MOCK-PAPER-v2.md` closed book, 90 minutes, no formula sheet. Mark it with
+   the worked solutions in `reports/08-MOCK-SOLUTIONS-v2.md`.
 3. Spend the rest of the day on whatever the mock exposed. Re-derive every formula you
    failed to recall. 90 minutes.
 

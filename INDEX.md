@@ -79,8 +79,10 @@ other tracked file appears below by name.
   04-QUESTION-BANK.md           corpus problems with verified answers
   05-FIVE-DAY-PLAN.md           13-17 Sep plan + 14 Sep re-pin
   06-VERIFICATION.md            verification record, three layers
-  07-MOCK-PAPER.md              mock MTE, 30 marks
-  08-MOCK-SOLUTIONS.md          mock worked solutions
+  07-MOCK-PAPER.md              retained v1 content drill with old section weights
+  08-MOCK-SOLUTIONS.md          retained v1 worked solutions
+  07-MOCK-PAPER-v2.md           mock rebuilt to the real A/B/C mark structure
+  08-MOCK-SOLUTIONS-v2.md       verified solutions and mark allocation for mock v2
   09-ERRATA.md                  18 errata, at the claim site
   10-SLIDES-VS-SYLLABUS.md      lecture-by-lecture slides audit (Chebyshev corrected)
   12-NEW-BATCH.md               THE batch-2 doc: list + 19-unit processing queue + scout findings
