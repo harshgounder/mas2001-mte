@@ -1,0 +1,116 @@
+{
+  "rows": 383,
+  "descriptions_filled": 101,
+  "rows_swept": 136,
+  "rows_frozen": 48,
+  "desc_state": {
+    "resolved": 274,
+    "pending": 109
+  },
+  "by_verdict": {
+    "unsearched": 201,
+    "open": 130,
+    "family": 9,
+    "CONCEPT": 5,
+    "FAMILY": 1,
+    "VERBATIM": 1,
+    "RESKIN": 3,
+    "FAMILY + CIRCULATING": 1,
+    "OPEN": 1,
+    "RESKIN + CIRCULATING": 2,
+    "DECK": 1,
+    "MIXED": 1,
+    "strong": 3,
+    "verbatim": 2,
+    "exact-text lead": 9,
+    "exact match": 3,
+    "probable exact-text lead": 2,
+    "family lead": 1,
+    "verbatim slide source": 7
+  },
+  "by_group": {
+    "teaching": {
+      "unsearched": 57,
+      "open": 3
+    },
+    "chebyshev": {
+      "unsearched": 2,
+      "open": 1
+    },
+    "assignments-2025": {
+      "open": 42,
+      "family": 4,
+      "unsearched": 6
+    },
+    "mte": {
+      "CONCEPT": 5,
+      "FAMILY": 1,
+      "VERBATIM": 1,
+      "RESKIN": 3,
+      "FAMILY + CIRCULATING": 1,
+      "OPEN": 1,
+      "RESKIN + CIRCULATING": 2,
+      "DECK": 1,
+      "MIXED": 1
+    },
+    "ete": {
+      "unsearched": 60,
+      "open": 37
+    },
+    "assignments-2024": {
+      "open": 39,
+      "family": 5,
+      "strong": 3,
+      "verbatim": 2,
+      "unsearched": 76
+    },
+    "four-decks": {
+      "exact-text lead": 9,
+      "exact match": 3,
+      "open": 8,
+      "probable exact-text lead": 2,
+      "family lead": 1,
+      "verbatim slide source": 7
+    }
+  },
+  "markers": {
+    "ppt3-discrete-prob-dist": "none",
+    "ppt4-continuous-prob-dist": "none",
+    "lms-standard-error-clt": "none",
+    "ppt5-estimation-summary": "none",
+    "lms-theory-of-estimation": "none",
+    "L10-11-chebyshev-deck": "Qn",
+    "assignment-2025-26-1": "Qn",
+    "assignment-2025-26-2": "Qn",
+    "assignment-2024-25-1": "Qn",
+    "assignment-2024-25-2": "n_dot",
+    "assignment-2024-25-3": "none",
+    "assignment-2024-25-3-ep2": "none",
+    "assignment-2024-25-4": "n_dot",
+    "assignment-2024-25-5": "none"
+  },
+  "count_mismatches": [
+    "assignment-2024-25-3",
+    "assignment-2024-25-3-ep2",
+    "assignment-2024-25-5",
+    "lms-standard-error-clt",
+    "lms-theory-of-estimation",
+    "ppt3-discrete-prob-dist",
+    "ppt4-continuous-prob-dist",
+    "ppt5-estimation-summary"
+  ],
+  "frozen_groups": [
+    "four-decks",
+    "mte"
+  ],
+  "frozen_ids": [
+    "cheb-Q1",
+    "cheb-Q2"
+  ],
+  "corpora": {
+    "G&K-Fundamentals": 191264,
+    "Hogg-Tanis-9e": 109481,
+    "GGD-Vol1": 55422,
+    "Davenport": 69524
+  }
+}
