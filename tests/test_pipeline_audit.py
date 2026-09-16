@@ -1,6 +1,10 @@
 """Independent audit checks. No network calls or edits to the study repo.
 
 Run with: python3 -B tests/test_pipeline_audit.py -v  (from the repo root)
+Artifact-backed corpus verification additionally needs the generated page PNGs,
+which are not committed. Point MTE_PAGE_ROOT at a checkout that has them, for
+example MTE_PAGE_ROOT=/home/liebert511/mas2001-mte/work/pages. It defaults to
+REPO/work/pages.
 Failures express desired behavior, not patches to the implementation.
 
 This is the in-repo working copy of the peer audit harness written by codex CLI on
@@ -22,8 +26,9 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-REPO = Path('/home/liebert511/mas2001-mte')
+REPO = Path(__file__).resolve().parent.parent
 EVIDENCE = Path(os.environ.get('MTE_EVIDENCE', '/home/liebert511/mas2001-mte-audit-v1'))
+PAGE_ROOT = Path(os.environ.get('MTE_PAGE_ROOT', str(REPO / 'work/pages')))
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(REPO / 'scripts'))
 import convert
@@ -74,7 +79,7 @@ class CorpusChecks(unittest.TestCase):
         missing_images = []
         for (label, page), row in latest.items():
             md = REPO / 'md' / label / ('p%03d.md' % page)
-            png = REPO / 'work/pages' / label / ('p%03d.png' % page)
+            png = PAGE_ROOT / label / ('p%03d.png' % page)
             with self.subTest(label=label, page=page):
                 self.assertTrue(md.is_file())
                 self.assertEqual(row['status'], 'ok')
