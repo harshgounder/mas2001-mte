@@ -220,7 +220,9 @@ Batch 2 (23 files catalogued in `sources.yaml`, plus 2 extra sources; U01 conver
 ## 7. The conversion pipeline
 
 Every page is rendered at 110 dpi and read through `~/.local/bin/vision`. The current default
-is `glm-5.3-flash`; the original 348-page batch used `xiaomi/mimo-v2.5`.
+is `gpt-5.6-luna` on commandcode; the original 348-page batch used `xiaomi/mimo-v2.5`. The
+`glm-5.3-flash` (ollama-cloud) route is currently dead (HTTP 401, re-probed 16 September),
+so conversion runs must pass `--model gpt-5.6-luna` until that lane returns.
 Vision was required, not optional: the PDFs have text layers but they shatter every equation,
 so the text layer is kept as an independent second channel for auditing.
 
