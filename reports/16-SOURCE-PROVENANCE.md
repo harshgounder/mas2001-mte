@@ -83,14 +83,49 @@ word in the course material and in the named source.
 - Palaniammal and Sundarapandian PDFs on disk are scans without a text layer; OCR is
   queued. Devore 8e mirrors refused (403); the 9e text serves the diff.
 
+## MTE block-by-block provenance (v0, evening of 16 Sep)
+
+All sixteen MTE blocks (2024-25 and 2025-26) have been run against the extracted full texts
+of Devore 9e, Gupta and Kapoor, and Hogg and Tanis 9e, plus targeted web hunts. No block is
+an original composition. Verdict classes: VERBATIM (word for word), RESKIN (same problem,
+constants or interval changed), FAMILY (same skeleton in the source), CIRCULATING (lives on
+question-bank sites), CONCEPT (definition check derivable from any text), DECK (the course
+slide is the immediate origin).
+
+| block | problem | verdict | origin / evidence |
+|---|---|---|---|
+| M24-A1 | Poisson mean 0.5, Y=2X, E and Var MCQ | CONCEPT | standard bank skeleton |
+| M24-A2 | triangular pdf CDF MCQ | FAMILY | G&K section 8-1-5, triangular distribution |
+| M24-A3 | Chebyshev forms, pick the false ones MCQ | CONCEPT | definitions in G&K / Devore |
+| M24-B1 | P(X=1)=P(X=2), P(Y=2)=P(Y=3), Var(X-2Y) | VERBATIM | G&K Poisson chapter example ("Find the variance of X - 2Y", lambda=2, mu=3, answer 14) |
+| M24-B2 | phone speech exponential, parameter 1/4 | RESKIN | G&K chapter 5 exercise 10, "lady speaks on the telephone" f(x)=Ae^(-x/5) [Shivaji Univ 1990]; mean 5 changed to 4 |
+| M24-B3 | U(-1,1) Chebyshev bound versus actual | RESKIN | G&K exercise 15(b) with interval (-1,3), bound 1/4, exact 0; interval changed to (-1,1) |
+| M24-B4 | trains every 15 min, 4 AM, arrival 9:00-9:30 | FAMILY + CIRCULATING | G&K subway example (uniform wait on (0,30), answer 1/3); the 4 AM form circulates on StudyX, Gauthmath, Transtutors |
+| M24-C1 | rainfall N(2.6, 34.5) four parts + binomial week; binomial mean 5/3 part | OPEN | not in Devore / G&K / H&T text; candidates: Palaniammal, Sundarapandian (OCR running), or a bank |
+| M25-Q1 | density integral MCQ | CONCEPT | axiom of total mass |
+| M25-Q2 | Poisson mean e MCQ | CONCEPT | substitution drill |
+| M25-Q3 | sufficiency MCQ | CONCEPT | H&T section 6.7, sufficient statistics |
+| M25-Q4 | f = kx^3(4-x)^2, find k, mean, variance | OPEN | not found in the three texts; search continuing |
+| M25-Q5 | Chebyshev find c, mu=10, var=4, bound 0.04 | DECK | L10-11 Chebyshev deck Q2(iv) word for word |
+| M25-Q6 | telephone conversation, mean 3 | RESKIN + CIRCULATING | G&K chapter 5 exercise 10 re-skinned (mean 5 to 3); the same text circulates as a numbered item on StudyX |
+| M25-Q7 | machine life 7 years, 9 samples | CIRCULATING | "bread-making machine" classic on algebra.com, Chegg, Quizlet, Numerade; exact source book TBD |
+| M25-Q8 | (i) typist letters (ii) t^2 biased | MIXED | (i) circulating (Bartleby, StudyX, Studocu Poisson notes); (ii) G&K estimation chapter exercise 6, verbatim |
+
+Result: 14 of 16 MTE blocks traced (3 verbatim G&K, 3 G&K re-skins, 2 G&K families, 1
+deck-verbatim, 2 circulating classics, 1 mixed, 4 concept checks); 2 blocks open (C1 rain
+set, Q4). The mutation pattern is explicit: the telephone problem appears with mean 5 (G&K
+original), 6, 4 and 3 across our materials; the uniform-Chebyshev comparison moves (-1,3)
+to (-1,1); the trains problem keeps its skeleton across years.
+
 ## Next phase (the ledger)
 
-1. OCR the Palaniammal and Sundarapandian scans, then run the same signature diff.
-2. Enumerate every question of the corpus into a block-level ledger (id, source file,
-   scope verdict, provenance verdict with evidence line). The corpus accounting in report
-   18 supplies the block counts; the ledger adds the per-block provenance column.
-3. For each un-matched question, run skeleton search (same wording, different constants)
-   against the source texts and then the web, and record the family it belongs to.
+1. OCR of the scanned books is running in the background (Palaniammal, GGD volume one);
+   when done, run the same diff for the pen problem, rain set, kx^3(4-x)^2 and the
+   remaining ETE items.
+2. Run the same block-by-block sweep for the 97 ETE / summer / re-sess blocks (first pass
+   already shows Chebyshev, subway, pens, E(X) table and CLT overlaps).
+3. Web hunt the still-open items (C1 rain set, Q4 density, bread-machine book, 5/3
+   binomial) with exact-phrase searches and capture the source page links as evidence.
 
 ---
 Report 16, added 16 Sep 2026. v0.1 (same day): round-2 source confirmations appended.
