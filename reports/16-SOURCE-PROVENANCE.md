@@ -80,8 +80,11 @@ word in the course material and in the named source.
 - L12-13 deck references page prints: Gupta and Kapoor; Palaniammal; Sundarapandian.
   L14-15 deck adds Mc Clave, Statistics for Business and Economics, whose slide style and
   copyright line the L14-15 examples carry (uniform 2 to 6, N(8,5), exponential 15/hr).
-- Palaniammal and Sundarapandian PDFs on disk are scans without a text layer; OCR is
-  queued. Devore 8e mirrors refused (403); the 9e text serves the diff.
+- The file downloaded under a Palaniammal name was misidentified. OCR title pages show it
+  is Davenport, Probability and Random Processes, and it has been renamed outside the
+  repo. No verified Palaniammal or Sundarapandian PDF was found on disk in the 16 Sep
+  cross-check. The earlier claim that both were present was false. Devore 8e mirrors
+  refused (403); the 9e text serves the diff.
 
 ## Round 3 confirmations (same evening, assignment and ETE items)
 
@@ -108,8 +111,10 @@ word in the course material and in the named source.
 ## MTE block-by-block provenance (v0, evening of 16 Sep)
 
 All sixteen MTE blocks (2024-25 and 2025-26) have been run against the extracted full texts
-of Devore 9e, Gupta and Kapoor, and Hogg and Tanis 9e, plus targeted web hunts. No block is
-an original composition. Verdict classes: VERBATIM (word for word), RESKIN (same problem,
+of Devore 9e, Gupta and Kapoor, and Hogg and Tanis 9e, plus targeted web hunts. That sweep
+does not prove that every block was copied, and it does not justify any claim about
+originality. Ten blocks have a source or family lead, five are generic concept checks,
+and one composite block remains open. Verdict classes: VERBATIM (word for word), RESKIN (same problem,
 constants or interval changed), FAMILY (same skeleton in the source), CIRCULATING (lives on
 question-bank sites), CONCEPT (definition check derivable from any text), DECK (the course
 slide is the immediate origin).
@@ -123,27 +128,41 @@ slide is the immediate origin).
 | M24-B2 | phone speech exponential, parameter 1/4 | RESKIN | G&K chapter 5 exercise 10, "lady speaks on the telephone" f(x)=Ae^(-x/5) [Shivaji Univ 1990]; mean 5 changed to 4 |
 | M24-B3 | U(-1,1) Chebyshev bound versus actual | RESKIN | G&K exercise 15(b) with interval (-1,3), bound 1/4, exact 0; interval changed to (-1,1) |
 | M24-B4 | trains every 15 min, 4 AM, arrival 9:00-9:30 | FAMILY + CIRCULATING | G&K subway example (uniform wait on (0,30), answer 1/3); the 4 AM form circulates on StudyX, Gauthmath, Transtutors |
-| M24-C1 | rainfall N(2.6, 34.5) four parts + binomial week; binomial mean 5/3 part | OPEN | not in Devore / G&K / H&T text; candidates: Palaniammal, Sundarapandian (OCR running), or a bank |
+| M24-C1 | rainfall N(2.6, 34.5) four parts + binomial week; binomial mean 5/3 part | OPEN | not found in Devore, G&K, H&T, Davenport OCR, or GGD volume 1 OCR; verified Palaniammal and Sundarapandian texts are absent, so their contents have not been searched |
 | M25-Q1 | density integral MCQ | CONCEPT | axiom of total mass |
 | M25-Q2 | Poisson mean e MCQ | CONCEPT | substitution drill |
 | M25-Q3 | sufficiency MCQ | CONCEPT | H&T section 6.7, sufficient statistics |
-| M25-Q4 | f = kx^3(4-x)^2, find k, mean, variance | OPEN | not found in the three texts; search continuing |
+| M25-Q4 | f = kx^3(4-x)^2, find k, mean, variance | RESKIN + CIRCULATING | ABES Institute sample paper Q6(b) carries the same support and density and asks for k, mean and standard deviation; the MTE changes standard deviation to variance; a Brainly repost carries the same family; originating book still open |
 | M25-Q5 | Chebyshev find c, mu=10, var=4, bound 0.04 | DECK | L10-11 Chebyshev deck Q2(iv) word for word |
 | M25-Q6 | telephone conversation, mean 3 | RESKIN + CIRCULATING | G&K chapter 5 exercise 10 re-skinned (mean 5 to 3); the same text circulates as a numbered item on StudyX |
-| M25-Q7 | machine life 7 years, 9 samples | CIRCULATING | "bread-making machine" classic on algebra.com, Chegg, Quizlet, Numerade; exact source book TBD |
+| M25-Q7 | machine life 7 years, 9 samples | RESKIN | Walpole, Myers, Myers and Ye, Probability and Statistics for Engineers and Scientists, Problem 8.25 in the 8e index and retained in 9e; a university sheet identifies page 242; the exam deletes "bread-making" and keeps part (a) with the same 7, 1, 9, 6.4 and 7.2 values |
 | M25-Q8 | (i) typist letters (ii) t^2 biased | MIXED | (i) circulating (Bartleby, StudyX, Studocu Poisson notes); (ii) G&K estimation chapter exercise 6, verbatim |
 
-Result: 14 of 16 MTE blocks traced (3 verbatim G&K, 3 G&K re-skins, 2 G&K families, 1
-deck-verbatim, 2 circulating classics, 1 mixed, 4 concept checks); 2 blocks open (C1 rain
-set, Q4). The mutation pattern is explicit: the telephone problem appears with mean 5 (G&K
+Result: 16 of 16 blocks were searched, but only 10 have a source or problem-family lead.
+Five generic concept checks do not have an identified origin, and the composite C1 rain
+and binomial block remains open. Labels such as CONCEPT and CIRCULATING are not provenance proof. The
+mutation pattern supported by current evidence is: the telephone problem appears with mean 5 (G&K
 original), 6, 4 and 3 across our materials; the uniform-Chebyshev comparison moves (-1,3)
 to (-1,1); the trains problem keeps its skeleton across years.
 
+Web evidence for the two follow-up corrections:
+
+- Walpole Problem 8.25 indexed by book, chapter and problem number:
+  <https://www.vaia.com/en-us/textbooks/math/probability-and-statistics-for-engineers-and-scientists-8-edition/chapter-8/problem-25-the-average-life-of-a-bread-making-machine-is-7-y/>
+- University homework explicitly identifying it as Problem 8.25, page 242:
+  <https://bashmuhndsa.wordpress.com/wp-content/uploads/2017/09/ie331-hw5-ch8-9.pdf>
+- ABES Institute sample question-paper collection containing the kx^3(4-x)^2 problem:
+  <https://naac.abesit.in/wp-content/uploads/2024/07/Sample-Question-Papers.pdf>
+- Public repost of the same density family:
+  <https://brainly.in/question/61111014>
+
 ## Next phase (the ledger)
 
-1. OCR of the scanned books is running in the background (Palaniammal, GGD volume one);
-   when done, run the same diff for the pen problem, rain set, kx^3(4-x)^2 and the
-   remaining ETE items.
+1. GGD volume one and Davenport OCR are complete. A signature sweep found generic
+   rainfall and fountain-pen material in GGD, but no exact open MTE signature in either
+   text. Acquire verified Palaniammal and Sundarapandian texts before using either name
+   for attribution, then run the same comparison for the pen problem, rain set,
+   kx^3(4-x)^2 and the remaining ETE items.
 2. Run the same block-by-block sweep for the 97 ETE / summer / re-sess blocks (first pass
    already shows Chebyshev, subway, pens, E(X) table and CLT overlaps).
 3. Web hunt the still-open items (C1 rain set, Q4 density, bread-machine book, 5/3
@@ -151,4 +170,3 @@ to (-1,1); the trains problem keeps its skeleton across years.
 
 ---
 Report 16, added 16 Sep 2026. v0.1 (same day): round-2 source confirmations appended.
-

@@ -1,0 +1,384 @@
+instance_id,corpus_group,source_label,block_order,page_start,page_end,summary,scope,description_state,provenance_verdict,provenance_source,evidence_locator,content_family_id,status
+teach-deck01-01,teaching,notes-lecture-series-01-09,1,41,42,"tournament, 4 parts, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-02,teaching,notes-lecture-series-01-09,2,46,47,"laptops and desktops, 4 parts, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-03,teaching,notes-lecture-series-01-09,3,48,49,"basketball lineup, 2 parts, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-04,teaching,notes-lecture-series-01-09,4,50,50,"camera conditional probability, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-05,teaching,notes-lecture-series-01-09,5,52,52,Bernoulli coin example,in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-06,teaching,notes-lecture-series-01-09,6,53,53,two coin X example,in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-07,teaching,notes-lecture-series-01-09,7,54,55,dice sum pmf,in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-08,teaching,notes-lecture-series-01-09,8,56,56,two coin Y example,in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-09,teaching,notes-lecture-series-01-09,9,57,59,geometric N example plus verify sum equals 1,in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-10,teaching,notes-lecture-series-01-09,10,60,60,car lifetime example,in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-11,teaching,notes-lecture-series-01-09,11,65,65,"gas station pumps, 3 parts, NO solution",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-12,teaching,notes-lecture-series-01-09,12,66,66,"k probability function, 4 parts, NO solution (key sits in assignment 1 long Q2)",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-13,teaching,notes-lecture-series-01-09,13,67,69,"tune-ups, 3 parts, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-14,teaching,notes-lecture-series-01-09,14,70,71,"contractor forms, 4 parts, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-15,teaching,notes-lecture-series-01-09,15,72,73,"flashlight batteries, 4 parts, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-16,teaching,notes-lecture-series-01-09,16,80,81,"boards inspection, 3 parts, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-17,teaching,notes-lecture-series-01-09,17,82,83,"dice maximum M, 2 parts, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-18,teaching,notes-lecture-series-01-09,18,85,85,"cdf nondecreasing proof, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-19,teaching,notes-lecture-series-01-09,19,89,89,die roll E(X) example,in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-20,teaching,notes-lecture-series-01-09,20,93,93,"prove E[aX plus b], solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-21,teaching,notes-lecture-series-01-09,21,94,94,"E(X), E(X squared), E(2X+1) squared, answer given",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-22,teaching,notes-lecture-series-01-09,22,107,108,"freezer dealer, 4 parts, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-23,teaching,notes-lecture-series-01-09,23,109,111,"magazine orders, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-24,teaching,notes-lecture-series-01-09,24,124,125,"f(x) equals 2x, verify and P(X under 1/2), solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-25,teaching,notes-lecture-series-01-09,25,126,126,"continuous conditional probability, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-26,teaching,notes-lecture-series-01-09,26,127,129,"bus waiting times, 6 parts, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-27,teaching,notes-lecture-series-01-09,27,138,138,"exercise, two cdfs, NO solution",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-28,teaching,notes-lecture-series-01-09,28,139,139,"distribution function to density, NO solution",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-29,teaching,notes-lecture-series-01-09,29,142,142,"hospitalization E(Y), answer given",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-deck01-30,teaching,notes-lecture-series-01-09,30,146,147,"Pareto pdf, 5 parts, solved",in-scope,resolved,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt3-01,teaching,ppt3-discrete-prob-dist,1,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt3-02,teaching,ppt3-discrete-prob-dist,2,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt3-03,teaching,ppt3-discrete-prob-dist,3,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt3-04,teaching,ppt3-discrete-prob-dist,4,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt3-05,teaching,ppt3-discrete-prob-dist,5,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt3-06,teaching,ppt3-discrete-prob-dist,6,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt4-01,teaching,ppt4-continuous-prob-dist,1,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt4-02,teaching,ppt4-continuous-prob-dist,2,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt4-03,teaching,ppt4-continuous-prob-dist,3,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt4-04,teaching,ppt4-continuous-prob-dist,4,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt4-05,teaching,ppt4-continuous-prob-dist,5,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt4-06,teaching,ppt4-continuous-prob-dist,6,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt4-07,teaching,ppt4-continuous-prob-dist,7,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-lms-se-clt-01,teaching,lms-standard-error-clt,1,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-lms-se-clt-02,teaching,lms-standard-error-clt,2,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-lms-se-clt-03,teaching,lms-standard-error-clt,3,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-lms-se-clt-04,teaching,lms-standard-error-clt,4,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-lms-se-clt-05,teaching,lms-standard-error-clt,5,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt5-01,teaching,ppt5-estimation-summary,1,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt5-02,teaching,ppt5-estimation-summary,2,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt5-03,teaching,ppt5-estimation-summary,3,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt5-04,teaching,ppt5-estimation-summary,4,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-ppt5-05,teaching,ppt5-estimation-summary,5,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-lms-theory-01,teaching,lms-theory-of-estimation,1,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-lms-theory-02,teaching,lms-theory-of-estimation,2,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-lms-theory-03,teaching,lms-theory-of-estimation,3,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-lms-theory-04,teaching,lms-theory-of-estimation,4,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-lms-theory-05,teaching,lms-theory-of-estimation,5,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-lms-theory-06,teaching,lms-theory-of-estimation,6,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+teach-lms-theory-07,teaching,lms-theory-of-estimation,7,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+cheb-Q1,chebyshev,L10-11-chebyshev-deck,1,,,,in-scope,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+cheb-Q2,chebyshev,L10-11-chebyshev-deck,2,,,,in-scope,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+cheb-Q3,chebyshev,L10-11-chebyshev-deck,3,,,,in-scope,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2025-1-MCQ-01,assignments-2025,assignment-2025-26-1,1,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-MCQ-02,assignments-2025,assignment-2025-26-1,2,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-MCQ-03,assignments-2025,assignment-2025-26-1,3,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-MCQ-04,assignments-2025,assignment-2025-26-1,4,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-MCQ-05,assignments-2025,assignment-2025-26-1,5,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-MCQ-06,assignments-2025,assignment-2025-26-1,6,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-MCQ-07,assignments-2025,assignment-2025-26-1,7,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-MCQ-08,assignments-2025,assignment-2025-26-1,8,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-MCQ-09,assignments-2025,assignment-2025-26-1,9,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-MCQ-10,assignments-2025,assignment-2025-26-1,10,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-SHORT-01,assignments-2025,assignment-2025-26-1,11,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-SHORT-02,assignments-2025,assignment-2025-26-1,12,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-SHORT-03,assignments-2025,assignment-2025-26-1,13,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-SHORT-04,assignments-2025,assignment-2025-26-1,14,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-SHORT-05,assignments-2025,assignment-2025-26-1,15,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-SHORT-06,assignments-2025,assignment-2025-26-1,16,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-LONG-01,assignments-2025,assignment-2025-26-1,17,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-LONG-02,assignments-2025,assignment-2025-26-1,18,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-LONG-03,assignments-2025,assignment-2025-26-1,19,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-LONG-04,assignments-2025,assignment-2025-26-1,20,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-APP-01,assignments-2025,assignment-2025-26-1,21,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-APP-02,assignments-2025,assignment-2025-26-1,22,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-APP-03,assignments-2025,assignment-2025-26-1,23,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-1-APP-04,assignments-2025,assignment-2025-26-1,24,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-A-01,assignments-2025,assignment-2025-26-2,1,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-A-02,assignments-2025,assignment-2025-26-2,2,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-A-03,assignments-2025,assignment-2025-26-2,3,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-A-04,assignments-2025,assignment-2025-26-2,4,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-A-05,assignments-2025,assignment-2025-26-2,5,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-A-06,assignments-2025,assignment-2025-26-2,6,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-A-07,assignments-2025,assignment-2025-26-2,7,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-A-08,assignments-2025,assignment-2025-26-2,8,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-A-09,assignments-2025,assignment-2025-26-2,9,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-A-10,assignments-2025,assignment-2025-26-2,10,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-A-11,assignments-2025,assignment-2025-26-2,11,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-A-12,assignments-2025,assignment-2025-26-2,12,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-B-01,assignments-2025,assignment-2025-26-2,13,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-B-02,assignments-2025,assignment-2025-26-2,14,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-B-03,assignments-2025,assignment-2025-26-2,15,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-B-04,assignments-2025,assignment-2025-26-2,16,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-B-05,assignments-2025,assignment-2025-26-2,17,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-B-06,assignments-2025,assignment-2025-26-2,18,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-B-07,assignments-2025,assignment-2025-26-2,19,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-B-08,assignments-2025,assignment-2025-26-2,20,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-C-01,assignments-2025,assignment-2025-26-2,21,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-C-02,assignments-2025,assignment-2025-26-2,22,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-C-03,assignments-2025,assignment-2025-26-2,23,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-C-04,assignments-2025,assignment-2025-26-2,24,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-D-01,assignments-2025,assignment-2025-26-2,25,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-D-02,assignments-2025,assignment-2025-26-2,26,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-D-03,assignments-2025,assignment-2025-26-2,27,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+asn2025-2-D-04,assignments-2025,assignment-2025-26-2,28,,,,in-scope,pending,unsearched,,reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md,,gross
+mte-M24-A1,mte,paper-mte-2024-25,1,,,"Poisson mean 0.5, Y=2X, E and Var MCQ",in-scope,resolved,CONCEPT,standard bank skeleton,reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M24-A2,mte,paper-mte-2024-25,2,,,triangular pdf CDF MCQ,in-scope,resolved,FAMILY,"G&K section 8-1-5, triangular distribution",reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M24-A3,mte,paper-mte-2024-25,3,,,"Chebyshev forms, pick the false ones MCQ",in-scope,resolved,CONCEPT,definitions in G&K / Devore,reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M24-B1,mte,paper-mte-2024-25,4,,,"P(X=1)=P(X=2), P(Y=2)=P(Y=3), Var(X-2Y)",in-scope,resolved,VERBATIM,"G&K Poisson chapter example (""Find the variance of X - 2Y"", lambda=2, mu=3, answer 14)",reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M24-B2,mte,paper-mte-2024-25,5,,,"phone speech exponential, parameter 1/4",in-scope,resolved,RESKIN,"G&K chapter 5 exercise 10, ""lady speaks on the telephone"" f(x)=Ae^(-x/5) [Shivaji Univ 1990]; mean 5 changed to 4",reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M24-B3,mte,paper-mte-2024-25,6,,,"U(-1,1) Chebyshev bound versus actual",in-scope,resolved,RESKIN,"G&K exercise 15(b) with interval (-1,3), bound 1/4, exact 0; interval changed to (-1,1)",reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M24-B4,mte,paper-mte-2024-25,7,,,"trains every 15 min, 4 AM, arrival 9:00-9:30",in-scope,resolved,FAMILY + CIRCULATING,"G&K subway example (uniform wait on (0,30), answer 1/3); the 4 AM form circulates on StudyX, Gauthmath, Transtutors",reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M24-C1,mte,paper-mte-2024-25,8,,,"rainfall N(2.6, 34.5) four parts + binomial week; binomial mean 5/3 part",in-scope,resolved,OPEN,"not found in Devore, G&K, H&T, Davenport OCR, or GGD volume 1 OCR; verified Palaniammal and Sundarapandian texts are absent, so their contents have not been searched",reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M25-Q1,mte,paper-mte-2025-26,1,,,density integral MCQ,in-scope,resolved,CONCEPT,axiom of total mass,reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M25-Q2,mte,paper-mte-2025-26,2,,,Poisson mean e MCQ,in-scope,resolved,CONCEPT,substitution drill,reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M25-Q3,mte,paper-mte-2025-26,3,,,sufficiency MCQ,in-scope,resolved,CONCEPT,"H&T section 6.7, sufficient statistics",reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M25-Q4,mte,paper-mte-2025-26,4,,,"f = kx^3(4-x)^2, find k, mean, variance",in-scope,resolved,RESKIN + CIRCULATING,"ABES Institute sample paper Q6(b) carries the same support and density and asks for k, mean and standard deviation; the MTE changes standard deviation to variance; a Brainly repost carries the same family; originating book still open",reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M25-Q5,mte,paper-mte-2025-26,5,,,"Chebyshev find c, mu=10, var=4, bound 0.04",in-scope,resolved,DECK,L10-11 Chebyshev deck Q2(iv) word for word,reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M25-Q6,mte,paper-mte-2025-26,6,,,"telephone conversation, mean 3",in-scope,resolved,RESKIN + CIRCULATING,G&K chapter 5 exercise 10 re-skinned (mean 5 to 3); the same text circulates as a numbered item on StudyX,reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M25-Q7,mte,paper-mte-2025-26,7,,,"machine life 7 years, 9 samples",in-scope,resolved,RESKIN,"Walpole, Myers, Myers and Ye, Probability and Statistics for Engineers and Scientists, Problem 8.25 in the 8e index and retained in 9e; a university sheet identifies page 242; the exam deletes ""bread-making"" and keeps part (a) with the same 7, 1, 9, 6.4 and 7.2 values",reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+mte-M25-Q8,mte,paper-mte-2025-26,8,,,(i) typist letters (ii) t^2 biased,in-scope,resolved,MIXED,"(i) circulating (Bartleby, StudyX, Studocu Poisson notes); (ii) G&K estimation chapter exercise 6, verbatim",reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance,,gross
+ete-E24S3-A1,ete,E24S3,1,,,"binomial mean, n=50 p=0.4",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-A2,ete,E24S3,2,,,"Chebyshev k=3, percentage within 3 sigma",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-A3,ete,E24S3,3,,,definition of unbiased estimator,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-A4,ete,E24S3,4,,,"testing H0 mu=1000, one-sided choice",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-A5,ete,E24S3,5,,,"CLT standard error, var 400 n=100",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-B1,ete,E24S3,6,,,"Chebyshev inverse: P(-2<X<8) >= 21/25, find E(X), Var(X)",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-B2,ete,E24S3,7,,,"pdf ax^2+bx on (0,1) with mean 0.5, find a, b",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-B3,ete,E24S3,8,,,"bombs 1/5, six dropped, at least two and exactly two",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-B4,ete,E24S3,9,,,"binomial 5 trials, mean+var=9/5, find pmf",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-B5,ete,E24S3,10,,,t-test on blood sugar data,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-B6,ete,E24S3,11,,,inoculation chi-square table,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-C1,ete,E24S3,12,,,(a) type I/II errors (b) MLE of Poisson,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-C2,ete,E24S3,13,,,"(a) t-test chickens (b) Y, Z, T unbiased, best estimator","PARTIAL, part b fine",resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-D1,ete,E24S3,14,,,"(a) pdf kx^2(1-x^3) find k, mean, variance (b) normal, 2000 students over 60",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S3-D2,ete,E24S3,15,,,"one-way ANOVA, rats food groups",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-A1,ete,E25S3,1,,,E[2X+3] with E[X]=5,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-A2,ete,E25S3,2,,,condition for unbiasedness,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-A3,ete,E25S3,3,,,"binomial(180, 1/3) mean and variance",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-A4,ete,E25S3,4,,,type II error definition,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-A5,ete,E25S3,5,,,standard normal mean,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-B1,ete,E25S3,6,,,"Chebyshev mu=10 var=4: P(5<X<15), P(|X-10|>=3)",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-B2,ete,E25S3,7,,,"pens defective 1/10, 12 pens, exactly 2 / at least 2 / none",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-B3,ete,E25S3,8,,,"pmf table -3, 6, 9: E(X), E(X^2), E((2X+1)^2)",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-B4,ete,E25S3,9,,,Bayes estimator of Poisson theta,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-B5,ete,E25S3,10,,,"population 2,4,6,8: sample mean unbiased",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-C1,ete,E25S3,11,,,"(a) 95% CI, 81 families (b) subway trains wait at least 20 min","PARTIAL, part b fine, part a BOUNDARY",resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-C2,ete,E25S3,12,,,MLE of Poisson,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-D1,ete,E25S3,13,,,"chi-square, hair and eye colour",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S3-D2,ete,E25S3,14,,,"ANOVA, blood pressure techniques",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-A1,ete,E24S4,1,,,unbiased estimator definition,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-A2,ete,E24S4,2,,,type I error definition,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-A3,ete,E24S4,3,,,P(exact value)=0 for continuous rv,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-A4,ete,E24S4,4,,,exponential pdf identification,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-A5,ete,E24S4,5,,,standard normal mean and variance,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-B1,ete,E24S4,6,,,"Bayes estimator of theta, exponential likelihood",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-B2,ete,E24S4,7,,,"sufficient estimators, exponential population",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-B3,ete,E24S4,8,,,"Chebyshev inverse: P(4<X<16) >= 24/25, find E(X), Var(X)",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-B4,ete,E24S4,9,,,"normal inverse: 31% under 45, 8% over 64, find mean, sd",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-B5,ete,E24S4,10,,,"two dice: pmf table, distribution function",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-C1,ete,E24S4,11,,,"(a) t CI, tensile strength (b) repair time exponential lambda=1/3","PARTIAL, part b fine",resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-C2,ete,E24S4,12,,,MLE for normal mu and sigma^2,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-D1,ete,E24S4,13,,,"chi-square, packaging machines",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E24S4-D2,ete,E24S4,14,,,"ANOVA, database query times",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-A1,ete,E25S4,1,,,random variable definition,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-A2,ete,E25S4,2,,,CDF non-decreasing,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-A3,ete,E25S4,3,,,Chebyshev purpose (bounding),IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-A4,ete,E25S4,4,,,"N(0,1) properties",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-A5,ete,E25S4,5,,,"exponential use, waiting time",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-A6,ete,E25S4,6,,,uniform mean (a+b)/2,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-A7,ete,E25S4,7,,,t-test small sample,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-A8,ete,E25S4,8,,,level of significance,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-A9,ete,E25S4,9,,,critical region,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-A10,ete,E25S4,10,,,F-test compares variances,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-B1,ete,E25S4,11,,,"pmf table with k, P(X<6), distribution function, min a",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-B2,ete,E25S4,12,,,sample mean sufficient for Poisson lambda,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-B3,ete,E25S4,13,,,"T1, T2 unbiased, efficiency comparison",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-B4,ete,E25S4,14,,,"method of moments for normal mu, sigma^2",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-B5,ete,E25S4,15,,,"95% CI, t table, leaf weights",BOUNDARY,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-B6,ete,E25S4,16,,,"chi-square, gender and colour",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-C1,ete,E25S4,17,,,"10,000 lamps, normal life, first 800 hours and 800-1200",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-C2,ete,E25S4,18,,,"t-test, two medicine groups",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25S4-D1,ete,E25S4,19,,,"ANOVA, household income, three areas",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q1,ete,E25SUM,1,,,random variable definition,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q2,ete,E25SUM,2,,,what a confidence interval provides,BOUNDARY,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q3,ete,E25SUM,3,,,binomial mean np,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q4,ete,E25SUM,4,,,what MLE maximizes,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q5,ete,E25SUM,5,,,type II error,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q6,ete,E25SUM,6,,,one-way ANOVA test statistic,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q7,ete,E25SUM,7,,,F-test purpose,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q8,ete,E25SUM,8,,,variance non-negative,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q9,ete,E25SUM,9,,,CLT applicability,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q10,ete,E25SUM,10,,,sampling distribution approaches normal,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q11,ete,E25SUM,11,,,"MLE, exponential lambda",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q12,ete,E25SUM,12,,,"pmf table, find k, P(1.5<X<3.5)",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q13,ete,E25SUM,13,,,"800 families, 4 children, binomial counts",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q14,ete,E25SUM,14,,,"joint pmf K(2x+3y), value of K, marginal of X",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q15,ete,E25SUM,15,,,"pmf -3, 6, 9: E(X), E(X^2), E((2X+1)^2)",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q16,ete,E25SUM,16,,,"t-test, phone call length",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q17,ete,E25SUM,17,,,"Poisson, defective bottles 0.1%, 500 per box, 100 boxes",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-E25SUM-Q18,ete,E25SUM,18,,,"F-test, hotel room rates",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S3-A1,ete,R25S3,1,,,independence: E[XY]=E[X]E[Y],IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S3-A2,ete,R25S3,2,,,consistency of Tn (bias and variance to 0),IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S3-A3,ete,R25S3,3,,,"sample size up, standard error down",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S3-B1,ete,R25S3,4,,,"independent exponential shelf lives, joint probability",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S3-B2,ete,R25S3,5,,,"Poisson demand, car hire firm, mean 1.5",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S3-B3,ete,R25S3,6,,,"t-test and confidence limits, part weights",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S3-B4,ete,R25S3,7,,,"MLE of alpha, show biased",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S3-C1,ete,R25S3,8,,,"F-test, two populations variance",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S4-A1,ete,R25S4,1,,,discrete rv definition,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S4-A2,ete,R25S4,2,,,which distribution has mean equal to variance (Poisson),IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S4-A3,ete,R25S4,3,,,consistency definition,IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S4-A4,ete,R25S4,4,,,type I error true/false,OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S4-B1,ete,R25S4,5,,,"heights normal, over 6 feet, expected count",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S4-B2,ete,R25S4,6,,,"literate 20%, binomial, investigators reporting 3 or less",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S4-B3,ete,R25S4,7,,,"bulb life, claim test (t)",OUT,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S4-B4,ete,R25S4,8,,,"95% CI, accidents per crossing",BOUNDARY,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+ete-R25S4-C1,ete,R25S4,9,,,"f(x)=6x(1-x): k with P(X<k)=P(X>k), CDF",IN,resolved,unsearched,,reports/17-ETE-INTAKE.md,,gross
+asn2024-1-Q01,assignments-2024,assignment-2024-25-1,1,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q02,assignments-2024,assignment-2024-25-1,2,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q03,assignments-2024,assignment-2024-25-1,3,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q04,assignments-2024,assignment-2024-25-1,4,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q05,assignments-2024,assignment-2024-25-1,5,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q06,assignments-2024,assignment-2024-25-1,6,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q07,assignments-2024,assignment-2024-25-1,7,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q08,assignments-2024,assignment-2024-25-1,8,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q09,assignments-2024,assignment-2024-25-1,9,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q10,assignments-2024,assignment-2024-25-1,10,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q11,assignments-2024,assignment-2024-25-1,11,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q12,assignments-2024,assignment-2024-25-1,12,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q13,assignments-2024,assignment-2024-25-1,13,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q14,assignments-2024,assignment-2024-25-1,14,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-1-Q15,assignments-2024,assignment-2024-25-1,15,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q01,assignments-2024,assignment-2024-25-2,1,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q02,assignments-2024,assignment-2024-25-2,2,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q03,assignments-2024,assignment-2024-25-2,3,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q04,assignments-2024,assignment-2024-25-2,4,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q05,assignments-2024,assignment-2024-25-2,5,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q06,assignments-2024,assignment-2024-25-2,6,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q07,assignments-2024,assignment-2024-25-2,7,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q08,assignments-2024,assignment-2024-25-2,8,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q09,assignments-2024,assignment-2024-25-2,9,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q10,assignments-2024,assignment-2024-25-2,10,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q11,assignments-2024,assignment-2024-25-2,11,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q12,assignments-2024,assignment-2024-25-2,12,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q13,assignments-2024,assignment-2024-25-2,13,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q14,assignments-2024,assignment-2024-25-2,14,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q15,assignments-2024,assignment-2024-25-2,15,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q16,assignments-2024,assignment-2024-25-2,16,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q17,assignments-2024,assignment-2024-25-2,17,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q18,assignments-2024,assignment-2024-25-2,18,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q19,assignments-2024,assignment-2024-25-2,19,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-2-Q20,assignments-2024,assignment-2024-25-2,20,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q01,assignments-2024,assignment-2024-25-3,1,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q02,assignments-2024,assignment-2024-25-3,2,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q03,assignments-2024,assignment-2024-25-3,3,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q04,assignments-2024,assignment-2024-25-3,4,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q05,assignments-2024,assignment-2024-25-3,5,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q06,assignments-2024,assignment-2024-25-3,6,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q07,assignments-2024,assignment-2024-25-3,7,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q08,assignments-2024,assignment-2024-25-3,8,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q09,assignments-2024,assignment-2024-25-3,9,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q10,assignments-2024,assignment-2024-25-3,10,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q11,assignments-2024,assignment-2024-25-3,11,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q12,assignments-2024,assignment-2024-25-3,12,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q13,assignments-2024,assignment-2024-25-3,13,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q14,assignments-2024,assignment-2024-25-3,14,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q15,assignments-2024,assignment-2024-25-3,15,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q16,assignments-2024,assignment-2024-25-3,16,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q17,assignments-2024,assignment-2024-25-3,17,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q18,assignments-2024,assignment-2024-25-3,18,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q19,assignments-2024,assignment-2024-25-3,19,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q20,assignments-2024,assignment-2024-25-3,20,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q21,assignments-2024,assignment-2024-25-3,21,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q22,assignments-2024,assignment-2024-25-3,22,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q23,assignments-2024,assignment-2024-25-3,23,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q24,assignments-2024,assignment-2024-25-3,24,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-3-Q25,assignments-2024,assignment-2024-25-3,25,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q01,assignments-2024,assignment-2024-25-3-ep2,1,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q02,assignments-2024,assignment-2024-25-3-ep2,2,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q03,assignments-2024,assignment-2024-25-3-ep2,3,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q04,assignments-2024,assignment-2024-25-3-ep2,4,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q05,assignments-2024,assignment-2024-25-3-ep2,5,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q06,assignments-2024,assignment-2024-25-3-ep2,6,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q07,assignments-2024,assignment-2024-25-3-ep2,7,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q08,assignments-2024,assignment-2024-25-3-ep2,8,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q09,assignments-2024,assignment-2024-25-3-ep2,9,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q10,assignments-2024,assignment-2024-25-3-ep2,10,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q11,assignments-2024,assignment-2024-25-3-ep2,11,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q12,assignments-2024,assignment-2024-25-3-ep2,12,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q13,assignments-2024,assignment-2024-25-3-ep2,13,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q14,assignments-2024,assignment-2024-25-3-ep2,14,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q15,assignments-2024,assignment-2024-25-3-ep2,15,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q16,assignments-2024,assignment-2024-25-3-ep2,16,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q17,assignments-2024,assignment-2024-25-3-ep2,17,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q18,assignments-2024,assignment-2024-25-3-ep2,18,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q19,assignments-2024,assignment-2024-25-3-ep2,19,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q20,assignments-2024,assignment-2024-25-3-ep2,20,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q21,assignments-2024,assignment-2024-25-3-ep2,21,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q22,assignments-2024,assignment-2024-25-3-ep2,22,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q23,assignments-2024,assignment-2024-25-3-ep2,23,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q24,assignments-2024,assignment-2024-25-3-ep2,24,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-ep2-Q25,assignments-2024,assignment-2024-25-3-ep2,25,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q01,assignments-2024,assignment-2024-25-4,1,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q02,assignments-2024,assignment-2024-25-4,2,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q03,assignments-2024,assignment-2024-25-4,3,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q04,assignments-2024,assignment-2024-25-4,4,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q05,assignments-2024,assignment-2024-25-4,5,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q06,assignments-2024,assignment-2024-25-4,6,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q07,assignments-2024,assignment-2024-25-4,7,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q08,assignments-2024,assignment-2024-25-4,8,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q09,assignments-2024,assignment-2024-25-4,9,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q10,assignments-2024,assignment-2024-25-4,10,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q11,assignments-2024,assignment-2024-25-4,11,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q12,assignments-2024,assignment-2024-25-4,12,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q13,assignments-2024,assignment-2024-25-4,13,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q14,assignments-2024,assignment-2024-25-4,14,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q15,assignments-2024,assignment-2024-25-4,15,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-4-Q16,assignments-2024,assignment-2024-25-4,16,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q01,assignments-2024,assignment-2024-25-5,1,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q02,assignments-2024,assignment-2024-25-5,2,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q03,assignments-2024,assignment-2024-25-5,3,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q04,assignments-2024,assignment-2024-25-5,4,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q05,assignments-2024,assignment-2024-25-5,5,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q06,assignments-2024,assignment-2024-25-5,6,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q07,assignments-2024,assignment-2024-25-5,7,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q08,assignments-2024,assignment-2024-25-5,8,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q09,assignments-2024,assignment-2024-25-5,9,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q10,assignments-2024,assignment-2024-25-5,10,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q11,assignments-2024,assignment-2024-25-5,11,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q12,assignments-2024,assignment-2024-25-5,12,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q13,assignments-2024,assignment-2024-25-5,13,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q14,assignments-2024,assignment-2024-25-5,14,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q15,assignments-2024,assignment-2024-25-5,15,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q16,assignments-2024,assignment-2024-25-5,16,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q17,assignments-2024,assignment-2024-25-5,17,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q18,assignments-2024,assignment-2024-25-5,18,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q19,assignments-2024,assignment-2024-25-5,19,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q20,assignments-2024,assignment-2024-25-5,20,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q21,assignments-2024,assignment-2024-25-5,21,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q22,assignments-2024,assignment-2024-25-5,22,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q23,assignments-2024,assignment-2024-25-5,23,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+asn2024-5-Q24,assignments-2024,assignment-2024-25-5,24,,,,pending,pending,unsearched,,reports/18-CORPUS-ACCOUNTING.md,,gross
+deck-L17-01,four-decks,sp-l1-7,1,31,31,faculty computer setup selection,IN,resolved,exact-text lead,Devore,deck wording matched in local Devore text,,gross
+deck-L17-02,four-decks,sp-l1-7,2,33,33,basketball starting-lineup counting,IN,resolved,exact-text lead,Devore Section 2.1 Exercise 1,local Devore text and prior independent confirmations,,gross
+deck-L17-03,four-decks,sp-l1-7,3,35,35,digital camera memory-card conditional probability,IN,resolved,exact-text lead,Devore,visual slide inspection and local Devore text,,gross
+deck-L17-04,four-decks,sp-l1-7,4,39,39,rare-disease diagnostic-test Bayes probability,IN,resolved,exact-text lead,Devore,visual slide inspection and local Devore text,,gross
+deck-L17-05,four-decks,sp-l1-7,5,54,54,gas-station pumps pmf probabilities,IN,resolved,exact match,Devore Example 2.3,visual slide inspection and local Devore text,,gross
+deck-L17-06,four-decks,sp-l1-7,6,54,54,pmf table with k and CDF questions,IN,resolved,open,unknown,no exact source identifier recorded yet,,gross
+deck-L17-07,four-decks,sp-l1-7,7,55,55,automobile cylinder-count pmf,IN,resolved,exact-text lead,Devore,visual slide inspection and local Devore text,,gross
+deck-L17-08,four-decks,sp-l1-7,8,58,58,county planning forms pmf,IN,resolved,exact match,Devore Chapter 3 Exercise 14,local Devore text plus web exercise index,,gross
+deck-L17-09,four-decks,sp-l1-7,9,60,60,flashlight batteries until two acceptable,IN,resolved,exact-text lead,Devore,visual slide inspection and local Devore text,,gross
+deck-L17-10,four-decks,sp-l1-7,10,68,68,computer-board inspection outcomes,IN,resolved,exact-text lead,Devore,visual slide inspection and local Devore text,,gross
+deck-L17-11,four-decks,sp-l1-7,11,70,70,maximum of two fair dice pmf and CDF,IN,resolved,exact-text lead,Devore,visual slide inspection and local Devore text,,gross
+deck-L17-12,four-decks,sp-l1-7,12,73,73,prove CDF is nondecreasing,IN,resolved,exact-text lead,Devore,visual slide inspection and local Devore text,,gross
+deck-L17-13,four-decks,sp-l1-7,13,82,82,pmf on minus 3 6 9 with transformed expectation,IN,resolved,open,unknown,no exact source identifier recorded yet,,gross
+deck-L89-01,four-decks,sp-l8-9,1,17,17,two-bus uniform waiting-time pdf,IN,resolved,exact match,Devore Chapter 4 Exercise 8,visual slide inspection plus local and web exercise index,,gross
+deck-L89-02,four-decks,sp-l8-9,2,29,29,CDF to density and interval probability,IN,resolved,open,unknown,no exact source identifier recorded yet,,gross
+deck-L89-03,four-decks,sp-l8-9,3,32,32,kidney-treatment hospitalization expectation,IN,resolved,probable exact-text lead,Devore,deck wording resembles Devore exercise and needs exact identifier,,gross
+deck-L89-04,four-decks,sp-l8-9,4,36,36,Pareto moments and existence conditions,IN,resolved,probable exact-text lead,Devore Exercise 10,slide itself says introduced in Exercise 10,,gross
+deck-L1213-01,four-decks,sp-l12-13-discrete,1,3,5,exactly three heads in five coin tosses,IN,resolved,open,unknown,no exact source identifier recorded yet,,gross
+deck-L1213-02,four-decks,sp-l12-13-discrete,2,13,16,twelve pens with ten percent defective,IN,resolved,family lead,Gupta and Kapoor defective-product family,exact twelve-pen version not found in current text sources,,gross
+deck-L1213-03,four-decks,sp-l12-13-discrete,3,17,18,irregular die even outcomes in ten throws,IN,resolved,open,unknown,no exact source identifier recorded yet,,gross
+deck-L1213-04,four-decks,sp-l12-13-discrete,4,25,25,Poisson relation P1 equals 0.2 P2,IN,resolved,open,unknown,no exact source identifier recorded yet,,gross
+deck-L1213-05,four-decks,sp-l12-13-discrete,5,26,26,Poisson calls with exactly two in each of five minutes,IN,resolved,open,unknown,no exact source identifier recorded yet,,gross
+deck-L1213-06,four-decks,sp-l12-13-discrete,6,27,27,life-insurance claims Poisson approximation,IN,resolved,open,unknown,no exact source identifier recorded yet,,gross
+deck-L1415-01,four-decks,sp-l14-15-continuous,1,6,6,uniform distribution from 2 to 6,IN,resolved,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slide,,gross
+deck-L1415-02,four-decks,sp-l14-15-continuous,2,26,26,standard normal probability below 2,IN,resolved,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slide,,gross
+deck-L1415-03,four-decks,sp-l14-15-continuous,3,27,27,standard normal probability below minus 2,IN,resolved,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slide,,gross
+deck-L1415-04,four-decks,sp-l14-15-continuous,4,29,31,normal N 8 5 probability below 8.6,IN,resolved,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slides,,gross
+deck-L1415-05,four-decks,sp-l14-15-continuous,5,32,33,normal N 8 5 probability above 8.6,IN,resolved,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slides,,gross
+deck-L1415-06,four-decks,sp-l14-15-continuous,6,35,37,normal N 8 5 lower twenty-percent cutoff,IN,resolved,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slides,,gross
+deck-L1415-07,four-decks,sp-l14-15-continuous,7,42,43,exponential interarrival under three minutes at fifteen per hour,IN,resolved,verbatim slide source,McClave Statistics for Business and Economics 6e,printed Pearson copyright and book title on slides,,gross

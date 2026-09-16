@@ -15,64 +15,73 @@ hold, with scope notes, because the user asked for the complete count.
 | 4 | lms-standard-error-clt | 19 | 5 | locked register |
 | 5 | ppt5-estimation-summary | 26 | 5 | locked register |
 | 6 | lms-theory-of-estimation | 40 | 7 (2 unique) | locked register |
-| 7 | L10-11 Chebyshev deck | 10 | 3 | text layer, counted 16 Sep (Q1, Q2, Q3) |
+| 7 | L10-11 Chebyshev deck | 9 | 3 | text layer, counted 16 Sep (Q1, Q2, Q3) |
 | 8 | assignment 2025-26 #1 | 6 | 24 | locked register |
 | 9 | assignment 2025-26 #2 | 4 | 28 | locked register |
 | 10 | MTE papers 2024-25 + 2025-26 | 5 question pages | 16 | locked register |
 | 11 | ETE, summer, re-sess papers (7 papers) | 15 | 97 | report 17, counted 16 Sep |
 | 12 | assignment 2024-25 #1, #2, #3, #3-ep2, #4, #5 | 15 | 125 | counted 16 Sep (15+20+25+25+16+24) |
-| 13 | S&P L1-7 / L8-9 / L12-13 / L14-15 decks | 221 | 25 | read 16 Sep evening (11+3+6+5) |
-| | TOTAL EXACT | | 378 | |
+| 13 | S&P L1-7 / L8-9 / L12-13 / L14-15 decks | 217 | 30 | page and block audit, 16 Sep (13+4+6+7) |
+| | TOTAL GROSS INSTANCES | | 383 | |
 
 Note on row 12: converted by the parallel working session; counted read-only from its
-working tree (uncommitted at the time of writing). Row 5 and row 6 overlap: of the 12
-blocks, 10 are the same five items counted once each in rows 5 and 6; the deep 2-unique
-figure stands.
+working tree (uncommitted at the time of writing). The total is a gross count of question
+instances. Row 5 and row 6 alone contain five duplicated problem families, so 383 must not
+be described as a deduplicated content count. Removing only that verified overlap gives an
+upper bound of 378 content families before the remaining cross-corpus duplicates are
+resolved.
 
-## Pending enumeration (the four decks are now read; the bundle remains)
+## Deck recount and pending enumeration
 
 The four lecture decks were fully read in the evening pass; their rows below carry final
 counts. The 2025-26 assignment bundle (#3 to #5) remains as near-duplicate material.
 
 | corpus | pages | estimate | note |
 |---|---|---:|---|
-| S&P L1-7 deck | 109 | 11 | read 16 Sep: Q2, Q3 (Devore exercises), pumps example, table example, -3/6/9 drill; 6 image-only markers |
-| S&P L8-9 deck | 38 | 3 | read 16 Sep: F(x)=(x-1)^4/16 density problem, hospitalization E(Y)=8 days, 1 marker |
-| S&P L12-13 deck | 29 | 6 | read 16 Sep: 5-coin, pens problem, irregular die, Poisson examples 1 to 3 |
-| S&P L14-15 deck | 45 | 5 | read 16 Sep: uniform 2 to 6, N(8,5) family, 20% cutoff, exponential 15/hr (Mc Clave style) |
-| 2025-26 assignment bundle #3, #4, #5 | (18-page bundle) | ~65 | near-duplicate sets of the 2024-25 assignments; spot checks match |
+| S&P L1-7 deck | 108 | 13 | page audit: 13 blocks, including two image-based blocks missed by text-marker counting |
+| S&P L8-9 deck | 37 | 4 | page audit: bus waiting-time pdf, CDF-to-pdf, hospitalization E(Y), Pareto moments |
+| S&P L12-13 deck | 28 | 6 | page audit: 5-coin, pens problem, irregular die, Poisson examples 1 to 3 |
+| S&P L14-15 deck | 44 | 7 | page audit: uniform example; two standard-normal examples; two N(8,5) probability examples; inverse 20% cutoff; exponential 15/hr |
+| 2025-26 assignment bundle #3, #4, #5 | (17-page bundle) | ~65 | near-duplicate sets of the 2024-25 assignments; spot checks match |
 | lms-MLE (out of scope) | 16 | ~6 | labeled examples, out of MTE syllabus |
 | lms-MOM (out of scope) | 11 | unlabeled | not counted by rule |
 
 Key finding: all of these PDFs carry clean text layers. The vision conversion pipeline is
-NOT required to count or read their questions; it remains useful only for archive-grade
-page images. The four decks are now read (25 blocks final). Only the bundle's #3 to #5
+not required for most text, but it is required to verify image-based blocks that the text
+layer omits. The earlier marker-only pass missed three such blocks. The four decks are now
+read (30 blocks). Only the bundle's #3 to #5
 (~65 near-duplicate blocks) remains from this table.
 
 ## Totals
 
-- Exact, enumerated now: 378 blocks (353 from the daytime pass plus 25 from the four
+- Exact gross instances enumerated now: 383 blocks (353 from the daytime pass plus 30 from the four
   lecture decks read in the evening pass).
 - Pending: the 2025-26 assignment bundle #3 to #5, about 65 blocks, near-duplicates of the
   2024-25 sets (spot checks match on airframes, Bayes, hotel rates).
-- Corpus-wide: 378 exact now; adding the bundle's near-duplicate ~65 arrives at roughly
-  443 gross. Net of known duplicates: roughly 378.
+- Corpus-wide: 383 exact gross instances now; adding the bundle's near-duplicate ~65
+  arrives at roughly 448 gross. A net unique-content total is not yet defensible. The only
+  current bound is at most 378 after removing the five verified row-5/row-6 overlaps, and
+  it will fall as the remaining duplicate families are mapped.
 
 ## MTE-scope running figure (what the current study pool can draw on)
 
-128 (U01 lock: 60 teaching + 52 assignments + 16 papers) + 56 IN from the ETE intake
+128 gross instances (U01 lock: 60 teaching + 52 assignments + 16 papers) + 56 IN from the ETE intake
 (+3 boundary, +3 partial) + the in-scope part of the 2024-25 assignments (probability and
-distribution sets #1 and #2, 35 blocks, plus estimation-property parts of #3) + the 25
+distribution sets #1 and #2, 35 blocks, plus estimation-property parts of #3) + the 30
 blocks from the four decks read tonight (all four decks are MTE-syllabus material)
-= roughly 245 to 255 blocks. Exact after the ledger pass.
+= roughly 250 to 260 gross usable instances. The unique-content count remains pending.
 
-## Known duplicates (not double counted)
+## Known duplicates
 
 - asgn-copy equals assignment-2 (sha-verified earlier).
 - SE/CLT trash "(1)" twin (sha-verified earlier).
 - 2025-26 assignment bundle #3 to #5 versus 2024-25 #3, #3-ep2, #4, #5: same sets
   recycled across years; spot checks show minor wording edits.
 - L-deck questions versus notes/PPT decks: overlap not yet assessed (ledger pass).
+
+These duplicates are present in the gross total above. They are listed here so a later
+content-family ledger can remove them once, with evidence, rather than mixing gross and
+net figures.
 
 ## Rules held
 
