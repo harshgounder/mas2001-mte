@@ -85,11 +85,21 @@ ledger.
 | Gupta and Kapoor (FMS) | FULL TEXT on disk (college mirror), diffed; 13+ item matches |
 | Hogg Tanis Zimmerman 9e | FULL TEXT on disk, diffed |
 | Palaniammal, Probability and Random Processes | the archive copy turned out to be Davenport (see correction); genuine copies gated (ResearchGate, Academia) |
-| GGD, Outline of Statistical Theory Vol 1 | scan on disk, OCR RUNNING (started 17:18) |
+| GGD, Outline of Statistical Theory Vol 1 | scan on disk, OCR COMPLETE, swept: classical exercise sets (items attributed to Parzen, Hoel, Banach, Bizley); contains a DIFFERENT pens problem (2.21, 100 from 1,000 with 10 defective) and a different insurance problem (5.17); no match for our opens |
 | Feller Vol 1 | gated on archive.org (lending 401) and Scribd |
 | Mc Clave, Statistics for Business and Economics | gated (archive lending; slides carry its style, L14-15 deck) |
 | Sundarapandian | gated (Scribd, ResearchGate); not on archive.org |
 | Devore 8e PDF | mirrors 403; 9e serves the diff |
+
+## Opens: working verdict after the OCR wave
+
+The pens (12, 1/10), rain (N(2.6, 34.5)) and k x^3 (4-x)^2 items are NOT in any acquired
+text: Devore 9e, Gupta and Kapoor, Hogg and Tanis 9e, GGD volume one, Davenport. The pens
+item circulates verbatim on question-answer sites (askfilo x2, StudyX x2, Chegg); rain and
+density have no site copies found yet. Working class: "question-bank compilation or
+mutated custom", not the six known books. Remaining acquisition targets that could still
+close them: Palaniammal (both titles, gated everywhere), Sundarapandian (gated), Feller
+and Mc Clave (lending-only). Status stays OPEN with the class noted.
 
 ---
 Ledger v0.1, 16 Sep evening. Grows as hunts close. Evidence lives in report 16; counts in
