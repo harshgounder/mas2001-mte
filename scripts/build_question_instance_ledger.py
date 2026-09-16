@@ -335,16 +335,24 @@ def parse_deck_rows(csv_text):
 def parse_assignment_bundle_rows(csv_text):
     """Parse the 119 assignment-bundle rows from the bundle ledger CSV.
 
-    Every row carries its own page span, statement summary and evidence locator. The
-    bundle ledger is the structured source; this group adds no new interpretation.
+    Every row carries its own page span, statement summary, evidence locator,
+    and scope. The bundle ledger is the structured source; this group adds no
+    new interpretation.
     """
     rows = []
     reader = csv.DictReader(io.StringIO(csv_text, newline=""))
+    if reader.fieldnames and "scope" not in reader.fieldnames:
+        raise ValueError("bundle CSV header lacks required scope field")
     for record in reader:
         item_id = (record.get("item_id") or "").strip()
         if not item_id:
             continue
         order = (record.get("order") or "").strip()
+        scope = (record.get("scope") or "").strip()
+        if scope not in ("in-scope", "out-of-scope"):
+            raise ValueError(
+                "invalid scope %r on %s" % (scope, item_id)
+            )
         rows.append(
             {
                 "instance_id": item_id,
@@ -353,6 +361,7 @@ def parse_assignment_bundle_rows(csv_text):
                 "page_start": (record.get("page_start") or "").strip(),
                 "page_end": (record.get("page_end") or "").strip(),
                 "summary": (record.get("summary") or "").strip(),
+                "scope": scope,
                 "evidence_locator": (record.get("evidence_locator") or "").strip()
                 or BUNDLE_LEDGER_LOCATOR,
             }
@@ -527,7 +536,7 @@ def build_rows(ete_text, mte_text, deck_csv_text, register_text, bundle_csv_text
                 page_start=parsed["page_start"],
                 page_end=parsed["page_end"],
                 summary=parsed["summary"],
-                scope="in-scope",
+                scope=parsed["scope"],
                 description_state=DESCRIPTION_RESOLVED,
                 provenance_verdict=PROVENANCE_UNSEARCHED,
                 evidence_locator=parsed["evidence_locator"],

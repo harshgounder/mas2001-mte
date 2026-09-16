@@ -282,9 +282,11 @@ class PlaceholderHonestyChecks(unittest.TestCase):
         for row in bundle:
             self.assertEqual(row["description_state"], "resolved")
             self.assertTrue(row["summary"])
-            self.assertEqual(row["scope"], "in-scope")
             self.assertEqual(row["provenance_verdict"], "unsearched")
             self.assertTrue(row["instance_id"].startswith("asgnbundle-"))
+        scopes = Counter(row["scope"] for row in bundle)
+        self.assertEqual(scopes["in-scope"], 63)
+        self.assertEqual(scopes["out-of-scope"], 56)
 
     def test_bundle_group_pages_stay_in_assignment_ranges(self):
         ranges = {
@@ -301,6 +303,22 @@ class PlaceholderHonestyChecks(unittest.TestCase):
             low, high = ranges[row["source_label"]]
             self.assertTrue(low <= int(row["page_start"]) <= high, row["instance_id"])
             self.assertTrue(low <= int(row["page_end"]) <= high, row["instance_id"])
+
+    def test_bundle_scopes_by_source(self):
+        bundle = [
+            r for r in self.rows if r["corpus_group"] == "assignments-2025-bundle"
+        ]
+        by_source = {}
+        for row in bundle:
+            by_source.setdefault(row["source_label"], set()).add(row["scope"])
+        self.assertEqual(by_source["assignment-2025-26-bundle-1"], {"in-scope"})
+        self.assertEqual(by_source["assignment-2025-26-bundle-2"], {"in-scope"})
+        self.assertEqual(
+            by_source["assignment-2025-26-bundle-3"],
+            {"in-scope", "out-of-scope"},
+        )
+        self.assertEqual(by_source["assignment-2025-26-bundle-4"], {"out-of-scope"})
+        self.assertEqual(by_source["assignment-2025-26-bundle-5"], {"out-of-scope"})
 
 
 class StructuredParsingChecks(unittest.TestCase):
@@ -376,6 +394,31 @@ class StructuredParsingChecks(unittest.TestCase):
         self.assertEqual(len(rows), 30)
         self.assertTrue(all(r["description_state"] == "resolved" for r in rows))
         self.assertTrue(any("basketball lineup" in r["summary"] for r in rows))
+
+    def test_parse_bundle_valid_header_and_scope(self):
+        csv_text = (
+            "item_id,source_label,order,page_start,page_end,summary,scope,evidence_locator\n"
+            'b1,src-1,1,1,1,summary,in-scope,loc\n'
+        )
+        rows = ledger.parse_assignment_bundle_rows(csv_text)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["scope"], "in-scope")
+
+    def test_parse_bundle_header_without_scope_raises(self):
+        csv_text = (
+            "item_id,source_label,order,page_start,page_end,summary,evidence_locator\n"
+            'b1,src-1,1,1,1,summary,loc\n'
+        )
+        with self.assertRaises(ValueError):
+            ledger.parse_assignment_bundle_rows(csv_text)
+
+    def test_parse_bundle_invalid_scope_raises(self):
+        csv_text = (
+            "item_id,source_label,order,page_start,page_end,summary,scope,evidence_locator\n"
+            'b1,src-1,1,1,1,summary,bad-scope,loc\n'
+        )
+        with self.assertRaises(ValueError):
+            ledger.parse_assignment_bundle_rows(csv_text)
 
 
 class ValidationChecks(unittest.TestCase):

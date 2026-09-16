@@ -30,6 +30,14 @@ extraction_state is one of:
     text_extracted          the item's statement follows its label in normal text order
     text_layout_recovered   the label sat alone on its line (or after a line break) so the
                             statement was recovered from the surrounding lines
+    text_layout_reviewed    the item was manually reviewed and supplied with a canonical
+                            summary via REVIEWED_SUMMARIES
+
+REVIEWED_SUMMARIES maps the 17 full item ids that are currently recovered to faithful
+one-line summaries. After automatic parsing, any row whose item_id appears in
+REVIEWED_SUMMARIES uses the override summary and its extraction_state is set to
+text_layout_reviewed. Retain text_layout_recovered as an allowed parser state, but
+generated output must have zero recovered rows and exactly 17 reviewed rows.
 
 structural_family_candidate is filled only when a section heading states the type in words
 (memory, concept, analytical, application). Assignments 3, 4 and 5 print bare "SECTION A"
@@ -38,6 +46,18 @@ claimed without explicit evidence.
 
 match_status is "not_assessed" for every row and matched_2024_locator is blank. The 2024-25
 assignments are not in this run, so no 2024 match is asserted.
+
+scope is one of:
+
+    in-scope      assignments 1 and 2, plus the lecture 19 to 21 items in assignment 3
+    out-of-scope  MLE, method of moments, Bayesian and CI mechanics in assignment 3,
+                  plus assignments 4 and 5
+
+Counts:
+
+    in-scope      63
+    out-of-scope  56
+    total         119
 
 Usage:
     python3 scripts/build_assignment_bundle_ledger.py [--bundle PATH] [--output PATH]
@@ -79,6 +99,7 @@ FIELDS = [
     "match_status",
     "matched_2024_locator",
     "evidence_locator",
+    "scope",
 ]
 
 WATERMARK = "MSV17HMFJTVMF6IE7MQ6"
@@ -106,7 +127,45 @@ SOURCE_LABEL = {
 
 EXTRACTION_TEXT = "text_extracted"
 EXTRACTION_RECOVERED = "text_layout_recovered"
+EXTRACTION_REVIEWED = "text_layout_reviewed"
 MATCH_STATUS = "not_assessed"
+
+SCOPE_IN_SCOPE = "in-scope"
+SCOPE_OUT_OF_SCOPE = "out-of-scope"
+
+ASSIGNMENT_3_IN_SCOPE = {
+    "A5",
+    "A6",
+    "A7",
+    "A9",
+    "A10",
+    "B3",
+    "C2",
+    "D5",
+}
+
+EXPECTED_IN_SCOPE_TOTAL = 63
+EXPECTED_OUT_OF_SCOPE_TOTAL = 56
+
+REVIEWED_SUMMARIES = {
+    "asgnbundle-3-A05": "True or false: if sample statistic t is an unbiased estimator of population parameter theta, then t squared is also an unbiased estimator of theta squared.",
+    "asgnbundle-3-A06": "Write a short note on efficiency of the best estimator.",
+    "asgnbundle-3-A09": "Explain the properties of unbiasedness and consistency for an estimator.",
+    "asgnbundle-3-B01": "Find the method of moments estimators for the mean and variance of normal random variables.",
+    "asgnbundle-3-B02": "Find the maximum likelihood estimator of theta from a sample drawn from a specified density function.",
+    "asgnbundle-3-B03": "Prove that the sample mean is a sufficient estimator of the population mean for a Poisson distribution.",
+    "asgnbundle-3-B04": "A quality control expert estimates the mean thickness of aluminum sheets for airframes from n=100 sheets with mean 0.048 inches and sd 0.01 inches; construct a 99% confidence interval.",
+    "asgnbundle-3-C01": "Find the maximum likelihood estimate of the mean survival time from exponential data of ten rats in a cancer drug study.",
+    "asgnbundle-3-C02": "Verify that the sample mean is an unbiased estimator of the population mean using all samples of size two drawn with replacement from 2, 4, 6, 8.",
+    "asgnbundle-3-C03": "Obtain a 95% confidence interval for the population mean from a random sample of size 10 with variance 44.1 inch squared.",
+    "asgnbundle-3-C04": "Construct a 95% confidence interval for the mean number of automobile accidents per crossing per year from a random sample of 50 of 600 Jaipur road crossings with mean 3.8 and sd 0.8.",
+    "asgnbundle-3-C05": "Find the maximum likelihood estimators for the population mean when variance is known and the population variance when mean is known from a normal population.",
+    "asgnbundle-3-D01": "Find a 95% Bayesian interval to estimate the mean life of light bulbs with known standard deviation 100 hours, prior mean 800 and prior sd 10, from a sample of 25 bulbs with mean 780 hours.",
+    "asgnbundle-3-D02": "Find a 90% confidence interval for the true mean value of sales from a random sample of 50 invoices with mean Rs 2000 and sd Rs 540.",
+    "asgnbundle-3-D03": "For a random sample from a two-parameter density function, find the likelihood function and the equations for the maximum likelihood estimators of alpha and beta.",
+    "asgnbundle-3-D05": "Find sufficient estimators for the mean and variance of a normal population from a random sample.",
+    "asgnbundle-5-C03": "Test whether income and type of schooling are independent for 1000 families selected at random.",
+}
 
 ASSIGNMENT_HEADER_RE = re.compile(
     r"(?m)^[ \t]*Assignment\s*(?:#\s*|[-]\s*|\u2013\s*|\u2014\s*)?([1-5])\s*$"
@@ -176,6 +235,15 @@ def canonical_label(assignment, printed):
     if assignment == 5 and printed == PRINTED_TYPO_LABEL:
         return TYPO_CANONICAL
     return printed
+
+
+def scope_for(assignment, item_label):
+    """Return the item-level MTE scope from the official lecture boundary."""
+    if assignment in (1, 2):
+        return SCOPE_IN_SCOPE
+    if assignment == 3 and item_label in ASSIGNMENT_3_IN_SCOPE:
+        return SCOPE_IN_SCOPE
+    return SCOPE_OUT_OF_SCOPE
 
 
 def label_id_part(assignment, printed):
@@ -452,10 +520,19 @@ def build_rows(text):
                 )
             if item["printed"] == PRINTED_TYPO_LABEL:
                 locator += " (printed label 45 read as A4)"
+            item_id = "asgnbundle-%d-%s" % (
+                assignment, label_id_part(assignment, item["printed"])
+            )
+            if item_id in REVIEWED_SUMMARIES:
+                summary = REVIEWED_SUMMARIES[item_id]
+                extraction_state = EXTRACTION_REVIEWED
+            else:
+                extraction_state = (
+                    EXTRACTION_RECOVERED if recovered else EXTRACTION_TEXT
+                )
             rows.append(
                 {
-                    "item_id": "asgnbundle-%d-%s"
-                    % (assignment, label_id_part(assignment, item["printed"])),
+                    "item_id": item_id,
                     "source_label": SOURCE_LABEL[assignment],
                     "assignment": assignment,
                     "section": item["section"],
@@ -464,13 +541,12 @@ def build_rows(text):
                     "page_start": page_start,
                     "page_end": page_end,
                     "summary": summary,
-                    "extraction_state": (
-                        EXTRACTION_RECOVERED if recovered else EXTRACTION_TEXT
-                    ),
+                    "extraction_state": extraction_state,
                     "structural_family_candidate": item["family"],
                     "match_status": MATCH_STATUS,
                     "matched_2024_locator": "",
                     "evidence_locator": locator,
+                    "scope": scope_for(assignment, item["canonical"]),
                 }
             )
     return rows
@@ -488,6 +564,15 @@ def section_family(header_line):
 def validate_rows(rows):
     """Return a list of invariant problems; empty means the ledger is well formed."""
     problems = []
+    for item_id, summary in REVIEWED_SUMMARIES.items():
+        if not summary:
+            problems.append("empty reviewed summary for %s" % item_id)
+        if "\n" in summary:
+            problems.append("multiline reviewed summary for %s" % item_id)
+        if len(summary) > 200:
+            problems.append("reviewed summary exceeds 200 chars for %s" % item_id)
+        if "\u2014" in summary or "\u2013" in summary:
+            problems.append("forbidden dash in reviewed summary for %s" % item_id)
     if len(rows) != EXPECTED_TOTAL:
         problems.append(
             "total item count: expected %d got %d" % (EXPECTED_TOTAL, len(rows))
@@ -525,13 +610,31 @@ def validate_rows(rows):
             problems.append("page_end out of range on %s" % row["item_id"])
         if row["page_end"] < row["page_start"]:
             problems.append("page_end before page_start on %s" % row["item_id"])
-        if row["extraction_state"] not in (EXTRACTION_TEXT, EXTRACTION_RECOVERED):
+        if row["extraction_state"] not in (
+            EXTRACTION_TEXT,
+            EXTRACTION_RECOVERED,
+            EXTRACTION_REVIEWED,
+        ):
             problems.append(
                 "unknown extraction_state %r on %s"
                 % (row["extraction_state"], row["item_id"])
             )
         if not row["summary"]:
             problems.append("empty summary on %s" % row["item_id"])
+        if row["item_id"] in REVIEWED_SUMMARIES:
+            if row["extraction_state"] != EXTRACTION_REVIEWED:
+                problems.append(
+                    "reviewed item %s not marked text_layout_reviewed"
+                    % row["item_id"]
+                )
+            if row["summary"] != REVIEWED_SUMMARIES[row["item_id"]]:
+                problems.append(
+                    "reviewed item %s has wrong summary" % row["item_id"]
+                )
+        elif row["extraction_state"] == EXTRACTION_REVIEWED:
+            problems.append(
+                "unearned text_layout_reviewed state on %s" % row["item_id"]
+            )
         if row["assignment"] in (3, 4, 5) and row["structural_family_candidate"]:
             problems.append(
                 "unearned structural candidate on %s" % row["item_id"]
@@ -542,6 +645,23 @@ def validate_rows(rows):
             problems.append(
                 "unearned 2024 locator on %s" % row["item_id"]
             )
+        expected_scope = scope_for(row["assignment"], row["item_label"])
+        if row["scope"] != expected_scope:
+            problems.append(
+                "wrong scope %r on %s" % (row["scope"], row["item_id"])
+            )
+    in_scope_count = sum(1 for row in rows if row["scope"] == SCOPE_IN_SCOPE)
+    out_of_scope_count = sum(1 for row in rows if row["scope"] == SCOPE_OUT_OF_SCOPE)
+    if in_scope_count != EXPECTED_IN_SCOPE_TOTAL:
+        problems.append(
+            "in-scope count: expected %d got %d"
+            % (EXPECTED_IN_SCOPE_TOTAL, in_scope_count)
+        )
+    if out_of_scope_count != EXPECTED_OUT_OF_SCOPE_TOTAL:
+        problems.append(
+            "out-of-scope count: expected %d got %d"
+            % (EXPECTED_OUT_OF_SCOPE_TOTAL, out_of_scope_count)
+        )
     return problems
 
 

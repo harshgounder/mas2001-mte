@@ -51,7 +51,8 @@ compaction artifacts, so it is not a count of 679 distinct research actions.
 - `reports/evidence/assignment-bundle-ledger-20260916.csv`: the exact 119-item ledger for
   the 17-page 2025-26 assignment bundle (assignments 1 to 5), with item id, section, label,
   order, page span, statement, extraction state, structural candidate, match status,
-  2024-locator slot, and evidence locator.
+  2024-locator slot, evidence locator, and scope. The item-level split is 63 in-scope and
+  56 out-of-scope. Seventeen layout-split statements carry reviewed summaries.
 - Report 17: 97 ETE blocks with scope verdicts. This is an intake ledger, not a completed
   provenance ledger.
 
@@ -75,7 +76,9 @@ honestly, instead of borrowing files from another checkout.
 2. rebuild the ETE extraction so all 97 ids are present before source matching;
 3. (done 16 Sep) the 17-page 2025-26 assignment bundle is enumerated exactly: 119 items
    across assignments 1 to 5, see reports/evidence/assignment-bundle-ledger-20260916.csv;
-   its 2024-25 matches remain not_assessed;
+   enumeration is complete, but source matching is not. Assignments 3 to 5 have overlap
+   spot checks, assignments 1 and 2 have no year-over-year comparison, and every row remains
+   not_assessed with a blank 2024 locator;
 4. replace the 210 pending descriptions in the 502-row instance ledger;
 5. attach a source locator, URL, or explicit unresolved status to every question row;
 6. deduplicate by content family only after every instance has an evidence-backed family id;
