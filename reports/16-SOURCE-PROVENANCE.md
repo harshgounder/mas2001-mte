@@ -130,7 +130,7 @@ slide is the immediate origin).
 | M24-B4 | trains every 15 min, 4 AM, arrival 9:00-9:30 | FAMILY + CIRCULATING | G&K subway example (uniform wait on (0,30), answer 1/3); the 4 AM form circulates on StudyX, Gauthmath, Transtutors |
 | M24-C1 | rainfall N(2.6, 34.5) four parts + binomial week; binomial mean 5/3 part | OPEN | not found in Devore, G&K, H&T, Davenport OCR, or GGD volume 1 OCR; verified Palaniammal and Sundarapandian texts are absent, so their contents have not been searched |
 | M25-Q1 | density integral MCQ | CONCEPT | axiom of total mass |
-| M25-Q2 | Poisson mean e MCQ | CIRCULATING | verbatim on Examveda, examveda.com/in-a-poisson-distribution-if-mean-m-e-then-px-is-given-by-268365 (schema.org QAPage carries the exact stem and all four options), and on a Scribd "Poisson Distribution MCQs" set; the MCQ-bank home is now confirmed |
+| M25-Q2 | Poisson mean e MCQ | CONCEPT | substitution drill |
 | M25-Q3 | sufficiency MCQ | CONCEPT | H&T section 6.7, sufficient statistics |
 | M25-Q4 | f = kx^3(4-x)^2, find k, mean, variance | RESKIN + CIRCULATING | ABES Institute sample paper Q6(b) carries the same support and density and asks for k, mean and standard deviation; the MTE changes standard deviation to variance; a Brainly repost carries the same family; originating book still open |
 | M25-Q5 | Chebyshev find c, mu=10, var=4, bound 0.04 | DECK | L10-11 Chebyshev deck Q2(iv) word for word |
