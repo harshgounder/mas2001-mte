@@ -34,6 +34,10 @@ DEV = "/home/liebert511/mas2001-devore/"
 AUD = "/home/liebert511/mas2001-mte-audit-v1/"
 
 LEDGER = S2 + "reports/evidence/question-instance-ledger.csv"
+# the sweep is a DERIVED stage: it reads the builder's canonical ledger and
+# writes an enriched copy, so the canonical file stays reproducible by
+# scripts/build_question_instance_ledger.py (its --check must keep passing).
+OUT_LEDGER = S2 + "reports/evidence/question-instance-ledger-enriched.csv"
 REPORT = S2 + "reports/evidence/wave-a-sweep-20260916.json"
 
 FROZEN_GROUPS = {"mte", "four-decks"}   # human-researched, never touched
@@ -381,11 +385,11 @@ def main(argv):
 
     if a.write:
         fields = list(rows[0].keys())
-        with open(LEDGER + ".tmp", "w", encoding="utf-8", newline="") as fh:
+        with open(OUT_LEDGER + ".tmp", "w", encoding="utf-8", newline="") as fh:
             w = csv.DictWriter(fh, fieldnames=fields)
             w.writeheader()
             w.writerows(rows)
-        os.replace(LEDGER + ".tmp", LEDGER)
+        os.replace(OUT_LEDGER + ".tmp", OUT_LEDGER)
         out = {
             "rows": len(rows), "descriptions_filled": filled,
             "rows_swept": swept, "rows_frozen": frozen,
@@ -397,7 +401,7 @@ def main(argv):
         }
         with open(REPORT, "w", encoding="utf-8") as fh:
             json.dump(out, fh, indent=2)
-        print("\nwrote", LEDGER)
+        print("\nwrote", OUT_LEDGER)
         print("wrote", REPORT)
     return 0
 
