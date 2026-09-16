@@ -69,6 +69,27 @@
     "flagged": 0,
     "dashes_fixed": 0
   },
+  "paper-ete-s4-2024-25": {
+    "pages": 2,
+    "chars": 4440,
+    "done": 2,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "paper-ete-s4-2025-26": {
+    "pages": 3,
+    "chars": 5869,
+    "done": 3,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "paper-ete-summer-2025-26": {
+    "pages": 2,
+    "chars": 5686,
+    "done": 2,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
   "paper-mte-2024-25": {
     "pages": 2,
     "chars": 3319,
@@ -100,6 +121,13 @@
   "paper-resess-s3-2025-26": {
     "pages": 2,
     "chars": 4141,
+    "done": 2,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "paper-resess-s4-2025-26": {
+    "pages": 2,
+    "chars": 3311,
     "done": 2,
     "flagged": 0,
     "dashes_fixed": 0
