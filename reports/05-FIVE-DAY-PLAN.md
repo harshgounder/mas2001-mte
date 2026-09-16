@@ -77,9 +77,9 @@ Goal: estimation block, then a closed-book content drill, then fix what the dril
 
 1. `md/ppt5-estimation-summary.md` all 26 pages. 90 minutes. Then
    `md/lms-theory-of-estimation.md` p022 to p030 for the extra worked numericals only.
-2. Use `reports/07-MOCK-PAPER.md` as a closed-book content drill, then mark it with
-   `reports/08-MOCK-SOLUTIONS.md`. Do not treat its section weights as a real-paper rehearsal:
-   it predates the past-paper batch and its format differs from both real MTE papers.
+2. Sit `reports/07-MOCK-PAPER-v2.md` closed book, 90 minutes, no formula sheet. Mark it with
+   the worked solutions in `reports/08-MOCK-SOLUTIONS-v2.md`. The v1 files remain a content
+   drill only; their old section weights do not match the real papers.
 3. Spend the rest of the day on whatever the mock exposed. Re-derive every formula you
    failed to recall. 90 minutes.
 
