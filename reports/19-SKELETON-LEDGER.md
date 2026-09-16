@@ -64,6 +64,17 @@ ledger.
 - S26/S27 Chebyshev inverse: sigma 2 with 21/25 (G&K) then sigma 3 with 24/25 (ETE S4).
 - S16 machine: "bread-making machine" (circulating original) then "a machine" (our M25-Q7).
 
+## Teaching deck skeletons (summary level, sweep of 16 Sep)
+
+| deck | items | provenance note |
+|---|---|---|
+| notes-lecture-series-01-09 (30 items) | Devore-derived | verified samples: p041 = Devore Ex 2.1 verbatim, p072 flashlight, p107 freezer, p109 magazine, p146 cites Devore's own exercise numbering; class-level conclusion consistent with the deck's printed Text Book |
+| ppt3-discrete (6 items) | G&K / Palaniammal class | p027 insurance example (5,000 men age 42) present; pens-family items; the deck prints the Indian trio as references |
+| ppt4-continuous (7 items) | Mc Clave style | p042-043 customers-arrive exponential example matches the Mc Clave slide family; references print Mc Clave |
+| ppt5-estimation (5 items) | standard estimation texts | p007 average response time example, p019 sample-size example; estimation block texts |
+| lms-standard-error-clt (5 items) | Devore 9e class | p014 chemical product example; p017-018 machine-life example (the same skeleton as M25-Q7, S16) |
+| lms-theory-of-estimation (7 items) | overlaps ppt5 | same two example families as ppt5 |
+
 ## Source library acquisition status
 
 | book | status |
