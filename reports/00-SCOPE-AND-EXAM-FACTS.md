@@ -83,12 +83,13 @@ and stops at "Characteristics of a good estimator".
 
 | scope block | lectures | where the material lives | pages |
 |---|---|---|---|
-| probability theory, RVs, PMF/PDF/CDF, expectation, Chebyshev | 2 to 11 | `notes-lecture-series-01-09` | 147 |
+| probability theory, RVs, PMF/PDF/CDF, expectation | 2 to 9 | `notes-lecture-series-01-09` | 147 |
+| Chebyshev's inequality | 10 to 11 | `sp-l10-11-chebyshev` | 9 |
 | binomial and discrete distributions | 12 | `ppt3-discrete-prob-dist` | 28 |
 | Poisson, uniform, normal, exponential | 13 to 16 | `ppt4-continuous-prob-dist` | 44 |
 | sampling, standard error, CLT | 17 to 18 | `lms-standard-error-clt` | 19 |
 | estimation intro, point and interval, good estimator | 19 to 21 | `ppt5-estimation-summary`, `lms-theory-of-estimation` | 26 + 40 |
-| MTE-critical total | | | 304 |
+| listed teaching-page inventory | | | 313, not deduplicated |
 | end-term only, still converted | 22 to 23 | `lms-method-of-moments`, `lms-maximum-likelihood` | 11 + 16 |
 | course facts, assessment scheme | | `mas2001-course-handout` | 7 |
 | problem practice | | `mas2001-assignment-1`, `mas2001-assignment-2` | 6 + 4 |

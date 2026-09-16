@@ -7,7 +7,7 @@ Rules:
 4. For every diagram, chart, histogram, curve, tree or figure, add a line starting with "Figure:" followed by what it shows, including axis labels, numeric ticks you can read, and the shape of the curve.
 5. Keep worked examples in order. Preserve step labels such as Solution, Step 1, Given, Formula, Answer. Keep every number exactly as printed.
 6. Never invent content. Never complete a formula from memory. Never add an example that is not on the slide.
-7. Never output a URL, a domain name, or a markdown link. If the slide shows a logo or a decorative image, ignore it.
+7. Never output a URL, a domain name, or a markdown link. Preserve the surrounding visible text, but replace only the URL or domain with [domain omitted by repository policy]. Never invent replacement wording. If the slide shows a logo or a decorative image, ignore it.
 8. If a word or symbol is genuinely unreadable, write [illegible] instead of guessing.
 9. Never use an em dash or an en dash anywhere in the output, not even inside a transcribed title. Use a hyphen, a colon, or a comma instead. This is a hard rule for every file in this repository.
 10. First line: "## " followed by the slide title exactly as printed. If the slide has no title, the first line is "## (untitled)".

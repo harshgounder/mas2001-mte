@@ -1,8 +1,9 @@
 # INDEX: every file in this repo, one line each
 
-Built 15 September 2026. If a file is not on this list, it does not exist (audit rule).
+Built 15 September 2026 and refreshed 16 September. This lists the tracked artifact groups;
+generated, ignored and local working files can exist outside the list.
 
-Coverage rule: the 348 `md/<label>/pNNN.md` page files are covered by their directory line,
+Coverage rule: the 363 `md/<label>/pNNN.md` page files are covered by their directory line,
 and `work/text/<label>.txt` plus `work/fidelity/<label>/pNNN.md` are covered by their
 directory lines and by `work/manifest.jsonl`, so they are not listed one by one. Every
 other tracked file appears below by name.
@@ -24,6 +25,8 @@ other tracked file appears below by name.
   BRIEF-001-conversion-pipeline.md    the build brief for convert.py + assemble.py
   BRIEF-002-dash-and-robustness.md    fix brief: dashes + failure modes
   BRIEF-003-audit-and-fidelity.md     the build brief for audit_conversion.py
+  BRIEF-004-pipeline-hardening.md     six pipeline fixes and model-default update
+  BRIEF-005-fix-real-run-nameerror.md two real-run crash fixes found during U01
 ```
 
 ## scripts/
@@ -34,7 +37,13 @@ other tracked file appears below by name.
   audit_conversion.py     coverage audit + fidelity gate (second reader model)
 ```
 
-## md/ (348 batch-1 pages converted; batch-2 conversion pending)
+## tests/
+
+```
+  test_pipeline_audit.py  unittest coverage for conversion and audit failure paths
+```
+
+## md/ (363 pages converted: 348 batch-1 pages and 15 U01 pages)
 
 ```
   notes-lecture-series-01-09/   147p  Dr. Vivek Singh deck, lectures 1-9 (batch 1)
@@ -48,8 +57,12 @@ other tracked file appears below by name.
   mas2001-course-handout/         7p  assessment scheme, lecture plan (batch 1)
   mas2001-assignment-1/           6p  assignment + key (batch 1)
   mas2001-assignment-2/           4p  second set (batch 1)
+  paper-mte-2025-26/              3p  MTE paper (batch 2, U01)
+  paper-mte-2025-26-scheme/       4p  MTE solution scheme (batch 2, U01)
+  paper-mte-2024-25/              2p  MTE paper (batch 2, U01)
+  paper-mte-2024-25-scheme/       6p  MTE solution scheme (batch 2, U01)
   (assembled .md + INDEX.json at md/ root)
-  Batch-2 sources are in sources.yaml, not yet converted; conversion is queue U01-U19.
+  Batch-2 sources are in sources.yaml; U01 is converted and U02-U19 remain queued.
 ```
 
 ## work/
@@ -81,9 +94,10 @@ other tracked file appears below by name.
   06-VERIFICATION.md            verification record, three layers
   07-MOCK-PAPER.md              mock MTE, 30 marks
   08-MOCK-SOLUTIONS.md          mock worked solutions
-  09-ERRATA.md                  18 errata, at the claim site
+  09-ERRATA.md                  21 errata, at the claim site
   10-SLIDES-VS-SYLLABUS.md      lecture-by-lecture slides audit (Chebyshev corrected)
   12-NEW-BATCH.md               THE batch-2 doc: list + 19-unit processing queue + scout findings
+  13-PROCESSING-LOG.md          per-unit conversion, verification and analysis state
   evidence/                     raw verification output
     verify-formula-sheet-20260913.txt  79-check formula and answer-key runner output
     verify-errata15-20260915.py        errata 15 checker, stdlib only, ships with its output
@@ -116,8 +130,8 @@ other tracked file appears below by name.
 
 ```
   batch 1: converted, audited, fidelity-gated, counted, classified. 112 items / 107 unique.
-  batch 2: listed, hashed, in sources.yaml. Nothing converted yet. 19-unit queue in
-           reports/12-NEW-BATCH.md. START HERE in a new window: queue U01.
+  batch 2: listed and hashed. U01 converted, 15 pages across 4 labels. Finish U01 atlas,
+           dedup and count work, then continue at U02 in reports/12-NEW-BATCH.md.
   corrections applied 15 Sep: Chebyshev has a deck (S&P L10-11); siblings confirmed by
            real papers (14 items, see 12-NEW-BATCH.md section 6); exam format known now.
   round-7 corrections applied 15 Sep (second pass, from a peer codex audit plus my own
@@ -133,7 +147,7 @@ other tracked file appears below by name.
                5ff19731) and is retracted
              - in-scope assignment drill is 90 blocks, not 91 (2024-25 A1 is 15, not 16)
              - 04-QUESTION-BANK battery SD reads 0.97 (exact), not the key's 0.98
-  still open (code, needs an explicit go): 6 pipeline gaps found by the peer harness at
-           ~/mas2001-mte-audit-v1/test_audit.py, and the two vision model defaults in
-           scripts/ still name xiaomi/mimo-v2.5 instead of glm-5.3-flash.
+  code state: the 6 round-7 pipeline gaps and model defaults were fixed in `9b187e0`.
+           Two real-run name errors were fixed in `32265ae`. A later audit reproduced
+           test pollution of work/manifest.jsonl; that isolation fix remains open.
 ```
