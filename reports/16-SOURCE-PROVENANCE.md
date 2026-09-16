@@ -33,8 +33,9 @@ sources, and verified the first links against the actual textbook. Receipts belo
    p109, freezer dealer p107; the Pareto slide (p146) cites "introduced in Exercise 10",
    which is Devore's own internal exercise numbering used by the slide author.
 4. Exam side: MTE 2025-26 Q5 (Chebyshev find-C, mu=10, var=4, bound 0.04) is the L10-11
-   Chebyshev deck's Q2(iv), word for word in both raw texts. The L10-11 deck in turn holds
-   the classic pair Q1 (E(X)=3, E(X^2)=13, lower bound for P(-2<X<8)) and Q2.
+   Chebyshev deck's Q2(iv), word for word in both raw texts. The L10-11 deck holds three
+   worked classics: Q1 (E(X)=3, E(X^2)=13, lower bound for P(-2<X<8)), Q2 (mu=10, var=4,
+   find the constant C), Q3 (X on -1,1,3,5: direct computation versus the Chebyshev bound).
 5. Skeleton reuse across years (same problem, changed constants): telephone call (rate 1/4
    in the 2024-25 paper, mean 3 minutes in 2025-26), trains every 15 minutes (2024-25 paper,
    and in the L-decks), pens defective 1/10 with 12 pens (L12-13 deck, ETE S3 2025-26,

@@ -15,13 +15,13 @@ hold, with scope notes, because the user asked for the complete count.
 | 4 | lms-standard-error-clt | 19 | 5 | locked register |
 | 5 | ppt5-estimation-summary | 26 | 5 | locked register |
 | 6 | lms-theory-of-estimation | 40 | 7 (2 unique) | locked register |
-| 7 | L10-11 Chebyshev deck | 10 | 2 | text layer, counted 16 Sep |
+| 7 | L10-11 Chebyshev deck | 10 | 3 | text layer, counted 16 Sep (Q1, Q2, Q3) |
 | 8 | assignment 2025-26 #1 | 6 | 24 | locked register |
 | 9 | assignment 2025-26 #2 | 4 | 28 | locked register |
 | 10 | MTE papers 2024-25 + 2025-26 | 5 question pages | 16 | locked register |
 | 11 | ETE, summer, re-sess papers (7 papers) | 15 | 97 | report 17, counted 16 Sep |
 | 12 | assignment 2024-25 #1, #2, #3, #3-ep2, #4, #5 | 15 | 125 | counted 16 Sep (15+20+25+25+16+24) |
-| | TOTAL EXACT | | 352 | |
+| | TOTAL EXACT | | 353 | |
 
 Note on row 12: converted by the parallel working session; counted read-only from its
 working tree (uncommitted at the time of writing). Row 5 and row 6 overlap: of the 12
@@ -47,10 +47,10 @@ page images. Estimated pending total: 27 to 33 blocks in the four lecture decks 
 
 ## Totals
 
-- Exact, enumerated today: 352 blocks.
+- Exact, enumerated today: 353 blocks.
 - Pending, text in hand: roughly 95 to 100 blocks, of which about 65 are cross-year
   duplicates of already counted sets.
-- Corpus-wide running estimate: roughly 440 to 455 gross blocks, 380 to 390 net of known
+- Corpus-wide running estimate: roughly 441 to 456 gross blocks, 381 to 391 net of known
   duplicates. These ranges close to exact numbers in the ledger pass.
 
 ## MTE-scope running figure (what the current study pool can draw on)
