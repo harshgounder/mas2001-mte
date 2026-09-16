@@ -6,7 +6,7 @@ B.Tech: III (CSE|AIML|ECE|EE)
 
 Section - A
 
-Q.A (1) 6 (a)
+Q.A (1) C (2)
 
 Q.A (2) B (2)
 
@@ -20,7 +20,7 @@ Thus, we have,
 
 $$P(X=x) = \frac{e^{-\lambda_1}\lambda_1^{x}}{x!} \;;\; x = 0, 1, 2, \ldots, \; \lambda_1 > 0$$
 
-$$P(Y=y) = \frac{e^{-\lambda_2}\lambda_2^{y}}{y!} \;;\; y = 0, 1, 2, \ldots, \; \lambda_2 > 0 \qquad (1)$$
+$$P(Y=y) = \frac{e^{-\lambda_2}\lambda_2^{x}}{x!} \;;\; x = 0, 1, 2, \ldots, \; \lambda_2 > 0 \qquad (1)$$
 
 Using given condition, we get (1)
 
@@ -34,7 +34,7 @@ Hence
 
 $$V(X-2Y) = 1^2 V(X) + (-2)^2 V(Y)$$
 
-$$= 2 + 4 \times 3 = 14$$ [illegible] (1)
+$$= 2 + 4 \times 3 = 14$$ Ans (1)
 
 page:1
 
@@ -42,9 +42,7 @@ page:1
 
 ## (untitled)
 
-[illegible]
-
-2.62 : let time of speaking in the exponentially distributed r.v.(X) with parameter $\lambda = \frac{1}{4}$
+Q.B2: let time of speaking in the exponentially distributed r.v.(X) with parameter $\lambda = \frac{1}{4}$
 
 (i)
 $$P(X>6)=\int_{6}^{\infty}\frac{1}{4}\,e^{-x/4}\,dx=\frac{1}{4}\int_{6}^{\infty}e^{-x/4}\,dx$$
@@ -68,11 +66,11 @@ $$=1-0.2865=0.7135$$
 (iv)
 $$\text{Mean}=\frac{1}{\lambda}=\frac{1}{1/4}=4\;;\qquad\text{Variance}=\frac{1}{\lambda^{2}}=\frac{1}{(1/4)^{2}}=16$$
 
-Red annotations below the line: $\left(\frac{1}{4}\right)$ under the Mean result and $\left(\frac{1}{4}\right)^{2}$ under the Variance result.
+Red annotations below the line: $\left(\frac{1}{2}\right)$ under the Mean result and $\left(\frac{1}{2}\right)$ under the Variance result.
 
 ---
 
-## Q8(3)
+## Q B(3)
 
 since $f(x) = \frac{1}{2}$ ; $-1 \le x \le 1$
 
@@ -98,13 +96,13 @@ $$= 1 - P\left[-\frac{2}{\sqrt{3}} \le X \le \frac{2}{\sqrt{3}}\right] = 1 - P[-
 
 $$= 1 - P[-1 \le X \le 1] = 1 - 1 = 0$$
 
-page:5
+page:3
 
 ---
 
 ## (untitled)
 
-Page
+Page 4
 
 Q. B4 :- Let X be the random variable representing the number of minutes past 9 that the passenger arrives at station. So, $f(x) = \frac{1}{30}$ (1)
 
@@ -120,17 +118,17 @@ $$= \frac{1}{6} + \frac{1}{6} = \frac{1}{3} \quad (1.5)$$
 
 Section: C
 
-Q.C (a) Given $X \sim N(3.6, 34.5)$, $\sigma = 5.87$
+Q.C (a) Given $X \sim N(2.6, 34.5)$, $\sigma = 5.87$
 
 (i) We need $P(X > 6)$
 
-$$Z = \frac{X - \mu}{\sigma} = \frac{6 - 3.6}{5.87} = 0.58 \quad (1)$$
+$$Z = \frac{X - \mu}{\sigma} = \frac{6 - 2.6}{5.87} = 0.58 \quad (1)$$
 
 $P(X > 6) = P(Z > 0.58) = 1 - P(Z < 0.58) = 0.281$
 
 (ii) $P(X < 1)$
 
-$$Z = \frac{X - \mu}{\sigma} = \frac{1 - 3.6}{5.87} = -0.27 \quad (1)$$
+$$Z = \frac{X - \mu}{\sigma} = \frac{1 - 2.6}{5.87} = -0.27 \quad (1)$$
 
 $P(X < 1) = P(Z < -0.27) = 0.3936$
 
@@ -174,7 +172,7 @@ page:5
 
 we have $n = 5$
 
-Now, the Variance of the distribution $= npq = 5 \times \frac{1}{3} \times$ [illegible] $= \frac{10}{9}$
+Now, the Variance of the distribution $= npq = 5 \times \frac{1}{3} \times \frac{2}{3} = \frac{10}{9}$
 
 $P(X = \text{at least } 1) = P(X \geq 1) = 1 - P(X \leq 0) = 1 - P(X = 0)$
 
@@ -186,6 +184,6 @@ $$= \left(\frac{2}{3}\right)^{5} + \binom{5}{1}\left(\frac{1}{3}\right)^{1}\left
 
 Figure: a horizontal decorative divider drawn across the page below the worked solution, made of double-headed arrows alternating with asterisk marks (arrow, star, arrow, star, arrow, star, arrow).
 
-For more material and PYQs, checkout [website] and MUJstella app on Playstore
+For more material and PYQs, checkout [domain omitted by repository policy] website and MUJstella app on Playstore
 
 page:6

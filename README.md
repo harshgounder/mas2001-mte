@@ -29,7 +29,7 @@ Scope: lectures 1 to 21. Repo is private.
 
 This is a single place that holds:
 
-- **every source of MAS2001 on disk**, catalogued with sha256 in `sources.yaml`,
+- **every source selected for this MAS2001 audit**, catalogued with sha256 in `sources.yaml`,
 - **every slide converted to markdown with real LaTeX**, so the maths survives copy, grep
   and printing (the PDFs shatter equations in their text layers),
 - **the full slide and question atlas**: what is in MTE scope, what each question tests, and
@@ -81,7 +81,7 @@ reports/11-QUESTION-ATLAS/00-LEARN-PLAN.md              # what after what
 
 ```bash
 reports/12-NEW-BATCH.md      # the 23-file list, 19-unit queue, per-unit protocol
-# start at U01: the four MTE documents, 15 pages, one at a time
+# U01 conversion is complete; continue with its analysis and processing log
 ```
 
 **If you are reading raw converted slides:**
@@ -106,13 +106,15 @@ mas2001-mte/
 ├── process/                   how the pipeline was built
 │   ├── BRIEF-001-conversion-pipeline.md    the brief for convert.py + assemble.py
 │   ├── BRIEF-002-dash-and-robustness.md    the brief for the dash normalisation fixes
-│   └── BRIEF-003-audit-and-fidelity.md     the brief for audit_conversion.py
+│   ├── BRIEF-003-audit-and-fidelity.md     the brief for audit_conversion.py
+│   ├── BRIEF-004-pipeline-hardening.md     six pipeline fixes and model defaults
+│   └── BRIEF-005-fix-real-run-nameerror.md two real-run crash fixes
 ├── scripts/
 │   ├── convert.py             render each page to png, read with a vision model, cache,
 │   │                          retry, log to manifest. resumable, stdlib only
 │   ├── assemble.py            per-page markdown into one deck document, normalises dashes
 │   └── audit_conversion.py    coverage audit + fidelity gate (second reader) + dash audit
-├── md/                        the converted corpus: 348 pages across 11 labels (batch 1)
+├── md/                        the converted corpus: 363 pages across 15 labels
 │   ├── INDEX.json             per label: pages, chars, done, flagged, dashes fixed
 │   └── <label>/pNNN.md        one slide per file
 ├── work/                      pipeline state and evidence
@@ -128,6 +130,7 @@ mas2001-mte/
     ├── 00 to 10               numbered main reports
     ├── 11-QUESTION-ATLAS/     the deep question work (see section 5)
     ├── 12-NEW-BATCH.md        batch 2 inventory + processing queue
+    ├── 13-PROCESSING-LOG.md   per-unit conversion and review state
     ├── archive/               superseded reports, versioned, never deleted
     └── evidence/              raw verification outputs, verbatim
 ```
@@ -147,9 +150,10 @@ mas2001-mte/
 | `06-VERIFICATION.md` | three verification layers, the failures that were caught, adjustments visible | trust audit |
 | `07-MOCK-PAPER.md` | 30-mark mock in the real format | self-test |
 | `08-MOCK-SOLUTIONS.md` | every number computed and cross-checked against a slide | after the mock |
-| `09-ERRATA.md` | 15 errors found in the source material, each with the computed value | before memorising anything |
+| `09-ERRATA.md` | 21 errors or source defects, each with the computed correction | before memorising anything |
 | `10-SLIDES-VS-SYLLABUS.md` | lecture-by-lecture slides audit (8-9 half, 10-11 corrected 15 Sep) | coverage questions |
 | `12-NEW-BATCH.md` | batch 2: 23 files catalogued, 19-unit processing queue, quality traps | batch 2 work |
+| `13-PROCESSING-LOG.md` | per-unit conversion, verification and analysis state | resuming batch 2 |
 | `14-U02-ETE-S3.md` | U02 semester-3 ETE/re-sessional review and scope split | end-term evidence |
 
 ---
@@ -192,7 +196,7 @@ Batch 1 (11 sources, 348 pages, fully converted):
 | `mas2001-assignment-1` | 6 | question paper + official answer key |
 | `mas2001-assignment-2` | 4 | second problem set |
 
-Batch 2 (23 files catalogued in `sources.yaml`, plus 2 extra sources, processing queued):
+Batch 2 (23 files catalogued in `sources.yaml`, plus 2 extra sources; U01 converted, later units queued):
 
 - 5 slide decks: L1-7, L8-9, **L10-11 Chebyshev (the missing block)**, L12-13, L14-15
 - 6 assignments: 2024-25 series (1,2,3,3-Ep2,4,5), one of which is the image-only scan, plus
@@ -212,7 +216,8 @@ Batch 2 (23 files catalogued in `sources.yaml`, plus 2 extra sources, processing
 
 ## 7. The conversion pipeline
 
-Every page is rendered at 110 dpi and read by `xiaomi/mimo-v2.5` through `~/.local/bin/vision`.
+Every page is rendered at 110 dpi and read through `~/.local/bin/vision`. The current default
+is `glm-5.3-flash`; the original 348-page batch used `xiaomi/mimo-v2.5`.
 Vision was required, not optional: the PDFs have text layers but they shatter every equation,
 so the text layer is kept as an independent second channel for auditing.
 
@@ -255,8 +260,7 @@ quietly loosened is worth less than one whose adjustments are visible.
 
 ## 9. Known errata in the source material
 
-18 entries in `reports/09-ERRATA.md`. Highlights (16, 17 and 18 added 15 Sep by the
-round-7 audit):
+21 entries in `reports/09-ERRATA.md`. Entries 19 to 21 were found during the U01 source review:
 
 ```
   insurance example            prints 0.1745, value 0.1755
@@ -278,7 +282,10 @@ round-7 audit):
   tube key part (ii)           prints 2/3, value is 8/27, errata 16
   2024-25 A1 Q16 pmf row       sums to 0.9, not 1, errata 17
   mock B4 Note                 claims T4 smallest variance, it is third of four, errata 18
-  normal notation note         N(mu, sigma^2), second slot is the variancevariance
+  normal notation note         N(mu, sigma^2), second slot is the variance
+  2024 MTE QA2 key             marks B, correct CDF option is D
+  2025 scheme Q4               writes infinite bounds although support is 0 < x < 4
+  2025 scheme Q8(ii)           concludes E(t^2) != 0, should be E(t^2) != theta^2
 ```
 
 Do not memorise the printed values; the computed ones are in the file.
@@ -304,12 +311,14 @@ Do not memorise the printed values; the computed ones are in the file.
 
 **Batch 1: complete.** 348 pages converted, audited, verified; report set 00-10 written.
 
-**Batch 2: catalogued, queued.** 23 files listed, 19 processing units at 10-20 pages each,
-per-unit protocol defined (every page read, every question entered, dedup verdict, count,
-log, commit). Starts at U01: the four MTE documents (paper + scheme, both years), 15 pages.
+**Batch 2: U01 converted, later units queued.** The four MTE documents, 15 pages total,
+were converted in commit `32265ae` and checked against 300 dpi renders. Their transcription
+fixes and source errata are recorded in the next audit commit. U01 question-atlas entries,
+dedup verdicts and count updates remain open. Units U02 to U19 have not been converted.
 
 **The standing question the atlases answer:** can a value change make a new type? No (M0),
 but inversion, re-conditioning, re-targeting and composition do (M1-M4), and the type space
 audit lists every sibling already implied by this course's own papers.
 
-**Next window:** read `CONTINUATION.md`, run the verification checklist, start U01.
+**Next window:** read `CONTINUATION.md`, run the verification checklist, finish U01 analysis,
+then continue to U02.

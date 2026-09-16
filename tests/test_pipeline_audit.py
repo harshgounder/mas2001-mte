@@ -225,6 +225,86 @@ class TranscribeExitChecks(unittest.TestCase):
             _, status, _, _ = convert.transcribe(Path('/unused'), 'prompt', 'test', 100)
         self.assertEqual(status, 'ok')
 
+    def test_truncation_retry_uses_second_exit_code(self):
+        reads = [
+            (0, 'short', '[truncated by token limit]'),
+            (9, 'a longer partial response', 'provider failed'),
+        ]
+        with patch.object(convert, 'call_vision', side_effect=reads), \
+             patch.object(convert.time, 'sleep'):
+            text, status, _, note = convert.transcribe(Path('/unused'), 'prompt', 'test', 100)
+        self.assertEqual(text, 'a longer partial response')
+        self.assertEqual(status, 'exit_9')
+        self.assertEqual(note, 'provider failed')
+
+
+class FailureSemanticsChecks(unittest.TestCase):
+    """Failed render and transcription paths must not look successful."""
+
+    def test_failed_forced_render_cannot_reuse_stale_final_png(self):
+        with tempfile.TemporaryDirectory(prefix='mas2001-render-stale-') as tmp:
+            png = Path(tmp) / 'p001.png'
+            png.write_bytes(b'stale image')
+            failed = subprocess.CompletedProcess([], 1, stdout='', stderr='render failed')
+            with patch.object(convert.subprocess, 'run', return_value=failed):
+                with self.assertRaises(RuntimeError):
+                    convert.render_page(Path('/unused.pdf'), 1, 110, png)
+
+    def test_successful_render_moves_new_numbered_png_to_final_path(self):
+        with tempfile.TemporaryDirectory(prefix='mas2001-render-success-') as tmp:
+            png = Path(tmp) / 'p001.png'
+
+            def fake_run(cmd, **_kwargs):
+                Path(cmd[-1] + '-1.png').write_bytes(b'new image')
+                return subprocess.CompletedProcess(cmd, 0, stdout='', stderr='')
+
+            with patch.object(convert.subprocess, 'run', side_effect=fake_run):
+                convert.render_page(Path('/unused.pdf'), 1, 110, png)
+            self.assertEqual(png.read_bytes(), b'new image')
+            self.assertFalse((Path(tmp) / 'p001-1.png').exists())
+
+    def test_non_ok_transcription_does_not_overwrite_good_markdown(self):
+        with tempfile.TemporaryDirectory(prefix='mas2001-preserve-good-') as tmp:
+            root = Path(tmp)
+            md = root / 'md/deck/p001.md'
+            png = root / 'pages/deck/p001.png'
+            manifest = root / 'manifest.jsonl'
+            md.parent.mkdir(parents=True)
+            png.parent.mkdir(parents=True)
+            md.write_text('## Verified page\nkeep me\n')
+            png.write_bytes(b'image')
+            with patch.object(convert, 'OUT', root/'md', create=True), \
+                 patch.object(convert, 'PAGEROOT', root/'pages', create=True), \
+                 patch.object(convert, 'MANIFEST', manifest, create=True), \
+                 patch.object(convert, 'render_page'), \
+                 patch.object(convert, 'transcribe', return_value=('provider error', 'exit_1', 1, 'failed')):
+                result = convert.process_page(
+                    'deck', 1, Path('/unused.pdf'), 110, 'prompt', 'test', 100, True
+                )
+            self.assertEqual(md.read_text(), '## Verified page\nkeep me\n')
+            self.assertFalse(result['done'])
+            record = json.loads(manifest.read_text().strip())
+            self.assertEqual(record['status'], 'exit_1')
+
+    def test_failed_page_makes_real_run_exit_nonzero(self):
+        config = dict(dpi=110, max_tokens=100, workers=1, page_dir='work/pages', out_dir='md')
+        with tempfile.TemporaryDirectory(prefix='mas2001-failed-page-') as tmp:
+            root = Path(tmp)
+            source_pdf = root / 'deck.pdf'
+            source_pdf.write_bytes(b'%PDF-1.4 stub\n')
+            (root / 'PROMPT.txt').write_text('prompt\n')
+            sources = [dict(label='deck', path=str(source_pdf), pages='1')]
+            failed = {'page': 1, 'ran': True, 'done': False, 'banned': False, 'truncated': False}
+            with patch.object(convert, 'load_config', return_value=(config, sources)), \
+                 patch.object(convert, 'ROOT', root), \
+                 patch.object(convert.convert_test_harness, '_root', root), \
+                 patch.object(convert, 'source_page_count', return_value=1), \
+                 patch.object(convert, 'process_page', return_value=failed), \
+                 patch.object(convert.time, 'sleep'):
+                with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                    result = convert.main([])
+            self.assertNotEqual(result, 0)
+
 
 class AgreementChecks(unittest.TestCase):
     """G3: empty second reading, signed numbers, and the no-numeric outcome."""
@@ -357,7 +437,7 @@ class RealRunSkipChecks(unittest.TestCase):
                  patch.object(convert, 'ROOT', root), \
                  patch.object(convert.convert_test_harness, '_root', root), \
                  patch.object(convert, 'source_page_count', return_value=1), \
-                 patch.object(convert, 'process_page', return_value={'page': 1, 'ran': True, 'done': False, 'banned': False, 'truncated': False}), \
+                 patch.object(convert, 'process_page', return_value={'page': 1, 'ran': True, 'done': True, 'banned': False, 'truncated': False}), \
                  patch.object(convert.time, 'sleep'):
                 buf_out, buf_err = io.StringIO(), io.StringIO()
                 with contextlib.redirect_stdout(buf_out), contextlib.redirect_stderr(buf_err):
