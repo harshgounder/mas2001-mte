@@ -84,6 +84,7 @@ other tracked file appears below by name.
   09-ERRATA.md                  18 errata, at the claim site
   10-SLIDES-VS-SYLLABUS.md      lecture-by-lecture slides audit (Chebyshev corrected)
   12-NEW-BATCH.md               THE batch-2 doc: list + 19-unit processing queue + scout findings
+  14-U02-ETE-S3.md              U02 conversion, scope split, counts and source cautions
   evidence/                     raw verification output
     verify-formula-sheet-20260913.txt  79-check formula and answer-key runner output
     verify-errata15-20260915.py        errata 15 checker, stdlib only, ships with its output

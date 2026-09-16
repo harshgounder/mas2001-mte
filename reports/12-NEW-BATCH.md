@@ -136,7 +136,7 @@ F-test, ANOVA = lectures 22 to 36).
 ```
   UNIT   content                                              pages  status
   U01    A1+A2+A3+A4: both MTE papers + both schemes           15    NEXT
-  U02    A5+A6+A10: ETE S3 x2 + re-sess S3                    6     queued
+  U02    A5+A6+A10: ETE S3 x2 + re-sess S3                    6     COMPLETE 16 Sep
   U03    A7+A8+A9+A11: ETE S4 x2 + summer + re-sess S4        9     queued
   U04    B1: 2025-26 assignments 1-5 combined, A1+A2 only     17    queued (skip 3-5, out of scope)
   U05    B2+B3: 2024-25 assignments 1 and 2 (IN scope)         4    PROMOTED 15 Sep: MTE drill,

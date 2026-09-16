@@ -55,6 +55,20 @@
     "flagged": 0,
     "dashes_fixed": 0
   },
+  "paper-ete-s3-2024-25": {
+    "pages": 2,
+    "chars": 5196,
+    "done": 2,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "paper-ete-s3-2025-26": {
+    "pages": 2,
+    "chars": 4699,
+    "done": 2,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
   "paper-mte-2024-25": {
     "pages": 2,
     "chars": 3319,
@@ -80,6 +94,13 @@
     "pages": 4,
     "chars": 4144,
     "done": 4,
+    "flagged": 0,
+    "dashes_fixed": 0
+  },
+  "paper-resess-s3-2025-26": {
+    "pages": 2,
+    "chars": 4141,
+    "done": 2,
     "flagged": 0,
     "dashes_fixed": 0
   },

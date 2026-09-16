@@ -150,6 +150,7 @@ mas2001-mte/
 | `09-ERRATA.md` | 15 errors found in the source material, each with the computed value | before memorising anything |
 | `10-SLIDES-VS-SYLLABUS.md` | lecture-by-lecture slides audit (8-9 half, 10-11 corrected 15 Sep) | coverage questions |
 | `12-NEW-BATCH.md` | batch 2: 23 files catalogued, 19-unit processing queue, quality traps | batch 2 work |
+| `14-U02-ETE-S3.md` | U02 semester-3 ETE/re-sessional review and scope split | end-term evidence |
 
 ---
 
