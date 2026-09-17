@@ -1,0 +1,24 @@
+visual_id,status,asset,source_files,purpose
+V00,not-needed,,deck/README.md,folder map has no ASCII visual block
+V01,done,assets/course-map.svg,deck/00-INDEX.md|deck/notes/00-NOTES-INDEX.md,course prerequisite map
+V02,done,assets/probability-tree.svg,deck/03-LINGUISTICS.md|deck/notes/01-probability-foundations.md,generic adaptation of the conditional probability flow
+V03,done,assets/dice-sum.svg,deck/notes/01-probability-foundations.md|deck/notes/02-random-variables.md,ordered outcomes and sum frequencies
+V04,done,assets/pmf-to-cdf.svg,deck/notes/03-pmf-and-cdf.md,pmf and cumulative step plot
+V05,done,assets/distribution-gallery.svg,deck/05-DISTRIBUTIONS.md|deck/notes/06-binomial-poisson.md|deck/notes/07-uniform-normal-exponential.md,five distribution shapes
+V06,done,assets/normal-table-conventions.svg,deck/06-NUMBERS.md|deck/notes/07-uniform-normal-exponential.md,cumulative versus centre-area tables
+V07,done,assets/sampling-clt.svg,deck/notes/08-sampling-and-clt.md,sampling distributions and standard error
+V08,done,assets/estimator-comparison.svg,deck/notes/09-estimation.md,estimator decision flow and variance comparison
+V09,done,assets/chebyshev-bound.svg,deck/notes/10-chebyshev-and-hidden.md,distribution-free central bound
+V10,done,assets/study-roadmap.svg,deck/14-MASTER-STUDY-ORDER.md,study sequence and gates
+V11,done,assets/formula-landscape.svg,deck/01-CHEATSHEET.md,one-page formula landscape
+V12,planned,,deck/02-TERMS.md,term relationship map
+V13,done,assets/method-decision-tree.svg,deck/04-METHODS.md,method decision tree
+V14,done,assets/mutation-operators.svg,deck/07-PATTERNS.md,mutation operator map
+V15,planned,,deck/08-TRAPS.md,trap and correction matrix
+V16,planned,,deck/09-QUESTIONS.md,question-family atlas
+V17,planned,,deck/10-SLIDE-MAP.md,page-to-topic timeline
+V18,planned,,deck/11-BEYOND-SLIDES.md,hidden prerequisite network
+V19,planned,,deck/12-DRILL.md,drill ladder and coverage matrix
+V20,done,assets/exam-timeline.svg,deck/13-EXAM-MECHANICS.md,exam time allocation
+V21,done,assets/expectation-variance.svg,deck/notes/04-expectation-and-variance.md,expectation balance and variance spread
+V22,done,assets/continuous-pdf-cdf.svg,deck/notes/05-continuous-rv.md,pdf area and cdf derivative
