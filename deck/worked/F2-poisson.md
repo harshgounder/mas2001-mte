@@ -54,9 +54,11 @@ THE SIGNATURE (memorize this; it is the fastest way to spot a Poisson):
    |  MEAN  =  VARIANCE  =  lambda          |
    +---------------------------------------+
 
-   every other distribution we study has mean and variance DIFFERENT from each other.
-   Poisson is the only one where they are the SAME NUMBER. If a question says
-   "mean equals variance", the answer is Poisson.
+   for a Poisson law, the mean and variance are the SAME NUMBER for every lambda.
+   This is the Poisson signature, but an observed numerical equality by itself is not
+   sufficient to prove a Poisson law. Another distribution can have matching mean and
+   variance for a particular parameter choice, so use the stated model or the full
+   probability formula.
 ```
 
 THE PICTURE of the pmf (lambda = 1.5, the car-hire example later in this file):
@@ -200,8 +202,10 @@ ANSWER: P(at least 2) = 0.4422, about 44 percent.
 
 SELF CHECK:
 ```
-   the missing piece (3 or more) must be 1 - 0.2231 - 0.3347 - 0.4422 = 0.0000. 
-   more precisely: P(0)+P(1) = 0.5578, P(>=2) = 0.4422, total 1.0000 ✓
+   this is a partition of all outcomes, not an extra "3 or more" piece:
+   P(0) + P(1) + P(X >= 2) = 0.2231 + 0.3347 + 0.4422 = 1.0000 ✓
+   P(X >= 2) already includes 2, 3, 4, and so on. More precisely, the unrounded
+   P(0) + P(1) and P(X >= 2) sum to exactly 1.
 ```
 
 TRAP:
@@ -712,6 +716,13 @@ QUESTION 8 (our paper, ETE re-session S4 A2)
 DECODE: pure recall of the signature.
 
 ANSWER: (b) Poisson.
+
+NOTE ON THE WORDING:
+```
+   Among the named families, Poisson is the one whose MEAN and VARIANCE formulas are
+   identical as an identity. This MCQ is asking for that identity, not for a coincidence
+   between two numerical moments from an unspecified distribution.
+```
 
 THE COMPARISON TABLE (memorize this row; it is a likely MCQ):
 

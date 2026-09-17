@@ -41,6 +41,16 @@ THE FOUR CHARACTERISTICS (the whole topic lives here):
    +----------------+-----------------------------------------------------+
 ```
 
+SUFFICIENCY QUALIFICATION:
+```
+   Sufficiency is a property of a statistic for a SPECIFIED parameter in a SPECIFIED
+   probability model. "Uses all the information" means that, once the statistic is known,
+   the conditional distribution of the rest of the sample does not depend on that parameter.
+   It does not mean the statistic is automatically unbiased, efficient, or sufficient under
+   a different model. The factorisation statements below assume the stated random-sample
+   model and fixed sample size.
+```
+
 THE PROTOCOL (check in THIS ORDER; it is the exam's expected sequence):
 
 ```
@@ -183,7 +193,9 @@ ANSWER: option 2.
 
 WHY (and this is worth a line in any written answer): sufficiency means the statistic captures
 EVERYTHING in the sample that tells you about the parameter. Once you know the sufficient
-statistic, the rest of the sample adds nothing.
+statistic, the rest of the sample adds nothing about that parameter under the stated model.
+This is the plain-language version of the parameter-free conditional-distribution definition,
+not a claim that every statistic is sufficient in every model.
 
 TRAP: option 1 is efficiency, option 3 is unbiasedness, option 4 is a specific example (the
 sample mean IS sufficient for a normal mean, but that is not the DEFINITION).
@@ -206,6 +218,9 @@ STEP 0: DECODE
 ```
    "all samples of size two with replacement" -> every ordered pair (a,b) from {2,4,6,8},
         and there are 4 x 4 = 16 of them.
+   FINITE-POPULATION ASSUMPTION: the four listed values are the four equally likely members
+        of the population, and replacement makes the two draws independent. Unequal member
+        frequencies or sampling without replacement would require a different calculation.
    "verify the sample mean is unbiased" -> show E(sample mean) = population mean.
    the METHOD: enumerate all 16, average their means, compare to the population mean.
 ```
@@ -512,6 +527,21 @@ ANSWER: (3.5783, 4.0217).
 TRAP: the "50 of 600" detail is a distractor. You use n = 50 (the SAMPLE), not 600 (the
 population). The 600 is flavour.
 
+ASSUMPTION NOTE ON THE FINITE POPULATION:
+```
+   The displayed answer follows the course convention of treating the 50 observations as
+   independent for the standard error, so it does not use a finite-population correction.
+   This is appropriate when the target is a larger or superpopulation mean, or when the
+   sampling fraction is being ignored as the source does. If the wording instead means a
+   simple random sample without replacement from this finite population of N = 600 and the
+   target is its finite-population mean, use
+        FPC = sqrt((N - n)/(N - 1)) = sqrt(550/599) = 0.9582,
+        SE = (0.8/sqrt(50)) x FPC = 0.1084,
+   giving ME = 1.96 x 0.1084 = 0.2125 and CI = (3.5875, 4.0125).
+   The source does not state this design choice, so state the no-FPC convention when using
+   its answer (3.5783, 4.0217).
+```
+
 THE THREE-CI PATTERN (this is a MUTATION family, learn the shape):
 ```
    all three questions are: xbar +/- (table value) x (s / sqrt(n))
@@ -539,9 +569,16 @@ STEP 0: DECODE
    "find sufficient estimators" -> find the statistic that captures all the information
       about theta
    the METHOD: Neyman-Fisher factorisation, OR recognise the standard result.
+
+   MODEL ASSUMPTION: the observations are an iid sample, the support is x >= 0 and theta is
+   the exponential RATE in f(x;theta) = theta exp(-theta x). A different parameterisation,
+   support, or sampling model can have a different sufficient statistic.
 ```
 
 THE STANDARD RESULTS (memorize the table; this is what the exam wants):
+
+These entries are model-specific shorthand. The Poisson and binomial rows assume fixed n;
+the normal rows name one parameter of interest and assume the usual iid normal sample.
 
 ```
    +--------------------------+--------------------------------+
@@ -717,13 +754,21 @@ QUESTION 14 (MTE 2025-26 paper, block Q8 part (ii) - THE REAL THING, 3 marks)
    estimator of theta^2.
 ```
 
+ASSUMPTION NOTE:
+```
+   The source wording above states only unbiasedness. The conclusion also needs the missing
+   non-degeneracy condition 0 < Var(t) < infinity. If Var(t) = 0, the identity below gives
+   E(t^2) = theta^2, so t^2 is not biased for theta^2. The proof therefore records the extra
+   condition instead of treating it as if it appeared in the source question.
+```
+
 STEP 0: DECODE - a PROOF question. The tool: the variance identity.
 
 ```
    "t is unbiased for theta"       -> E(t) = theta
    "show t^2 is BIASED for theta^2"-> show E(t^2) is NOT equal to theta^2
    the tool: V(t) = E(t^2) - [E(t)]^2   (the computational variance identity)
-             and V(t) is NOT zero in general (the question states var(t) != 0)
+             and assume 0 < V(t) < infinity (the source question omits this condition)
 ```
 
 EVERY STEP:
@@ -744,7 +789,7 @@ EVERY STEP:
   STEP 4  rearrange:
           E(t^2) = V(t) + theta^2
 
-  STEP 5  the punchline: since V(t) is NOT zero (given var(t) != 0),
+  STEP 5  the punchline: since V(t) is positive under the added non-degeneracy condition,
           E(t^2) = theta^2 + V(t) > theta^2
           so    E(t^2) - theta^2 = V(t) != 0
           the bias of t^2 as an estimator of theta^2 equals V(t), which is NON-ZERO.
@@ -753,13 +798,15 @@ EVERY STEP:
           so t^2 is a BIASED estimator of theta^2. Q.E.D.
 ```
 
-ANSWER: the proof above. Bias of t^2 = V(t) (positive), which is non-zero.
+ANSWER: under the added condition 0 < V(t) < infinity, the proof shows that the bias of t^2
+is V(t), which is positive and non-zero. With only the source's unbiasedness assumption, the
+general identity is E(t^2) = theta^2 + V(t), so the claim is not guaranteed when V(t) = 0.
 
 THE PICTURE (why squaring breaks unbiasedness):
 
 ```
    t lands around theta:     ...t...theta...t...
-   t^2 lands around theta^2 + V(t):
+   t^2 lands around theta^2 + V(t) when V(t) > 0:
         E(t^2) = theta^2 + V(t)      <- always ABOVE theta^2
                  |<--bias=V(t)-->|
    squaring shifts the average upward by exactly the variance. that shift IS the bias.
@@ -839,6 +886,15 @@ QUESTION 16 (our LMS deck, theory-of-estimation Example 2 - the T1/T2/T3 set)
    (4) best estimator?
 ```
 
+CONSISTENCY QUALIFICATION:
+```
+   The source gives only one statistic at the fixed sample size n = 3. Consistency is a
+   property of a sequence of estimators as n -> infinity, not of one fixed-n statistic.
+   Thus T3 at n = 3 can be shown unbiased, but its variance sigma^2/3 does not itself tend
+   to zero. To answer the source's consistency part, interpret T3 as the n = 3 member of the
+   sample-mean sequence T_n = (X1 + ... + Xn)/n, with iid observations of finite variance.
+```
+
 EVERY STEP:
 
 ```
@@ -851,15 +907,22 @@ EVERY STEP:
   STEP 3  T3: E = (lambda mu + 2mu)/3 = mu  ->  lambda + 2 = 3  ->  lambda = 1
           then T3 = (X1+X2+X3)/3 = the sample mean.
 
-  STEP 4  consistency of T3: E(T3) = mu (no bias at any n) and Var = sigma^2/3 -> 0.
-          both consistency conditions hold -> CONSISTENT.
+  STEP 4  at the displayed fixed n = 3, T3 has E(T3) = mu and Var(T3) = sigma^2/3.
+          This proves unbiasedness at n = 3, but does NOT prove consistency because there is
+          no n -> infinity limit for one fixed statistic.
 
-  STEP 5  variances: 3 sigma^2 (T1) vs 29 sigma^2 (T2) vs sigma^2/3 (T3)
+  STEP 5  under the sample-mean-sequence interpretation in the note,
+          T_n = (X1 + ... + Xn)/n has E(T_n) = mu and Var(T_n) = sigma^2/n -> 0.
+          Its bias and variance therefore both tend to zero, so the sequence is consistent.
+
+  STEP 6  variances at the displayed n = 3:
+          3 sigma^2 (T1) vs 29 sigma^2 (T2) vs sigma^2/3 (T3)
           sigma^2/3 < 3sigma^2 < 29sigma^2  -> T3 is the BEST.
 ```
 
-ANSWER: T1 and T2 both unbiased (the weights each sum to 1); lambda = 1; T3 is consistent;
-best = T3 (= the sample mean).
+ANSWER: T1 and T2 are unbiased; lambda = 1; T3 is the n = 3 sample mean and is best at this
+fixed n. Under the intended sample-mean-sequence interpretation, the family T_n is consistent.
+The fixed-n display alone does not establish consistency.
 
 TRAP: T2's coefficients (2, -4, 3) look wild but sum to 1, so it IS unbiased; its variance
 is the killer (29). And note the negative weight SQUARES into the variance as positive 16.

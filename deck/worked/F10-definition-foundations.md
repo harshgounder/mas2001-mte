@@ -53,8 +53,8 @@ WHY (the picture that makes it stick):
 THE VARIANTS (all three papers ask this; the wording changes slightly):
 ```
    "a function from sample space to real numbers"        (E25S4-A1, E25SUM-1)
-   "A discrete random variable X is a function that maps: the sample space to the set of
-    countable real numbers"                              (R25S4-A1 - the discrete version)
+   "A discrete random variable X is a function that maps the sample space to a countable
+    subset of the real numbers"                         (R25S4-A1 - the discrete version)
 ```
 
 TRAP:
@@ -95,7 +95,7 @@ QUESTION 2 (our paper, ETE 2025 summer Q12; the same table appears again in Q B1
    +-----+-----+-----+------+------+------+------+------+----------+
    |  X  |  0  |  1  |  2   |  3   |  4   |  5   |  6   |    7     |
    +-----+-----+-----+------+------+------+------+------+----------+
-   | P(X)|  0  |  k  |  2k  |  2k  |  3k  | k^2  | 2k^2 | 7k^2 + k |
+   | P(X=x)|  0  |  k  |  2k  |  2k  |  3k  | k^2  | 2k^2 | 7k^2 + k |
    +-----+-----+-----+------+------+------+------+------+----------+
    (i) Find the value of k.   (ii) Find P(1.5 < X < 3.5).
    (the Q B1 variant of the same table asks: (i) evaluate P(X<6), P(X>=6), P(0<X<5);
@@ -148,7 +148,7 @@ THE SANITY CHECK (always substitute back):
 PART (ii) - P(1.5 < X < 3.5):
 
 ```
-  STEP 1  X is DISCRETE, so only whole values count: 1.5 < X < 3.5 means X = 2 or X = 3.
+  STEP 1  X is DISCRETE with support {0,1,...,7}, so 1.5 < X < 3.5 means X = 2 or X = 3.
   STEP 2  P(X=2) + P(X=3) = 2k + 2k = 4k
   STEP 3  = 4 x 0.1 = 0.4
 ```
@@ -162,7 +162,7 @@ THE Q B1 VARIANT (the same table, five more asks; this is the full drill):
    +-----+-------+-------+-------+-------+-------+-------+-------+-------+
    |  X  |   0   |   1   |   2   |   3   |   4   |   5   |   6   |   7   |
    +-----+-------+-------+-------+-------+-------+-------+-------+-------+
-   | P(X)|  0    |  0.1  |  0.2  |  0.2  |  0.3  | 0.01  | 0.02  | 0.17  |
+   | P(X=x)|  0    |  0.1  |  0.2  |  0.2  |  0.3  | 0.01  | 0.02  | 0.17  |
    +-----+-------+-------+-------+-------+-------+-------+-------+-------+
    (each cell from the k-expressions: 7k^2 + k = 7(0.01) + 0.1 = 0.17)
    sum check: 0.1+0.2+0.2+0.3+0.01+0.02+0.17 = 1.0 ✓
@@ -208,7 +208,8 @@ TRAP:
    3. In part (ii)-of-B1: stopping at F(3) = 0.5. The condition is P(X<=a) > 1/2 STRICTLY,
       and 0.5 is not > 0.5, so it must be a = 4.
    4. For discrete X, "1.5 < X < 3.5" means X=2 and X=3 only. Do not try to include any
-      fractional values.
+      values outside the stated integer support.
+```
 
 ═══════════════════════════════════════════════════════════════════════════════
 F10.3  THE JOINT PMF AND THE MARGINAL  (a two-variable extension)

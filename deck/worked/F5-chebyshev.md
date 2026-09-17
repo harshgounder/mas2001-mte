@@ -147,6 +147,10 @@ STEP 0: DECODE - the gap is in RAW units (c), not in sigma units, so use form (3
    |X - 10| >= c            ->  the gap is c, a plain number (NOT c times sigma)
    "<= 0.04"                ->  the target ceiling
    => use form (3):  P(|X - mu| >= c) <= sigma^2 / c^2
+
+   ASSUMPTION ABOUT THE SOURCE WORDING: the paper says "find the value of c", but the
+   inequality is also true for every larger c. We use the course convention of finding
+   the SMALLEST positive c for which the Chebyshev bound reaches the target 0.04.
 ```
 
 THE DECISION TREE that picks the form (this is the whole skill):
@@ -166,7 +170,7 @@ EVERY STEP:
 ```
   STEP 1  sigma^2 = 4
   STEP 2  Chebyshev form 3: P(|X - 10| >= c) <= 4 / c^2
-  STEP 3  We want the ceiling to be 0.04:
+  STEP 3  To find the smallest threshold, set the bound equal to 0.04:
           4 / c^2 = 0.04
   STEP 4  multiply both sides by c^2:
           4 = 0.04 c^2
@@ -174,9 +178,13 @@ EVERY STEP:
           c^2 = 4 / 0.04 = 100
   STEP 6  take the square root:
           c = sqrt(100) = 10
+
+  STEP 7  Since 4/c^2 decreases as positive c increases, every c >= 10 also gives a
+          bound at most 0.04. Therefore 10 is the minimum positive value.
 ```
 
-ANSWER: c = 10.
+ANSWER: c_min = 10 under the minimum-threshold interpretation. The original <= condition
+is also satisfied by every c >= 10, so c = 10 is the smallest valid choice.
 
 THE SANITY CHECK (always do this on a find-c question):
 
@@ -215,8 +223,11 @@ QUESTION 3 (our paper, ETE 2024-25 S3 B1 - the 21/25 case)
 STEP 0: DECODE - the interval holds two hidden pieces of information.
 
 ```
-   P(-2 < X < 8) is an interval. Chebyshev always talks about a SYMMETRIC interval
-   around the mean. So:
+   P(-2 < X < 8) is an interval. To recover the moments as this course question intends,
+   ASSUME the displayed interval is the symmetric Chebyshev interval
+   (mu - k sigma, mu + k sigma), and that 21/25 is the exact Chebyshev lower-bound
+   expression 1 - 1/k^2. A bare inequality alone would not identify E(X) and Var(X).
+   Under that course interpretation:
         - the CENTRE of (-2, 8) is the mean
         - the HALF-WIDTH of (-2, 8) is k times sigma
    ">= 21/25" is the WITHIN form, so 1 - 1/k^2 = 21/25.
@@ -290,6 +301,14 @@ QUESTION 4 (our paper, ETE 2024-25 S4 B3 - the same shape with different numbers
 ```
    If the Chebyshev's inequality for the random variable X is given by
    P(4 < X < 16) >= 24/25,  find E(X) and Var(X).
+```
+
+ASSUMPTION NOTE:
+```
+   As in Q3, the source writes a lower-bound inequality. The calculation below follows the
+   course's intended reading that (4,16) is the symmetric interval (mu-k sigma, mu+k sigma)
+   and 24/25 is the exact Chebyshev bound 1 - 1/k^2. Without that reading, the inequality
+   alone allows many possible means and variances.
 ```
 
 EVERY STEP:

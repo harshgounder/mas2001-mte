@@ -1,18 +1,19 @@
-# WORKED QUESTIONS: the complete zero-knowledge answer set
+# WORKED QUESTIONS: audited study-bank index
 
-Built 17 Sep 2026. Every question here comes from OUR OWN material: the two MTE papers, the
-nine ETE sittings, the assignments, and the lecture decks. Nothing invented. Every number in
-every solution was machine-verified before the file was committed.
+Built 17 Sep 2026. The worked bank draws from nine supplied exam papers in total, two MTE
+and seven ETE, plus assignments and lecture material. Source labels record the claimed
+course-material origin. They do not prove that the bank is exhaustive or that every
+calculation has been independently recomputed.
 
 ```
    folder:   ~/mas2001-mte-s2/deck/worked/
-   files:    14 (one per family) + this index
+   files:    15 family files (F1-F15) + this index and companion drill/method files
    size:     ~415 KB
-   questions: 131
-   register: ZERO-KNOWLEDGE LONG FORM ONLY (every step shown, no assumed maths)
+   counts:   160 QUESTION headers; 179 audited solved-content items; 183 source-question units
+   register: worked explanations, with detail varying by item
 ```
 
-drill file: 00-QUESTIONS-ONLY.md (168 questions: all worked + 10 MCQs; solutions behind pointers)
+drill file: 00-QUESTIONS-ONLY.md (180 drill units after adding the 12 F13 MCQs)
 
 ═══════════════════════════════════════════════════════════════════════════════
 THE FILES AND WHAT EACH COVERS
@@ -35,7 +36,7 @@ THE FILES AND WHAT EACH COVERS
   |       |                           |       | SE-of-average, phi table conventions   |
   | F7    | RV / pdf / cdf            |   6   | find-k, mean/var exact fractions,      |
   |       |                           |       | piecewise cdf, dice grid               |
-  | F8    | Estimation                |  17   | 4 properties, unbiased verification,   |
+  | F8    | Estimation                | 18 hdr| 17 solutions + 1 pointer-only header;  |
   |       |                           |       | consistency, CIs (3), sufficiency (3)  |
   | F9    | CLT / sampling            |   8   | SE value, SE behaviour, applicability, |
   |       |                           |       | 3 deck examples (ATM, impurity, LED)   |
@@ -45,19 +46,20 @@ THE FILES AND WHAT EACH COVERS
   |       |                           |       | typist Q8, soldiers, Poisson scaling   |
   | F12   | Hypothesis testing (OUT*) |  20   | 8 MCQs, t-tests (3), F-tests (2),      |
   |       |                           |       | chi-square (3), ANOVA (2), bulbs       |
-  | F13   | Assignment sheets         |  28   | both assignments in full: 12 MCQs +    |
-  |       |                           |       | 16 full solves, printed-answer quirks  |
+  | F13   | Assignment sheets         | 28 hdr| 28 solution headers + a 12-MCQ table;  |
+  |       |                           | +12MCQ| printed-answer quirks documented       |
   | F14   | Probability foundations   |   1 + | lecture-2 basics: events, conditional  |
   |       |                           |  10MCQ| prob (camera example), independence,   |
   |       |                           |       | the assignment-1 MCQ key (C,B,B,A,D,   |
   |       |                           |       | B,B,B,A,B)                             |
-  | F15   | Assignment bank 2         |  22   | 2024-25 + 2025-26 sheets:            |
-  |       |                           |       | expectation tricks, find-k, counts,   |
+  | F15   | Assignment bank 2         | 22 hdr| 21 solutions + 1 pointer-only header;  |
   |       |                           |       | 8 printed-answer flags documented     |
   +-------+---------------------------+-------+----------------------------------------+
    (*) hypothesis testing is marked out of the MTE syllabus in the ledger, but it appeared in
        five ETE papers with two 10-mark questions; included for completeness.
-   TOTAL: 158 questions
+   HEADER TOTAL: 160. This table counts `QUESTION` headers, including two pointer-only stubs.
+   AUDITED CONTENT TOTAL: 179 solved-content items. SOURCE-QUESTION TOTAL: 183 units.
+   See 00-HOW-AND-WHY.md for the counting rules; these totals are not interchangeable.
 ```
 
 ═══════════════════════════════════════════════════════════════════════════════
@@ -72,8 +74,8 @@ SOURCE MAP: WHERE THE QUESTIONS COME FROM
 ═══════════════════════════════════════════════════════════════════════════════
 
 ```
-   MTE 2024-25 paper    M24 (A1-A3, B1-B4, C1)   -> all 9 blocks covered across F2,F3,F4,F5,F6,F7,F11
-   MTE 2025-26 paper    M25 (Q1-Q8)              -> all 8 blocks covered across F2,F3,F5,F6,F7,F8,F11
+   MTE 2024-25 paper    M24 (A1-A3, B1-B4, C1)   -> 8 blocks represented across F2,F3,F4,F5,F6,F7,F11
+   MTE 2025-26 paper    M25 (Q1-Q8)              -> 8 blocks represented across F2,F3,F5,F6,F7,F8,F11
    ETE 2024-25 S3       E24S3 (A1-B5)            -> F5,F6,F7,F8,F9,F10,F11,F12
    ETE 2024-25 S4       E24S4 (A1-D2)            -> F3,F6,F7,F8,F10,F12
    ETE 2025-26 S3       E25S3 (A1-C2)            -> F1,F2,F4,F5,F6,F7,F8,F9,F12
@@ -82,7 +84,7 @@ SOURCE MAP: WHERE THE QUESTIONS COME FROM
    ETE re-session S3    R25S3                    -> F1,F2,F3,F5,F6,F8,F9,F11,F12
    ETE re-session S4    R25S4                    -> F3,F4,F7,F11,F12
    decks (ppt3/ppt4/ppt5/lms) -> F1,F2,F4,F6,F9 (the deck examples)
-   assignments (2024-25, 2025-26) -> F13 (all 28 questions), plus F6 (7%/89%), F1/F5/F8
+   assignments (2024-25, 2025-26) -> F13 (28 headers + 12 embedded MCQs), plus F6, F1, F5, F8
    university solution schemes (NEW source mined) -> cross-checks in F1,F5,F6,F7,F8,F11,F12
 ```
 
@@ -146,7 +148,7 @@ HOW TO USE THIS FOLDER
      4. F2  poisson         |  the discrete three
      5. F3  exponential     )
      6. F4  uniform         )
-     7. F5  chebyshev       (appears in EVERY sitting; P=1.00)
+     7. F5  chebyshev       (recurs in the supplied papers; future frequency is unknown)
      8. F6  normal          (the hardest block; two tables!)
      9. F9  clt             (feeds F6 and F8)
     10. F8  estimation      (the protocol)
@@ -159,10 +161,10 @@ HOW TO USE THIS FOLDER
      - ASCII flowcharts and pictures inside the solves
      - a SUMMARY CARD at the end (the whole family on one screen)
 
-   THE NUMBER GUARANTEE:
-     every arithmetic line was checked with a machine script before commit.
-     where the paper's printed value differs from the exact value (rounding, or typos),
-     both are shown and the difference is explained.
+   CALCULATION STATUS:
+     construction commits record batches of checks, but a full independent recomputation
+     of every current line is still in progress. Printed-answer differences are flagged
+     where they were found.
 ```
 
 ═══════════════════════════════════════════════════════════════════════════════
@@ -195,7 +197,7 @@ RELATED FILES
    00-HOW-AND-WHY.md            methodology: how/why the question set was
                                 made, the exact counts, the shape/skeleton
                                 derivation, stated limits
-   deck/15-DECISION-MANUAL.md   the if-X-do-Y manual for all 34 shapes + mutations
+   deck/15-DECISION-MANUAL.md   a 36-category study taxonomy (16 in-MTE + 20 recall-gap)
    deck/notes/                  the slide conversions rewritten (00-09)
    deck/01 to 13                the reference deck (cheatsheet, terms, traps...)
    deck/12-DRILL.md             the 50-item drill
@@ -203,20 +205,9 @@ RELATED FILES
 ```
 
 ═══════════════════════════════════════════════════════════════════════════════
-VERIFICATION LEDGER (every file's number-check total at commit time)
+CALCULATION CHECK STATUS
 ═══════════════════════════════════════════════════════════════════════════════
 
-```
-   F1   36/36 checks pass   (9 questions)
-   F2   22/22 checks pass   (8 questions)
-   F3   26/26 checks pass   (6 questions)
-   F4   17/17 checks pass   (4 questions)
-   F5   ~21/21 checks pass  (7 questions)
-   F6   13/13 + 6/6 (the added variant)
-   F7   17/17 checks pass   (6 questions)
-   F8   20/20 + 5/5 (the added ones)
-   F9   13/13 checks pass   (7 questions)
-   F10  15/15 checks pass   (4 questions)
-   F11  13/13 checks pass   (5 questions)
-   F12  7/7 + 15/15 (the added ones)
-```
+Construction commits recorded partial arithmetic checks. A current independent,
+line-by-line recomputation of the whole bank is still in progress. See
+reports/21-DECK-NOTES-AUDIT.md and reports/22-WORKED-BANK-METHODOLOGY-AUDIT.md.

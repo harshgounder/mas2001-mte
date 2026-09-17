@@ -1,7 +1,9 @@
 # 15 DECISION MANUAL: faced with X, do Y
 
-Built 17 Sep 2026. The extreme-distinction study artifact. For every one of the 34
-(family / ask) shapes that has EVER appeared across the 9 sittings, this file gives:
+Built 17 Sep 2026. A study lookup organised as a working 36-category taxonomy:
+16 categories observed in the two supplied MTE papers and 20 recall-gap categories drawn
+from the wider course material. The source set contains nine exam papers in total, two MTE
+and seven ETE. The taxonomy is a study aid, not an exhaustive model of a future paper.
 
 ```
    TRIGGER    the phrase or structure that tells you which shape it is
@@ -65,7 +67,7 @@ SUB-SHAPES:
    VALUES pens B(12,0.1): P(0)=0.2824  P(2)=0.2301
 
  F1.2  tail  P(X >= k) or "at least" / "at most"
-   DO     use the COMPLEMENT, never sum longhand
+   DO     translate the wording first, then use either a short direct sum or a complement
    IF "at least 1"    THEN P(X>=1) = 1 - P(X=0) = 1 - q^n
    IF "at least 2"    THEN 1 - P(X=0) - P(X=1)   (two terms)
    IF "at most k"     THEN P(X<=k), sum P(0)..P(k) OR 1 - P(>=k+1)
@@ -79,8 +81,8 @@ SUB-SHAPES:
 
  F1.4  parameter recovery
    DO     set up the stated probability relation, solve for p
-   IF "P(X=5) = 2 P(X=4)"  THEN C(n,5)p^5q^(n-5) = 2 C(n,4)p^4q^(n-4) -> p/q = 2(n-4)/(5)
-          -> with the right n this collapses to p = 5/8
+   IF "P(X=5) = 2 P(X=4)"  THEN P(X=5)/P(X=4) = ((n-4)/5)(p/q) = 2
+          -> p/q = 10/(n-4). For n=10, p/q=5/3 and p=5/8.
    TRAP   forgetting the combination ratio C(n,5)/C(n,4) = (n-4)/5
 
  F1.5  formula MCQ  "the pmf of binomial is ..."
@@ -116,13 +118,15 @@ SUB-SHAPES:
 
  F2.2  tail  P(X >= k) or P(X > k)
    DO     complement from 0. P(X>=4) = 1 - P(0) - P(1) - P(2) - P(3)
-   IF "rejected" or "overflow" or "capacity" THEN it is a tail; translate the story to P(X>=c)
-   VALUES lambda=2: P(X>=4) = 0.1429 ; a capacity story gave 0.2424 at lambda=3
+   IF capacity is c and rejection starts only after capacity is filled THEN use P(X>=c+1);
+          state the threshold from the wording before calculating
+   VALUES lambda=2: P(X>=4) = 0.1429 ; the capacity story gives 0.2424 at lambda=2.5
 
  F2.3  parameter recovery
    DO     set the given probability relation, solve for lambda
-   IF "P(X=1) = 0.2 P(X=2)"  THEN el l = 0.2 (el l^2/2) -> 1 = 0.1 l -> l = 10
-   IF "P(X=2) = 9 P(X=4) + 90 P(X=6)" THEN divide through and solve (gives l = 1 or 10)
+   IF "P(X=1) = 0.2 P(X=2)"  THEN e^-l l = 0.2(e^-l l^2/2) -> 1 = 0.1l -> l = 10
+   IF "P(X=2) = 9 P(X=4) + 90 P(X=6)" THEN divide by e^-l l^2/2:
+          1 = 3l^2/4 + l^4/4, so l^4 + 3l^2 - 4 = 0 and the valid rate is l = 1
    TRAP   forgetting to divide out e^-l, which is common to both sides
 
  F2.4  rate/window scaling
@@ -130,10 +134,11 @@ SUB-SHAPES:
    VALUES 2/min -> 5 min = 10 ; 15/hr -> per 1 hr = 15 ; 5/day -> 2.5/day = 2.5
 
  F2.5  nesting (composite)
-   DO     stage 1 Poisson gives a COUNT, stage 2 treats that count as n in a binomial
-   IF "2 calls per minute, then in 5 minutes" THEN n = Poisson(2) over 5 min = 10,
-          then binomial B(5 something) -- read the second stage carefully
-   VALUES the textbook form is 32 e^-10 = 0.00145
+   DO     define the event in one interval, find its Poisson probability p, then count how
+          many independent intervals satisfy that event with a binomial model
+   IF calls arrive at 2/min and the ask is "exactly two calls in each of five minutes"
+          THEN p=P(Poisson(2)=2)=2e^-2 and M~B(5,p); P(M=5)=p^5
+   VALUES (2e^-2)^5 = 32e^-10 = 0.00145
    TRAP   mixing the two stages' parameters
 ```
 
@@ -174,7 +179,8 @@ SUB-SHAPES:
  F3.4  conditional  P(X > a+b | X > a) = P(X > b)   (memoryless)
    DO     for exponential, the condition drops out. P(X>s+t|X>s) = e^(-lt)
    IF NOT memoryless (a general continuous rv) THEN use P(A|B) = P(A n B)/P(B) with S ratios
-   VALUES e^-0.5/e^-1 = 0.6225
+   VALUES P(X<1|X<2) for mean 2 is (1-e^-0.5)/(1-e^-1) = 0.6225; this is
+          a nested lower-tail event, not a memoryless upper-tail event
    TRAP   trying to compute the general conditional when memoryless applies
 
  F3.5  moments  E = 1/lambda, Var = 1/lambda^2
@@ -214,17 +220,17 @@ SUB-SHAPES:
  F4.3  absolute-value to interval  P(|X - c| < d) = P(c-d < X < c+d)
    DO     expand the modulus to an interval, clip, ratio
    IF the centre is E(X) THEN c = (a+b)/2
-   VALUES P(|X-3|>2) -> P(X<1 or X>5) -> two pieces, add them
+   VALUES for X~U(0,8), P(|X-3|>2) -> P(X<1 or X>5) -> (1+3)/8 = 1/2
 
  F4.4  moments  E = (a+b)/2, Var = (b-a)^2/12
    DO     plug a and b.
    IF given mean and variance, solve for a and b THEN two equations:
           a+b = 2m ; b-a = sqrt(12 v).  solve.
-   VALUES U(0,5): E=2.5 ; (a,b) with mean 1 var 4/3 -> a=0, b=2
+   VALUES U(0,5): E=2.5 ; (a,b) with mean 1 and variance 4/3 -> a=-1, b=3
 
  F4.5  inverse  find a so that P(X > c) = p
    DO     set up the ratio equal to p, solve for the unknown bound
-   VALUES P(X>1) = 1/3 over (-a,a) -> a = 3/2  (or similar)
+   VALUES P(X>1) = 1/3 over (-a,a) -> (a-1)/(2a)=1/3 -> a=3
 
  F4.6  Chebyshev on uniform  (composite, see F5.4)
 ```
@@ -237,7 +243,7 @@ MUTATIONS SEEN:
 ```
 
 -------------------------------------------------------------------------------
-F5. CHEBYSHEV  (appears in EVERY sitting)
+F5. CHEBYSHEV  (recurs in the supplied papers)
 -------------------------------------------------------------------------------
 
 ```
@@ -451,9 +457,11 @@ SUB-SHAPES:
    IF the parameter is an exponential rate THEN sum (or Xbar) is sufficient.
    VALUES Poisson sample mean sufficient; exponential sufficient statistic.
 
- F8.5  confidence interval (in-scope for "point and interval estimation")
-   DO     Xbar +/- z(alpha/2) sigma/sqrt(n) for a known sigma, large n.
-   IF sigma unknown and n small THEN use t with n-1 df.
+ F8.5  confidence interval (boundary material, outside the stated MTE lectures 1-21)
+   DO     Xbar +/- z(alpha/2) sigma/sqrt(n) when sigma is known and the population is normal,
+          or as a justified large-sample approximation.
+   IF sigma is unknown and the population is normal THEN use t with n-1 df; for a
+          non-normal population, justify any large-sample approximation.
    VALUES 95% CI for mean weight from a sample; z=1.96 for 95%
    TRAP   using z when t is required
 
@@ -496,8 +504,9 @@ SUB-SHAPES:
    TRAP   using sigma instead of SE, the single most common CLT error
 
  F9.3  applicability  "when does the CLT hold"
-   DO     n > 30 for any distribution; any n if the population is normal;
-          NOT valid for n < 30 with a non-normal population.
+   DO     if the population is normal, Xbar is normal for every n. Otherwise, assess sample
+          size together with skewness and tail weight. The course's n>=30 cutoff is a
+          classroom heuristic, not a theorem and not a guarantee for every distribution.
 
  F9.4  sampling distribution  distribution of Xbar
    DO     mean = mu, variance = sigma^2/n.
@@ -556,8 +565,9 @@ PART 4: THE ASK-VERB MAP (one line each)
 ═══════════════════════════════════════════════════════════════════════════════
 
 ```
-  "find the probability that"     -> point/tail; complement if "at least"
-  "at least" / "at most"          -> COMPLEMENT rule, never longhand sum
+  "find the probability that"     -> translate the event, then choose point, sum, or tail
+  "at least"                       -> often a lower-tail complement, e.g. P(X>=k)=1-P(X<=k-1)
+  "at most"                        -> P(X<=k), either sum 0..k or use 1-P(X>=k+1)
   "greater than" / "exceeds"      -> upper tail, 1 - F
   "between a and b"               -> F(b) - F(a)
   "find k" / "find the constant"  -> normalise (integrate = 1) then solve
@@ -601,10 +611,10 @@ WHEN A MUTATION CHANGES THE METHOD:
 ```
 
 ═══════════════════════════════════════════════════════════════════════════════
-PART 6: THE 34-SHAPE CHECKLIST (tick each off while drilling)
+PART 6: THE 36-CATEGORY STUDY CHECKLIST (tick each off while drilling)
 ═══════════════════════════════════════════════════════════════════════════════
 
-IN-MTE (14)  [ ] Chebyshev/concept-mcq  [ ] Chebyshev/inverse-c  [ ] Chebyshev/point
+IN-MTE (16)  [ ] Chebyshev/concept-mcq  [ ] Chebyshev/inverse-c  [ ] Chebyshev/point
              [ ] Chebyshev/moments  [ ] Poisson/concept-mcq  [ ] Poisson/formula-mcq
              [ ] Poisson/moments  [ ] Binomial/tail  [ ] Exponential/tail
              [ ] Normal/interval  [ ] Estimation/sufficiency  [ ] Estimation/tail
@@ -621,6 +631,6 @@ RECALL-GAP (20)  [ ] Binomial/point  [ ] Binomial/moments  [ ] Binomial/formula-
 
 ═══════════════════════════════════════════════════════════════════════════════
 
-This is the "if given X, do Y" map. Read it once, then drill against it. The mutation layer
-(Part 5) is where the setter operates: for every shape above, the exam changes ONE thing, and
-the IF/THEN branches tell you which one-line method the change triggers.
+This is an "if given X, do Y" study map. Read it once, then test it against the drill. The
+mutation layer records changes observed in the supplied material. A future question may make
+one change, several changes, or use a form not represented here.

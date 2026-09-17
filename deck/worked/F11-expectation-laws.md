@@ -29,7 +29,7 @@ THE EXPECTATION LAWS:
    | E(cX)       = c E(X)       constants pull out of E             |
    | E(X + Y)    = E(X) + E(Y)  ALWAYS (no independence needed)     |
    | E(X - Y)    = E(X) - E(Y)  ALWAYS                              |
-   | E(XY)       = E(X) E(Y)    ONLY when X and Y are INDEPENDENT    |
+   | E(XY)       = E(X) E(Y)    if X and Y are independent          |
    +---------------------------------------------------------------+
 ```
 
@@ -98,14 +98,15 @@ QUESTION 1 (our paper, ETE re-session S3 A1)
 
 ANSWER: (d) E[XY] = E[X] E[Y].
 
-WHY: independence is exactly the condition that makes the expectation of a product FACTOR.
-Without independence this fails (for example, X = Y gives E[XY] = E[X^2], not (E[X])^2).
+WHY: independence guarantees that the expectation of a product FACTORS. It is a sufficient
+condition, not a necessary one. Without independence the equality may or may not hold; for
+example, X = Y generally gives E[XY] = E[X^2], not (E[X])^2.
 
 TRAP:
 ```
    (c) E[X] + E[Y] is the rule for E(X + Y), which holds ALWAYS. The question asks about the
-   PRODUCT XY, and for products you need independence. Additive rule: always. Multiplicative
-   rule: only independent. Keep the two straight.
+      PRODUCT XY. Independence guarantees the product factorization, while equality can also
+      happen in some dependent cases. Additive rule: always. Keep the two straight.
 ```
 
 ═══════════════════════════════════════════════════════════════════════════════
@@ -432,7 +433,7 @@ F11 SUMMARY CARD
      E(X +- Y) = E(X) +- E(Y)      Var(X +- c) = Var(X)
         always                     Var(X +- Y) = Var(X) + Var(Y)   when independent
      E(XY) = E(X)E(Y)                 (PLUS even for the minus case)
-        only if independent
+        whenever independent; dependence does not by itself rule out equality
 
    Var(X) = E(X^2) - [E(X)]^2
 
