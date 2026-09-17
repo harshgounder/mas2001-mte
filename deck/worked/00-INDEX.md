@@ -12,7 +12,7 @@ every solution was machine-verified before the file was committed.
    register: ZERO-KNOWLEDGE LONG FORM ONLY (every step shown, no assumed maths)
 ```
 
-drill file: 00-QUESTIONS-ONLY.md (every question, no solutions, with solution pointers)
+drill file: 00-QUESTIONS-ONLY.md (168 questions: all worked + 10 MCQs; solutions behind pointers)
 
 ═══════════════════════════════════════════════════════════════════════════════
 THE FILES AND WHAT EACH COVERS

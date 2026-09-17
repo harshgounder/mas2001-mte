@@ -3,7 +3,7 @@
 Every question from the worked set (F1 to F15), stripped of solutions.
 How to drill: read the question, attempt it cold, then open the solution pointer.
 
-TOTAL QUESTIONS: 158
+TOTAL QUESTIONS: 168 (158 worked questions + 10 assignment MCQs)
 
 pointer format:  FILE.md (QUESTION n)  ->  the full zero-knowledge solution.
 
@@ -1623,8 +1623,97 @@ Mean 70, variance 25. Minimum proportion scoring 60-80 (Chebyshev).
   F14-foundations   (1 questions)
 ==============================================================================
 
-  note: the 10 assignment-1 MCQs + key (C,B,B,A,D,B,B,B,A,B) live in
-        F14-foundations.md section F14.5 (table format).
+  note: the 10 assignment-1 MCQs are listed below as M1 to M10 (key in F14.5).
+
+------------------------------------------------------------------------------
+  F14-foundations M1    [source: our assignment-1, MCQ section]
+  solution -> F14-foundations.md (F14.5 table)
+------------------------------------------------------------------------------
+
+```
+Which of the following is a discrete random variable?  A) height of students  B) time taken to complete an exam  C) number of defective bulbs in a box  D) temperature of a city
+```
+
+------------------------------------------------------------------------------
+  F14-foundations M2    [source: our assignment-1, MCQ section]
+  solution -> F14-foundations.md (F14.5 table)
+------------------------------------------------------------------------------
+
+```
+The cumulative distribution function (CDF) of a random variable is:  A) P(X=x)  B) P(X<=x)  C) P(X>=x)  D) P(X>x)
+```
+
+------------------------------------------------------------------------------
+  F14-foundations M3    [source: our assignment-1, MCQ section]
+  solution -> F14-foundations.md (F14.5 table)
+------------------------------------------------------------------------------
+
+```
+Which of the following is true about a PMF?  A) It can take negative values  B) Its sum over all values equals 1  C) It is decreasing  D) It is defined only for continuous variables
+```
+
+------------------------------------------------------------------------------
+  F14-foundations M4    [source: our assignment-1, MCQ section]
+  solution -> F14-foundations.md (F14.5 table)
+------------------------------------------------------------------------------
+
+```
+The expectation of a random variable represents its:  A) average value  B) maximum value  C) minimum value  D) most likely value
+```
+
+------------------------------------------------------------------------------
+  F14-foundations M5    [source: our assignment-1, MCQ section]
+  solution -> F14-foundations.md (F14.5 table)
+------------------------------------------------------------------------------
+
+```
+Which inequality provides an upper bound on the probability that a random variable deviates from its mean?  A) Bayes' theorem  B) Binomial theorem  C) Central Limit Theorem  D) Chebyshev's inequality
+```
+
+------------------------------------------------------------------------------
+  F14-foundations M6    [source: our assignment-1, MCQ section]
+  solution -> F14-foundations.md (F14.5 table)
+------------------------------------------------------------------------------
+
+```
+The conditional probability of A given B is defined as:  A) P(B)/P(A)  B) P(A n B)/P(B)  C) P(A)+P(B)  D) P(A n B)/P(A)
+```
+
+------------------------------------------------------------------------------
+  F14-foundations M7    [source: our assignment-1, MCQ section]
+  solution -> F14-foundations.md (F14.5 table)
+------------------------------------------------------------------------------
+
+```
+A box contains 4 red and 6 blue balls. One ball is selected randomly. The probability of selecting a red ball is:  A) 0.2  B) 0.4  C) 0.6  D) 0.8
+```
+
+------------------------------------------------------------------------------
+  F14-foundations M8    [source: our assignment-1, MCQ section]
+  solution -> F14-foundations.md (F14.5 table)
+------------------------------------------------------------------------------
+
+```
+If P(A|B) = 1, then:  A) A is impossible whenever B occurs  B) A always occurs whenever B occurs  C) A and B are mutually exclusive  D) none of these
+```
+
+------------------------------------------------------------------------------
+  F14-foundations M9    [source: our assignment-1, MCQ section]
+  solution -> F14-foundations.md (F14.5 table)
+------------------------------------------------------------------------------
+
+```
+A card is drawn from a standard deck of 52 cards. The probability of drawing an Ace is:  A) 1/13  B) 1/4  C) 4/13  D) 1/52
+```
+
+------------------------------------------------------------------------------
+  F14-foundations M10    [source: our assignment-1, MCQ section]
+  solution -> F14-foundations.md (F14.5 table)
+------------------------------------------------------------------------------
+
+```
+Chebyshev's inequality is applicable to:  A) only normal distributions  B) any distribution with finite mean and variance  C) only discrete distributions  D) only continuous distributions
+```
 
 ------------------------------------------------------------------------------
   F14-foundations Q1    [source: our deck, lecture-series 01-09 - the digital camera example]
