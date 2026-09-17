@@ -7,6 +7,50 @@ skeleton plus its mutations contains the next paper with high probability.
 The miss probability equals the chance the setter invents a NEW skeleton. Across 9 sittings we
 have seen 0 new skeletons, only reskins. That is the basis.
 
+## THE POOL AS A PICTURE
+
+```
+                        THE MTE GENERATOR (9 sittings observed)
+                                     |
+        +----------------------------+----------------------------+
+        |                            |                            |
+   DISTRIBUTIONS                FOUNDATIONS                 ESTIMATION
+   (every paper)                (every paper)               (every paper)
+        |                            |                            |
+   +----+----+----+----+         +----+----+                 +----+----+
+   |    |    |    |    |         |         |                 |         |
+ Bino Pois Norm Exp  Unif    RV/pdf-cdf  Chebyshev      estimator   sufficiency
+  |    |    |    |    |      find-k        |             compare     unbiased
+  |    |    |    |    |      pmf-table     +-- within-k   |         t^2
+  |    |    |    |    |      cdf->density  +-- find-c     unbiasedness
+  |    |    |    |    |                   +-- inverse
+  |    |    |    |    |                   +-- tail
+  |    |    |    |    |      CLT/SE ----+
+  |    |    |    |    |      independence rules (hidden)
+  |    |    |    |    |
+  +----+----+----+----+-----> THE NEXT MTE IS A DRAW FROM THIS SET
+
+  observed new skeletons across 9 sittings: 0
+  => the pool is closed; coverage beats forecasting
+```
+
+## THE COVERAGE LOGIC (why this hits 80-100 percent)
+
+```
+   pool of skeletons          15 distinct shapes seen in 9 sittings
+   + mutations per skeleton   M0 reskin, M1 invert, M3 retarget, M4 compose
+   + source references        G&K / Walpole / H&T / deck / assignment
+        |
+        v
+   a bank covering [15 skeletons] x [mutations] x [slots]
+        |
+        v
+   contains the next paper UNLESS the setter invents a 16th skeleton
+        |
+        v
+   P(miss) = P(new skeleton) ~ 0 in the sample  => high hit rate by COVERAGE
+```
+
 ## How to read an entry
 
 ```
