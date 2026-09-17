@@ -6,9 +6,9 @@ every solution was machine-verified before the file was committed.
 
 ```
    folder:   ~/mas2001-mte-s2/deck/worked/
-   files:    12 (one per family)
-   size:     ~390 KB
-   questions: 125
+   files:    14 (one per family) + this index
+   size:     ~415 KB
+   questions: 131
    register: ZERO-KNOWLEDGE LONG FORM ONLY (every step shown, no assumed maths)
 ```
 
@@ -33,23 +33,34 @@ THE FILES AND WHAT EACH COVERS
   |       |                           |       | SE-of-average, phi table conventions   |
   | F7    | RV / pdf / cdf            |   6   | find-k, mean/var exact fractions,      |
   |       |                           |       | piecewise cdf, dice grid               |
-  | F8    | Estimation                |  15   | 4 properties, unbiased verification,   |
+  | F8    | Estimation                |  18   | 4 properties, unbiased verification,   |
   |       |                           |       | consistency, CIs (3), sufficiency (3)  |
-  | F9    | CLT / sampling            |   7   | SE value, SE behaviour, applicability, |
+  | F9    | CLT / sampling            |   8   | SE value, SE behaviour, applicability, |
   |       |                           |       | 3 deck examples (ATM, impurity, LED)   |
   | F10   | Definition/foundations    |   4   | rv definition (3 papers!), pmf drill,  |
   |       |                           |       | joint pmf + marginal, E(2X+1)^2        |
   | F11   | Expectation/variance laws |   6   | laws toolbox, E[XY], variance>=0,      |
   |       |                           |       | typist Q8, soldiers, Poisson scaling   |
-  | F12   | Hypothesis testing (OUT*) |  19   | 8 MCQs, t-tests (3), F-tests (2),      |
+  | F12   | Hypothesis testing (OUT*) |  20   | 8 MCQs, t-tests (3), F-tests (2),      |
   |       |                           |       | chi-square (3), ANOVA (2), bulbs       |
   | F13   | Assignment sheets         |  28   | both assignments in full: 12 MCQs +    |
   |       |                           |       | 16 full solves, printed-answer quirks  |
+  | F14   | Probability foundations   |   1 + | lecture-2 basics: events, conditional  |
+  |       |                           |  10MCQ| prob (camera example), independence,   |
+  |       |                           |       | the assignment-1 MCQ key (C,B,B,A,D,   |
+  |       |                           |       | B,B,B,A,B)                             |
   +-------+---------------------------+-------+----------------------------------------+
    (*) hypothesis testing is marked out of the MTE syllabus in the ledger, but it appeared in
        five ETE papers with two 10-mark questions; included for completeness.
-   TOTAL: 125 questions
+   TOTAL: 131 questions
 ```
+
+═══════════════════════════════════════════════════════════════════════════════
+SCOPE TRUTH (from ~/PS/syllabus.txt, verified against reports/00-SCOPE-AND-EXAM-FACTS.md):
+MTE = lectures 1-21, ending at "Characteristics of a good estimator". MLE, MoM, Bayesian
+estimation, confidence intervals and hypothesis testing are OUT (they appear in ETE papers
+and are kept in F8/F12 for completeness, clearly marked).
+═══════════════════════════════════════════════════════════════════════════════
 
 ═══════════════════════════════════════════════════════════════════════════════
 SOURCE MAP: WHERE THE QUESTIONS COME FROM

@@ -842,8 +842,8 @@ EVERY STEP:
           2.5495 > 1.708 -> REJECT H0
 ```
 
-ANSWER: yes, the sample is NOT up to the standard; the mean life is significantly below the
-claimed 1000 hours. (machine-verified: SE = 3.9223, t = -2.5495)
+ANSWER: yes, the sample is NOT up to the standard; the mean life is below the claimed
+1000 hours by a margin that is real at the 5% level. (machine-verified: SE = 3.9223, t = -2.5495)
 
 TRAP:
 ```
