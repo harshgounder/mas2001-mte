@@ -1,6 +1,6 @@
 # ONE-BY-ONE: every question its own file
 
-Built 17 Sep 2026, audited same day. 195 files: every question from the worked set as its own
+Built 17 Sep 2026, audited same day. 196 files (180 question files + 15 family guides + this README): every question from the worked set as its own
 file, PLUS a 00-GUIDE.md per family carrying the non-question explanation content
 (toolboxes, decision trees, summary cards) so the folder is lossless vs the family files.
 Format per question file: PART 1 = the question alone. PART 2 = the full answer from zero
