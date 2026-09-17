@@ -26,7 +26,7 @@
 ```
               ┌─────────────────┐
               │ M0 RE-SKIN      │  numbers/names/units/story
-              │ TYPE UNCHANGED  │  <- ~90% of what the setters do
+              │ TYPE UNCHANGED  │  <- common in the reviewed papers; exact rate unmeasured
               └─────────────────┘
               ┌─────────────────┐
               │ M1 INVERT       │  swap given <-> asked
@@ -181,14 +181,16 @@ estimation, and mixed-model questions sit outside this grid. See 04-METHODS.md f
 
 ```
   7.a  DESIGN / MIN-SIZE INVERSION   "how large must n be so that ..."          HIGH RISK
-       binomial: smallest n so P(at least one) > 0.9  -> n = 22
-       CLT: smallest n for an SE target               -> n = 35
+       binomial: solve n from the stated p and target probability
+       CLT: solve n from the stated sigma and SE target
        Chebyshev: k for a given guarantee
   7.b  PARAMETER RECOVERY (general)  solve for l, p, mu, sigma from a probability or moment
        examples seen: p=5/8, l=10, l=2.3026, mu=87.18, b=5.5, moment matching
   7.c  DERIVED-VARIABLE ALGEBRA      min/max/sum/difference of rvs
-       two dice max (2m-1)/36, Poisson sum additivity, B+B is B
-  7.d  CONDITIONAL ON AN INEQUALITY  P(X=k | X>=j) = P(X=k)/P(X>=j) = 0.3207 (A2 B5)
+       two dice max (2m-1)/36, Poisson sum additivity,
+       independent B(n1,p)+B(n2,p)=B(n1+n2,p)
+  7.d  CONDITIONAL ON AN INEQUALITY  for k>=j,
+       P(X=k | X>=j) = P(X=k)/P(X>=j). The pens sibling gives 0.3207.
   7.e  DECISION / OPTIMISATION       choose the best option from an expectation
        magazine 3 vs 4 copies, capacity sizing, which estimator to use
   7.f  APPROXIMATION CHOICE          Poisson for binomial (asked), binomial->normal with a
@@ -206,7 +208,7 @@ estimation, and mixed-model questions sit outside this grid. See 04-METHODS.md f
   2     binomial two-sided interval P(2<=X<=4)     from the one-sided tails (0.3367)
   3     CLT for a SUM not a mean                   sigma scales by sqrt(n)
   4     discrete conditional P(X=k | X>=j)         from the continuous conditional
-  5     min-n design (binomial 22, CLT 35)         from the parameter recovery family
+  5     min-n design from stated p, sigma, and target        from parameter recovery
   6     geometric variance / tail                  from the geometric mean (graded once)
   7     independence CHECK question                from the independence rules
   8     MSE comparison                             from the efficiency question with bias allowed

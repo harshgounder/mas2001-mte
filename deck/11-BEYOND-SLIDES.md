@@ -42,7 +42,7 @@
     5 min │██                    H7 hypergeom
     5 min │██                    H4 landmarks
           └────────────────────────────────────────────────
-            ≈ 1h45 total, and it is the least-taught part
+            2h total, and it is the least-taught part
             of the syllabus that the papers keep asking.
 ```
 
@@ -113,14 +113,16 @@ several are prerequisites for later topics.
                equals surviving s from scratch.
   why it matters  A2 MCQ Q5 and A2 section C Q1 both use it. It is one line to state and a
                full mark in a short answer.
-  drill        P(T > 5 | T > 3) = P(T > 2). e^-1 = 0.3679 as the canonical number.
+  drill        P(T > 5 | T > 3) = P(T > 2) = e^(-2lambda).
+               This equals e^-1 = 0.3679 only when lambda=0.5.
 ```
 
 ## H4. The 68 / 95 / 99.7 landmarks
 
 ```
   why hidden   no slide prints the empirical rule.
-  what it is   68.27 percent within 1 sigma, 95.45 within 2, 99.73 within 3.
+  what it is   for a normal distribution: 68.27 percent within 1 sigma,
+               95.45 within 2, 99.73 within 3.
   why it matters  A2 MCQ Q11 uses it. Also the fast sanity check for any normal answer.
   drill        "what fraction lies within 2 sigma" -> 95.45.
 ```
@@ -188,4 +190,4 @@ several are prerequisites for later topics.
 ```
 
 Study order for these: H2 and H1 first (they gate the most), then H8 and H3, then H5, then
-H6, H7, H4. Total about 1h40, and it is the best-spent time before the paper.
+H6, H7, H4. Total 2h, and it is the best-spent time before the paper.

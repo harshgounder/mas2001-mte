@@ -21,7 +21,8 @@
 
 ```
   ┌───────────────────────────────────────────────────────────────┐
-  │ "equal probabilities for all possible outcomes"                │
+  │ constant density, so equal-length subintervals have equal       │
+  │ probabilities. Individual points each have probability zero.    │
   │                                                                │
   │   f(x) = 1/(b-a)      a ≤ x ≤ b                                │
   │   f(x) = 0            otherwise                                │
@@ -51,9 +52,10 @@
 
 ```
   ┌──────────────────────────────────────────────────────────┐
-  │ THE LENGTH-RATIO SHORTCUT: probability = interval length   │
+  │ THE LENGTH-RATIO SHORTCUT: probability = overlap length    │
   │ divided by total length. No integration needed.            │
-  │   P(c ≤ X ≤ d) = (d - c)/(b - a)                           │
+  │   P(c ≤ X ≤ d) = length([c,d] intersection [a,b])/(b-a)    │
+  │ If [c,d] lies inside [a,b], this becomes (d-c)/(b-a).       │
   └──────────────────────────────────────────────────────────┘
 ```
 
@@ -170,16 +172,16 @@
   ╔═══════════════════════════════════════════════════════════════╗
   ║  THE SLIDES SHOW **TWO DIFFERENT TABLES** AND THEY LOOK ALIKE  ║
   ║                                                               ║
-  ║  TABLE 1 (p022, "Areas under Normal Curve"):                   ║
-  ║     gives  P(0 < Z < z)     = area FROM THE CENTRE to z        ║
-  ║     φ(z). e.g. z=2.0 -> 0.4772                                 ║
-  ║                                                               ║
-  ║  TABLE 2 (p022 top, standard statistical tables):              ║
-  ║     gives  P(Z < z)         = CUMULATIVE from -∞ to z          ║
+  ║  TABLE 1 (p022, cumulative standard normal table):             ║
+  ║     gives  P(Z < z)         = CUMULATIVE from -infinity to z   ║
   ║     F(z). e.g. z=0.0 -> 0.5000, z=2.0 -> 0.9772                ║
   ║                                                               ║
+  ║  TABLE 2 (p023, area from 0 to z):                              ║
+  ║     gives  P(0 < Z < z)     = area FROM THE CENTRE to z        ║
+  ║     A(z). e.g. z=2.0 -> 0.4772                                 ║
+  ║                                                               ║
   ║  THEY DIFFER BY 0.5 FOR z > 0:                                 ║
-  ║     F(z) = 0.5 + φ(z)                                          ║
+  ║     F(z) = 0.5 + A(z)                                          ║
   ║     0.9772 = 0.5 + 0.4772  ✓                                  ║
   ║                                                               ║
   ║  DECIDE WHICH TABLE THE QUESTION GIVES **BEFORE** SUBSTITUTING ║
@@ -320,8 +322,10 @@
 ```
         f(t) = λ e^{-λt},    t > 0
         μ = 1/λ              σ² = 1/λ²
-        F(t) = 1 - e^{-λt}   (the cdf)
-        P(T > t) = e^{-λt}   (the tail)
+        F(t) = 0               for t≤0
+             = 1 - e^{-λt}    for t>0
+        P(T > t) = 1          for t<0
+                 = e^{-λt}    for t≥0
 ```
 
 ```
@@ -428,7 +432,7 @@
    │ pdf       │ 1/(b-a)     │ 1/(σ√2π)e^.. │ λe^{-λt}        │
    │ mean      │ (a+b)/2     │ μ            │ 1/λ             │
    │ variance  │ (b-a)²/12   │ σ²           │ 1/λ²            │
-   │ cdf       │ (x-a)/(b-a) │ table        │ 1-e^{-λt}       │
+   │ cdf       │ 0, ratio, 1 │ table        │ 0 or 1-e^{-λt}  │
    │ tail      │ ratio       │ 1-Φ(z)       │ e^{-λt}         │
    │ parameter │ a,b         │ μ,σ²         │ λ (a RATE)      │
    │ models    │ random pt   │ measurement  │ waiting time    │

@@ -165,8 +165,9 @@ Use the computed value. Each entry is verified in the repo (reports/09-ERRATA.md
        batch-1 edition: 10k^2 + 9k = 1, k = 1/10 exact, key checks out.
        second edition: 12k + 10k^2 = 1, k = 0.0782, but its own key prints 1/10 which does
        NOT satisfy its own table. Do not drill the second edition.
-  E6   impurity Z: slide prints Z2 = -0.4, correct -0.94. Answer 0.1644 is still right
-       (because the working used 0.94). (clt p014)
+  E6   impurity Z: slide prints Z2 = -0.4, correct -0.94. Rounded table areas give
+       0.1645; unrounded z values give about 0.1637. The slide's 0.1644 is also wrong.
+       (clt p014)
   E7   N(mu, sigma^2): the prose says variance, the notation says squared. Second slot IS
        variance.
   E8   ppt4 p030 figure labels sigma = 10 under mu = 8, but the arithmetic uses sigma = 5.

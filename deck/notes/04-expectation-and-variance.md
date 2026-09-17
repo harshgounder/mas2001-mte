@@ -39,7 +39,7 @@
 ## 3. Worked: a fair die (p089)
 
 ```
-   f(x) = 1/6,  x = 1..6
+   p(x) = 1/6,  x = 1..6
 
    E(X) = 1(1/6) + 2(1/6) + 3(1/6) + 4(1/6) + 5(1/6) + 6(1/6)
         = (1+2+3+4+5+6)/6 = 21/6 = 7/2 = 3.5
@@ -140,8 +140,11 @@
 
 ```
    the idea: the SQUARED deviation from the mean, weighted by probability.
-   large σ²  <=>  values far from μ carry a lot of probability  <=>  unpredictable
-   small σ²  <=>  values hug μ                                  <=>  consistent
+   large σ²  <=>  more squared spread around μ
+   small σ²  <=>  less squared spread around μ
+
+   Variance measures spread. It is not a universal equivalence to predictability,
+   and it is unrelated to the estimator property called consistency.
 ```
 
 ```

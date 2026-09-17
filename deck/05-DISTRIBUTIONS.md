@@ -77,8 +77,8 @@ slot names are the same nine in every table so you can see the pattern (full pat
   mean          np
   variance      npq
   sd            sqrt(npq)
-  mode          where P(X=x+1)/P(X=x) crosses 1
-  approximation -> Poisson when n large and p small, l = np
+  mode          floor((n+1)p), with two adjacent modes if (n+1)p is an integer
+  approximation -> Poisson in the limit n->infinity, p->0, np->finite l
 ```
 
 ```
@@ -112,7 +112,7 @@ slot names are the same nine in every table so you can see the pattern (full pat
   slot        ask                                          used in
   1 point     P(X=4), l=5 -> 0.1755                          ppt3 p027 (slide prints 0.1745)
   2 tail      P(X>2) = 1-P0-P1-P2 = 0.8753                   A2 C3
-  2 tail      "rejected" = P(X>=4) = 0.2424                  A2 B1
+  2 tail      "rejected" = P(X>=4) = 0.2424 when l=2.5       A2 B1
   3 interval  P(2<=X<=4)                                     NOT asked, medium risk
   4 moments   E=Var=l, the signature test                    MCQ (R25S4-A2)
   5 params    l from P(X=1)=0.2P(X=2) -> l=10                ppt3 p025
@@ -162,7 +162,7 @@ slot names are the same nine in every table so you can see the pattern (full pat
   slot        ask                                     used in
   1 point     density value, symmetry facts             ppt4 p010-011
   2 tail      P(X>8.6) = 0.4522                         ppt4 p032-033
-  3 interval  P(45<X<62), P(3.5<Xbar<3.8)=0.1644        A2 B3, clt p013 (errata 6)
+  3 interval  P(45<X<62), impurity=0.1645 by rounded table A2 B3, clt p013 (errata 6)
   4 moments   E=mu, Var=sigma^2, identify both          E25S4-A4, E25S3-A5
   5 params    two unknowns from two probabilities       A2 C2 (errata 10: mu 37.2)
   6 inverse   x for a 20 percent lower tail = 3.792     ppt4 p034-037
@@ -176,8 +176,8 @@ slot names are the same nine in every table so you can see the pattern (full pat
 ```
   models        waiting time between events, lifetimes, "until failure"
   pdf           f(t) = l e^{-l t},  t > 0            (l is a RATE)
-  cdf           F(t) = 1 - e^{-l t}
-  tail          P(T>t) = e^{-l t}
+  cdf           F(t) = 0 for t<=0; 1 - e^{-l t} for t>0
+  tail          P(T>t) = 1 for t<0; e^{-l t} for t>=0
   mean          1/l
   variance      1/l^2
   sd            1/l
@@ -213,7 +213,7 @@ slot names are the same nine in every table so you can see the pattern (full pat
 
   memory hooks:
     binomial: np and npq, the q is the only extra
-    Poisson: mean IS variance, if they differ it is not Poisson
+    Poisson: mean IS variance, necessary but not enough to identify the family
     uniform: centre and span squared over 12
     normal: mu and sigma SQUARED, the second slot is variance
     exponential: reciprocal pair, rate in, time out

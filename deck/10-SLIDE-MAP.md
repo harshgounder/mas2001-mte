@@ -68,7 +68,7 @@ Page refs are the pipeline page numbers (md/<label>/pNNN.md), which match the PD
                dice sum, two coins, geometric, car life      D1-5..D1-10
   p063-087     pmf, cdf: conditions, find k, build, graphs    D1-11..D1-18
   p088-094     expectation: def, E[h], linearity              D1-19..D1-21
-  p095-111     variance: def, shortcut, transforms            D1-22..D1-25, D1-26 (bus triangle)
+  p095-111     variance: def, shortcut, transforms            D1-22..D1-25
   p112-139     continuous: pdf, cdf, F'=f, piecewise          D1-26..D1-28
   p140-147     continuous expectation and variance            D1-29, D1-30
 ```
@@ -152,7 +152,8 @@ exclusive / independence illustrations).
      p005       lightbulb SE, n=25 -> 20, n=100 -> 10
   p007-010   the three rules, n=30 boundary
   p011-012   ATM wait, mu=4, sigma=2, n=36, Z=1.50, 0.0668
-  p013-014   impurity, mu=4.0, sigma=1.5, n=50, 0.1644 (errata 6, Z2=-0.94)
+  p013-014   impurity, mu=4.0, sigma=1.5, n=50, 0.1645 by rounded table,
+             about 0.1637 unrounded (errata 6, Z2=-0.94)
   p015-016   LED, mu=50000, sigma=8000, n=64, Z=-2.00, 0.0228
   p017-018   machine, normal population, n=9 exact, 0.6898
 ```

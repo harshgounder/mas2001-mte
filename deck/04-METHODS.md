@@ -187,7 +187,8 @@ entry: when to use it, the steps, and the alternate with its tradeoff.
   alternate  for the ratio question P(X=1)=c P(X=2), the e^-l cancels, leaving l = 2/c
   traps  rate vs window scaling (2 per minute, then 5 minutes -> l = the window's rate)
          the nesting: Poisson per minute THEN binomial over the minutes (0.00145 question)
-         mean equals variance is the signature, use it to spot Poisson
+         a Poisson variable has equal mean and variance, but equality alone does not prove
+         an otherwise unspecified distribution is Poisson
 ```
 
 ## 11. Uniform

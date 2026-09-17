@@ -213,7 +213,7 @@
 ```
 
 ```
-   B(n,x) p^x q^(n-x)  ──limit──▶  e^{-λ} λ^x / x!     with λ = np
+   C(n,x) p^x q^(n-x)  ──limit──▶  e^{-λ} λ^x / x!     with λ = np
 ```
 
 ```
@@ -241,10 +241,10 @@
 
 ```
   ╔══════════════════════════════════════════════════════════════╗
-  ║ MEAN = VARIANCE IS THE POISSON FINGERPRINT                   ║
-  ║ If a question gives you a mean and a variance and they are    ║
-  ║ EQUAL, it is asking you to recognise Poisson.                 ║
-  ║ If they differ, it is NOT Poisson.                            ║
+  ║ A POISSON VARIABLE HAS MEAN = VARIANCE                        ║
+  ║ Equality is necessary for Poisson, but it does not prove that ║
+  ║ an otherwise unspecified distribution is Poisson. Use the     ║
+  ║ model assumptions or a stated Poisson family as well.         ║
   ╚══════════════════════════════════════════════════════════════╝
 ```
 
@@ -388,7 +388,8 @@
    "arrivals, calls, defects, rare, per unit time"       -> POISSON
    "use the approximation"                               -> POISSON with λ=np
    "in each of the k intervals"                          -> NEST (Poisson then binomial)
-   "mean equals variance given"                          -> POISSON
+   "mean equals variance"                                -> necessary Poisson check;
+                                                            confirm the model too
    "at least one"                                        -> complement, 1 - q^n
 ```
 

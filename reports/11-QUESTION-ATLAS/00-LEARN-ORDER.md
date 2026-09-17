@@ -24,12 +24,11 @@ and tells you which artifact to open next.
     S&P L10-11      9 pp  (text  6,224 ch)   Chebyshev, the only truly new one
     S&P L12-13     28 pp  (text 16,171 ch)
     S&P L14-15     44 pp  (text 32,573 ch)
-  papers, converted: 2 MTE + 2 MTE schemes + 5 ETE + 2 re-sess + 1 summer = 12 files
+  papers, converted: 2 MTE + 2 MTE schemes + 4 ETE + 2 re-sess + 1 summer = 11 files
   assignments, converted: mas2001-assignment-1 (6p), -2 (4p); 2024-25 1-5; 2025-26 bundle (17p)
 
-  papers count 15, not 12: the count register says "7 papers" for the ETE family but the disk
-  holds S3-2024-25, S3-2025-26, S4-2024-25, S4-2025-26, Summer, Re-sess-S3, Re-sess-S4 = 7,
-  plus 2 MTE and their 2 schemes. Report 17 is right; any prose saying 5 ETE papers is wrong.
+  paper files total 11: 7 in the ETE and re-sessional family, plus 2 MTE papers and 2 MTE
+  marking schemes. That is 9 exam papers and 2 schemes. Schemes are not exam papers.
 ```
 
 ## 1. The dedup finding that sets the whole order
@@ -170,7 +169,7 @@ the trap.
   4.1  lms-standard-error-clt, p001-p018, read in full                    60 min
        population vs sample, SRS, SE = sigma/sqrt(n), scaling law, CLT statement and conditions,
        z with the SE denominator, the "average of n" template
-       DO: lightbulbs 20->10 (p005), ATM, impurity (errata 6: z=-0.94, answer 0.1644), LED,
+       DO: lightbulbs 20->10 (p005), ATM, impurity (errata 6: z=-0.94, table 0.1645), LED,
            machines n=9 exact-normal fallback
        DO: E24S3-A5 (SE), R25S3-A3 (n up SE down), E25SUM-Q9, Q10, E25S3-B5
   gate: the impurity question reproduced with the corrected Z, closed book
@@ -290,12 +289,13 @@ practice), then the repeats as timed speed work.
 ```
   - the S&P decks are not "new material" for four of five of them; the shared 5-gram counts
     above are the evidence, and reading them as new teaching would waste the 9 days we have
-  - the pens, rain and kx^3(4-x)^2 sources are still OPEN; no drill claim depends on them
+  - the pens and rain originating sources are open. The kx^3(4-x)^2 item has an ABES sample
+    paper match, but its originating book remains open. No drill claim depends on attribution.
   - the 2025-26 bundle's 119 items are enumerated but their 2024 matches are NOT assessed, so
-    treating them as 119 fresh items would double-count. Do assignments 1-2 of the bundle
-    (the in-scope part) and treat 3-5 as the repeat sets they are
-  - the two re-sess and one summer paper have 35 OUT blocks each family; only the IN blocks
-    are drill
+    treating them as 119 fresh items would risk double-counting. Do assignments 1-2 of the
+    bundle first; spot checks suggest overlap in 3-5, but per-row matching is unfinished.
+  - the full 97-row ETE, summer, and re-sess intake has 35 OUT rows in total; drill only the
+    rows marked IN, with boundary rows kept separate
 ```
 
 ---

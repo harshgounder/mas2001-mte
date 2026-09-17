@@ -4,7 +4,7 @@
 
 ```
   ┌────────────────────────────────────────────────────────────────────┐
-  │ p(x) = P(X = x) = P(all s in S : X(s) = x)                         │
+  │ p(x) = P(X = x) = P({s in S : X(s) = x})                           │
   │ "for every possible value x, the probability of observing it"      │
   └────────────────────────────────────────────────────────────────────┘
 ```
@@ -18,7 +18,7 @@ Two conditions (necessary AND sufficient):
 
 ```
   ┌──────────────────────────────────────────────────────────────┐
-  │ "The density function of a random variable COMPLETELY        │
+  │ "The probability mass function of a discrete random variable │
   │  describes the behaviour of the variable."                   │
   └──────────────────────────────────────────────────────────────┘
 ```
@@ -51,8 +51,8 @@ Two conditions (necessary AND sufficient):
 ```
   THE cdf-arithmetic habit:
      "at most k"   =  F(k)   add up to k
-     "at least k"  =  1 - F(k-1)   complement of below-k
-     "between a,b" =  F(b) - F(a-1)   NOTE the a-1
+     "at least k"  =  1 - F(k-1)   for an integer-valued X
+     "between a,b" =  F(b) - F(a-1)   for integer-valued X and integer a,b
 ```
 
 ## 3. Worked: the find-k table (p066) - the batch-1 assignment long Q2
@@ -244,9 +244,10 @@ The tree for part (b):
 ```
 
 ```
-  and the INTEGER version that catches people (p135):
+  and the integer-valued version that catches people (p135):
 
-        P(a ≤ X ≤ b) = F(b) - F(a-1)     when a, b are integers
+        P(a ≤ X ≤ b) = F(b) - F(a-1)
+        when X is integer-valued and a, b are integers
 
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         the a-1 because F(a-1) INCLUDES the value a-1, and
@@ -315,7 +316,8 @@ The tree for part (b):
          25/36   5≤m<6
            1     m≥6
 
-   ^ the cdf is m²/36, the SQUARES: 1,4,9,16,25,36
+   ^ at integer support points m=1,...,6, F(m)=m²/36.
+     For real 1≤m<6, F(m)=floor(m)²/36, as the steps above show.
 ```
 
 ```

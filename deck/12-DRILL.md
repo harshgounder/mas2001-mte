@@ -66,7 +66,7 @@ source gives an exact value.
   D14  P(exactly 2 in each of 5 minutes).          ans (2e^-2)^5 = 32e^-10 = 0.00145
   D15  5000 men, death rate 0.001. P(X=4).         ans e^-5 5^4/4! = 0.1755
   D16  P(X>2) with lambda=5.           ans 0.8753
-  D17  "Rejected" P(X>=4) with lambda appropriate. ans 0.2424
+  D17  "Rejected" P(X>=4) with lambda=2.5. ans 0.2424
 ```
 
 ## Uniform
@@ -115,7 +115,8 @@ source gives an exact value.
 ```
   D37  sigma=100, n=25 then n=100. Find SE.       ans 20 then 10
   D38  mu=4, sigma=2, n=36. P(Xbar>4.5).          ans Z=1.50, 0.0668
-  D39  mu=4.0, sigma=1.5, n=50. P(3.5<Xbar<3.8).  ans Z1=-2.36, Z2=-0.94, 0.1644
+  D39  mu=4.0, sigma=1.5, n=50. P(3.5<Xbar<3.8).
+       ans Z1=-2.36, Z2=-0.94; 0.1645 from rounded table areas, about 0.1637 unrounded
   D40  mu=50000, sigma=8000, n=64. P(Xbar<48000). ans Z=-2.00, 0.0228
   D41  mu=7, sigma=1, n=9 (normal pop). P(6.4<Xbar<7.2).  ans Z1=-1.80, Z2=0.60, 0.6898
 ```
@@ -128,8 +129,8 @@ source gives an exact value.
        ans lambda=0; t1 and t3 unbiased, t2 not; Var 0.2, 1.5, 0.5556 sigma^2; best t1
   D43  T1=X1+X2-X3, T2=2X1+3X3-4X2, T3=(lambda X1+X2+X3)/3.
        Find lambda, unbiased set, variances, best, and comment on consistency.
-       ans lambda=1; all unbiased; Var 3, 29, 1/3 sigma^2; best T3; T3 is the sample mean
-           so it is consistent
+       ans lambda=1; all unbiased; Var 3, 29, 1/3 sigma^2; best T3. Fixed n=3 does not
+           prove consistency; the sequence Xbar_n is consistent under usual iid assumptions.
   D44  OUT OF MTE SCOPE: n=25, Xbar=8.4, sigma=1.5, 95 percent interval.
        ans 8.4 +- 0.588 = (7.81, 8.99)
   D45  Response times sum 1640, n=8. Point estimate.      ans 205 ms
