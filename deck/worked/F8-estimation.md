@@ -765,6 +765,122 @@ TRAP:
       theta^2" (FALSE, what you are disproving).
 ```
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 15 (our LMS deck, theory-of-estimation Example 1 - the find-lambda estimator set)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   A sample (X1..X5) from a normal population with mean mu. Three estimators:
+        t1 = (X1+X2+X3+X4+X5)/5
+        t2 = (X1+X2)/2 + X3
+        t3 = (2X1 + X2 + lambda X3)/3   with lambda chosen for unbiasedness.
+   Tasks: (1) find lambda (2) check t1, t2 unbiased (3) best estimator?
+```
+
+EVERY STEP:
+
+```
+  STEP 1  find lambda so E(t3) = mu:
+          E(t3) = (2mu + mu + lambda mu)/3 = [(3+lambda)/3] mu
+          set = mu:  3+lambda = 3  ->  lambda = 0
+          so t3 = (2X1 + X2)/3
+
+  STEP 2  unbiasedness check:
+          E(t1) = mu          -> UNBIASED
+          E(t2) = (mu+mu)/2 + mu = mu + mu = 2mu  -> BIASED
+          E(t3) = (2mu+mu)/3 = mu -> UNBIASED
+          so the unbiased pair is t1 and t3.
+
+  STEP 3  variances (independent Xi, Var = sigma^2 each):
+          Var(t1) = 5 sigma^2/25 = sigma^2/5      = 0.2000 sigma^2
+          Var(t2) = sigma^2/2 + sigma^2 = 3sigma^2/2 = 1.5000 sigma^2  (biased, out anyway)
+          Var(t3) = (4 sigma^2 + sigma^2)/9 = 5 sigma^2/9 = 0.5556 sigma^2
+
+  STEP 4  among the UNBIASED: sigma^2/5 < 5sigma^2/9 -> t1 has the smaller variance.
+```
+
+ANSWER: lambda = 0; t1 and t3 unbiased (t2 biased); best = t1 = the sample mean.
+
+THE PICTURE:
+```
+   variance ladder:  t1 [0.20]  <  t3 [0.56]  <  t2 [1.50] (out: biased)
+                      ^ best
+```
+
+TRAP: t2 LOOKS like it uses all three observations but its weights are (1/2, 1/2, 1) summing
+to 2, not 1, so it is biased. Always check the WEIGHTS SUM to 1 before comparing variances.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 16 (our LMS deck, theory-of-estimation Example 2 - the T1/T2/T3 set)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   X1, X2, X3 a sample of size 3 with mean mu, variance sigma^2.
+        T1 = X1 + X2 - X3
+        T2 = 2X1 + 3X3 - 4X2
+        T3 = (lambda X1 + X2 + X3)/3
+   (1) unbiasedness of T1, T2 (2) lambda for T3 unbiased (3) is T3 consistent then
+   (4) best estimator?
+```
+
+EVERY STEP:
+
+```
+  STEP 1  T1: E = mu + mu - mu = mu                -> UNBIASED
+          Var(T1) = sigma^2 + sigma^2 + sigma^2 = 3 sigma^2
+
+  STEP 2  T2: E = 2mu + 3mu - 4mu = mu             -> UNBIASED (2+3-4 = 1!)
+          Var(T2) = 4sigma^2 + 9sigma^2 + 16sigma^2 = 29 sigma^2
+
+  STEP 3  T3: E = (lambda mu + 2mu)/3 = mu  ->  lambda + 2 = 3  ->  lambda = 1
+          then T3 = (X1+X2+X3)/3 = the sample mean.
+
+  STEP 4  consistency of T3: E(T3) = mu (no bias at any n) and Var = sigma^2/3 -> 0.
+          both consistency conditions hold -> CONSISTENT.
+
+  STEP 5  variances: 3 sigma^2 (T1) vs 29 sigma^2 (T2) vs sigma^2/3 (T3)
+          sigma^2/3 < 3sigma^2 < 29sigma^2  -> T3 is the BEST.
+```
+
+ANSWER: T1 and T2 both unbiased (the weights each sum to 1); lambda = 1; T3 is consistent;
+best = T3 (= the sample mean).
+
+TRAP: T2's coefficients (2, -4, 3) look wild but sum to 1, so it IS unbiased; its variance
+is the killer (29). And note the negative weight SQUARES into the variance as positive 16.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+F8.7  THE REAL-LIFE NUMERICALS (LMS deck):  point estimates and the z-CI table
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Three quick drills from the deck (they teach the estimator-vs-estimate distinction):
+
+```
+   DRILL 1: server response times 180,210,195,220,205,190,200,240 (ms).
+     estimator = Xbar ; estimate = 1640/8 = 205 ms.
+
+   DRILL 2: 500 packets, 465 delivered.
+     estimator = p-hat = X/n ; estimate = 465/500 = 0.93 (93%).
+
+   DRILL 3: n=25 devices, xbar=8.4 h, sigma=1.5 KNOWN. 95% CI with z=1.96.
+     CI = 8.4 +/- 1.96 x (1.5/sqrt(25)) = 8.4 +/- 1.96 x 0.3
+        = 8.4 +/- 0.588 = (7.812, 8.988) -> about (7.81, 8.99) hours.
+```
+
+THE Z-TABLE TO MEMORIZE (the CI rows):
+
+```
+   +-------------+-------+---------+--------+
+   | confidence  | alpha | alpha/2 | z      |
+   +-------------+-------+---------+--------+
+   | 90%         | 0.10  | 0.050   | 1.645  |
+   | 95%         | 0.05  | 0.025   | 1.960  |
+   | 99%         | 0.01  | 0.005   | 2.576  |
+   +-------------+-------+---------+--------+
+```
+
+TRAP: sigma KNOWN -> use z (1.96 etc). sigma UNKNOWN with small n -> use t (2.262, 2.093...).
+The papers mix both (see the sugar question uses t, this drill uses z).
+
 ═══════════════════════════════════════════════════════════════════════════════
 F8 SUMMARY CARD
 ═══════════════════════════════════════════════════════════════════════════════
