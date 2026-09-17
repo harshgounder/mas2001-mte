@@ -32,6 +32,15 @@ with exact, scalable diagrams while leaving the audited study text unchanged.
 - Every visual must name the Markdown sources it represents.
 - Run `python3 deck/visuals-gpt56/build_visuals.py` to rebuild the assets deterministically.
 - Run `python3 deck/visuals-gpt56/build_inventory.py` to rebuild the full fenced-block ledger.
+- Run `python3 deck/visuals-gpt56/build_note_pdfs.py` in an environment containing ReportLab
+  and svglib to rebuild the eleven illustrated note PDFs and the combined volume.
+
+## Illustrated note PDFs
+
+The finished PDFs live in `output/pdf/visual-notes/`. There is one PDF for each file in
+`deck/notes/`, plus `MAS2001-visual-notes-complete.pdf` containing the full set. The PDF
+edition preserves every worked example and source code panel, inserts the topic SVGs beside
+the matching explanations, and adds consistent page headers, footers, and page numbers.
 
 ## Coverage status
 
