@@ -125,10 +125,9 @@ P(3.5 < X bar < 3.8).
   Z2 = (3.8 - 4)/0.212132 = -0.943  ->  slide prints -0.4, WRONG
 ```
 
-The final answer on the slide, 0.1644, is nevertheless correct, because the two table areas it
-subtracts are 0.4909 for z = 2.36 and 0.3264 for z = 0.94. The area 0.3264 belongs to z = 0.94,
-not to z = 0.4 (that area is 0.1554). So the printed Z line is a typo and the working behind it
-used the right value.
+The slide uses the right table entries but prints the wrong subtraction result. The areas are
+0.4909 for z = 2.36 and 0.3264 for z = 0.94. The area 0.3264 belongs to z = 0.94, not z =
+0.4, whose centre area is 0.1554.
 
 ```
   correct answer, table method   0.4909 - 0.3264 = 0.1645
@@ -136,8 +135,9 @@ used the right value.
   what -0.4 would actually give  0.33544, roughly double
 ```
 
-If you reproduce this question, write Z2 = -0.94. Both the slide's 0.1644 and the exact 0.1637
-are acceptable final values, but only with the correct Z.
+If you reproduce this question, write Z2 = -0.94 and state the precision used. The rounded
+table method gives 0.1645; unrounded z values give about 0.1637. The slide's 0.1644 is not
+the result of either stated method.
 
 ## 7. Not an error, but easy to misread
 

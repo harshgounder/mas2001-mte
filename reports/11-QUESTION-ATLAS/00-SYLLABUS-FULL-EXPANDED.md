@@ -648,7 +648,7 @@ L18  CENTRAL LIMIT THEOREM  (clt p006 to p018)
     14.4.1 ATM wait [p011, p012 style]
     14.4.2 impurity [p013, p014, errata 6]: mean 4.0, sd 1.5, n = 50;
           P(3.5 < Xbar < 3.8): SE = 0.2121; z1 = -2.36, z2 = -0.94 (slide prints -0.4,
-          typo); answer 0.1644
+          typo); rounded table answer 0.1645, unrounded about 0.1637
     14.4.3 LED sample [p015, p016]
     14.4.4 machine lives [p017, p018]: n = 9 but the population is normal, so exact
           normal applies, no CLT needed; the fallback reading

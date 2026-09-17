@@ -116,9 +116,10 @@ gate: one mixed question per distribution, closed book, before moving on
 
 ```
 read: clt p001 to p018
-core: population vs sample, SE = sigma/sqrt(n), scaling law, CLT conditions (n>=30 any
-      shape, normal any n, else no), z with SE denominator, "average of n" template
-drills: lightbulbs 20->10, ATM, impurity (Z2 = -0.94, answer 0.1644), LED, machines n=9
+core: population vs sample, SE = sigma/sqrt(n), scaling law, CLT conditions. Treat n>=30
+      as the course heuristic, not a theorem cutoff; normal populations work at any n,
+      while skew and tail behaviour still matter. Use the SE denominator for averages.
+drills: lightbulbs 20->10, ATM, impurity (Z2 = -0.94, table answer 0.1645), LED, machines n=9
       exact-normal fallback
 gate: the impurity question reproduced with the corrected Z, closed book
 ```
