@@ -192,6 +192,9 @@ RELATED FILES
 ═══════════════════════════════════════════════════════════════════════════════
 
 ```
+   00-HOW-AND-WHY.md            methodology: how/why the question set was
+                                made, the exact counts, the shape/skeleton
+                                derivation, stated limits
    deck/15-DECISION-MANUAL.md   the if-X-do-Y manual for all 34 shapes + mutations
    deck/notes/                  the slide conversions rewritten (00-09)
    deck/01 to 13                the reference deck (cheatsheet, terms, traps...)
