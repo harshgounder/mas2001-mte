@@ -10,49 +10,49 @@ out_dir: md
 
 sources:
   - label: ppt3-discrete-prob-dist
-    path: "/home/liebert511/PS/PPT 3 SnP LMS.pdf"
+    path: "/home/liebert511/PS/01-slides/06-lms-versions/PPT 3 SnP LMS.pdf"
     pages: 28
     author: "Dr. Ashish Kumar"
     topic: "Discrete probability distributions, binomial"
     sha256: "9cc7f631c99f5afd171767ad47ab653ef1e5033e85ccdf1b8a643f27cfae1dea"
 
   - label: ppt4-continuous-prob-dist
-    path: "/home/liebert511/PS/PPT 4 SnP LMS.pdf"
+    path: "/home/liebert511/PS/01-slides/06-lms-versions/PPT 4 SnP LMS.pdf"
     pages: 44
     author: "Dr. Ashish Kumar"
     topic: "Continuous distributions: uniform, normal, exponential"
     sha256: "b3de25d8294cf071a255e7620f158204f1101668df5c1ec79e49e203d532c191"
 
   - label: ppt5-estimation-summary
-    path: "/home/liebert511/PS/PPT 5 SnP LMS.pdf"
+    path: "/home/liebert511/PS/01-slides/06-lms-versions/PPT 5 SnP LMS.pdf"
     pages: 26
     author: "Dr. Shamshad Ur Rasool"
     topic: "Theory of estimation, characteristics of a good estimator"
     sha256: "2af21af1032ce9a1fc2d6566b5eb6f7a38c97ea387ada5e2f9725c549e3679b9"
 
   - label: lms-theory-of-estimation
-    path: "/home/liebert511/PS/LMS- Theory_of_Estimation_.pdf"
+    path: "/home/liebert511/PS/01-slides/06-lms-versions/LMS- Theory_of_Estimation_.pdf"
     pages: 40
     author: "Dr. Shamshad Ur Rasool"
     topic: "Theory of estimation, expanded deck"
     sha256: "0c8a88567cec1521ffec203c6ea64f7d91e940144ced729d1e50b6e690e7b95c"
 
   - label: lms-standard-error-clt
-    path: "/home/liebert511/PS/LMS -Standard Error & Central Limit Theorem.pdf"
+    path: "/home/liebert511/PS/01-slides/06-lms-versions/LMS -Standard Error & Central Limit Theorem.pdf"
     pages: 19
     author: "Dr. Ashish Kumar"
     topic: "Population, sample, standard error, central limit theorem"
     sha256: "e48f4981ed692c1842903f75195dab348596c8e963ceca174bfcd5e7e698c807"
 
   - label: lms-method-of-moments
-    path: "/home/liebert511/PS/LMS -Method of Moments(MOM).pdf"
+    path: "/home/liebert511/PS/01-slides/06-lms-versions/LMS -Method of Moments(MOM).pdf"
     pages: 11
     author: "Dr. Ashish Kumar"
     topic: "Method of moments, parameter estimation"
     sha256: "9abbabce952e5e086496f0046a01c2e00e25ee9bd93b85bd5d8755ab8756650a"
 
   - label: lms-maximum-likelihood
-    path: "/home/liebert511/PS/Maximum Likelihood Estimator(MLE).pdf"
+    path: "/home/liebert511/PS/01-slides/06-lms-versions/Maximum Likelihood Estimator(MLE).pdf"
     pages: 16
     author: "Dr. Ashish Kumar"
     topic: "Maximum likelihood estimation"
@@ -90,161 +90,161 @@ sources:
 # Same rules as above. Nothing is moved or deleted.
 
   - label: sp-l1-7
-    path: "/home/liebert511/PS/S&P L1-7.pdf"
+    path: "/home/liebert511/PS/01-slides/01-L1-7/S&P L1-7.pdf"
     pages: 108
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "9964d15b91116f65625934d257da43bc12d0cd251789126da488b4643dc2d961"
 
   - label: sp-l8-9
-    path: "/home/liebert511/PS/S&P L8-9.pdf"
+    path: "/home/liebert511/PS/01-slides/02-L8-9/S&P L8-9.pdf"
     pages: 37
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "4355535f729b39261aa0349069eaa0cdfab294d6f0e747fb69557b8e7162310c"
 
   - label: sp-l10-11-chebyshev
-    path: "/home/liebert511/PS/S&P L10-11 Chebyshev's inequality.pdf"
+    path: "/home/liebert511/PS/01-slides/03-L10-11-chebyshev/S&P L10-11 Chebyshev's inequality.pdf"
     pages: 9
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "243d38ef0722c40ff00e6d24a1126ef557ca35f5e0733c9ac30d162ca9df5aad"
 
   - label: sp-l12-13-discrete
-    path: "/home/liebert511/PS/S&P L12-13 Discrete Probability Distribution.pdf"
+    path: "/home/liebert511/PS/01-slides/04-L12-13-discrete/S&P L12-13 Discrete Probability Distribution.pdf"
     pages: 28
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "a3aadaa677bb1f9b3953b1f8dd7beedb4f7367de1a856115e5cf05d8c7840d68"
 
   - label: sp-l14-15-continuous
-    path: "/home/liebert511/PS/S&P L14-15 Continuous Probability Distribution.pdf"
+    path: "/home/liebert511/PS/01-slides/05-L14-15-continuous/S&P L14-15 Continuous Probability Distribution.pdf"
     pages: 44
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "474b90ee94a172f89954f75bfa3cb8b7ecf1cdeab9d73eb12e1104029191f77c"
 
   - label: asgn-2024-25-1
-    path: "/home/liebert511/PS/2024-2025-Assignment 1.pdf"
+    path: "/home/liebert511/PS/02-assignments/2024-25/2024-2025-Assignment 1.pdf"
     pages: 2
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "e7b1afce3d9403d8da67ade94813c74508671a121c77015279acc8f00a191b71"
 
   - label: asgn-2024-25-2
-    path: "/home/liebert511/PS/2024-2025-Assignment 2.pdf"
+    path: "/home/liebert511/PS/02-assignments/2024-25/2024-2025-Assignment 2.pdf"
     pages: 2
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "d6dfb6ac7a144efb0ee146d0576431f6b723fecab67a8fdd43ce1a4dcc186779"
 
   - label: asgn-2024-25-3
-    path: "/home/liebert511/PS/2024-2025-Assignment 3.pdf"
+    path: "/home/liebert511/PS/02-assignments/2024-25/2024-2025-Assignment 3.pdf"
     pages: 3
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "42dd780dd5ea226fa0314426a9a10568a2696f51e4af1b1f486916e3d7018a39"
 
   - label: asgn-2024-25-3-ep2
-    path: "/home/liebert511/PS/2024-2025-Assignment 3 Episode 2.pdf"
+    path: "/home/liebert511/PS/02-assignments/2024-25/2024-2025-Assignment 3 Episode 2.pdf"
     pages: 2
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "e7593bc145a6db3fd42787b07952addd0df78f822ff3761688058d29d401e9e5"
 
   - label: asgn-2024-25-4
-    path: "/home/liebert511/PS/2024-2025-Assignment 4.pdf"
+    path: "/home/liebert511/PS/02-assignments/2024-25/2024-2025-Assignment 4.pdf"
     pages: 3
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "0d09ac5c836886b0139e752bac55be7139853eea4ea6f7138f58938f75d9162b"
 
   - label: asgn-2024-25-5
-    path: "/home/liebert511/PS/2024-2025-Assignment 5.pdf"
+    path: "/home/liebert511/PS/02-assignments/2024-25/2024-2025-Assignment 5.pdf"
     pages: 3
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "91e72d5ba3f40978694477c6de6b0df8d932efadeb397728ddb398759388944d"
 
   - label: asgn-2025-26-1-5
-    path: "/home/liebert511/PS/2025-2026-S&P_assignments_1-5.pdf"
+    path: "/home/liebert511/PS/02-assignments/2025-26/2025-2026-S&P_assignments_1-5.pdf"
     pages: 17
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "93b2b997b3cf4d8576bc36628e6be690f397e69b5f2be101b28793ec75a8996e"
 
   - label: paper-mte-2025-26
-    path: "/home/liebert511/PS/S&P_MTE_Sem-3_2025-2026.pdf"
+    path: "/home/liebert511/PS/03-mte/S&P_MTE_Sem-3_2025-2026.pdf"
     pages: 3
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "760fa24a41c8b16fe9a55593f051a3f611c6e1aeb26b5e5a770f61017672758c"
 
   - label: paper-mte-2025-26-scheme
-    path: "/home/liebert511/PS/S&P_MTE_Sem-3_2025-2026solutionscheme.pdf"
+    path: "/home/liebert511/PS/03-mte/solution-schemes/S&P_MTE_Sem-3_2025-2026solutionscheme.pdf"
     pages: 4
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "77b94b73e28fa0f5f2e4f0b7374da31c702b6841025ec8020c16d0d97785a0b7"
 
   - label: paper-mte-2024-25
-    path: "/home/liebert511/PS/S&P_MTE_Sem-3_2024-2025.pdf"
+    path: "/home/liebert511/PS/03-mte/S&P_MTE_Sem-3_2024-2025.pdf"
     pages: 2
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "544564c54b88ecb6dc29e84badd6894784aab4c7e862e9069ae38eb7c7cd5bdd"
 
   - label: paper-mte-2024-25-scheme
-    path: "/home/liebert511/PS/S&P_MTE_Sem-3_2024-2025solutions-scheme-how-marks-were-given.pdf"
+    path: "/home/liebert511/PS/03-mte/solution-schemes/S&P_MTE_Sem-3_2024-2025solutions-scheme-how-marks-were-given.pdf"
     pages: 6
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "7d4323bc7f6b7b7d7f0460c59cd77170b251416e77249cf0ba712ced74c84859"
 
   - label: paper-ete-s3-2024-25
-    path: "/home/liebert511/PS/S&P_ETE_Sem-3_2024-25.pdf"
+    path: "/home/liebert511/PS/04-ete/sem3-2024-25/S&P_ETE_Sem-3_2024-25.pdf"
     pages: 2
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "f3649402143bd376cbf1716ba37ee9e20eab462ef144479bf2ec070d9d4e97c1"
 
   - label: paper-ete-s3-2025-26
-    path: "/home/liebert511/PS/S&P_ETE_Sem-3_2025-26.pdf"
+    path: "/home/liebert511/PS/04-ete/sem3-2025-26/S&P_ETE_Sem-3_2025-26.pdf"
     pages: 2
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "e9dce446c372b68a2d93e89e83aef7e255b9b53d3079855efc733358b79753a6"
 
   - label: paper-ete-s4-2024-25
-    path: "/home/liebert511/PS/S&P_ETE_Sem-4_2024-25.pdf"
+    path: "/home/liebert511/PS/04-ete/sem4-2024-25/S&P_ETE_Sem-4_2024-25.pdf"
     pages: 2
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "445b80e2f279bbac13d76489c6e5823027f5b73be7a9504fdc3ad3dce7bc923d"
 
   - label: paper-ete-s4-2025-26
-    path: "/home/liebert511/PS/S&P_ETE_Sem-4_2025-26_mujstella.pdf"
+    path: "/home/liebert511/PS/04-ete/sem4-2025-26/S&P_ETE_Sem-4_2025-26_mujstella.pdf"
     pages: 3
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "81d1261f02b3b611e1c554431df9e06cc503857eb49e16cacf8ac7437e60c7e6"
 
   - label: paper-ete-summer-2025-26
-    path: "/home/liebert511/PS/S&P_ETE_Summer_2025-26_mujstella.pdf"
+    path: "/home/liebert511/PS/04-ete/summer-2025-26/S&P_ETE_Summer_2025-26_mujstella.pdf"
     pages: 2
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "f3d55699900c97ec389c19b0ee2ad06f0bb75f1477c4d5219398163833b9f0a1"
 
   - label: paper-resess-s3-2025-26
-    path: "/home/liebert511/PS/S&P_Re-sess_Sem-3_2025-26.pdf"
+    path: "/home/liebert511/PS/05-re-sessional/sem3/S&P_Re-sess_Sem-3_2025-26.pdf"
     pages: 2
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
     sha256: "48b1790c9617bda3adae5780f7ddb9f2e7d6e75df44fa076d6c36dd498a6314c"
 
   - label: paper-resess-s4-2025-26
-    path: "/home/liebert511/PS/S&P_Re-sess_Sem-4_2025-26_mujstella.pdf"
+    path: "/home/liebert511/PS/05-re-sessional/sem4/S&P_Re-sess_Sem-4_2025-26_mujstella.pdf"
     pages: 2
     author: "Course faculty"
     topic: "batch 2, 15 Sep 2026"
@@ -264,14 +264,14 @@ sources:
 # Compare, do not dedup, at U05; its key column needs a vision pass.
 
   - label: asgn-copy-2025-26
-    path: "/home/liebert511/PS/Assignment 2_MAS2001-2.pdf"
+    path: "/home/liebert511/PS/02-assignments/2025-26/Assignment 2_MAS2001-2.pdf"
     pages: 4
     author: "Course faculty"
     topic: "byte-identical copy of batch-1 assignment 2, kept for provenance"
     sha256: "5ff197311b6037e1211ccbf2540c02d9340f52ccc3e94bc9c5484d3a2befb18f"
 
   - label: asgn-faculty-variant
-    path: "/home/liebert511/PS/MAS2001-Assignment 1 .pdf"
+    path: "/home/liebert511/PS/02-assignments/2025-26/MAS2001-Assignment 1 .pdf"
     pages: 6
     author: "Dr. Ruchika Mehta"
     topic: "assignment 1 faculty variant, same questions different faculty name"
