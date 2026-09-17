@@ -622,6 +622,47 @@ TRAP: identical to Question 4. The extra trap here: "89% are under 63" is a LOWE
 cumulative ask (not an upper tail), so its phi is 0.89 - 0.5 = 0.39 and z is POSITIVE.
 Read "under" vs "over" with full attention; that single word decides the sign.
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 5 (our deck, ppt4 - the inverse-normal drill)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   X is normal with mean 8.0 and sd 5.0. Find the X value so that only 20% of all
+   values are below it.
+```
+
+STEP 0: DECODE - this is the INVERSE direction: given a probability (0.20 below), find
+the value. The forward direction goes value -> z -> area; the inverse goes area -> z ->
+value.
+
+EVERY STEP:
+
+```
+  STEP 1  the ask in symbols: P(X < x) = 0.20, find x.
+  STEP 2  20% below is LESS than 50%, so x sits BELOW the mean and its z is negative.
+  STEP 3  find z: the area from the mean to x is 0.50 - 0.20 = 0.30.
+          the z whose area-from-mean equals 0.30 is z = -0.84 (table: phi(0.84) = 0.2995).
+          (with more precision z = -0.8416; either reads off the table.)
+  STEP 4  un-standardise: x = mu + z*sigma = 8 + (-0.84)(5) = 8 - 4.2 = 3.8
+          (with z = -0.8416: x = 8 - 4.208 = 3.792)
+```
+
+ANSWER: x = 3.79 (about 3.8). Only 20% of values fall below 3.79.
+
+THE PICTURE (running the standardisation backwards):
+```
+   forward:   x -> z = (x-mu)/sigma -> look up area
+   inverse:   area -> read z off the table -> x = mu + z*sigma
+                                    |
+   |############                        |
+   --x=3.79------mu=8.0---------->
+     |<-20%->|<----- 30% ----->|
+              (area mean-to-x = .30 -> z = -0.84)
+```
+
+TRAP: the area-to-phi conversion. "20% below" means phi(|z|) = 0.50 - 0.20 = 0.30 (NOT
+0.20). Using 0.20 directly gives the wrong z (roughly -0.52) and a wrong x.
+
 ═══════════════════════════════════════════════════════════════════════════════
 F6 SUMMARY CARD
 ═══════════════════════════════════════════════════════════════════════════════
