@@ -560,6 +560,46 @@ EVERY STEP:
           (WITHOUT replacement they would be dependent.)
 ```
 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+F10.6  THE SHEET-A MEMORY QUESTIONS (2024-25 #1 and 2025-26 #1 variants)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+These short "fill the blank" items appear on the assignment sheets (Section A) and test the
+SAME lecture-2 vocabulary. Answers with one-line whys:
+
+```
+   +----------------------------------------------------------------------------------+
+   | "A discrete random variable can take a FINITE (countable) number of values."      |
+   | "A continuous random variable can take INFINITE values within its range."         |
+   | "The range of the distribution function is [0, 1]."                               |
+   | "The height of persons in a country is a random variable of the CONTINUOUS type." |
+   | "If f(x) is the pdf of a continuous rv, then int_{-inf}^{inf} f(x) dx = 1."       |
+   | "For a standard normal variate, the mean is 0 (and the variance is 1)."           |
+   | "Under the normal curve, the total area right of the mean is 50%."                |
+   | "The expectation of two independent random variables: E(XY) = E(X)E(Y)."          |
+   | "If b is a constant, then E(b) = b."                                             |
+   | "Which continuous distribution is memoryless: the EXPONENTIAL."                  |
+   | "Mean = variance always holds for the POISSON (any lambda)."                     |
+   | "p.d.f. of the Uniform distribution: f(x) = 1/(b-a) on [a,b]."                   |
+   | "p.d.f. of the Exponential: f(x) = lambda e^{-lambda x}, x > 0."                 |
+   +----------------------------------------------------------------------------------+
+```
+
+THE ONE MULTIPLE-CHOICE REASONING ITEM:
+
+```
+   "If X and Y are two random variables with existing expectations and P(X <= Y) = 1, then
+       (i) E(X) <= E(Y)   (ii) E(X) = E(Y)   (iii) E(X) >= E(Y)   (iv) none"
+   ANSWER: (i) E(X) <= E(Y).
+   WHY: if X never exceeds Y, the weighted average of X cannot exceed the weighted
+        average of Y. (Expectation is monotone.)
+```
+
+TRAP: "P(X <= Y) = 1" does not force equality of the expectations; strict inequality is
+possible (e.g. X = 0 always, Y exponential). And the reverse implication fails: E(X) <= E(Y)
+does not imply P(X<=Y)=1.
+
 ═══════════════════════════════════════════════════════════════════════════════
 F10 SUMMARY CARD
 ═══════════════════════════════════════════════════════════════════════════════

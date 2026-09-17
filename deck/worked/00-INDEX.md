@@ -12,6 +12,8 @@ every solution was machine-verified before the file was committed.
    register: ZERO-KNOWLEDGE LONG FORM ONLY (every step shown, no assumed maths)
 ```
 
+drill file: 00-QUESTIONS-ONLY.md (every question, no solutions, with solution pointers)
+
 ═══════════════════════════════════════════════════════════════════════════════
 THE FILES AND WHAT EACH COVERS
 ═══════════════════════════════════════════════════════════════════════════════
@@ -29,15 +31,15 @@ THE FILES AND WHAT EACH COVERS
   | F4    | Uniform                   |   4   | point (2 forms), trains, U(-1,1) bound |
   | F5    | Chebyshev                 |   7   | within, tail, find-c, find-E/Var,      |
   |       |                           |       | NOT-form MCQ, interpretation MCQ       |
-  | F6    | Normal                    |   5   | interval, two-unknown (2 variants!),   |
+  | F6    | Normal                    |   6   | interval, two-unknown (2 variants!),   |
   |       |                           |       | SE-of-average, phi table conventions   |
   | F7    | RV / pdf / cdf            |   6   | find-k, mean/var exact fractions,      |
   |       |                           |       | piecewise cdf, dice grid               |
-  | F8    | Estimation                |  18   | 4 properties, unbiased verification,   |
+  | F8    | Estimation                |  17   | 4 properties, unbiased verification,   |
   |       |                           |       | consistency, CIs (3), sufficiency (3)  |
   | F9    | CLT / sampling            |   8   | SE value, SE behaviour, applicability, |
   |       |                           |       | 3 deck examples (ATM, impurity, LED)   |
-  | F10   | Definition/foundations    |   4   | rv definition (3 papers!), pmf drill,  |
+  | F10   | Definition/foundations    |  10   | rv definition (3 papers!), pmf drill,  |
   |       |                           |       | joint pmf + marginal, E(2X+1)^2        |
   | F11   | Expectation/variance laws |   6   | laws toolbox, E[XY], variance>=0,      |
   |       |                           |       | typist Q8, soldiers, Poisson scaling   |
@@ -49,10 +51,13 @@ THE FILES AND WHAT EACH COVERS
   |       |                           |  10MCQ| prob (camera example), independence,   |
   |       |                           |       | the assignment-1 MCQ key (C,B,B,A,D,   |
   |       |                           |       | B,B,B,A,B)                             |
+  | F15   | Assignment bank 2         |  22   | 2024-25 + 2025-26 sheets:            |
+  |       |                           |       | expectation tricks, find-k, counts,   |
+  |       |                           |       | 8 printed-answer flags documented     |
   +-------+---------------------------+-------+----------------------------------------+
    (*) hypothesis testing is marked out of the MTE syllabus in the ledger, but it appeared in
        five ETE papers with two 10-mark questions; included for completeness.
-   TOTAL: 131 questions
+   TOTAL: 158 questions
 ```
 
 ═══════════════════════════════════════════════════════════════════════════════
