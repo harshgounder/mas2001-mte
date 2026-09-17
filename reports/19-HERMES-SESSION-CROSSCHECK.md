@@ -41,8 +41,8 @@ compaction artifacts, so it is not a count of 679 distinct research actions.
 - `reports/evidence/deck-block-ledger-20260916.csv`: 30 manually verified blocks across
   L1-7, L8-9, L12-13, and L14-15, including the five blocks missed in PR 10.
 - `reports/evidence/external-source-inventory-20260916.csv`: hash-locked external reference
-  assets, verified identities, text state, and explicit absent rows for Palaniammal and
-  Sundarapandian.
+  assets, verified identities, text state, and explicit absent rows for both named
+  Palaniammal titles and for Sundarapandian.
 - `reports/evidence/question-instance-ledger.csv`: 383 gross question instances. Each row
   has a stable id, corpus group, source label, order, description state, scope, provenance
   state, source field, locator, family-id slot, and gross status. The 210 rows whose

@@ -262,14 +262,16 @@
 
 ```
    (ii) FIND λ FOR T3
-       E(T3) = (λ/3)(μ+μ+μ) = λμ
-       λμ = μ  ->  λ = 1
+       E(T3) = (λμ+μ+μ)/3 = ((λ+2)/3)μ
+       ((λ+2)/3)μ = μ  ->  λ = 1
        so T3 = (X1+X2+X3)/3 = X̄, the sample mean
 ```
 
 ```
    (iii) IS T3 CONSISTENT?
-       with λ=1, T3 IS the sample mean -> consistent  ✓
+       With λ=1, this fixed-n statistic is the sample mean for n=3.
+       That fact alone does not establish consistency. The sequence Xbar_n is
+       consistent under the usual iid assumptions because Var(Xbar_n)=σ²/n -> 0.
 ```
 
 ```
@@ -350,6 +352,9 @@
    n = 25, x̄ = 8.4 hours, σ = 1.5 known.  95% CI,  z(0.975) = 1.96
 ```
 
+This z interval assumes a normal population or a separately justified normal
+approximation. A sample size of 25 alone does not supply that justification.
+
 ```
    CI = x̄ ± z(σ/√n)
       = 8.4 ± 1.96(1.5/5)
@@ -365,7 +370,7 @@
          7.81    8.4    8.99
               "plausible range for μ"
 
-   NOTE: the CI MECHANICS belong to lecture 25 (OUT of MTE scope), but
+   NOTE: the CI MECHANICS belong to lecture 25 (BOUNDARY for this audit), but
    "point and interval estimation" IS named in the MTE syllabus line 15.
    Keep the formula in reserve; do not drill the mechanics.
 ```

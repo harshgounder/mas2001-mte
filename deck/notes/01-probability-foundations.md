@@ -78,7 +78,7 @@ Four limitations the slides list (worth a one-line recall, low exam weight):
   ╚════════════════════════════════════════════════════════════╝
 ```
 
-The 36-outcome grid, drawn out:
+The 36 ordered-pair positions, with each cell displaying its sum:
 
 ```
         1    2    3    4    5    6      <- die 2
@@ -87,8 +87,8 @@ The 36-outcome grid, drawn out:
    ├────┼────┼────┼────┼────┼────┤
  2 │ 3  │ 4  │ 5  │ 6  │ 7  │ 8  │
    ├────┼────┼────┼────┼────┼────┤
- 3 │ 4  │ 5  │ 6  │ 7  │ 8  │ 9  │    each cell = a SUM
-   ├────┼────┼────┼────┼────┼────┤    each cell = 1/36
+ 3 │ 4  │ 5  │ 6  │ 7  │ 8  │ 9  │    cell position = (row die, column die)
+   ├────┼────┼────┼────┼────┼────┤    printed value = the sum; each cell = 1/36
  4 │ 5  │ 6  │ 7  │ 8  │ 9  │ 10 │
    ├────┼────┼────┼────┼────┼────┤
  5 │ 6  │ 7  │ 8  │ 9  │ 10 │ 11 │

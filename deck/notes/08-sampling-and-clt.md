@@ -221,10 +221,10 @@
   ╔═══════════════════════════════════════════════════════════════╗
   ║  ERRATA 6: the slide PRINTS Z2 = -0.4, which is WRONG.         ║
   ║  The correct value is -0.94.                                   ║
-  ║  The final answer 0.1644 is nevertheless correct, because the  ║
-  ║  working behind it used the right table areas (0.4909 and       ║
-  ║  0.3264; the latter belongs to z=0.94, not z=0.4).             ║
-  ║  WRITE Z2 = -0.94 in your answer.                              ║
+  ║  The slide's final 0.1644 is also wrong: 0.4909-0.3264         ║
+  ║  equals 0.1645 using rounded table areas. Using unrounded z     ║
+  ║  values gives about 0.1637. WRITE Z2 = -0.94 and state which    ║
+  ║  precision convention you used.                                ║
   ╚═══════════════════════════════════════════════════════════════╝
 ```
 

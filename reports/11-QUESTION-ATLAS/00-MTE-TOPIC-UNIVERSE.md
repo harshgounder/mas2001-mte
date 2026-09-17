@@ -446,12 +446,14 @@ T13  SAMPLING AND STANDARD ERROR  (clt p001-005)  lect 17
 T14  CENTRAL LIMIT THEOREM  (clt p006-018)  lect 18
 --------------------------------------------------------------------------------
 ```
-14.1 statement [p007-008]: n>=30 any shape; normal population any n; n<30 non-normal fails
+14.1 statement [p007-008]: normal population any n; n>=30 is the course heuristic, not a
+     universal cutoff; for non-normal populations check skew, tails, and assumptions
      [C]  14.1.1 CLT applicability concept item [E25SUM-Q9]
 14.2 distribution of the mean: mean mu, sd sigma/sqrt(n)
 14.3 z transform with SE denominator [~]: z = (xbar-mu)/(sigma/sqrt(n)); "average of n" template
      vs plain normal (only the denominator differs: the classic mix-up)
-14.4 worked: ATM [p011-012]; impurity [p013-014, errata 6: z=-0.94 typo -0.4, answer 0.1644];
+14.4 worked: ATM [p011-012]; impurity [p013-014, errata 6: z=-0.94 typo -0.4,
+     rounded table 0.1645, unrounded about 0.1637];
      LED [p015-016]; machines n=9 exact-normal fallback [p017-018]
 14.5 exact table selections in the deck: 0.4909, 0.3264, 0.4641, 0.2257, 0.4772
 ```

@@ -6,7 +6,7 @@
    T = time of peak electricity demand at a power plant
    - cannot be limited to a countable list of times
    - T can take ANY value in [0, 24)
-   - P(peak at exactly 12.013278...)? virtually impossible -> ZERO
+   - P(peak at exactly 12.013278...) = 0 in a continuous model
 ```
 
 ```
@@ -251,9 +251,9 @@
 
 ```
    for discrete : pmf = DIFFERENCE of two cdf values
-   for continuous: pdf = DERIVATIVE of the cdf
+   for an absolutely continuous distribution: pdf = DERIVATIVE of the cdf
 
-        F'(x) = f(x)          (Fundamental Theorem of Calculus)
+        F'(x) = f(x)          where F is differentiable
 ```
 
 ## 10. Worked: find the cdf, exercise 1 (p138)

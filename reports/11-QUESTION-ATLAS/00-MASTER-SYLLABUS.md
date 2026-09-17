@@ -255,10 +255,12 @@ graded 5 times, deck arrived 15 Sep (S&P L10-11). sources: deck, sheet E, bank s
 ### Lecture 18: CLT (clt p006 to p018)
 
 ```
-14.1 statement: n>=30 any shape | normal population any n | n<30 non-normal fails (p007, p008)
+14.1 statement: normal population any n; n>=30 is the course heuristic for approximation,
+     not a universal cutoff; for non-normal populations check skew, tails, and assumptions
 14.2 sample mean sd = sigma/sqrt(n)
 14.3 [~] z with SE denominator: (xbar - mu)/(sigma/sqrt(n)) (p011 to p018)
-14.4 [~] applications: ATM (p011-12), impurity 0.1644 (p013-14, errata 6 z=-0.94), LED (p015-16),
+14.4 [~] applications: ATM (p011-12), impurity 0.1645 by rounded table
+     (p013-14, errata 6 z=-0.94), LED (p015-16),
      machines n=9 exact normal fallback (p017-18)
 14.5 [~] exact table selections: 0.4909, 0.3264, 0.4641, 0.2257, 0.4772
 14.6 [~] "average of n" template vs plain normal: only the denominator differs, classic mix-up
@@ -340,7 +342,8 @@ graded 5 times, deck arrived 15 Sep (S&P L10-11). sources: deck, sheet E, bank s
 3  A1 key truncates 0.0915, value 0.0916
 4  p4 p040 inverts lambda wording, p041 is right
 5  A1 long 2: normalisation is 9k + 10k^2 = 1, root 1/10 exact
-6  clt impurity: prints Z=-0.4, must be -0.94 (answer 0.1644/0.1637 fine)
+6  clt impurity: prints Z=-0.4, must be -0.94; rounded table gives 0.1645,
+   unrounded z values give about 0.1637, and the printed 0.1644 is wrong
 7  notation note: X ~ N(mu, sigma^2), second parameter is VARIANCE
 8  p4 p030 figure prints sigma = 10 under mu = 8, must be 5.0 (source text layer confirmed)
 9  A2 B5: prints 0.5679, computed (1-e^-0.5)/(1-e^-1) = 0.6225

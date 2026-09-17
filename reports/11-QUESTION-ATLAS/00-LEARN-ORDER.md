@@ -24,12 +24,11 @@ and tells you which artifact to open next.
     S&P L10-11      9 pp  (text  6,224 ch)   Chebyshev, the only truly new one
     S&P L12-13     28 pp  (text 16,171 ch)
     S&P L14-15     44 pp  (text 32,573 ch)
-  papers, converted: 2 MTE + 2 MTE schemes + 5 ETE + 2 re-sess + 1 summer = 12 files
+  papers, converted: 2 MTE + 2 MTE schemes + 4 ETE + 2 re-sess + 1 summer = 11 files
   assignments, converted: mas2001-assignment-1 (6p), -2 (4p); 2024-25 1-5; 2025-26 bundle (17p)
 
-  papers count 15, not 12: the count register says "7 papers" for the ETE family but the disk
-  holds S3-2024-25, S3-2025-26, S4-2024-25, S4-2025-26, Summer, Re-sess-S3, Re-sess-S4 = 7,
-  plus 2 MTE and their 2 schemes. Report 17 is right; any prose saying 5 ETE papers is wrong.
+  paper files total 11: 7 in the ETE and re-sessional family, plus 2 MTE papers and 2 MTE
+  marking schemes. That is 9 exam papers and 2 schemes. Schemes are not exam papers.
 ```
 
 ## 1. The dedup finding that sets the whole order
@@ -170,7 +169,7 @@ the trap.
   4.1  lms-standard-error-clt, p001-p018, read in full                    60 min
        population vs sample, SRS, SE = sigma/sqrt(n), scaling law, CLT statement and conditions,
        z with the SE denominator, the "average of n" template
-       DO: lightbulbs 20->10 (p005), ATM, impurity (errata 6: z=-0.94, answer 0.1644), LED,
+       DO: lightbulbs 20->10 (p005), ATM, impurity (errata 6: z=-0.94, table 0.1645), LED,
            machines n=9 exact-normal fallback
        DO: E24S3-A5 (SE), R25S3-A3 (n up SE down), E25SUM-Q9, Q10, E25S3-B5
   gate: the impurity question reproduced with the corrected Z, closed book

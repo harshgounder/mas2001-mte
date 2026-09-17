@@ -60,7 +60,7 @@ notes folder existed; this one covers every artifact we now have).
    └───────────────────────────┬──────────────────────────────────┘
                                ▼
    ┌──────────────────────────────────────────────────────────────┐
-   │  PASS 3   notes/06,07  +  L12-13 & L14-15 question blocks ·4h│
+   │  PASS 3   notes/06,07 + L12-13 & L14-15 blocks · 4h20       │
    │  binomial, Poisson, uniform, normal, exponential             │
    └───────────────────────────┬──────────────────────────────────┘
                                ▼
@@ -69,7 +69,7 @@ notes folder existed; this one covers every artifact we now have).
    └───────────────────────────┬──────────────────────────────────┘
                                ▼
    ┌──────────────────────────────────────────────────────────────┐
-   │  PASS 5   notes/09  ·  2h30  ·  estimation theory            │
+   │  PASS 5   notes/09  ·  2h15  ·  estimation theory            │
    └───────────────────────────┬──────────────────────────────────┘
                                ▼
    ┌──────────────────────────────────────────────────────────────┐
@@ -174,7 +174,7 @@ saves rework in PASS 3, 4 and 5.
 
 ---
 
-## 5. PASS 3, THE DISTRIBUTION SHELF, 4h
+## 5. PASS 3, THE DISTRIBUTION SHELF, 4h20
 
 One template per distribution: setup, pmf/pdf, moments, the corpus question, the trap.
 
@@ -214,13 +214,13 @@ One template per distribution: setup, pmf/pdf, moments, the corpus question, the
 
 ---
 
-## 6. PASS 4, SAMPLING AND CLT, 2h
+## 6. PASS 4, SAMPLING AND CLT, 1h40
 
 ```
    ┌────┬───────────────────────────────────────────────┬──────┐
    │4.1 │ notes/08-sampling-and-clt.md, read fully       │ 60m  │
    │    │   DO: lightbulbs (SE 20/10), ATM (0.0668),     │      │
-   │    │   impurity (Z2=-0.94, 0.1644), LED (0.0228),   │      │
+   │    │   impurity (Z2=-0.94, 0.1645 table), LED       │      │
    │    │   machines n=9 (0.6898)                        │      │
    ├────┼───────────────────────────────────────────────┼──────┤
    │4.2 │ deck/04-METHODS.md sections 14-15              │ 15m  │
@@ -236,7 +236,7 @@ One template per distribution: setup, pmf/pdf, moments, the corpus question, the
 
 ---
 
-## 7. PASS 5, ESTIMATION, 2h30
+## 7. PASS 5, ESTIMATION, 2h15
 
 ```
    ┌────┬───────────────────────────────────────────────┬──────┐
@@ -306,8 +306,8 @@ Order matters: papers reveal the SHAPE, assignments give the VOLUME.
    │    │   confirm your labels against it                │      │
    ├────┼───────────────────────────────────────────────┼──────┤
    │7.5 │ 2025-26 assignment bundle, assignments 1 and 2 │ 2h   │
-   │    │   (the in-scope part). The 119 rows are         │      │
-   │    │   enumerated; 3-5 are repeat sets, light pass.  │      │
+   │    │   (the in-scope part). The full bundle has 119  │      │
+   │    │   rows; assignments 3-5 get a separate light pass.│    │
    ├────┼───────────────────────────────────────────────┼──────┤
    │7.6 │ 2024-25 assignments 1 and 2 (in MTE scope)     │ 1h30 │
    ├────┼───────────────────────────────────────────────┼──────┤
@@ -418,12 +418,12 @@ Order matters: papers reveal the SHAPE, assignments give the VOLUME.
 ## 13. IF TIME IS SHORT (fallbacks, in priority order)
 
 ```
-   ONLY 1 DAY (8h):
+   ONLY 1 DAY (7h20 core, plus 40m review reserve):
       PASS 0 (1h40) + notes/01-03 skim (1h) + notes/06,07 skim (2h)
       + mock (1h30) + cheatsheet (40m) + traps (30m)
       -> the hidden layer + the shelf + the mock. Highest marks/hour.
 
-   ONLY 1 EVENING (3h):
+   ONLY 1 EVENING (3h40):
       PASS 0 (1h40) + the two MTE papers, closed book, then mark (2h)
       -> you will at least recognise every question shape.
 
@@ -447,7 +447,8 @@ Order matters: papers reveal the SHAPE, assignments give the VOLUME.
    R5  every question is done WITH its deck or paper, never read in a batch.
    R6  papers BEFORE assignments (shape first, volume second).
    R7  out-of-scope gets ONE light pass, never more.
-   R8  read deck/08-TRAPS.md before touching any source (errata 1-21).
+   R8  read deck/08-TRAPS.md before opening raw source PDFs. The guided question
+       blocks in PASS 2 and PASS 3 may come earlier.
    R9  the mock is the only timed closed-book artifact; do not re-run it
        for comfort, only the failed parts.
    R10 the notes replace the PDFs for learning. Open the PDFs only for the

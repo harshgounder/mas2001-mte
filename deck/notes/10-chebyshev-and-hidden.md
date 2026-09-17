@@ -96,14 +96,13 @@
 
 ```
    ── Q1 (safe) ──────────────────────────────────────────────
-   X takes values with E(X) = 3, E(X²) = 13.  Bound for a deviation?
+   X has E(X) = 3 and E(X²) = 13. Find a lower bound for P(-2<X<8).
 
        Var = E(X²) - [E(X)]² = 13 - 9 = 4,  σ = 2
 
-       with k=2:  P(|X-3| ≥ 4) ≤ 1/4 = 0.25
-       complement  P(|X-3| < 4) ≥ 0.75
-
-       (the deck works a "21/25" lower bound in its other row)
+       -2<X<8 is |X-3|<5, so k = 5/2 = 2.5
+       P(|X-3| ≥ 5) ≤ 4/25
+       complement  P(-2<X<8) = P(|X-3|<5) ≥ 21/25
 ```
 
 ```
@@ -152,9 +151,10 @@
    ── WORKED: 600 throws (A1 short Q6) ───────────────────────
    X ~ B(600, 1/6):  μ = 100,  σ² = npq = 600(1/6)(5/6) = 250/3
 
-       P(80 ≤ X ≤ 120) = P(|X-100| < 20)
+       P(80 ≤ X ≤ 120) = P(|X-100| ≤ 20)
            ε = 20, k² = ε²/σ² = 400/(250/3) = 1200/250 = 4.8
-           bound = 1 - 1/k² = 1 - 1/4.8 = 1 - 5/24 = 19/24 = 0.7917
+           Chebyshev directly bounds the strict complement |X-100| > 20
+           by at most 5/24, so the inclusive event is at least 19/24.
 
        exact binomial = 0.9754
 ```
@@ -200,12 +200,12 @@ These carry marks and have NO teaching slide. Full treatment in `../11-BEYOND-SL
 
    ┌────────────────────────────────────────────────────────────────┐
    │ H3  MEMORYLESS  P(T>s+t | T>s) = P(T>t)                        │
-   │     exponential never ages.  e^{-1} = 0.3679.                  │
+   │     exponential never ages. P(T>t)=e^(-lambda t).              │
    │     graded: A2 MCQ Q5, A2 section C Q1.                        │
    └────────────────────────────────────────────────────────────────┘
 
    ┌────────────────────────────────────────────────────────────────┐
-   │ H4  LANDMARKS  68.27 / 95.45 / 99.73 within 1,2,3 sigma         │
+   │ H4  NORMAL LANDMARKS  68.27 / 95.45 / 99.73 within 1,2,3 sigma  │
    │     graded: A2 MCQ Q11.                                        │
    └────────────────────────────────────────────────────────────────┘
 

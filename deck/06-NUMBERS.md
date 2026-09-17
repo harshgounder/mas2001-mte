@@ -9,7 +9,7 @@
    4.5e-5  .0067    .0183     .1353   .3679      (.9772, .9987)
    rare ─────────────────────────────────────────▶ common
 
-   the four e-values to have instantly:
+   the five e-values to have instantly:
         e^-1 = 0.3679        e^-2 = 0.1353
         e^-4 = 0.01832       e^-5 = 0.006738      e^-10 = 4.54e-5
 ```
@@ -33,7 +33,8 @@
      z=1.50 -> .9332      z=1.96 -> .9750      z=2.00 -> .9772
      z=2.36 -> .9909      z=2.58 -> .9950      z=3.00 -> .9987
 
-   -2.36 / -0.94 pair (impurity):  .4909 - .3264 = .1645
+   -2.36 / -0.94 pair (impurity): rounded table subtraction gives
+                                  .4909 - .3264 = .1645
 ```
 
 ## THE THREE CHEBYSHEV THRESHOLDS, DRAWN
@@ -114,12 +115,14 @@ find one fast.
 
 ```
   negative z, use  Phi(-z) = 1 - Phi(z), or the table's left tail directly.
-  the -2.36 / -0.94 pair (impurity):  0.4909 - 0.3264 = 0.1645  (errata 6)
+  the -2.36 / -0.94 pair (impurity): rounded table subtraction gives
+                                   0.4909 - 0.3264 = 0.1645  (errata 6)
 ```
 
 ## 4. The 68 / 95 / 99.7 landmarks
 
 ```
+  for a normal distribution:
   within 1 sigma   68.27 percent
   within 2 sigma   95.45 percent
   within 3 sigma   99.73 percent
@@ -143,7 +146,8 @@ find one fast.
   exponential lifetime  P(X>12) with f = x e^-x/3 / 9 -> 5e^-4 = 0.0916 (errata 3)
   clt lightbulbs        SE 20 at n=25, SE 10 at n=100
   clt ATM               Z = 1.50, P = 0.0668
-  clt impurity          Z1 -2.36, Z2 -0.94, answer 0.1644  (errata 6)
+  clt impurity          Z1 -2.36, Z2 -0.94. Rounded table areas give 0.1645;
+                        unrounded z values give about 0.1637  (errata 6)
   clt LED               Z = -2.00, P = 0.0228
   clt machine n=9       Z1 -1.80, Z2 0.60, answer 0.6898
   estimator set 1       lambda 0, Var(t1) 0.2s^2, t2 1.5s^2, t3 0.5556s^2, best t1

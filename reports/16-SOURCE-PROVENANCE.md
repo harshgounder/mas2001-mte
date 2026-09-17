@@ -104,9 +104,10 @@ word in the course material and in the named source.
   chapter 8), pens (deck and assignment family, source pending OCR), E(X) -3/6/9 table
   (deck family across assignment and summer paper); the testing-topic blocks (t, F,
   chi-square, ANOVA) sit outside MTE scope and carry standard textbook forms.
-- Still open: the pens problem book, the rain set N(2.6, 34.5), kx^3(4-x)^2, the
-  ax^2+bx mean-0.5 block, the 5/3 binomial block. OCR of Palaniammal and GGD volume one is
-  running; a fresh sweep follows when the text lands.
+- Historical status at that point: the pens problem book, the rain set N(2.6, 34.5),
+  kx^3(4-x)^2, the ax^2+bx mean-0.5 block, and the 5/3 binomial block were open. The scan
+  then called Palaniammal was later identified as Davenport. GGD volume one OCR completed;
+  verified Palaniammal texts remain absent.
 
 ## MTE block-by-block provenance (v0, evening of 16 Sep)
 

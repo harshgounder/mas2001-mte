@@ -177,7 +177,7 @@ Full per-question sequencing: `../reports/11-QUESTION-ATLAS/00-LEARN-ORDER.md`.
   MTE generic concept checks           5 of 16 blocks
   MTE open composite                   1 of 16 blocks
   content family ids                   0 of 502 rows, dedup remains unfinished
-  exam papers on disk                 10   (2 MTE + 5 ETE + 2 re-sess + 1 summer)
+  exam papers on disk                  9   (2 MTE + 4 ETE + 2 re-sess + 1 summer)
   marking schemes on disk              2   (kept separate from exam-paper count)
 ```
 

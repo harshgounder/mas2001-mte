@@ -231,9 +231,10 @@ T1 = X1 + X2 - X3, T2 = 2X1 + 3X3 - 4X2, T3 = (lambda X1 + X2 + X3)/3.
                Var(T2) = (4 + 9 + 16) sigma^2 = 29 sigma^2
                Var(T3) = sigma^2/3
   best:        T3
-  consistency: T3 is the sample mean, so it is consistent. T1 has variance 3 sigma^2 for
-               every sample size when the sample size is fixed at three, which is the trap:
-               consistency is a statement about behaviour as n grows
+  consistency: this T3 is a fixed-n sample mean, which alone does not prove consistency.
+               The sequence Xbar_n is consistent under the usual iid assumptions because
+               its variance is sigma^2/n and tends to zero. T1's fixed-n variance of
+               3 sigma^2 supplies no consistency statement.
 ```
 
 ### 9.3 Real life numericals, quick set (ppt5 p022 to p025)
