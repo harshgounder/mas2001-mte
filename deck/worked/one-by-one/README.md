@@ -1,7 +1,9 @@
 # ONE-BY-ONE: every question its own file
 
-Built 17 Sep 2026. 180 files: every question from the worked set, one file each.
-Format per file: PART 1 = the question alone. PART 2 = the full answer from zero
+Built 17 Sep 2026, audited same day. 195 files: every question from the worked set as its own
+file, PLUS a 00-GUIDE.md per family carrying the non-question explanation content
+(toolboxes, decision trees, summary cards) so the folder is lossless vs the family files.
+Format per question file: PART 1 = the question alone. PART 2 = the full answer from zero
 (every step, nothing assumed, all the ASCII visuals). Split mechanically from the
 family files, so nothing is lost: each file carries the same content as its block
 in the parent F-file.
