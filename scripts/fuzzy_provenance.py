@@ -94,23 +94,22 @@ def tokens(t):
 
 
 def numbers(t):
-    """Distinctive numeric signatures only. A common value like 0.5 or a bare
-    single digit is NOT distinctive, so it is excluded; fractions, 3+ digit
-    runs, and multi-digit decimals are kept, because those survive OCR and
-    rarely coincide by chance. LaTeX fractions (\\frac{21}{25}) are unfolded to
-    21/25 first, since the question text is written in LaTeX and the book text
-    is OCR, so only the digits survive both."""
-    # unfold LaTeX fractions FIRST, before norm_ocr strips the backslashes:
-    # \frac{21}{25} -> 21/25
+    """Distinctive numeric signatures only. Deliberately narrow, because a
+    validation pass showed decimal table values (2.262, 9.488) and 2-digit
+    fragments (19.41) produce FALSE matches in a big book.
+
+    Kept: fractions (21/25), 3+ digit integers in the realistic question range
+    (100..9999, so 5000 yes but a stray 5-digit table run is capped), and that is
+    it. Decimals are excluded entirely: statistics books are full of them.
+    """
+    # unfold LaTeX fractions FIRST, before norm_ocr strips the backslashes
     t = re.sub(r"\\?frac\s*\{\s*(\d+)\s*\}\s*\{\s*(\d+)\s*\}", r"\1/\2", t)
     t = norm_ocr(t)
-    # the book writes spaced fractions "21 / 25" or "21/ 25"
     t = re.sub(r"\b(\d{1,3})\s*/\s*(\d{1,3})\b", r"\1/\2", t)
     out = set()
-    # no leading \b: LaTeX can glue a digit to a word ("geq21/25")
     out |= {m.group(0) for m in re.finditer(r"\d{1,3}/\d{1,3}\b", t)}
-    out |= {m.group(0) for m in re.finditer(r"\d{3,}\b", t)}
-    out |= {m.group(0) for m in re.finditer(r"\d\.\d{2,}\b", t)}
+    # 3-4 digit integers only, capped at 9999 so a long table number is not grabbed
+    out |= {m.group(0) for m in re.finditer(r"(?<!\d)(\d{3,4})(?!\d)", t)}
     return out
 
 
@@ -153,30 +152,40 @@ class Corpus:
 
 
 def verdict(bgh, bgt, bnh, word_ratio):
-    """Evidence rule, kept simple and documented so it is auditable.
+    """Evidence rule, kept simple and auditable.
 
-    Two signals, both restricted to DISTINCTIVE tokens (a token that appears in
-    exactly one of the four reference corpora):
-      - distinctive number matches (bnh): strong, because 21/25 or 520 or 0.2301
-        landing in exactly one book is not coincidence.
-      - distinctive word ratio (word_ratio): the share of the row's distinctive
-        words that the corpus contains.
+    One signal that matters: DISTINCTIVE n-gram overlap between the row and the
+    corpus (bgh/bgt), plus DISTINCTIVE number matches (bnh), where "distinctive"
+    means the token appears in exactly one of the four reference corpora.
+
+    The word-ratio signal was REMOVED after validation: it fired on generic MCQ
+    blocks ("standard normal variate mean") that share only common vocabulary.
+    A short row cannot produce enough distinctive grams, so those correctly fall
+    to "open" rather than a false claim.
 
     Labels:
-      fuzzy-verbatim  distinctive number + strong word support, or 2+ distinctive
-                      numbers, or very high word ratio
-      fuzzy-strong    a distinctive number, or high word ratio
-      fuzzy-family    partial signal
-      open            no signal
+      fuzzy-verbatim  2+ distinctive numbers, or high gram overlap
+      fuzzy-strong    1 distinctive number with some gram support, or good overlap
+      fuzzy-family    partial overlap
+      open            no usable signal
     """
     if bgt == 0:
         return "unsearched"
     ratio = bgh / bgt
-    if (bnh >= 1 and word_ratio >= 0.50) or bnh >= 2 or word_ratio >= 0.90:
+    # HONEST CEILING after validation: a single distinctive number can coincide by
+    # chance in a 3.5M-char book (11/26 turned up in an unrelated "Ans" line), so
+    # one number is NOT enough for a source claim. Requiring 2+ distinctive
+    # numbers OR a number together with strong distinctive-gram overlap makes the
+    # matcher precise (high-confidence) and deliberately conservative (it misses
+    # real matches it cannot prove). That tradeoff is the point: report the
+    # candidates it can stand behind, leave the rest "open".
+    if bnh >= 2 and ratio >= 0.15:
         return "fuzzy-verbatim"
-    if bnh >= 1 or ratio >= 0.45 or word_ratio >= 0.70:
+    if bnh >= 1 and ratio >= 0.35:
+        return "fuzzy-verbatim"
+    if bnh >= 2 or (bnh >= 1 and ratio >= 0.15):
         return "fuzzy-strong"
-    if ratio >= 0.25 or word_ratio >= 0.40:
+    if ratio >= 0.45:
         return "fuzzy-family"
     return "open"
 
@@ -185,8 +194,11 @@ def main(argv):
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--verify", action="store_true",
+                    help="print each candidate with its matched tokens and their "
+                         "context in the book, so a human can accept or reject it")
     a = ap.parse_args(argv)
-    if not (a.write or a.check):
+    if not (a.write or a.check or a.verify):
         ap.print_help()
         return 2
 
@@ -194,10 +206,12 @@ def main(argv):
     print(f"rows: {len(rows)}")
     print("building fuzzy corpora (OCR-normalised)...")
     corps = {}
+    RAW = {}
     for name, path in CORPORA.items():
         c = Corpus(path)
         if c.grams:
             corps[name] = c
+            RAW[name] = open(path, encoding="utf-8", errors="ignore").read()
             print(f"  {name:18s} {len(c.grams):>8,} 3-grams  {len(c.nums):>6,} numbers")
 
     # a word OR number is distinctive when it appears in only ONE corpus, so
@@ -243,6 +257,20 @@ def main(argv):
         v = verdict(bgh, bgt, bnh, bwr)
         counts[v] += 1
         by_group[group][v] += 1
+        if a.verify and v in ("fuzzy-verbatim", "fuzzy-strong"):
+            dn = sorted(x for x in nums if x in DISTINCTIVE_NUM)
+            print(f"\n{iid}  [{v}]  -> {best}")
+            print(f"   row: {text[:110]!r}")
+            print(f"   distinctive numbers: {dn if dn else '(none, word-ratio driven)'}")
+            if dn and best:
+                raw = RAW.get(best, "")
+                for tok in dn[:3]:
+                    idx = raw.find(tok)
+                    if idx < 0:
+                        # the OCR may write it with spaces; show the number bare
+                        idx = raw.find(tok.replace("/", " "))
+                    snippet = raw[max(0, idx - 60):idx + 60] if idx >= 0 else "(token not found verbatim)"
+                    print(f"      {tok} @ {snippet!r}")
 
     print("\nfuzzy verdicts (non-frozen rows):")
     for k, n in counts.most_common():

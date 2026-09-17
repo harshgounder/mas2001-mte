@@ -1,28 +1,27 @@
 {
   "rows": 383,
   "by_verdict": {
-    "unsearched": 197,
-    "fuzzy-strong": 28,
-    "open": 38,
-    "fuzzy-family": 27,
-    "fuzzy-verbatim": 47,
+    "unsearched": 200,
+    "fuzzy-family": 20,
+    "open": 111,
+    "fuzzy-strong": 5,
+    "fuzzy-verbatim": 1,
     "frozen": 46
   },
   "by_group": {
     "teaching": {
       "unsearched": 59,
-      "fuzzy-strong": 1
-    },
-    "chebyshev": {
-      "open": 2,
       "fuzzy-family": 1
     },
+    "chebyshev": {
+      "open": 3
+    },
     "assignments-2025": {
-      "fuzzy-family": 6,
-      "open": 8,
-      "fuzzy-verbatim": 16,
-      "unsearched": 14,
-      "fuzzy-strong": 8
+      "open": 28,
+      "fuzzy-strong": 4,
+      "fuzzy-verbatim": 1,
+      "unsearched": 16,
+      "fuzzy-family": 3
     },
     "mte": {
       "CONCEPT": 4,
@@ -37,18 +36,15 @@
       "MIXED": 1
     },
     "ete": {
-      "unsearched": 41,
-      "fuzzy-family": 13,
-      "fuzzy-strong": 9,
-      "open": 19,
-      "fuzzy-verbatim": 15
+      "unsearched": 42,
+      "open": 50,
+      "fuzzy-family": 5
     },
     "assignments-2024": {
-      "fuzzy-family": 7,
-      "open": 9,
-      "fuzzy-strong": 10,
-      "fuzzy-verbatim": 16,
-      "unsearched": 83
+      "open": 30,
+      "fuzzy-family": 11,
+      "unsearched": 83,
+      "fuzzy-strong": 1
     },
     "four-decks": {
       "exact-text lead": 9,
