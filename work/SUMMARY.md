@@ -1,7 +1,7 @@
 # Conversion summary
 
-Wall time: 15.4s
+Wall time: 18.3s
 
 | label | pages | done | failed | banned | dashes | truncated |
 |---|---|---|---|---|---|---|
-| paper-resess-s4-2025-26 | 2 | 2 | 0 | 0 | 0 | 0 |
+| asgn-2024-25-5 | 3 | 3 | 0 | 0 | 0 | 0 |
