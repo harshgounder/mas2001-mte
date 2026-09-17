@@ -401,6 +401,165 @@ THE COMPARISON (this distinction is examined):
    the question says E(2X+1)^2 with the 2 attached to the bracket, so it is the FIRST one.
 ```
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+F10.5  THE LECTURE-DECK PMF DRILLS (five more real examples from our own notes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 5 (our deck, lecture-series - the gas station, six pumps)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   A gas station has six pumps. X = pumps in use:
+   +---+------+------+------+------+------+------+------+
+   | x |  0   |  1   |  2   |  3   |  4   |  5   |  6   |
+   +---+------+------+------+------+------+------+------+
+   |p(x)| .05 | .10  | .15  | .25  | .20  | .15  | .10  |
+   +---+------+------+------+------+------+------+------+
+   (a) P(at most 2 in use)  (b) P(at least 3)  (c) P(between 2 and 5 inclusive)
+```
+
+EVERY STEP:
+
+```
+  STEP 1  the check first: .05+.10+.15+.25+.20+.15+.10 = 1.00 ✓ a valid pmf.
+  STEP 2  (a) "at most 2" = P(0)+P(1)+P(2) = .05+.10+.15 = .30
+  STEP 3  (b) "at least 3" = P(3)+...+P(6) = .25+.20+.15+.10 = .70
+          (or 1 - P(at most 2) = 1 - .30 = .70, faster)
+  STEP 4  (c) "between 2 and 5 inclusive" = P(2)+P(3)+P(4)+P(5)
+          = .15+.25+.20+.15 = .75
+```
+
+TRAP: "inclusive" adds the endpoints (2 and 5 included). "Between" WITHOUT inclusive would
+exclude them (P(3)+P(4) = .45). The word decides.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 6 (our deck, lecture-series - the tune-up cylinders)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   45% of tune-ups are 4-cylinder, 40% are 6-cylinder, 15% are 8-cylinder.
+   X = cylinders of the next car. Find P(at least 6) and P(more than 6).
+```
+
+EVERY STEP:
+
+```
+  STEP 1  P(at least 6) = P(6) + P(8) = .40 + .15 = .55
+  STEP 2  P(more than 6) = P(8) only = .15
+```
+
+TRAP: "at least 6" INCLUDES 6; "more than 6" EXCLUDES it. That one word swings the answer
+from .55 to .15, the classic MCQ trap.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 7 (our deck, lecture-series - the contractor's forms, p(y) = ky)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   Y = forms required, p(y) = ky for y = 1,...,5.
+   (a) find k (b) P(at most 3) (c) P(between 2 and 4 inclusive) (d) could y^2/50 be the pmf?
+```
+
+EVERY STEP:
+
+```
+  STEP 1  (a) sum = k(1+2+3+4+5) = 15k = 1  ->  k = 1/15
+  STEP 2  (b) P(at most 3) = (1+2+3)/15 = 6/15 = 2/5 = .40
+  STEP 3  (c) P(2 to 4 incl) = (2+3+4)/15 = 9/15 = 3/5 = .60
+  STEP 4  (d) sum of y^2/50 = (1+4+9+16+25)/50 = 55/50 = 1.10 != 1
+          even the max term alone: 25/50 = 0.5, but the TOTAL is 1.1 > 1 -> NOT a pmf.
+```
+
+TRAP: part (d) is a validity check: a pmf MUST sum to exactly 1. 1.10 fails.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 8 (our deck, lecture-series - the flashlight battery process)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   Batteries are acceptable with prob 0.90. A flashlight tests batteries until TWO
+   acceptable ones are found. Y = total batteries tested.
+   Find P(2), P(3), P(5), and the general p(y).
+```
+
+STEP 0: DECODE the process. Y = the TEST on which the SECOND acceptable is found.
+KEY: with p = 0.9, hitting two A's almost always happens fast, so the probability
+COLLAPSES as y grows. Read the ask carefully: it is the second A, not "at least two".
+
+EVERY STEP:
+
+```
+  STEP 1  P(Y=2): the first TWO are both acceptable (AA):
+          .9 x .9 = .81
+
+  STEP 2  P(Y=3): among the first two there is exactly ONE acceptable, then the 3rd is
+          acceptable:  UAA or AUA  -> 2 x (.1 x .9 x .9) = .162
+
+  STEP 3  P(Y=5): among the first FOUR there is exactly ONE acceptable (three U's),
+          then the 5th is acceptable: AUUUA, UAUUA, UUAUA, UUUAA -> 4 arrangements:
+          p(5) = 4 x .9 x .9 x .1 x .1 x .1 = 4 x (.1)^3 x (.9)^2 = .00324
+
+  STEP 4  the general form: the y-th battery is acceptable AND exactly one of the first
+          (y-1) is also acceptable (the remaining y-2 are unacceptable):
+          p(y) = (y-1) x (.1)^(y-2) x (.9)^2,  y = 2, 3, 4, ...
+```
+
+THE PMF TABLE AND THE SANITY CHECK:
+
+```
+   +-----+---------+------------------------------------------+
+   |  y  |  p(y)   | note                                     |
+   +-----+---------+------------------------------------------+
+   |  2  | 0.81000 | AA                                       |
+   |  3  | 0.16200 | UAA, AUA                                 |
+   |  4  | 0.02430 | 3 arrangements x (.1)^2 x (.9)^2           |
+   |  5  | 0.00324 | 4 x (.1)^3 x .81 = .00324                |
+   +-----+---------+------------------------------------------+
+   SUM over all y = 1.0 exactly (machine-checked). A valid pmf.
+```
+
+TRAP: the tempting wrong answer is to think "until two acceptable" means the LAST battery
+completes the pair while the others are also acceptable-heavy. Here the correct count of
+acceptable batteries among the first (y-1) is EXACTLY ONE (plus the y-th one), so the
+probability FALLS as y grows. The hint in the deck ("list the four outcomes for Y=5")
+tells you the structure: y-1 free positions for the single acceptable battery.
+
+QUESTION 9 (our deck, lecture-series - the mutually-exclusive check)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   Roll one die. A = even = {2,4,6}, B = odd = {1,3,5}: mutually exclusive?
+   Then A = even, B = prime = {2,3,5}: mutually exclusive?
+```
+
+EVERY STEP:
+
+```
+  STEP 1  A n B = {} (even and odd never overlap) -> MUTUALLY EXCLUSIVE.
+  STEP 2  A n B = {2} (2 is both even and prime) -> NOT mutually exclusive.
+  STEP 3  the test is always: do they share ANY outcome?
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 10 (our deck, lecture-series - independence: coin AND die)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   Toss a coin AND roll a die. A = head (P=1/2), B = getting a 6 (P=1/6).
+   Are they independent? Also the replaced-card case.
+```
+
+EVERY STEP:
+
+```
+  STEP 1  the coin and the die do not affect each other -> INDEPENDENT by construction.
+  STEP 2  the test confirms: P(A n B) = P(A) x P(B) = (1/2)(1/6) = 1/12 ✓
+  STEP 3  the card case: draw a card, REPLACE it, draw again. Because of the replacement
+          the second draw is unaffected -> independent.
+          (WITHOUT replacement they would be dependent.)
+```
+
 ═══════════════════════════════════════════════════════════════════════════════
 F10 SUMMARY CARD
 ═══════════════════════════════════════════════════════════════════════════════
