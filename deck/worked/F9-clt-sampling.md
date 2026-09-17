@@ -383,6 +383,42 @@ THE MTE TWIN (MTE 2025-26 Q7, solved in full in F6.4):
    (population normal -> any n works).
 ```
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 8 (our LMS deck, standard-error-clt - the SE drill)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   A factory's bulbs have sigma = 100 hours. Find the SE of the mean for a sample of 25,
+   and see what happens if n increases to 100.
+```
+
+EVERY STEP:
+
+```
+  STEP 1  n = 25:  SE = 100/sqrt(25) = 100/5 = 20 hours
+  STEP 2  n = 100: SE = 100/sqrt(100) = 100/10 = 10 hours
+  STEP 3  interpretation: quadrupling n (25 -> 100) HALVED the SE (20 -> 10).
+          SE shrinks with the SQUARE ROOT of n: to halve SE you need 4x the sample.
+```
+
+THE SHAPE OF THE RELATION:
+
+```
+   SE
+   20 |*
+      | *
+      |  *
+      |    *
+   10 |        *  *
+      |              *   *    *
+    0 +------------------------------- n
+      25   50   100   200   400
+   SE ~ 1/sqrt(n): the curve flattens; doubling n gives only 1.41x improvement.
+```
+
+TRAP: the "quadruple to halve" rule is a favorite MCQ trap (they ask: to reduce SE to
+one-third, how many times bigger must n be? Answer: 9x, because SE ~ 1/sqrt(n)).
+
 ═══════════════════════════════════════════════════════════════════════════════
 F9 SUMMARY CARD
 ═══════════════════════════════════════════════════════════════════════════════
