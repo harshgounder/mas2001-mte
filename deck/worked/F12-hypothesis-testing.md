@@ -192,6 +192,35 @@ QUESTION 7 (our paper, ETE 2025-26 S4 A9) - critical region
 ANSWER: (b) the REJECTION region.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 7b (our paper, ETE 2024-25 S3 A4 - the one-sided / two-tailed MCQ)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   Testing H0: mu = 1000 against H1: mu > 1000 leads to
+   a) One sided right-tailed test   b) One sided left-tailed test
+   c) Two tailed test               d) None of these
+```
+
+EVERY STEP:
+
+```
+  STEP 1  read the DIRECTION in H1: "mu > 1000" points RIGHT.
+  STEP 2  a directional alternative = ONE-SIDED; the tail follows H1's arrow.
+  STEP 3  answer: option (a), one-sided right-tailed.
+```
+
+THE PICTURE:
+```
+   H1: mu > 1000        H1: mu < 1000        H1: mu != 1000
+   ----+   [tail]--->   <---[tail]  +----    <--[t]  +  [t]-->
+       (a) right            (b) left              (c) two-tailed
+```
+
+TRAP: H1 with ">" or "<" is one-sided (the tail on that side); H1 with "!=" is two-tailed.
+The tail side follows the ARROW of H1, and the rejection region is where H1 claims the
+parameter sits.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 QUESTION 8 (asked twice: ETE 2025-26 S4 A10 form, ETE 2025 summer Q7) - the F-test
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

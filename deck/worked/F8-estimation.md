@@ -152,6 +152,22 @@ WHY: the MLE's entire definition is "the value of the parameter that makes the o
 most likely". And convergence as n grows IS consistency.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 4b (our paper, ETE 2025 summer Q2 - what a CI provides)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   A confidence interval provides
+   (A) Exact value of parameter        (B) Range of values likely to contain the parameter
+   (C) Only sample mean                (D) Only population variance
+```
+
+ANSWER: (B). A CI is a RANGE estimator; it never claims an exact value (that misreads the
+nature of an interval).
+
+TRAP: (A) is the tempting wrong answer. "Exact value" contradicts the whole point of an
+interval estimate (which exists precisely to express uncertainty).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 QUESTION 5 (MTE 2025-26 paper, block Q3 - the real thing)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
