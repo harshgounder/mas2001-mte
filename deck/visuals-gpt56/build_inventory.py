@@ -55,7 +55,7 @@ def main():
                 }
             )
     with OUT.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=rows[0].keys())
+        writer = csv.DictWriter(handle, fieldnames=rows[0].keys(), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     candidates = sum(row["classification"] == "structural-candidate" for row in rows)
