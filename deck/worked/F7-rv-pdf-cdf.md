@@ -443,6 +443,20 @@ TRAP:
    3. Mixing up the two branches of f. Between 1 and 2 the density is (2-x), not x.
 ```
 
+NOTE ON THE OFFICIAL SCHEME (conflict, flagged honestly):
+
+```
+   the handwritten university scheme for this paper appears to mark this MCQ as "B".
+   the CORRECT answer is (d), by direct computation:
+        F(x) = 1/2 + [2t - t^2/2] from 1 to x = 2x - x^2/2 - 1   on [1,2]
+        check F(1) = 1/2 (must equal the first piece) ✓
+        check F(2) = 1   (a cdf must end at 1)        ✓
+   option (b) fails both checks (F(1)=1.5, F(2)=2), so it cannot be right.
+   resolution: if the exam ever shows this question, write (d) and show the F(1)/F(2)
+   checks; they settle it in 20 seconds without integration. the scheme's "B" is
+   either a handwriting misread (the image is low quality) or a grader's slip.
+```
+
 ═══════════════════════════════════════════════════════════════════════════════
 F7.5  PDF FROM CDF / FINDING THE CDF  (the paired skill)
 ═══════════════════════════════════════════════════════════════════════════════
