@@ -573,6 +573,125 @@ TRAP:
    3. Confusing sufficient with unbiased (see the MTE MCQ - option 3 is the decoy).
 ```
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 12 (our paper, ETE 2025-26 S4 Q B2 - the Poisson twin, 6 marks)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   Show that the sample mean is sufficient for the parameter lambda of the Poisson
+   distribution.
+```
+
+STEP 0: DECODE - "SHOW" means you must PROVE it, not just state it. The tool is the
+Neyman-Fisher factorisation.
+
+EVERY STEP:
+
+```
+  STEP 1  write the joint pmf of the sample (independent Poisson observations):
+          P(x1,...,xn; lambda) = product over i of [ e^(-lambda) lambda^(xi) / xi! ]
+
+  STEP 2  combine the exponentials and the powers:
+          = e^(-n lambda) x lambda^(x1+x2+...+xn) / (x1! x2! ... xn!)
+
+  STEP 3  the two factors:
+          (A) e^(-n lambda) lambda^(sum xi)      <- contains lambda AND the data only
+                                                     through the SUM
+          (B) 1 / (x1! ... xn!)                  <- contains only the data, no lambda
+
+  STEP 4  by the factorisation theorem, a statistic is sufficient exactly when the joint
+          pmf splits into (a function of the statistic and the parameter) x (a function of
+          the data alone). Factor (A) depends on the data only via sum xi = n x (sample
+          mean), so the SAMPLE MEAN (equivalently the sum) is sufficient.
+
+  STEP 5  the closing line to write: the sample mean is sufficient for lambda. Q.E.D.
+```
+
+THE LIKELIHOOD-RATIO CHECK (a second way to see it, useful for intuition):
+```
+   take two different samples with the SAME sum, e.g. (1,1,3) and (2,2,1), both sum 5.
+   P(1,1,3)/P(2,2,1) for lambda = 0.5, 2, 5, 100 is CONSTANT (machine-checked: 2/3 in
+   all cases). If the ratio does not depend on lambda, then no information about lambda
+   lives outside the sum. That is sufficiency.
+```
+
+TRAP:
+```
+   1. Answering only "the sample mean is sufficient" without the factorisation. The word
+      SHOW earns marks only with the split written out.
+   2. Forgetting that "sum" and "sample mean" are interchangeable here (one is n times
+      the other).
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 13 (our paper, ETE 2025-26 S4 Q B3 - the weighted estimators, 6 marks)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   Let X1, X2, X3, X4, X5 be a random sample of size 5 from a population with mean mu and
+   variance sigma^2. Two estimators are suggested:
+        T1 = (X1 + X2 + X3 + X4 + X5) / 5
+        T2 = (X1 + 2X2 + 3X3 + 4X4 + 5X5) / 15
+   Are both estimators unbiased? Which one is more efficient?
+```
+
+EVERY STEP:
+
+```
+  STEP 1  E(T1): each Xi has mean mu, so
+          E(T1) = (mu + mu + mu + mu + mu)/5 = 5mu/5 = mu  -> UNBIASED ✓
+
+  STEP 2  E(T2): the weights are 1,2,3,4,5 over a denominator of 15:
+          E(T2) = (1mu + 2mu + 3mu + 4mu + 5mu)/15 = 15mu/15 = mu  -> UNBIASED ✓
+          (both are unbiased; the weights summing to the denominator is exactly why)
+
+  STEP 3  Var(T1): independent Xi, equal weights 1/5:
+          Var(T1) = (1/25)(5 sigma^2) = sigma^2/5 = 9 sigma^2/45
+
+  STEP 4  Var(T2): weights 1/15, 2/15, ..., 5/15, squared:
+          Var(T2) = (1^2+2^2+3^2+4^2+5^2) sigma^2 / 15^2
+                  = (55/225) sigma^2
+                  = 11 sigma^2/45
+
+  STEP 5  compare: 9/45 vs 11/45.
+          Var(T1) < Var(T2), so T1 is MORE EFFICIENT.
+```
+
+ANSWER: both unbiased; T1 is more efficient because it has the smaller variance
+(sigma^2/5 vs 11 sigma^2/45).
+
+THE PICTURE (why the equal weights win):
+```
+   T1 gives every observation the same weight: 1/5 each   <- spreads the risk evenly
+   T2 leans on X5 (weight 5/15) and barely uses X1 (1/15) <- a few observations carry
+                                                              most of the risk
+
+   the squared weights in Var:  T1 -> 5 x (1/25)          = 0.200
+                                T2 -> (1+4+9+16+25)/225    = 0.244
+   the uneven weights make the variance bigger. That is the general lesson: among linear
+   unbiased estimators with independent equal-variance data, equal weights are best.
+```
+
+TRAP:
+```
+   1. Concluding T2 is "more efficient" because it weights bigger Xi more. Weighting the
+      DATA values tells you nothing; what matters is the variance formula with SQUARED
+      weights.
+   2. Concluding T2 is biased. Its weights sum to the same as the denominator (15), so
+      E(T2) = mu exactly. The un-normalised-looking form is the decoy.
+   3. Forgetting the SQUARES in Var(T2): the term is (2/15)^2 = 4/225, not 2/225.
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 11b (the MTE MCQ above, cross-referenced)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+For completeness: the MTE 2025-26 paper asks the SUFFICIENCY DEFINITION as MCQ (Q3), solved
+at the top of this file (F8.1 Question 5). The three real paper questions on sufficiency
+(all in our corpus) are now: the MTE definition MCQ, the exponential "find sufficient
+estimators" (2024-25 S4 B2), and the Poisson "show the sample mean is sufficient"
+(2025-26 S4 B2).
+
 ═══════════════════════════════════════════════════════════════════════════════
 F8 SUMMARY CARD
 ═══════════════════════════════════════════════════════════════════════════════
