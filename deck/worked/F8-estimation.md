@@ -692,6 +692,79 @@ at the top of this file (F8.1 Question 5). The three real paper questions on suf
 estimators" (2024-25 S4 B2), and the Poisson "show the sample mean is sufficient"
 (2025-26 S4 B2).
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 14 (MTE 2025-26 paper, block Q8 part (ii) - THE REAL THING, 3 marks)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   If t is an unbiased estimator of the parameter theta, show that t^2 is a biased
+   estimator of theta^2.
+```
+
+STEP 0: DECODE - a PROOF question. The tool: the variance identity.
+
+```
+   "t is unbiased for theta"       -> E(t) = theta
+   "show t^2 is BIASED for theta^2"-> show E(t^2) is NOT equal to theta^2
+   the tool: V(t) = E(t^2) - [E(t)]^2   (the computational variance identity)
+             and V(t) is NOT zero in general (the question states var(t) != 0)
+```
+
+EVERY STEP:
+
+```
+  STEP 1  start from the definition of variance of t:
+          V(t) = E[(t - theta)^2]
+
+  STEP 2  expand the square inside the expectation:
+          E[(t - theta)^2] = E[t^2 - 2 theta t + theta^2]
+                           = E(t^2) - 2 theta E(t) + theta^2     (linearity)
+
+  STEP 3  use the unbiasedness E(t) = theta:
+          V(t) = E(t^2) - 2 theta (theta) + theta^2
+               = E(t^2) - 2 theta^2 + theta^2
+               = E(t^2) - theta^2
+
+  STEP 4  rearrange:
+          E(t^2) = V(t) + theta^2
+
+  STEP 5  the punchline: since V(t) is NOT zero (given var(t) != 0),
+          E(t^2) = theta^2 + V(t) > theta^2
+          so    E(t^2) - theta^2 = V(t) != 0
+          the bias of t^2 as an estimator of theta^2 equals V(t), which is NON-ZERO.
+
+  STEP 6  conclude: a biased estimator is one whose expectation is NOT the parameter,
+          so t^2 is a BIASED estimator of theta^2. Q.E.D.
+```
+
+ANSWER: the proof above. Bias of t^2 = V(t) (positive), which is non-zero.
+
+THE PICTURE (why squaring breaks unbiasedness):
+
+```
+   t lands around theta:     ...t...theta...t...
+   t^2 lands around theta^2 + V(t):
+        E(t^2) = theta^2 + V(t)      <- always ABOVE theta^2
+                 |<--bias=V(t)-->|
+   squaring shifts the average upward by exactly the variance. that shift IS the bias.
+```
+
+NOTE ON THE OFFICIAL SCHEME: the university's solution prints E(t^2) != 0 at one step; the
+mathematically correct line is E(t^2) != theta^2 (or equivalently E(t^2) - theta^2 = V(t)
+!= 0). Use the correct form in the exam; the marks are for the identity V(t) = E(t^2) -
+[E(t)]^2 applied with E(t) = theta.
+
+TRAP:
+```
+   1. Writing E(t^2) = [E(t)]^2 (i.e. pulling the square out of the expectation). This is
+      exactly the false step the question tests. E(t^2) = [E(t)]^2 + V(t), ALWAYS.
+   2. Forgetting to use E(t) = theta (the unbiasedness assumption). It is the input that
+      makes the identity collapse to the answer.
+   3. Concluding "biased" without stating the bias. The clean finish is: bias = V(t) != 0.
+   4. Confusing the two statements: "t is unbiased" (TRUE, given) vs "t^2 is unbiased for
+      theta^2" (FALSE, what you are disproving).
+```
+
 ═══════════════════════════════════════════════════════════════════════════════
 F8 SUMMARY CARD
 ═══════════════════════════════════════════════════════════════════════════════

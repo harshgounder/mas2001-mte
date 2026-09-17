@@ -674,6 +674,157 @@ ANSWER: t = 0.1393, no evidence the mean has shifted from 25.0 g; the 95% CI is
 TRAP: the same t-protocol points as the sugar question: df = 19 (n-1), divide the sum of
 squares by n-1 = 19, and use the SAME t for the CI as for the test.
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 17 (our paper, ETE 2025-26 S3 D2 - the ANOVA techniques, 10 marks)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   Three techniques (medication, exercise, special diet) are randomly assigned to people
+   with high blood pressure. The reductions (after four weeks):
+   Medication: 10, 12, 9, 15, 13
+   Exercise:    6,  8, 3,  0,  2
+   Diet:        5,  9, 12, 8,  4
+   Test at 5% whether there is a significant difference in the mean reduction.
+   (Tabulated value: 19.41)
+```
+
+EVERY STEP:
+
+```
+  STEP 1  group means: Medication = 59/5 = 11.8 ; Exercise = 19/5 = 3.8 ; Diet = 38/5 = 7.6
+          grand mean = (59+19+38)/15 = 116/15 = 7.7333
+
+  STEP 2  SSB = sum of n x (group mean - grand mean)^2
+          = 5[(11.8-7.7333)^2 + (3.8-7.7333)^2 + (7.6-7.7333)^2]
+          = 5[16.5378 + 15.4711 + 0.0178]
+          = 5 x 32.0267 = 160.1333
+
+  STEP 3  SSW (deviations inside each group):
+          Medication: (10-11.8)^2+(12-11.8)^2+(9-11.8)^2+(15-11.8)^2+(13-11.8)^2
+                    = 3.24+0.04+7.84+10.24+1.44 = 22.8
+          Exercise:   (6-3.8)^2+(8-3.8)^2+(3-3.8)^2+(0-3.8)^2+(2-3.8)^2
+                    = 4.84+17.64+0.64+14.44+3.24 = 40.8
+          Diet:       (5-7.6)^2+(9-7.6)^2+(12-7.6)^2+(8-7.6)^2+(4-7.6)^2
+                    = 6.76+1.96+19.36+0.16+12.96 = 41.2
+          SSW = 22.8 + 40.8 + 41.2 = 104.8
+
+  STEP 4  mean squares:
+          MSB = 160.1333/2 = 80.0667
+          MSW = 104.8/12 = 8.7333
+
+  STEP 5  F = 80.0667/8.7333 = 9.1679
+```
+
+THE DECISION:
+
+```
+   F = 9.1679 vs 19.41
+   9.1679 < 19.41 -> FAIL TO REJECT
+```
+
+ANSWER: no significant difference in mean reduction among the three techniques at the 5%
+level. (machine-verified: SSB=160.1333, SSW=104.8, F=9.1679)
+
+TRAP:
+```
+   1. The same df structure as the other ANOVA: (k-1, N-k) = (2, 12).
+   2. This one FAILS to reject while the database ANOVA rejected. Do not pattern-match
+      "ANOVA always rejects"; the decision depends entirely on the numbers.
+   3. Arithmetic in SSW: three separate sums, then add.
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 18 (our paper, ETE 2024-25 S3 B6 - the inoculation 2x2, 5 marks)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   Two batches of 12 animals each test an inoculation. One batch was inoculated.
+   Dead/Survived:
+   +----------------+------+-----------+
+   |                | Dead | Survived  |
+   +----------------+------+-----------+
+   | Inoculated     |   2  |    10     |
+   | Not inoculated |   8  |     4     |
+   +----------------+------+-----------+
+   Can the inoculation be regarded as effective? (Tabulated value 3.841)
+```
+
+EVERY STEP:
+
+```
+  STEP 1  totals: rows 12 and 12; columns Dead 10, Survived 14; grand 24
+
+  STEP 2  expected: cell = row x col / 24
+          Inoculated-Dead:     12 x 10/24 = 5
+          Inoculated-Survived: 12 x 14/24 = 7
+          Not-Dead:            12 x 10/24 = 5
+          Not-Survived:        12 x 14/24 = 7
+
+  STEP 3  terms:
+          (2-5)^2/5 = 1.8000
+          (10-7)^2/7 = 1.2857
+          (8-5)^2/5 = 1.8000
+          (4-7)^2/7 = 1.2857
+          chi2 = 6.1714
+
+  STEP 4  df = (2-1)(2-1) = 1 (a 2x2 table)
+          compare 6.1714 vs 3.841
+          6.1714 > 3.841 -> REJECT H0
+```
+
+ANSWER: there is a significant association; the inoculation IS effective (the death rate is
+much lower among the inoculated). (machine-verified chi2 = 6.1714; with Yates continuity
+correction = 4.2857, still > 3.841, same decision)
+
+TRAP:
+```
+   1. df for a 2x2 table is 1, not 2.
+   2. The Yates correction (2x2-specific) reduces chi2 to 4.2857. The decision is the same,
+      but if the question's critical value were between the two, you would need to know
+      which convention your course uses. Here it does not matter.
+   3. Reading the table axes correctly: the question asks whether INOCULATION matters, so the
+      rows are the groups and the columns are dead/survived.
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 19 (our paper, ETE re-session S4 B3 - the bulbs t-test, 4 marks)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   A sample of 26 bulbs gives a mean life of 990 hours with a standard deviation of
+   20 hours. The manufacturer claims a mean life of 1000 hours. Is the sample "not up to
+   the standard"? (Useful data: 1.708)
+```
+
+STEP 0: DECODE
+
+```
+   "is the sample not up to the standard" -> H0: mu = 1000 (the claim), and we ask whether
+      the sample gives evidence AGAINST it. n = 26 (small), sigma unknown -> t-test.
+   "1.708" -> the t value for 25 df, ONE-tailed at 5% (the question's implied direction)
+```
+
+EVERY STEP:
+
+```
+  STEP 1  SE = s/sqrt(n) = 20/sqrt(26) = 20/5.0990 = 3.9223
+  STEP 2  t = (990 - 1000)/3.9223 = -10/3.9223 = -2.5495
+  STEP 3  compare: |t| = 2.5495 vs 1.708
+          2.5495 > 1.708 -> REJECT H0
+```
+
+ANSWER: yes, the sample is NOT up to the standard; the mean life is significantly below the
+claimed 1000 hours. (machine-verified: SE = 3.9223, t = -2.5495)
+
+TRAP:
+```
+   1. df = n-1 = 25, and the given 1.708 matches 25 df. Do not use 26.
+   2. Reading "1.708" as two-tailed: 1.708 IS the one-tailed 5% value for 25 df. The
+      question's phrasing ("is the sample not up to standard") is directional.
+   3. Reporting the t value without the conclusion sentence. State which way the decision
+      goes and what it means for the claim.
+```
+
 ═══════════════════════════════════════════════════════════════════════════════
 F12 SUMMARY CARD
 ═══════════════════════════════════════════════════════════════════════════════

@@ -372,6 +372,56 @@ TRAP:
 ```
 
 ═══════════════════════════════════════════════════════════════════════════════
+F11.7  MORE PAPER QUESTIONS AND THE OFFICIAL-SCHEME FORMS
+═══════════════════════════════════════════════════════════════════════════════
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+THE TYPIST IN THE OFFICIAL FORM (the scheme expresses the answer per WORD)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The university's solution scheme for M25-Q8 works with the per-WORD mistake probability p
+and the base-10 log form (with e = 2.72, log10(e) = 0.4346). Both are the same answer in
+different units. Learn both; the exam accepts either, but its scheme uses this one:
+
+```
+   (i)  e^(-200p) >= 0.99
+        -200p x log10(e) >= log10(0.99)
+        -p x (200 x 0.4346) >= -0.0044
+        p <= 0.0044/86.92 = 0.0000506        (the scheme's value)
+
+   (ii) e^(-4000p) = 0.90
+        -4000p x log10(e) = log10(0.90)
+        -p x (4000 x 0.4346) = -0.0458
+        p = 0.0458/1738.4 = 0.0000263        (the scheme's value)
+```
+
+THE TRANSLATION TABLE (so you can move between the two forms):
+```
+   +-------------------------+------------------+--------------------+
+   | quantity                | per-word p      | per-letter lambda  |
+   +-------------------------+------------------+--------------------+
+   | (i)  answer             | 0.0000506       | 0.01005            |
+   | (ii) answer             | 0.0000263       | 0.00527            |
+   | relation                | lambda = 200 p  | (200 words/letter) |
+   +-------------------------+------------------+--------------------+
+   exact values (natural logs): p_i = 5.03e-5, p_ii = 2.63e-5.
+   the scheme's 5.06e-5 differs only by the 2.72 rounding; state the form you use.
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 6 (our paper, ETE 2025-26 S3 B3 - E(X^2) and the at-most part, plus the M24 twin)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+(The full solve of E(X), E(X^2), E(2X+1)^2 is in F10.4. The additional asks that appear in
+the paper variants:)
+
+```
+   E25SUM-15 variant asks the same three. R25S3-A1 asks E[XY] for independent X,Y (F11.2).
+   The M24 paper's binomial variant (mean 5/3): variance 10/9, P(X>=1) = 211/243,
+   P(X<=1) = 112/243 - full solve in F1, Question 7b.
+```
+
+═══════════════════════════════════════════════════════════════════════════════
 F11 SUMMARY CARD
 ═══════════════════════════════════════════════════════════════════════════════
 
