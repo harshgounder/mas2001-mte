@@ -21,20 +21,22 @@ hold, with scope notes, because the user asked for the complete count.
 | 10 | MTE papers 2024-25 + 2025-26 | 5 question pages | 16 | locked register |
 | 11 | ETE, summer, re-sess papers (7 papers) | 15 | 97 | report 17, counted 16 Sep |
 | 12 | assignment 2024-25 #1, #2, #3, #3-ep2, #4, #5 | 15 | 125 | counted 16 Sep (15+20+25+25+16+24) |
-| 13 | S&P L1-7 / L8-9 / L12-13 / L14-15 decks | 217 | 30 | page and block audit, 16 Sep (13+4+6+7) |
-| | TOTAL GROSS INSTANCES | | 383 | |
+| 13 | assignment 2025-26 bundle #1 to #5 | 17 | 119 | text layer, counted 16 Sep (19+36+25+21+18) |
+| 14 | S&P L1-7 / L8-9 / L12-13 / L14-15 decks | 217 | 30 | page and block audit, 16 Sep (13+4+6+7) |
+| | TOTAL GROSS INSTANCES | | 502 | |
 
 Note on row 12: converted by the parallel working session; counted read-only from its
 working tree (uncommitted at the time of writing). The total is a gross count of question
-instances. Row 5 and row 6 alone contain five duplicated problem families, so 383 must not
-be described as a deduplicated content count. Removing only that verified overlap gives an
-upper bound of 378 content families before the remaining cross-corpus duplicates are
-resolved.
+instances. Row 5 and row 6 alone contain five duplicated problem families, so 502 must not
+be described as a deduplicated content count. Spot checks indicate overlap between bundle
+assignments 3 to 5 and the 2024-25 sets. Assignments 1 and 2 have not been compared across
+years in this ledger pass. No net unique-content bound is claimed here.
 
 ## Deck recount and pending enumeration
 
 The four lecture decks were fully read in the evening pass; their rows below carry final
-counts. The 2025-26 assignment bundle (#3 to #5) remains as near-duplicate material.
+counts. The 2025-26 assignment bundle (#1 to #5) is now enumerated exactly as 119 items;
+its rows are in reports/evidence/assignment-bundle-ledger-20260916.csv.
 
 | corpus | pages | estimate | note |
 |---|---|---:|---|
@@ -42,26 +44,26 @@ counts. The 2025-26 assignment bundle (#3 to #5) remains as near-duplicate mater
 | S&P L8-9 deck | 37 | 4 | page audit: bus waiting-time pdf, CDF-to-pdf, hospitalization E(Y), Pareto moments |
 | S&P L12-13 deck | 28 | 6 | page audit: 5-coin, pens problem, irregular die, Poisson examples 1 to 3 |
 | S&P L14-15 deck | 44 | 7 | page audit: uniform example; two standard-normal examples; two N(8,5) probability examples; inverse 20% cutoff; exponential 15/hr |
-| 2025-26 assignment bundle #3, #4, #5 | (17-page bundle) | ~65 | near-duplicate sets of the 2024-25 assignments; spot checks match |
+| 2025-26 assignment bundle #1 to #5 | 17 | 119 | exact text-layer enumeration, 16 Sep: assignment 1 19, 2 36, 3 25, 4 21, 5 18 |
 | lms-MLE (out of scope) | 16 | ~6 | labeled examples, out of MTE syllabus |
 | lms-MOM (out of scope) | 11 | unlabeled | not counted by rule |
 
 Key finding: all of these PDFs carry clean text layers. The vision conversion pipeline is
 not required for most text, but it is required to verify image-based blocks that the text
 layer omits. The earlier marker-only pass missed three such blocks. The four decks are now
-read (30 blocks). Only the bundle's #3 to #5
-(~65 near-duplicate blocks) remains from this table.
+read (30 blocks) and the 2025-26 bundle is now read (119 blocks). Nothing from this table
+remains unenumerated.
 
 ## Totals
 
-- Exact gross instances enumerated now: 383 blocks (353 from the daytime pass plus 30 from the four
-  lecture decks read in the evening pass).
-- Pending: the 2025-26 assignment bundle #3 to #5, about 65 blocks, near-duplicates of the
-  2024-25 sets (spot checks match on airframes, Bayes, hotel rates).
-- Corpus-wide: 383 exact gross instances now; adding the bundle's near-duplicate ~65
-  arrives at roughly 448 gross. A net unique-content total is not yet defensible. The only
-  current bound is at most 378 after removing the five verified row-5/row-6 overlaps, and
-  it will fall as the remaining duplicate families are mapped.
+- Exact gross instances enumerated now: 502 blocks. That is 383 from the earlier passes
+  plus 119 from the 2025-26 assignment bundle enumerated on 16 Sep.
+- Pending enumeration: none from the assignment bundle. The 119 bundle items all carry a
+  statement summary. Seventeen layout-split rows have explicit reviewed summaries and are
+  marked text_layout_reviewed.
+- Pending source work: all 119 bundle rows remain not_assessed, with blank 2024 locators.
+- Corpus-wide: 502 exact gross instances. A net unique-content total is not yet defensible:
+  source matching and content-family assignment for the bundle are incomplete.
 
 ## MTE-scope running figure (what the current study pool can draw on)
 
@@ -69,19 +71,30 @@ read (30 blocks). Only the bundle's #3 to #5
 (+3 boundary, +3 partial) + the in-scope part of the 2024-25 assignments (probability and
 distribution sets #1 and #2, 35 blocks, plus estimation-property parts of #3) + the 30
 blocks from the four decks read tonight (all four decks are MTE-syllabus material)
-= roughly 250 to 260 gross usable instances. The unique-content count remains pending.
+= roughly 250 to 260 gross usable instances before the bundle. The bundle scope split is
+now exact at item level: 62 in-scope instances, 7 boundary instances, and 50 out-of-scope
+instances. Assignments 1 and 2 contribute 55 in-scope rows. Assignment 3 contributes 7
+in-scope rows on unbiasedness, consistency, efficiency, standard error, and sufficiency;
+7 confidence-interval construction rows sit on the stated boundary; its other 11 rows use
+MLE, method of moments, Bayesian estimation, or other post-MTE material and are out of
+scope. Assignments 4 and 5 contribute the other 39 out-of-scope rows. The 62 strict in-scope rows are
+not added to the running figure because their overlap with the existing 52 assignment rows
+and the 2024-25 sets has not been mapped. The
+unique-content count remains pending.
 
-## Known duplicates
+## Known duplicates and unconfirmed overlap
 
 - asgn-copy equals assignment-2 (sha-verified earlier).
 - SE/CLT trash "(1)" twin (sha-verified earlier).
-- 2025-26 assignment bundle #3 to #5 versus 2024-25 #3, #3-ep2, #4, #5: same sets
-  recycled across years; spot checks show minor wording edits.
+- 2025-26 assignment bundle #3 to #5 versus 2024-25 #3 to #5: spot checks show overlap and
+  minor wording edits. This is not yet a per-row match. Assignments 1 and 2 have not been
+  assessed for year-over-year reuse. Every bundle match status remains not_assessed and no
+  2024 locator is claimed.
 - L-deck questions versus notes/PPT decks: overlap not yet assessed (ledger pass).
 
-These duplicates are present in the gross total above. They are listed here so a later
-content-family ledger can remove them once, with evidence, rather than mixing gross and
-net figures.
+These known duplicates and candidate overlaps are present in the gross total above. They
+are listed here so a later content-family ledger can resolve them once, with evidence,
+rather than mixing gross and net figures.
 
 ## Rules held
 

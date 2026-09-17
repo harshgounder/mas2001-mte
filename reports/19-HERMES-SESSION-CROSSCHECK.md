@@ -30,9 +30,10 @@ compaction artifacts, so it is not a count of 679 distinct research actions.
 | ETE provenance | sweep in progress over all 97 | parser produced only 46 blocks and skipped four paper groups | treat sweep as incomplete and do not cite its phrase hits as provenance |
 | deck pages | 109, 38, 29, 45 and Chebyshev 10 | PDF and `sources.yaml` counts are 108, 37, 28, 44 and 9 | report 18 corrected |
 | four-deck blocks | 11 + 3 + 6 + 5 = 25 | visual page audit gives 13 + 4 + 6 + 7 = 30 | report 18 and deck ledger corrected |
-| total blocks | 378 exact | corrected gross count is 383 | report 18 corrected |
+| total blocks | 378 exact | corrected gross count is 383, then 502 once the 119 bundle rows are added | report 18 corrected |
 | duplicate treatment | known duplicates not double counted | the arithmetic included five row-5/row-6 overlaps | gross and net counts separated |
 | text-layer sufficiency | vision not required to count questions | text-marker counting missed image-based blocks | page images remain required for completeness checks |
+| assignment bundle scope | the 17-page 2025-26 bundle PDF covered only assignments 3 to 5, about 65 items | a direct text-layer enumeration finds all five assignments and 119 items (19+36+25+21+18), one row per occurrence | report 18 corrected; reports/evidence/assignment-bundle-ledger-20260916.csv added |
 
 ## Evidence layers now present
 
@@ -43,10 +44,15 @@ compaction artifacts, so it is not a count of 679 distinct research actions.
 - `reports/evidence/external-source-inventory-20260916.csv`: hash-locked external reference
   assets, verified identities, text state, and explicit absent rows for both named
   Palaniammal titles and for Sundarapandian.
-- `reports/evidence/question-instance-ledger.csv`: 383 gross question instances. Each row
+- `reports/evidence/question-instance-ledger.csv`: 502 gross question instances. Each row
   has a stable id, corpus group, source label, order, description state, scope, provenance
   state, source field, locator, family-id slot, and gross status. The 210 rows whose
   descriptions have not yet been extracted are marked pending with blank summaries.
+- `reports/evidence/assignment-bundle-ledger-20260916.csv`: the exact 119-item ledger for
+  the 17-page 2025-26 assignment bundle (assignments 1 to 5), with item id, section, label,
+  order, page span, statement, extraction state, structural candidate, match status,
+  2024-locator slot, evidence locator, and scope. The item-level split is 62 in-scope, 7
+  boundary, and 50 out-of-scope. Seventeen layout-split statements carry reviewed summaries.
 - Report 17: 97 ETE blocks with scope verdicts. This is an intake ledger, not a completed
   provenance ledger.
 
@@ -68,9 +74,12 @@ honestly, instead of borrowing files from another checkout.
 1. acquire verified Palaniammal and Sundarapandian sources; GGD and Davenport OCR are
    complete, and their first signature sweep did not identify an exact open MTE source;
 2. rebuild the ETE extraction so all 97 ids are present before source matching;
-3. enumerate the 17-page 2025-26 assignment bundle exactly;
-4. replace the 210 pending descriptions in the 383-row instance ledger, then add exact
-   rows for the still-unenumerated 2025-26 assignment bundle;
+3. (done 16 Sep) the 17-page 2025-26 assignment bundle is enumerated exactly: 119 items
+   across assignments 1 to 5, see reports/evidence/assignment-bundle-ledger-20260916.csv;
+   enumeration is complete, but source matching is not. Assignments 3 to 5 have overlap
+   spot checks, assignments 1 and 2 have no year-over-year comparison, and every row remains
+   not_assessed with a blank 2024 locator;
+4. replace the 210 pending descriptions in the 502-row instance ledger;
 5. attach a source locator, URL, or explicit unresolved status to every question row;
 6. deduplicate by content family only after every instance has an evidence-backed family id;
 7. merge the worktree-safe test-harness correction in PR 13.

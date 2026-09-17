@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
-"""Build the deterministic gross question-instance ledger (383 exact instances).
+"""Build the deterministic gross question-instance ledger (502 exact instances).
 
 This ledger enumerates every question instance the corpus accounting report counts,
 without deduplicating content families. It is a GROSS ledger: the same underlying
 problem may appear in more than one row, exactly as reports/18-CORPUS-ACCOUNTING.md
-counts it. The total is fixed at 383 across seven groups:
+counts it. The total is fixed at 502 across eight groups:
 
-    teaching          60
-    chebyshev          3
-    assignments-2025  52
-    mte               16
-    ete               97
-    assignments-2024 125
-    four-decks        30
-    total            383
+    teaching                 60
+    chebyshev                 3
+    assignments-2025         52
+    assignments-2025-bundle 119
+    mte                      16
+    ete                      97
+    assignments-2024        125
+    four-decks               30
+    total                   502
 
 Structured data is reused where it is reliable:
 
@@ -25,6 +26,8 @@ Structured data is reused where it is reliable:
     (ledger fields and provenance carried).
   * 30 teaching Deck 01 items parsed from the numbered manifest in
     reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md when present.
+  * 119 assignment-bundle rows parsed from reports/evidence/assignment-bundle-ledger-20260916.csv,
+    the exact ledger for the 17-page 2025-26 assignment bundle (assignments 1 to 5).
 
 Everything that has no reliable row description is seeded as an ordered placeholder:
 the remaining teaching sources (ppt3 6, ppt4 7, lms-standard-error-clt 5, ppt5 5,
@@ -63,6 +66,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 ETE_REL = pathlib.Path("reports") / "17-ETE-INTAKE.md"
 MTE_REL = pathlib.Path("reports") / "16-SOURCE-PROVENANCE.md"
 DECK_REL = pathlib.Path("reports") / "evidence" / "deck-block-ledger-20260916.csv"
+BUNDLE_REL = (
+    pathlib.Path("reports") / "evidence" / "assignment-bundle-ledger-20260916.csv"
+)
 REGISTER_REL = pathlib.Path("reports") / "11-QUESTION-ATLAS" / "00-COUNT-REGISTER.md"
 LEDGER_REL = pathlib.Path("reports") / "evidence" / "question-instance-ledger.csv"
 
@@ -87,6 +93,7 @@ GROUP_ORDER = [
     "teaching",
     "chebyshev",
     "assignments-2025",
+    "assignments-2025-bundle",
     "mte",
     "ete",
     "assignments-2024",
@@ -97,12 +104,13 @@ GROUP_TOTALS = {
     "teaching": 60,
     "chebyshev": 3,
     "assignments-2025": 52,
+    "assignments-2025-bundle": 119,
     "mte": 16,
     "ete": 97,
     "assignments-2024": 125,
     "four-decks": 30,
 }
-TOTAL_INSTANCES = 383
+TOTAL_INSTANCES = 502
 
 SOURCE_ORDER = {
     "teaching": [
@@ -115,6 +123,13 @@ SOURCE_ORDER = {
     ],
     "chebyshev": ["L10-11-chebyshev-deck"],
     "assignments-2025": ["assignment-2025-26-1", "assignment-2025-26-2"],
+    "assignments-2025-bundle": [
+        "assignment-2025-26-bundle-1",
+        "assignment-2025-26-bundle-2",
+        "assignment-2025-26-bundle-3",
+        "assignment-2025-26-bundle-4",
+        "assignment-2025-26-bundle-5",
+    ],
     "mte": ["paper-mte-2024-25", "paper-mte-2025-26"],
     "ete": ["E24S3", "E25S3", "E24S4", "E25S4", "E25SUM", "R25S3", "R25S4"],
     "assignments-2024": [
@@ -172,6 +187,7 @@ COUNT_REGISTER_LOCATOR = "reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md"
 ETE_LOCATOR = "reports/17-ETE-INTAKE.md"
 MTE_LOCATOR = "reports/16-SOURCE-PROVENANCE.md#mte-block-by-block-provenance"
 DECK_LEDGER_LOCATOR = "reports/evidence/deck-block-ledger-20260916.csv"
+BUNDLE_LEDGER_LOCATOR = "reports/evidence/assignment-bundle-ledger-20260916.csv"
 ACCOUNTING_LOCATOR = "reports/18-CORPUS-ACCOUNTING.md"
 
 
@@ -311,6 +327,43 @@ def parse_deck_rows(csv_text):
                 "provenance_verdict": (record.get("provenance_status") or "").strip(),
                 "provenance_source": (record.get("source_candidate") or "").strip(),
                 "evidence_locator": (record.get("evidence") or "").strip(),
+            }
+        )
+    return rows
+
+
+def parse_assignment_bundle_rows(csv_text):
+    """Parse the 119 assignment-bundle rows from the bundle ledger CSV.
+
+    Every row carries its own page span, statement summary, evidence locator,
+    and scope. The bundle ledger is the structured source; this group adds no
+    new interpretation.
+    """
+    rows = []
+    reader = csv.DictReader(io.StringIO(csv_text, newline=""))
+    if reader.fieldnames and "scope" not in reader.fieldnames:
+        raise ValueError("bundle CSV header lacks required scope field")
+    for record in reader:
+        item_id = (record.get("item_id") or "").strip()
+        if not item_id:
+            continue
+        order = (record.get("order") or "").strip()
+        scope = (record.get("scope") or "").strip()
+        if scope not in ("in-scope", "boundary", "out-of-scope"):
+            raise ValueError(
+                "invalid scope %r on %s" % (scope, item_id)
+            )
+        rows.append(
+            {
+                "instance_id": item_id,
+                "source_label": (record.get("source_label") or "").strip(),
+                "block_order": int(order) if order else "",
+                "page_start": (record.get("page_start") or "").strip(),
+                "page_end": (record.get("page_end") or "").strip(),
+                "summary": (record.get("summary") or "").strip(),
+                "scope": scope,
+                "evidence_locator": (record.get("evidence_locator") or "").strip()
+                or BUNDLE_LEDGER_LOCATOR,
             }
         )
     return rows
@@ -465,13 +518,30 @@ def seed_assignment_2024():
     return rows
 
 
-def build_rows(ete_text, mte_text, deck_csv_text, register_text):
-    """Assemble all 383 rows in the fixed group and source order."""
+def build_rows(ete_text, mte_text, deck_csv_text, register_text, bundle_csv_text=""):
+    """Assemble all 502 rows in the fixed group and source order."""
     rows = []
     rows.extend(seed_teaching(parse_deck01_manifest(register_text)))
 
     rows.extend(seed_chebyshev())
     rows.extend(seed_assignment_2025())
+
+    for parsed in parse_assignment_bundle_rows(bundle_csv_text):
+        rows.append(
+            make_row(
+                parsed["instance_id"],
+                "assignments-2025-bundle",
+                parsed["source_label"],
+                parsed["block_order"],
+                page_start=parsed["page_start"],
+                page_end=parsed["page_end"],
+                summary=parsed["summary"],
+                scope=parsed["scope"],
+                description_state=DESCRIPTION_RESOLVED,
+                provenance_verdict=PROVENANCE_UNSEARCHED,
+                evidence_locator=parsed["evidence_locator"],
+            )
+        )
 
     for parsed in parse_mte_rows(mte_text):
         rows.append(
@@ -557,6 +627,34 @@ def validate_rows(rows):
             {value for value in ids if ids.count(value) > 1}
         )
         problems.append("duplicate instance_id(s): %s" % duplicates)
+
+    bundle_rows = [
+        row for row in rows if row["corpus_group"] == "assignments-2025-bundle"
+    ]
+    bundle_scope_counts = {}
+    bundle_source_scope_counts = {}
+    for row in bundle_rows:
+        scope = row["scope"]
+        bundle_scope_counts[scope] = bundle_scope_counts.get(scope, 0) + 1
+        key = (row["source_label"], scope)
+        bundle_source_scope_counts[key] = bundle_source_scope_counts.get(key, 0) + 1
+    expected_bundle_scopes = {"in-scope": 62, "boundary": 7, "out-of-scope": 50}
+    if bundle_scope_counts != expected_bundle_scopes:
+        problems.append(
+            "bundle scope counts: expected %r got %r"
+            % (expected_bundle_scopes, bundle_scope_counts)
+        )
+    expected_bundle_source_scopes = {
+        ("assignment-2025-26-bundle-1", "in-scope"): 19,
+        ("assignment-2025-26-bundle-2", "in-scope"): 36,
+        ("assignment-2025-26-bundle-3", "in-scope"): 7,
+        ("assignment-2025-26-bundle-3", "boundary"): 7,
+        ("assignment-2025-26-bundle-3", "out-of-scope"): 11,
+        ("assignment-2025-26-bundle-4", "out-of-scope"): 21,
+        ("assignment-2025-26-bundle-5", "out-of-scope"): 18,
+    }
+    if bundle_source_scope_counts != expected_bundle_source_scopes:
+        problems.append("bundle source and scope mapping is wrong")
 
     for row in rows:
         if row["description_state"] == DESCRIPTION_PENDING:
@@ -672,12 +770,19 @@ def load_texts(root):
         "mte": read_text(root / MTE_REL),
         "deck": read_text(root / DECK_REL),
         "register": read_text(root / REGISTER_REL),
+        "bundle": read_text(root / BUNDLE_REL),
     }
 
 
 def generate_rows(root):
     texts = load_texts(root)
-    rows = build_rows(texts["ete"], texts["mte"], texts["deck"], texts["register"])
+    rows = build_rows(
+        texts["ete"],
+        texts["mte"],
+        texts["deck"],
+        texts["register"],
+        texts["bundle"],
+    )
     problems = validate_rows(rows)
     if problems:
         raise ValueError("; ".join(problems))

@@ -105,7 +105,8 @@ split. Per-row year-over-year source matching remains unfinished.
 4. Verify every “no slide” and “hidden” label against the full source page ledger, not only the
    converted text search.
 5. Review PR 14's still-unassessed year-over-year matches. Its item-level scope and all 17
-   layout-split summaries are now corrected and production-validated.
+   layout-split summaries are now corrected and production-validated. Assignment 3 has
+   7 in-scope, 7 boundary, and 11 out-of-scope rows.
 6. Continue broad source searching for the rain plus binomial composite, the pens problem,
    and the remaining open four-deck blocks. Similarity is a lead until the originating source
    or a strong family match is established.
