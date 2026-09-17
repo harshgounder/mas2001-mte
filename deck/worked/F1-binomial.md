@@ -244,7 +244,7 @@ SELF CHECK (always do this when you have a moment):
 
 ```
    P(0) + P(1) + P(at least 2) = 0.2824 + 0.3766 + 0.3410 = 1.0000
-   and indeed, everything must total 1. the check passes.
+   and everything must total 1. the check passes.
 ```
 
 ═══════════════ PART (iii): no defective pen ═══════════════
@@ -896,7 +896,7 @@ EVERY STEP:
           and q = 1 - 5/8 = 3/8 = 0.375
 
   STEP 7  CHECK: does this satisfy the clue? (quick sanity)
-          p=0.625 is greater than 0.5, so 5 evens (a high count) is indeed more likely to
+          p=0.625 is greater than 0.5, so 5 evens (a high count) is more likely to
           be twice 4 evens. the direction is plausible. the algebra already proved it.
 
   STEP 8  Now the real ask: P(no even number in 10 throws) = P(X=0) with p=5/8, q=3/8
