@@ -594,6 +594,87 @@ TRAP:
 ```
 
 ═══════════════════════════════════════════════════════════════════════════════
+F12.6  MORE PAPER QUESTIONS (the remaining real ones from our corpus)
+═══════════════════════════════════════════════════════════════════════════════
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 15 (our paper, ETE 2025-26 S3 D1 - contingency table, 10 marks)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   Given the following contingency table for hair colour and eye colour:
+   +------------+--------+---------+---------+
+   | Eye colour | Fair   | Brown   | Black   |
+   +------------+--------+---------+---------+
+   | Blue       |  15    |   5     |   20    |
+   | Grey       |  20    |  10     |   20    |
+   | Brown      |  25    |  15     |   20    |
+   +------------+--------+---------+---------+
+   Is there a good association between hair colour and eye colour at 5% level?
+   (Tabulated value: 9.488)
+```
+
+EVERY STEP:
+
+```
+  STEP 1  totals:
+          rows: Blue 40, Grey 50, Brown 60;  columns: Fair 60, Brown 30, Black 60
+          grand total = 150
+
+  STEP 2  expected counts = row x col / 150:
+          Blue-Fair 16, Blue-Brown 8, Blue-Black 16
+          Grey-Fair 20, Grey-Brown 10, Grey-Black 20
+          Brown-Fair 24, Brown-Brown 12, Brown-Black 24
+
+  STEP 3  the terms (O-E)^2/E:
+          (15-16)^2/16 = 0.0625      (5-8)^2/8 = 1.125        (20-16)^2/16 = 1.0
+          (20-20)^2/20 = 0           (10-10)^2/10 = 0         (20-20)^2/20 = 0
+          (25-24)^2/24 = 0.0417      (15-12)^2/12 = 0.75      (20-24)^2/24 = 0.6667
+          chi2 = 0.0625 + 1.125 + 1.0 + 0.0417 + 0.75 + 0.6667 = 3.6458
+
+  STEP 4  df = (3-1)(3-1) = 4; compare 3.6458 vs 9.488
+          3.6458 < 9.488 -> FAIL TO REJECT
+```
+
+ANSWER: no evidence of association; hair colour and eye colour are independent in this
+data. (machine-verified chi2 = 3.6458)
+
+TRAP: the same as the other chi-square: expected counts from row x col / grand, divide each
+squared deviation by E, df = (r-1)(c-1) = 4.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUESTION 16 (our paper, ETE re-session S3 B3 - engine parts, t-test + CI)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+   A company manufactures small engine parts. The engineers aim for a part weight of 25.0 g.
+   A sample of 20 parts from a recent run: 24.8, 25.1, 24.9, 25.0, 25.2, 24.7, 25.0, 25.1,
+   25.3, 24.9, 25.0, 24.8, 25.1, 24.9, 25.2, 25.0, 25.1, 24.8, 25.0, 25.2.
+   Test the hypothesis at 5% and give the 95% confidence limits.
+   (t for 19 df at 5% = 2.093)
+```
+
+EVERY STEP:
+
+```
+  STEP 1  sum = 500.1, n = 20 -> xbar = 25.005
+  STEP 2  sum of squared deviations = 0.4895 -> s^2 = 0.4895/19 = 0.025763
+          s = 0.16051
+  STEP 3  SE = 0.16051 / sqrt(20) = 0.16051/4.4721 = 0.03589
+  STEP 4  t = (25.005 - 25.0) / 0.03589 = 0.005/0.03589 = 0.1393
+  STEP 5  |t| = 0.1393 < 2.093 -> FAIL TO REJECT (no evidence of a shift)
+  STEP 6  CI = 25.005 +/- 2.093 x 0.03589 = 25.005 +/- 0.0751
+            = (24.9299, 25.0801)
+```
+
+ANSWER: t = 0.1393, no evidence the mean has shifted from 25.0 g; the 95% CI is
+(24.93, 25.08), which contains 25.0 (consistent with the decision).
+(machine-verified: xbar = 25.005, s = 0.16051, t = 0.1393, CI = (24.9299, 25.0801))
+
+TRAP: the same t-protocol points as the sugar question: df = 19 (n-1), divide the sum of
+squares by n-1 = 19, and use the SAME t for the CI as for the test.
+
+═══════════════════════════════════════════════════════════════════════════════
 F12 SUMMARY CARD
 ═══════════════════════════════════════════════════════════════════════════════
 
