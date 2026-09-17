@@ -289,12 +289,13 @@ practice), then the repeats as timed speed work.
 ```
   - the S&P decks are not "new material" for four of five of them; the shared 5-gram counts
     above are the evidence, and reading them as new teaching would waste the 9 days we have
-  - the pens, rain and kx^3(4-x)^2 sources are still OPEN; no drill claim depends on them
+  - the pens and rain originating sources are open. The kx^3(4-x)^2 item has an ABES sample
+    paper match, but its originating book remains open. No drill claim depends on attribution.
   - the 2025-26 bundle's 119 items are enumerated but their 2024 matches are NOT assessed, so
-    treating them as 119 fresh items would double-count. Do assignments 1-2 of the bundle
-    (the in-scope part) and treat 3-5 as the repeat sets they are
-  - the two re-sess and one summer paper have 35 OUT blocks each family; only the IN blocks
-    are drill
+    treating them as 119 fresh items would risk double-counting. Do assignments 1-2 of the
+    bundle first; spot checks suggest overlap in 3-5, but per-row matching is unfinished.
+  - the full 97-row ETE, summer, and re-sess intake has 35 OUT rows in total; drill only the
+    rows marked IN, with boundary rows kept separate
 ```
 
 ---

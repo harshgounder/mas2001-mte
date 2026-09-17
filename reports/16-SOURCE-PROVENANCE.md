@@ -109,6 +109,25 @@ word in the course material and in the named source.
   then called Palaniammal was later identified as Davenport. GGD volume one OCR completed;
   verified Palaniammal texts remain absent.
 
+## Complementary web search, 17 Sep
+
+- The 12-pen, 10-percent-defective wording appears verbatim on Brainly and DoorstepTutor,
+  and an AskFilo MCQ set carries the zero-defective variant. This confirms circulation,
+  not the originating book.
+- A Pearson calculus exercise reposted by Vaia uses the related kernel
+  `(15/512)x^2(4-x)^2` on `[0,4]` and asks for moments. The changed exponent makes this a
+  weak structural-family lead only. The ABES sample-paper match for `kx^3(4-x)^2` remains
+  the stronger evidence.
+- Exact GitHub code searches for the density, pens wording, and rainfall constants returned
+  no hits. Exact and structure-preserving searches found no qualified new origin for the
+  rainfall composite or the mean-5/3 binomial block.
+
+Search pages:
+
+- `https://brainly.com/question/35706136`
+- `https://www.doorsteptutor.com/Exams/AP/Statistics/Questions/Topic-Probability-Random-Variables-and-Probability-Distributions-10-20-Score-3/Part-51.html`
+- `https://www.vaia.com/en-us/textbooks/math/calculus-early-transcendentals-pearson-new-international-edition-1-edition/chapter-6/problem-37-the-expected-value-of-a-function-gx-of-a-continuo/`
+
 ## MTE block-by-block provenance (v0, evening of 16 Sep)
 
 All sixteen MTE blocks (2024-25 and 2025-26) have been run against the extracted full texts

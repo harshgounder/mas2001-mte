@@ -388,7 +388,8 @@
    "arrivals, calls, defects, rare, per unit time"       -> POISSON
    "use the approximation"                               -> POISSON with λ=np
    "in each of the k intervals"                          -> NEST (Poisson then binomial)
-   "mean equals variance given"                          -> POISSON
+   "mean equals variance"                                -> necessary Poisson check;
+                                                            confirm the model too
    "at least one"                                        -> complement, 1 - q^n
 ```
 
