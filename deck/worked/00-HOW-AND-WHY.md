@@ -1,300 +1,146 @@
-# HOW AND WHY: the methodology behind the question set
+# HOW AND WHY: methodology and count rules
 
-Built 17 Sep 2026, on direct request ("is there any file that says how u made them and why
-only those, same for the shapes and skeletons"). Until now the answer lived scattered across
-report files; this is the single file that states it end to end.
+Re-audited 17 Sep 2026. This file explains what the worked bank contains, how its counts
+are defined, how its study categories were formed, and what cannot be inferred from them.
 
-Everything below is traceable to a file on disk. Where a number is a count, the counting rule
-is stated. Where a claim is a judgement call, it is labelled as one.
+## 1. Four counts, four units
 
-═══════════════════════════════════════════════════════════════════════════════
-1. THE EXACT QUESTION COUNTS (three different numbers, all real)
-═══════════════════════════════════════════════════════════════════════════════
+The numbers below answer different questions. Do not substitute one for another.
 
-Three counts float around this project. They measure different things, and all three are
-correct. This is the reconciliation:
+| count | unit | meaning |
+|---:|---|---|
+| 160 | `QUESTION` headers | literal grep count across F1-F15, including two pointer-only stubs |
+| 179 | solved-content items | audited instructional items after expanding embedded tables and grouped content, while excluding pointer-only and repeated content |
+| 183 | source-question units | solved content split where one worked block combines multiple numbered source questions |
+| 180 | drill units | current `00-QUESTIONS-ONLY.md`, after adding the 12 F13 Section A MCQs to the prior 168-unit drill |
 
-```
-   +--------+-----------------------------------------------------------------+
-   |  158   | WORKED QUESTIONS. A worked question = a full zero-knowledge      |
-   |        | solution: question block + steps + answer + traps.               |
-   |        | = 160 header blocks minus 2 cross-reference stubs                |
-   |        |   (F8 QUESTION 11b and F15 QUESTION 19 are pointers to questions  |
-   |        |    solved elsewhere, not standalone questions).                  |
-   +--------+-----------------------------------------------------------------+
-   |  160   | the same 158 plus those 2 cross-reference stubs. counted by       |
-   |        | grepping "^QUESTION n" headers across the F-files.                |
-   +--------+-----------------------------------------------------------------+
-   |  168   | DRILL ENTRIES in 00-QUESTIONS-ONLY.md: the 158 worked questions   |
-   |        | PLUS the 10 assignment-1 MCQs (M1-M10), which live inside F14.5   |
-   |        | as a table and get their own drill entries.                       |
-   +--------+-----------------------------------------------------------------+
+The 160 header total is reproducible with:
+
+```sh
+rg '^QUESTION ' deck/worked/F*.md | wc -l
 ```
 
-the current exact numbers on disk:
+The other totals require the audit's item rules. A header may be a pointer rather than a
+solution, a table may solve several MCQs without separate `QUESTION` headers, and one worked
+block may represent more than one numbered source question. This is why header, content,
+source-unit, and drill totals differ.
 
-```
-   per-file worked questions (headers, stubs included):
-     F1  binomial              10        F9  clt/sampling           8
-     F2  poisson                8        F10 definition/foundations 10
-     F3  exponential            6        F11 expectation laws        6
-     F4  uniform                4        F12 hypothesis testing     20
-     F5  chebyshev              7        F13 assignment sheets      28
-     F6  normal                 6        F14 foundations             1 (+10 MCQ table)
-     F7  rv/pdf/cdf             6        F15 assignment bank 2      22
-     F8  estimation            18
-     ------------------------------------------------------------
-     headers total            160   (158 real + 2 stubs)
-   drill file entries         168   (158 + 10 MCQs)
+The per-file header counts are:
+
+```text
+F1  10   F2   8   F3   6   F4   4   F5   7
+F6   6   F7   6   F8  18   F9   8   F10 10
+F11  6   F12 20   F13 28   F14  1   F15 22
+                                              total 160
 ```
 
-═══════════════════════════════════════════════════════════════════════════════
-2. WHERE THE QUESTIONS ACTUALLY LIVE (file by file)
-═══════════════════════════════════════════════════════════════════════════════
+F13 also contains a 12-MCQ answer table, and F14 contains a 10-MCQ answer table. Those
+embedded items explain part of the difference between a header count and a content count.
+The audit report records the full reconciliation and the source-unit split.
 
-```
-   THE QUESTIONS themselves (this is the folder):
-      /home/liebert511/mas2001-mte-s2/deck/worked/
+## 2. Source boundary
 
-      F1-binomial.md                ...  F15-assignment-bank-2.md
-      00-QUESTIONS-ONLY.md             the drill file (all questions, no solutions)
-      00-INDEX.md                      the map into the folder
-```
+The exam-paper set used here contains nine papers in total:
 
-every question in these files was copied from, or is a direct variant of, one of these SOURCE
-documents (all on disk, all from the course itself):
+- two MTE papers, 2024-25 and 2025-26;
+- seven ETE, summer, or re-session papers.
 
-```
-   SOURCE TYPE                               WHERE ON DISK
-   MTE papers (2)                            md/paper-mte-2024-25.md, paper-mte-2025-26.md
-   MTE official solution schemes (2)         md/paper-mte-*-scheme.md   <- NEW this session
-   ETE papers (7 sittings)                   md/paper-ete-*, md/paper-resess-*
-   the slide decks (ppt3/ppt4/ppt5)          md/ppt3-discrete-prob-dist.md etc
-   the lecture-notes deck (147 pages)        md/notes-lecture-series-01-09.md
-   the LMS modules                           md/lms-*.md
-   assignment sheets (both years)            md/mas2001-assignment-1/2.md
-                                             + ~/mas2001-mte-audit-v1/text/asgn-*.txt
-   textbook-derived (G&K, Walpole, Devore)   ~/mas2001-devore/sources/  (PDFs)
-```
+The bank also draws on course assignments, lecture decks, LMS modules, and course reference
+material. External textbook files are a reference layer and do not by themselves establish
+that a question originated there. A source label is evidence to inspect, not a corpus-wide
+provenance guarantee.
 
-═══════════════════════════════════════════════════════════════════════════════
-3. HOW THE QUESTIONS WERE SELECTED (the inclusion rule)
-═══════════════════════════════════════════════════════════════════════════════
+Relevant locations:
 
-The selection rule, stated plainly. A question was included if and only if:
-
-```
-   R1. IT EXISTS IN OUR MATERIAL. Traced to a source document by text match.
-       nothing invented, nothing "typical for this topic". if it has no
-       on-disk origin, it is not in the set.
-
-   R2. IT IS IN MTE SCOPE. The MTE scope = lectures 1 to 21, ending at
-       "Characteristics of a good estimator" (~/PS/syllabus.txt).
-       OUT: MLE, method of moments, Bayesian estimation, confidence
-       intervals, hypothesis testing, t-test, F-test, chi-square, ANOVA.
-       F8 and F12 carry some OUT-of-scope material from the ETE papers,
-       and both files say so in their headers.
+```text
+md/paper-mte-*.md                         two MTE papers and their schemes
+md/paper-ete-*.md, md/paper-resess-*.md  seven ETE-family papers
+md/mas2001-assignment-*.md                current assignment sheets
+md/ppt*.md, md/lms-*.md                  teaching material
+reports/16-SOURCE-PROVENANCE.md           current provenance findings
+reports/18-CORPUS-ACCOUNTING.md            gross corpus accounting
+reports/22-WORKED-BANK-METHODOLOGY-AUDIT.md this count and claim audit
 ```
 
-R2 has one deliberate exception, and it is worth stating why:
+## 3. Scope and selection
 
-```
-   THE EXCEPTION: F12 (hypothesis testing, 20 questions) is majority
-   out-of-scope. It exists because the ETE papers contain two 10-mark
-   hypothesis questions and the whole family appears in five sittings.
-   Cost of including: one file to skip. Cost of EXCLUDING if the setter
-   reaches for it: a whole 10-mark question with no drill behind it.
-   Asymmetric risk, so it stays, clearly marked.
-```
+The stated MTE scope is lectures 1 to 21, ending with characteristics of a good estimator.
+Maximum likelihood, method of moments, Bayesian estimation, confidence intervals, and
+hypothesis testing are outside that stated MTE boundary. Some are retained in F8 and F12 as
+clearly marked ETE or boundary practice.
 
-and an ordering preference, not a hard rule:
+Selection favoured supplied MTE questions, then related ETE questions, then course-deck and
+assignment practice. The worked bank is a selected study set. It is not a complete copy of
+every question in the larger corpus, and it does not establish a fixed cap of two or three
+questions for every category.
 
-```
-   P1. QUESTIONS FROM OUR OWN PAPERS FIRST (MTE, then ETE), because those
-       are the ones the setter demonstrably uses.
-   P2. THEN deck/assignment questions, because those are what the course
-       expects you to be able to do.
-   P3. THEN textbook-lineage questions when a paper item traces to a book.
-```
+## 4. Categories, skeletons, and mutations
 
-═══════════════════════════════════════════════════════════════════════════════
-4. WHY "ONLY THOSE" QUESTIONS (the two caps explained)
-═══════════════════════════════════════════════════════════════════════════════
+The decision manual now uses a working 36-category study taxonomy:
 
-Two numbers cap the set, and both were chosen, not accidental:
-
-```
-   CAP 1: "2-3 questions per shape" (user directive).
-     the set does NOT include every question in the corpus. it includes
-     enough per shape to see the pattern, its variants, and its traps.
-     examples of one shape, three sizes of it:
-        binomial tail: pens "at least" (F1 Q1), bombs "at least 2" (F1 Q4),
-                       families "at most 2" (F1 Q3)   = 3 sizes
-        chebyshev inverse: 21/25 case (F5 Q3), 24/25 case (F5 Q4) = 2 sizes
-     when a fourth question added nothing new, it was left out.
-
-   CAP 2: THE CORPUS ITSELF.
-     the source material is what it is: 2 MTE papers, 7 ETE sittings,
-     2 assignment sheets + 2 more bank sheets, 4 decks, 4 LMS modules.
-     every question in those documents is either in the set, pointed to,
-     or genuinely redundant with something already in it.
+```text
+16 categories observed in the supplied MTE papers
+20 recall-gap categories drawn from the wider course material
+36 total study categories
 ```
 
-what was deliberately NOT added (and why):
+These categories group a family with an ask type, such as `Normal/find-param` or
+`Binomial/tail`. They are useful because different asks can require different methods inside
+the same distribution family.
 
-```
-   invented "predicted" questions      -> user rule: dont invent it.
-   textbook exercises without a paper
-      trace (hundreds exist in Devore) -> dilutes; the papers only used a
-                                          handful of book items, those are in.
-   duplicate variants (same shape, same
-      numbers, different paper)        -> noted as "asked twice" in the
-                                          source line, not re-solved.
-```
+This is a study taxonomy, not proof that there are exactly 36 possible exam forms. Category
+boundaries depend on tagging choices, and a future paper can combine or alter methods in a
+way that is not represented here.
 
-═══════════════════════════════════════════════════════════════════════════════
-5. THE SHAPES AND SKELETONS: WHAT THEY ARE AND HOW THEY WERE DERIVED
-═══════════════════════════════════════════════════════════════════════════════
+The term `skeleton` refers to a recurring structure within a category. The mutation labels
+record common changes:
 
-Definitions first, because the two words get used loosely:
-
-```
-   FAMILY   = the distribution or topic: Binomial, Poisson, Normal, Estimation...
-              (12 families in total)
-   SHAPE    = (family, ask-type): "Binomial/point", "Chebyshev/inverse-c",
-              "Normal/find-param"... the thing that decides WHICH method you run.
-   SKELETON = a shape plus its structural details: which constants vary, which
-              phrasing recurs. the setter's template. ("Poisson ratio conditions
-              fix lambda and mu, ask Var(X-2Y)" is a skeleton.)
-   MUTATION = the setter's change lever: M0 reskin, M1 invert, M2 re-condition,
-              M3 re-target, M4 compose.
+```text
+M0  values, names, or context change
+M1  given and target are reversed
+M2  a condition is added or changed
+M3  the target quantity changes
+M4  two methods are composed
 ```
 
-where each layer is documented on disk:
+Supporting files:
 
-```
-   +-----------------------------+--------------------------------------------------+
-   | what                        | file                                             |
-   +-----------------------------+--------------------------------------------------+
-   | the 12 families             | reports/11-QUESTION-ATLAS/00-MTE-TOPIC-UNIVERSE.md|
-   | the 34 shapes + IF/THEN     | deck/15-DECISION-MANUAL.md (Part 6 checklist)     |
-   | the shape list + recall gap | reports (32-RECALL-FIRST-SKELETONS, on lane-c)    |
-   | per-question skeleton trace | reports/20-SKELETON-LEDGER.md (S01-S28)          |
-   | mutation analysis           | reports/11-QUESTION-ATLAS/00-MUTATION-ANALYSIS.md |
-   | type-space audit            | reports/11-QUESTION-ATLAS/00-TYPE-SPACE-AUDIT.md  |
-   | the count register          | reports/11-QUESTION-ATLAS/00-COUNT-REGISTER.md    |
-   | provenance per source       | reports/16-SOURCE-PROVENANCE.md                   |
-   +-----------------------------+--------------------------------------------------+
+```text
+deck/15-DECISION-MANUAL.md
+reports/20-SKELETON-LEDGER.md
+reports/11-QUESTION-ATLAS/00-MUTATION-ANALYSIS.md
+reports/11-QUESTION-ATLAS/00-TYPE-SPACE-AUDIT.md
 ```
 
-HOW THE SHAPES WERE DERIVED (the actual method, step by step):
+## 5. Calculation and coverage status
 
-```
-   1. INDEX EVERY QUESTION in all 9 sittings + decks + assignments, with a
-      (family, ask-verb) tag. -> the question-instance ledger (383 rows
-      gross, in reports/evidence/question-instance-ledger.csv)
+Construction commits recorded batches of arithmetic checks, but that history is not proof
+that every current number is correct. The wider audit still lists line-level recomputation as
+in progress. Treat the worked solutions as reviewed study material that can still contain an
+error, and report any mismatch against the source or a fresh calculation.
 
-   2. GROUP BY (family, ask). Each group that appears at least once becomes
-      a SHAPE. 34 (family,ask) shapes emerged.
+The two supplied MTE papers are represented in the bank. That is retrospective coverage of
+two known papers. It is not a backtest of future-paper prediction, and it is not a success
+rate. The category checklist likewise measures whether the selected study categories have a
+pointer, not whether those categories predict a future exam.
 
-   3. SPLIT BY PROVENANCE:
-        shapes seen in the MTE papers      -> the 14 in-MTE shapes
-        shapes seen ONLY outside the MTE   -> the 20 recall-gap shapes
-      The recall-gap list is the safety net: "it's OK to mark something
-      that does not come; it is NOT OK for something to come that we had
-      not counted" (user's rule).
+## 6. Prediction limits
 
-   4. TRACE EACH MTE BLOCK TO ITS SKELETON. For every one of the 16 MTE
-      blocks: name the structure, find the source (paper / deck / book),
-      record the value deltas. That is the S01-S18 table in the skeleton
-      ledger.
+Past-paper recurrence can support prioritisation, but this corpus is too small and too
+dependent for a calibrated probability forecast. In particular:
 
-   5. EXTRACT THE MUTATION LEVERS from the deltas. When a question repeats
-      with one thing changed, that thing IS the setter's lever: value swap
-      (M0), ask inverted (M1), condition added (M2), target changed (M3),
-      two shapes joined (M4).
-```
+- two MTE papers do not support a defensible topic probability for the next MTE;
+- ETE questions come from a broader syllabus and cannot be treated as equivalent MTE trials;
+- course decks and assignments are teaching material, not independent exam sittings;
+- repeated or near-duplicate questions inflate naive frequency counts;
+- a new combination, wording, or topic can appear even when all known items are covered.
 
-WHY 34 SHAPES AND NOT FEWER (why precision was not the goal):
+No file in this bank should claim a 100 percent backtest, a guaranteed mark, a guaranteed
+topic, or exhaustive coverage of all future question forms.
 
-```
-   a smaller shape set (say, "the 8 families") misses ask-type entirely:
-      "Normal/find-param" and "Normal/tail" are the same family but need
-      different methods (solve two equations vs read a table).
-   a larger set (every individual question) overfits: two questions with
-      the same shape would count as different, and coverage % becomes
-      meaningless.
-   34 is the level at which the METHOD changes. that is the right unit.
-```
+## 7. Practical use
 
-═══════════════════════════════════════════════════════════════════════════════
-6. HOW THE WORKED SOLUTIONS WERE BUILT (the quality process)
-═══════════════════════════════════════════════════════════════════════════════
-
-Every file in deck/worked/ was produced under the same five gates:
-
-```
-   GATE 1: SOURCE. The question is quoted from the on-disk source, with the
-           source named in the header line.
-
-   GATE 2: MACHINE-CHECKED NUMBERS. Every number in every solution was
-           computed in python BEFORE being written. Hand-guessed values were
-           wrong often enough to be discarded as a method (examples caught:
-           p(5) on the flashlight, F=9.17 vs a hand guess of 27.97, chi2
-           3.6458 vs a hand guess of 7.5).
-
-   GATE 3: ZERO-KNOWLEDGE REGISTER. Every step shown, every symbol decoded,
-           no assumed maths. "the long explain-from-nothing answers" (user
-           directive).
-
-   GATE 4: SCANS. No em dashes, no banned AI-tell words, no leftover
-           thinking text. Checked mechanically at commit time.
-
-   GATE 5: COMMIT ONLY WHEN GREEN. Each file committed with its check count
-           in the commit message. The full ledger is at the bottom of
-           00-INDEX.md.
-```
-
-═══════════════════════════════════════════════════════════════════════════════
-7. WHAT THE COVERAGE CLAIM ACTUALLY IS (and its limits)
-═══════════════════════════════════════════════════════════════════════════════
-
-The claim, stated precisely so it cannot be over-read:
-
-```
-   CLAIMED:  every one of the 16 MTE paper blocks (2 papers x 8 blocks) has
-             at least one worked question at its shape. verified by a
-             fingerprint audit (each block's key numbers/phrases searched
-             across the F-files).
-   CLAIMED:  36/36 shape probes pass (the 34 checklist shapes + 2 extras).
-   CLAIMED:  every worked number machine-checked before commit.
-
-   NOT CLAIMED: that these are the ONLY questions that can come. the paper
-                can always surprise with a new mutation.
-   NOT CLAIMED: that the 158 is exhaustive of the corpus. it is capped by
-                the 2-3-per-shape rule; the corpus itself is bigger (the
-                instance ledger counts 383+ gross instances).
-   NOT CLAIMED: that doing these guarantees any mark. coverage is not
-                execution (see the probability analysis delivered in chat).
-```
-
-═══════════════════════════════════════════════════════════════════════════════
-8. THE ONE-PAGE ANSWER (if you only remember one screen)
-═══════════════════════════════════════════════════════════════════════════════
-
-```
-   WHERE:   ~/mas2001-mte-s2/deck/worked/    (F1-F15 + drill + index)
-            the drill file: 00-QUESTIONS-ONLY.md (168 entries)
-
-   HOW:     every question traced to a source file; every number computed in
-            python first; zero-knowledge steps; scans; commit messages carry
-            the check counts.
-
-   WHY ONLY THOSE: 2-3 per shape (user cap), in-scope per ~/PS/syllabus.txt,
-            own-papers-first ordering, nothing invented.
-
-   SHAPES/SKELETONS: 12 families -> 34 (family,ask) shapes -> skeletons in
-            the S01-S28 ledger -> mutation levers M0-M4. documented in
-            reports/20-SKELETON-LEDGER.md, deck/15-DECISION-MANUAL.md,
-            reports/11-QUESTION-ATLAS/00-MUTATION-ANALYSIS.md.
-```
+Use `00-QUESTIONS-ONLY.md` for cold attempts, then follow its pointer into F1-F15. Use
+`deck/15-DECISION-MANUAL.md` to choose a method after identifying the distribution and the
+ask. Give priority to in-scope MTE material, and treat ETE and confidence-interval material
+as boundary or later practice.

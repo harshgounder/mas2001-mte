@@ -422,6 +422,18 @@ EVERY STEP:
 
 ANSWER: option (d), F(x) = 2x - x^2/2 - 1 on [1,2].
 
+THE FULL CDF (all real x, not only the branch asked for):
+```
+   F(x) = 0                         for x <= 0
+          x^2/2                     for 0 < x <= 1
+          2x - x^2/2 - 1            for 1 < x <= 2
+          1                         for x > 2
+
+   The source MCQ asks only for the third branch, so that branch is option (d). The
+   outside-support branches are part of the CDF definition and should not be omitted
+   when the question asks for F(x) itself.
+```
+
 SANITY CHECKS (do these, they catch the decoys):
 ```
    at x = 1: F(1) = 2 - 1/2 - 1 = 1/2        ✓ (piece 1 alone should give 1/2)
@@ -534,6 +546,16 @@ ANSWER:
 ```
    k = 0.5
    F(x) = 3x^2 - 2x^3 on [0,1]
+```
+
+THE FULL CDF (include the outside-support branches):
+```
+   F(x) = 0                 for x <= 0
+          3x^2 - 2x^3       for 0 < x < 1
+          1                 for x >= 1
+
+   At x = 0 the first branch gives F(0) = 0, and at x = 1 the middle branch reaches
+   F(1) = 1. The source density is zero outside [0,1], so the CDF stays flat there.
 ```
 
 SANITY CHECKS:
@@ -650,6 +672,28 @@ STEP 4: THE CDF (cumulative sum)
    +-----+----------+-----------------------------+
 ```
 
+THE DISCRETE CDF AS A FUNCTION OF EVERY REAL x:
+```
+   F(x) = 0       for x < 2
+          1/36    for 2 <= x < 3
+          3/36    for 3 <= x < 4
+          6/36    for 4 <= x < 5
+          10/36   for 5 <= x < 6
+          15/36   for 6 <= x < 7
+          21/36   for 7 <= x < 8
+          26/36   for 8 <= x < 9
+          30/36   for 9 <= x < 10
+          33/36   for 10 <= x < 11
+          35/36   for 11 <= x < 12
+          1       for x >= 12
+
+   This is a step function. For example, F(3.7) = F(3) = 3/36, not an interpolated value.
+   For integer-valued X and integer endpoints a,b, use
+        P(a <= X <= b) = F(b) - F(a - 1).
+   For non-integer endpoints, use the step-function values directly, or subtract the
+   appropriate left limit. The a-1 shortcut is not a continuous-CDF rule.
+```
+
 THE BAR CHART (see the shape):
 
 ```
@@ -688,11 +732,14 @@ F7 SUMMARY CARD
    PDF from CDF: differentiate.
    MEDIAN:      P(X<k) = P(X>k) means F(k) = 0.5. check for symmetry first.
    DISCRETE:    pmf table (count/36 style), then cumulative for the CDF.
-                P(a<=X<=b) = F(b) - F(a-1), note the a-1.
+                For integer-valued X with integer endpoints,
+                P(a<=X<=b) = F(b) - F(a-1), note the a-1. Between support points F is flat.
 
    FREE CHECKS (they eliminate MCQ decoys and catch algebra slips):
-     F(lowest support value) = 0
-     F(highest support value) = 1
+     continuous support: F(left endpoint) = 0 and F(right endpoint) = 1 (here, no endpoint
+     atom is present)
+     discrete support: F(x) = 0 below the smallest support value, while F(at the smallest
+     support value) includes that point's mass; F(x) = 1 at and above the largest value
      the pmf/cdf must be non-decreasing
      the mean must lie inside the support
      Var = E(X^2) - (E(X))^2, the second term SQUARED

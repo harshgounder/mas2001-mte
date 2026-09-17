@@ -20,9 +20,9 @@ BEFORE ANY QUESTION: what the CLT says, in plain words
    +---------------------------------------------------------------------+
    |  THE CENTRAL LIMIT THEOREM (CLT):                                    |
    |                                                                     |
-   |  take many independent samples of size n, and look at the AVERAGE    |
-   |  of each sample. as n gets large, those averages follow a NORMAL     |
-   |  distribution, NO MATTER WHAT THE ORIGINAL POPULATION LOOKS LIKE.    |
+   |  take independent observations and look at their AVERAGE. under the  |
+   |  usual CLT conditions, as n gets large, those averages approach a    |
+   |  NORMAL distribution, even when the population is not normal.       |
    |                                                                     |
    |  and the averages' spread is:    sigma / sqrt(n)                     |
    |                                  ^^^^^^^^^^^^^^^                     |
@@ -68,9 +68,11 @@ THE APPLICABILITY RULES (memorize; two MCQs test this):
 
 ```
    +----------------------------------------------------------+
-   |  n > 30, ANY population shape   -> Xbar is normal (CLT)   |
-   |  ANY n, population IS normal    -> Xbar is normal         |
-   |  n <= 30 and population NOT normal -> CLT does NOT apply  |
+   | n >= 30, any shape -> approximate normal by course       |
+   |                   heuristic, not a universal cutoff    |
+   | any n, normal population -> normal                       |
+   | n < 30, non-normal -> inspect shape and tails; CLT       |
+   |                         is not automatic                 |
    +----------------------------------------------------------+
 ```
 
@@ -176,10 +178,12 @@ QUESTION 3 (our paper, ETE 2025 summer Q9)
    (D) Only discrete variables
 ```
 
-ANSWER: (B) any distribution, provided the sample size is large.
+ANSWER: (B) any distribution, provided the sample size is sufficiently large
+and the usual CLT conditions hold.
 
-WHY: the CLT's whole point is that the ORIGINAL distribution can be anything. The requirement
-is on n (large), not on the shape.
+WHY: the CLT's point is that the ORIGINAL distribution need not be normal. A large-sample
+normal approximation still depends on the usual conditions. In this course, n >= 30 is a
+heuristic, not a universal theorem boundary.
 
 TRAP: (C) "only normal distributions" is the most tempting wrong answer. It inverts the
 theorem: the CLT is precisely what lets you USE the normal distribution when the population is
@@ -219,7 +223,8 @@ STEP 0: DECODE - four things to note before computing.
 ```
    "heavily right-skewed"  -> the population is NOT normal. this matters for whether we can
                               use the normal table at all.
-   "n = 36"                -> 36 >= 30, so the CLT DOES apply despite the skew.
+   "n = 36"                -> the course n >= 30 heuristic supports an approximate normal
+                              model despite the skew.
    "average wait time"     -> we are looking at Xbar, so use SE = sigma/sqrt(n).
    "greater than 4.5"      -> an upper tail.
 ```
@@ -231,8 +236,9 @@ THE MASTER FLOWCHART (use this for every CLT probability question):
                 |
                 v
    +-----------------------------+
-   | 1. is n >= 30, or is the     |   if NO -> cannot use the normal table
-   |    population normal?        |            (the CLT does not apply)
+   | 1. is n >= 30 by the course   |   if NO -> CLT alone does not license a
+   |    heuristic, or is the       |            normal approximation; inspect
+   |    population normal?         |            shape and tails or use another method
    +--------------+--------------+   if YES -> continue
                   |
                   v
@@ -255,8 +261,9 @@ THE MASTER FLOWCHART (use this for every CLT probability question):
 EVERY STEP:
 
 ```
-  STEP 1  applicability: n = 36 >= 30, so Xbar is approximately normal even though the
-          population is skewed. the CLT is what licenses the next steps.
+  STEP 1  applicability: n = 36 meets the course n >= 30 heuristic, so Xbar is approximately
+          normal even though the population is skewed. This is an approximation, not a
+          universal cutoff.
 
   STEP 2  the standard error:
           SE = sigma / sqrt(n) = 2 / sqrt(36) = 2 / 6 = 0.3333
@@ -327,13 +334,14 @@ EVERY STEP:
 
   STEP 4  BOTH z's are negative (same sign), so we SUBTRACT the cumulative values:
           P = F(-0.943) - F(-2.357)
-            = 0.1728 - 0.0092
-            = 0.1636
-          (with the phi table: |phi(0.94) - phi(2.36)| = |0.3264 - 0.4909| = 0.1645, matching
-           the deck's stated 0.1644 when using the printed table values)
+            = 0.1729 - 0.0092
+            = 0.1637  (using unrounded z values and normal CDFs)
+          (with the phi table: |phi(0.94) - phi(2.36)| = |0.3264 - 0.4909| = 0.1645;
+           the deck's stated 0.1644 is an arithmetic typo)
 ```
 
-ANSWER: approximately 0.164 (about 16 percent).
+ANSWER: approximately 0.164 (about 16 percent). More precisely, 0.1637 from unrounded
+normal CDFs, or 0.1645 when the printed two-decimal phi table is used.
 
 PICTURE:
 
@@ -367,7 +375,8 @@ QUESTION 7 (the deck's example 3, p015 - the LED bulbs, and the MTE machine-life
 EVERY STEP:
 
 ```
-  STEP 1  n = 64 >= 30, so the CLT applies despite the skew.
+  STEP 1  n = 64 meets the course n >= 30 heuristic, so the CLT gives an approximate normal
+          model despite the skew.
   STEP 2  SE = 8000 / sqrt(64) = 8000 / 8 = 1000
   STEP 3  z = (48000 - 50000) / 1000 = -20000/1000 = -2.0
   STEP 4  "less than" is a lower tail: P = F(-2.0) = 0.0228
@@ -424,13 +433,14 @@ F9 SUMMARY CARD
 ═══════════════════════════════════════════════════════════════════════════════
 
 ```
-   CLT: the sample mean of a large sample is approximately normal, whatever the population.
+   CLT: under the usual conditions, the sample mean of a large sample is approximately normal,
+        even when the population is not normal.
         mean of Xbar = mu ;  sd of Xbar = sigma/sqrt(n) = SE
 
    APPLICABILITY:
-     n > 30, any shape        -> OK
+     n >= 30, any shape        -> approximately OK under the course heuristic
      any n, normal population -> OK
-     n <= 30, non-normal      -> NOT OK
+     n < 30, non-normal        -> inspect shape and tails; CLT is not automatic
 
    THE UNIVERSAL SOLVE:
      1. check applicability
@@ -449,7 +459,7 @@ F9 SUMMARY CARD
    TOP TRAPS:
      using sigma instead of SE                                     <- the #1 error
      forgetting to sqrt the variance
-     refusing to apply the normal table to a skewed population when n >= 30
+     treating n >= 30 as a universal theorem cutoff for a skewed population
      same-sign vs opposite-sign z handling in the interval
 
    CONNECTION: this family feeds F6 (the normal solves) and F8 (the CI uses the same SE).

@@ -33,7 +33,7 @@ THE VOCABULARY:
    | H1 (alternative)   | what you conclude if H0 is rejected                        |
    | alpha              | the significance level = P(Type I error), usually 0.05     |
    | Type I error       | rejecting H0 WHEN IT IS TRUE     (false alarm)             |
-   | Type II error      | accepting H0 WHEN IT IS FALSE    (missed detection)        |
+   | Type II error      | failing to reject H0 WHEN IT IS FALSE (missed detection) |
    | critical value     | the table value; |statistic| beyond it -> reject            |
    | critical region    | = the REJECTION region                                     |
    | p-value            | probability of data at least this extreme if H0 true       |
@@ -123,7 +123,8 @@ QUESTION 2 (our paper, ETE 2025 summer Q5) - Type II error
 ANSWER: (B).
 
 TRAP: (A) is Type I. The two errors are mirror images: Type I rejects a TRUE H0; Type II
-keeps a FALSE H0. Drill the table above until it is automatic.
+fails to reject a FALSE H0. Some source options say "accept", but write "fail to reject"
+in your conclusion. Drill the table above until it is automatic.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 QUESTION 3 (our paper, ETE 2025-26 S3 A4) - the investigator form
@@ -137,7 +138,7 @@ QUESTION 3 (our paper, ETE 2025-26 S3 A4) - the investigator form
    d) accepts a null hypothesis when it is false
 ```
 
-ANSWER: (d).
+ANSWER: (d), equivalently, failing to reject H0 when it is false.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 QUESTION 4 (our paper, ETE re-session S4 A4) - True / False form
@@ -300,8 +301,8 @@ EVERY STEP:
 ```
 
 ANSWER: t = -0.62 which is inside the critical values, so there is no evidence against the
-assumption; the sample SUPPORTS a population mean of 100 mg/dl. The 95% range for the mean
-is (86.99, 107.41).
+assumption; the result is consistent with a population mean of 100 mg/dl. The 95% range for
+the mean is (86.99, 107.41).
 
 NOTE how the two asks connect: the decision rule "|xbar - 100| small enough" and the CI
 "does the interval contain 100?" are the SAME test. 100 is inside (86.99, 107.41), which
@@ -336,14 +337,14 @@ EVERY STEP:
   STEP 4  |t| = 1.697 vs t_crit = 2.110 -> 1.697 < 2.110 -> FAIL TO REJECT
 ```
 
-ANSWER: no, there is not enough evidence against the claim; the data supports the company's
-claim of an 8-minute average.
+ANSWER: fail to reject H0: there is not enough evidence against the claim, and the result is
+consistent with an 8-minute average. This does not prove the claim.
 
 TRAP:
 ```
    1. Reading "is there enough evidence to SUPPORT the claim" and flipping the conclusion.
-      Failing to reject H0 (mu = 8) IS supporting the claim here, because the claim IS H0.
-      (If the claim had been the alternative, the wording of the conclusion flips.)
+      Failing to reject H0 (mu = 8) means there is not enough evidence against the claim;
+      it does not prove the claim. (If the claim had been the alternative, the wording flips.)
    2. df = 17 comes from n-1 = 18-1. Using 18 is wrong.
 ```
 
@@ -385,8 +386,8 @@ EVERY STEP:
           1.1703 < 4.72 -> FAIL TO REJECT
 ```
 
-ANSWER: no, you cannot reject the agency's claim; the sample variances are not different
-enough. The claim that the two standard deviations are equal stands.
+ANSWER: fail to reject H0: there is not enough evidence that the sample variances differ.
+The equality claim remains consistent with the data, but it is not proved.
 
 TRAP:
 ```
@@ -394,7 +395,8 @@ TRAP:
       VARIANCES. 27.50/29.75 = 0.924 would be meaningless as an F.
    2. Putting the smaller variance on top. The convention (and the critical value) assumes
       the LARGER variance is the numerator, so that F >= 1.
-   3. Conclusion wording: "cannot reject the claim" (H0 was the claim).
+   3. Conclusion wording: "fail to reject H0" (H0 was the claim), followed by "no evidence
+      that the standard deviations differ".
 ```
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -432,8 +434,8 @@ EVERY STEP:
           1.4147 < 3.07 -> FAIL TO REJECT
 ```
 
-ANSWER: there is no evidence to say the variances differ; the two populations can be taken
-to have the same variance.
+ANSWER: fail to reject H0: there is no evidence that the variances differ. Do not state that
+the two populations are proved to have the same variance.
 
 TRAP:
 ```
@@ -525,7 +527,7 @@ THE PICTURE:
    the observed counts deviate, and chi2 measures the total squared deviation,
    scaled by the expectation:
 
-      small chi2  ->  data looks like independence  ->  keep H0
+      small chi2  ->  data looks like independence  ->  fail to reject H0
       large chi2  ->  data departs from independence -> reject H0
 ```
 
@@ -665,8 +667,8 @@ EVERY STEP:
           3.6458 < 9.488 -> FAIL TO REJECT
 ```
 
-ANSWER: no evidence of association; hair colour and eye colour are independent in this
-data. (machine-verified chi2 = 3.6458)
+ANSWER: fail to reject H0: there is no evidence of association between hair colour and eye
+colour. This does not prove independence. (machine-verified chi2 = 3.6458)
 
 TRAP: the same as the other chi-square: expected counts from row x col / grand, divide each
 squared deviation by E, df = (r-1)(c-1) = 4.

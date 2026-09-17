@@ -352,14 +352,17 @@ ANSWER: P(exactly 2) = 0.2458, about 25 percent.
   THE COMPLEMENT AGAIN:
   "at least 2" = 1 - P(0) - P(1)
 
-  STEP 1  P(0) = C(6,0) x (0.2)^0 x (0.8)^6 = 1 x 1 x 0.262144 = 0.2621
+  STEP 1  P(0) = C(6,0) x (0.2)^0 x (0.8)^6
+               = 1 x 1 x 0.262144 = 0.262144  -> display 0.2621
   STEP 2  P(1) = C(6,1) x (0.2)^1 x (0.8)^5
                = 6 x 0.2 x 0.32768
-               = 1.2 x 0.32768 = 0.3932
-  STEP 3  add them: 0.2621 + 0.3932 = 0.6553
-  STEP 4  subtract from 1: 1 - 0.6553 = 0.3447
-          (more precisely, 1 - 0.65536 = 0.34464, which rounds to 0.3446;
-           using the rounded terms gives 0.3447. both round to about 0.345.)
+               = 1.2 x 0.32768 = 0.393216  -> display 0.3932
+  STEP 3  keep the unrounded values for the subtraction:
+          P(0) + P(1) = 0.262144 + 0.393216 = 0.655360
+  STEP 4  subtract from 1: 1 - 0.655360 = 0.344640
+          rounding only now gives 0.3446.
+          If the displayed 0.2621 and 0.3932 are subtracted instead, the display becomes
+          0.3447. That is a rounding artefact, not the final four-decimal answer.
 ```
 
 ANSWER: P(at least 2) = 0.3446 (about 34 percent).

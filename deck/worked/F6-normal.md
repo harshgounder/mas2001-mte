@@ -56,6 +56,15 @@ WHICH ONE ARE OUR PAPERS USING? Read the useful data:
       TABLE. USE THE CONVERSIONS ABOVE.
 ```
 
+!!! PROMINENT SOURCE-DATA WARNING !!!
+```
+   The inverse-normal question later prints phi(0.19) = 0.50. That printed pair is
+   IMPOSSIBLE for the area-from-mean entry at z = 0.19: phi(0.19) is about 0.075.
+   In this table phi(0) = 0 and the area approaches 0.50 only as z grows without bound.
+   Treat the paper entry as a typo. The probability statement gives phi(|z|) = 0.19,
+   which leads to |z| about 0.496. The detailed correction appears in F6.5.
+```
+
 THE CONVERSION CHEAT-SHEET (all four cases, memorize the pattern):
 
 ```
@@ -272,7 +281,8 @@ EVERY STEP:
           P(1.5 < X < 4.6) = phi(0.19) + phi(0.34)
                            = 0.075 + 0.133
                            = 0.208
-          (using the paper's rounded table values; the exact value is 0.2075)
+          (using the paper's rounded table values; the unrounded normal calculation is
+           0.207539..., which displays as 0.2075)
 ```
 
 PICTURE:
@@ -300,6 +310,11 @@ STEP 0: RECOGNISE THE COMPOSITE:
    |     p = 0.208    (the probability from part iii)              |
    |     "at most 2"  -> P(X = 0) + P(X = 1) + P(X = 2)            |
    +--------------------------------------------------------------+
+
+   Rounding convention: this follows the source table and uses p = 0.208, the displayed
+   value from part (iii). If p = 0.207539... is carried instead, the corresponding result
+   is about 0.8388. Do not mix a rounded p with unrounded intermediate terms and then
+   report the result as if it came from one precision.
 ```
 
 EVERY STEP:

@@ -1,0 +1,64 @@
+{
+  "rows": 383,
+  "by_verdict": {
+    "unsearched": 200,
+    "fuzzy-family": 20,
+    "open": 111,
+    "fuzzy-strong": 5,
+    "fuzzy-verbatim": 1,
+    "frozen": 46
+  },
+  "by_group": {
+    "teaching": {
+      "unsearched": 59,
+      "fuzzy-family": 1
+    },
+    "chebyshev": {
+      "open": 3
+    },
+    "assignments-2025": {
+      "open": 28,
+      "fuzzy-strong": 4,
+      "fuzzy-verbatim": 1,
+      "unsearched": 16,
+      "fuzzy-family": 3
+    },
+    "mte": {
+      "CONCEPT": 4,
+      "FAMILY": 1,
+      "VERBATIM": 1,
+      "RESKIN": 3,
+      "FAMILY + CIRCULATING": 1,
+      "OPEN": 1,
+      "CIRCULATING": 1,
+      "RESKIN + CIRCULATING": 2,
+      "DECK": 1,
+      "MIXED": 1
+    },
+    "ete": {
+      "unsearched": 42,
+      "open": 50,
+      "fuzzy-family": 5
+    },
+    "assignments-2024": {
+      "open": 30,
+      "fuzzy-family": 11,
+      "unsearched": 83,
+      "fuzzy-strong": 1
+    },
+    "four-decks": {
+      "exact-text lead": 9,
+      "exact match": 3,
+      "open": 8,
+      "probable exact-text lead": 2,
+      "family lead": 1,
+      "verbatim slide source": 7
+    }
+  },
+  "corpora": {
+    "G&K-Fundamentals": 73353,
+    "Hogg-Tanis-9e": 62621,
+    "GGD-Vol1": 25502,
+    "Davenport": 38096
+  }
+}

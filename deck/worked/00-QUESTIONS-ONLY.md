@@ -3,7 +3,9 @@
 Every question from the worked set (F1 to F15), stripped of solutions.
 How to drill: read the question, attempt it cold, then open the solution pointer.
 
-TOTAL QUESTIONS: 168 (158 worked questions + 10 assignment MCQs)
+TOTAL DRILL UNITS: 180 (the prior 168-unit drill + the 12 F13 assignment MCQs below)
+COUNT NOTE: this drill-unit count is not the `QUESTION`-header count in F1-F15. See
+00-HOW-AND-WHY.md and reports/22-WORKED-BANK-METHODOLOGY-AUDIT.md.
 
 pointer format:  FILE.md (QUESTION n)  ->  the full zero-knowledge solution.
 
@@ -1331,6 +1333,174 @@ A sample of 26 bulbs gives a mean life of 990 hours with a standard deviation of
 ==============================================================================
   F13-assignments   (28 questions)
 ==============================================================================
+
+The 12 Section A MCQs were previously present only inside the F13 solution table. They now
+have explicit drill entries. Wording and option order follow md/mas2001-assignment-2.md.
+
+------------------------------------------------------------------------------
+  F13-assignments M1    [source: Assignment 2, Section A, Q1]
+  solution -> F13-assignments.md (F13.1 table, Q1)
+------------------------------------------------------------------------------
+
+```
+In a Normal distribution, the probability density curve is perfectly symmetric about the:
+a) Variance
+b) Standard Deviation
+c) Mean
+d) Origin
+```
+
+------------------------------------------------------------------------------
+  F13-assignments M2    [source: Assignment 2, Section A, Q2]
+  solution -> F13-assignments.md (F13.1 table, Q2)
+------------------------------------------------------------------------------
+
+```
+For a Binomial distribution where the number of trials is $n = 10$ and the probability of
+success is $p = 0.5$, what is the variance?
+a) 5
+b) 2.5
+c) 10
+d) 0.25
+```
+
+------------------------------------------------------------------------------
+  F13-assignments M3    [source: Assignment 2, Section A, Q3]
+  solution -> F13-assignments.md (F13.1 table, Q3)
+------------------------------------------------------------------------------
+
+```
+Which of the following is a unique property of the Poisson distribution?
+a) The mean is always greater than the variance.
+b) The mean is always less than the variance.
+c) The mean and the variance are strictly equal.
+d) The standard deviation is independent of the mean.
+```
+
+------------------------------------------------------------------------------
+  F13-assignments M4    [source: Assignment 2, Section A, Q4]
+  solution -> F13-assignments.md (F13.1 table, Q4)
+------------------------------------------------------------------------------
+
+```
+If a continuous random variable $X$ is uniformly distributed over the interval $(a, b)$, its
+variance is given by:
+a) $\frac{a+b}{2}$
+b) $\frac{(b-a)^2}{12}$
+c) $\frac{b-a}{2}$
+d) $\frac{(b-a)^2}{2}$
+```
+
+------------------------------------------------------------------------------
+  F13-assignments M5    [source: Assignment 2, Section A, Q5]
+  solution -> F13-assignments.md (F13.1 table, Q5)
+------------------------------------------------------------------------------
+
+```
+The "memoryless property" is a defining characteristic of which of the following continuous
+probability distributions?
+a) Normal Distribution
+b) Uniform Distribution
+c) Exponential Distribution
+d) Poisson Distribution
+```
+
+------------------------------------------------------------------------------
+  F13-assignments M6    [source: Assignment 2, Section A, Q6]
+  solution -> F13-assignments.md (F13.1 table, Q6)
+------------------------------------------------------------------------------
+
+```
+What is the variance for a Standard Normal distribution?
+a) 1
+b) 3
+c) 0
+d) $\infty$
+```
+
+------------------------------------------------------------------------------
+  F13-assignments M7    [source: Assignment 2, Section A, Q7]
+  solution -> F13-assignments.md (F13.1 table, Q7)
+------------------------------------------------------------------------------
+
+```
+Which of the following distributions is best suited to model the number of rare events
+occurring in a fixed interval of time or space?
+a) Binomial Distribution
+b) Uniform Distribution
+c) Poisson Distribution
+d) Exponential Distribution
+```
+
+------------------------------------------------------------------------------
+  F13-assignments M8    [source: Assignment 2, Section A, Q8]
+  solution -> F13-assignments.md (F13.1 table, Q8)
+------------------------------------------------------------------------------
+
+```
+If $X$ is an exponentially distributed random variable with the rate parameter $\lambda$,
+what is the standard deviation of $X$?
+a) $\lambda$
+b) $\frac{1}{\lambda}$
+c) $\frac{1}{\lambda^2}$
+d) $\lambda^2$
+```
+
+------------------------------------------------------------------------------
+  F13-assignments M9    [source: Assignment 2, Section A, Q9]
+  solution -> F13-assignments.md (F13.1 table, Q9)
+------------------------------------------------------------------------------
+
+```
+In a Binomial distribution, if the probability of success is $p = 0.5$, the experiment is
+performed 12 times. what is the maximum number of successes that can occur:
+a) 6
+b) 8
+c) 10
+d) 12
+```
+
+------------------------------------------------------------------------------
+  F13-assignments M10    [source: Assignment 2, Section A, Q10]
+  solution -> F13-assignments.md (F13.1 table, Q10)
+------------------------------------------------------------------------------
+
+```
+A continuous Uniform distribution defined over the interval $[a, b]$. What is $P(c < X < d)$,
+where $c \in (a, b)$ and $d > b$:
+a) $\frac{b-c}{b-a}$
+b) $\frac{d-c}{b-a}$
+c) $\frac{d-c}{d-a}$
+d) $\frac{b-c}{d-a}$
+```
+
+------------------------------------------------------------------------------
+  F13-assignments M11    [source: Assignment 2, Section A, Q11]
+  solution -> F13-assignments.md (F13.1 table, Q11)
+------------------------------------------------------------------------------
+
+```
+For a standard normal curve, what is the approximate area under the curve between $z = -1$
+and $z = 1$?
+a) 95.45%
+b) 99.73%
+c) 50.00%
+d) 68.27%
+```
+
+------------------------------------------------------------------------------
+  F13-assignments M12    [source: Assignment 2, Section A, Q12]
+  solution -> F13-assignments.md (F13.1 table, Q12)
+------------------------------------------------------------------------------
+
+```
+If $X$ and $Y$ are independent Poisson random variables with parameters $\lambda_1$ and
+$\lambda_2$ respectively, then the distribution of $X + Y$ follows:
+a) A Binomial distribution with mean $\lambda_1 + \lambda_2$
+b) A Poisson distribution with mean $\lambda_1\lambda_2$
+c) A Poisson distribution with mean $\lambda_1 + \lambda_2$
+d) An Exponential distribution with mean $\lambda_1 + \lambda_2$
+```
 
 ------------------------------------------------------------------------------
   F13-assignments Q1    [source: IT support desk, Poisson mean 2.5]
