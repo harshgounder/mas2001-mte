@@ -7,8 +7,8 @@ every solution was machine-verified before the file was committed.
 ```
    folder:   ~/mas2001-mte-s2/deck/worked/
    files:    12 (one per family)
-   size:     ~326 KB
-   questions: 91
+   size:     ~390 KB
+   questions: 125
    register: ZERO-KNOWLEDGE LONG FORM ONLY (every step shown, no assumed maths)
 ```
 
@@ -20,7 +20,7 @@ THE FILES AND WHAT EACH COVERS
   +-------+---------------------------+-------+----------------------------------------+
   | file  | family                    |  Qs   | what is inside                         |
   +-------+---------------------------+-------+----------------------------------------+
-  | F1    | Binomial                  |   9   | point, tail, count, formula MCQ,       |
+  | F1    | Binomial                  |  10   | point, tail, count, formula MCQ,       |
   |       |                           |       | find-p from ratio, literate variant    |
   | F2    | Poisson                   |   8   | point, tail, nested, two-stage chain,  |
   |       |                           |       | Y=2X scaling, mean=e MCQ               |
@@ -33,20 +33,22 @@ THE FILES AND WHAT EACH COVERS
   |       |                           |       | SE-of-average, phi table conventions   |
   | F7    | RV / pdf / cdf            |   6   | find-k, mean/var exact fractions,      |
   |       |                           |       | piecewise cdf, dice grid               |
-  | F8    | Estimation                |  14   | 4 properties, unbiased verification,   |
+  | F8    | Estimation                |  15   | 4 properties, unbiased verification,   |
   |       |                           |       | consistency, CIs (3), sufficiency (3)  |
   | F9    | CLT / sampling            |   7   | SE value, SE behaviour, applicability, |
   |       |                           |       | 3 deck examples (ATM, impurity, LED)   |
   | F10   | Definition/foundations    |   4   | rv definition (3 papers!), pmf drill,  |
   |       |                           |       | joint pmf + marginal, E(2X+1)^2        |
-  | F11   | Expectation/variance laws |   5   | laws toolbox, E[XY], variance>=0,      |
+  | F11   | Expectation/variance laws |   6   | laws toolbox, E[XY], variance>=0,      |
   |       |                           |       | typist Q8, soldiers, Poisson scaling   |
-  | F12   | Hypothesis testing (OUT*) |  16   | 8 MCQs, t-tests (2), F-tests (2),      |
-  |       |                           |       | chi-square (2), ANOVA (1), engine parts|
+  | F12   | Hypothesis testing (OUT*) |  19   | 8 MCQs, t-tests (3), F-tests (2),      |
+  |       |                           |       | chi-square (3), ANOVA (2), bulbs       |
+  | F13   | Assignment sheets         |  28   | both assignments in full: 12 MCQs +    |
+  |       |                           |       | 16 full solves, printed-answer quirks  |
   +-------+---------------------------+-------+----------------------------------------+
    (*) hypothesis testing is marked out of the MTE syllabus in the ledger, but it appeared in
        five ETE papers with two 10-mark questions; included for completeness.
-   TOTAL: 91 questions
+   TOTAL: 125 questions
 ```
 
 ═══════════════════════════════════════════════════════════════════════════════
@@ -64,7 +66,8 @@ SOURCE MAP: WHERE THE QUESTIONS COME FROM
    ETE re-session S3    R25S3                    -> F1,F2,F3,F5,F6,F8,F9,F11,F12
    ETE re-session S4    R25S4                    -> F3,F4,F7,F11,F12
    decks (ppt3/ppt4/ppt5/lms) -> F1,F2,F4,F6,F9 (the deck examples)
-   assignments (2024-25, 2025-26) -> F6 (7%/89%), plus F1/F5/F8 cross-refs
+   assignments (2024-25, 2025-26) -> F13 (all 28 questions), plus F6 (7%/89%), F1/F5/F8
+   university solution schemes (NEW source mined) -> cross-checks in F1,F5,F6,F7,F8,F11,F12
 ```
 
 ═══════════════════════════════════════════════════════════════════════════════
