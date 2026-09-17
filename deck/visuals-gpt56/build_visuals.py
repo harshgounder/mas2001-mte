@@ -283,8 +283,144 @@ def study_roadmap():
     svg("study-roadmap.svg","MAS2001 study roadmap","".join(b),desc="Seven-stage study sequence from prerequisites to timed mock")
 
 
+def formula_landscape():
+    b = [text(60, 58, "Formula landscape: classify first, then compute", 34, 500)]
+    b.append(box(455, 88, 290, 76, "Read the ask", "blue", "name the object and target"))
+    cards = [
+        (65, 220, "Probability", "P(A|B), counting, independence", "cyan"),
+        (625, 220, "Random variables", "pmf, pdf, CDF, E(X), Var(X)", "purple"),
+        (65, 410, "Five distributions", "B, Poi, U, N, Exp", "orange"),
+        (625, 410, "Bounds and inference", "Chebyshev, SE, CLT, estimators", "green"),
+    ]
+    for x, y, label, sub, color in cards:
+        b.append(line(600, 164, x + 240, y, COLORS["grid"], 4))
+        b.append(box(x, y, 480, 92, label, color, sub))
+    checks = [("support", 160), ("boundary", 380), ("units", 600), ("exact value", 820)]
+    for label, x in checks:
+        b.append(box(x, 590, 180, 64, label, "blue"))
+    b.append(text(600, 690, "final gate: support, boundary word, units, and exact value", 20, 500, "middle", COLORS["muted"]))
+    svg("formula-landscape.svg", "MAS2001 formula landscape", "".join(b), desc="Four-part map for choosing the correct probability or statistics formula")
+
+
+def method_decision_tree():
+    b = [text(60, 58, "Question-solving decision path", 34, 500)]
+    b.append(box(50, 105, 220, 78, "1. Identify", "blue", "named model or event?"))
+    b.append(line(270, 144, 345, 144, COLORS["grid"], 5))
+    b.append(box(345, 105, 250, 78, "2. Choose form", "cyan", "pmf, pdf, CDF, tree"))
+    b.append(line(595, 144, 670, 144, COLORS["grid"], 5))
+    b.append(box(670, 105, 220, 78, "3. Solve", "purple", "formula or algebra"))
+    b.append(line(890, 144, 965, 144, COLORS["grid"], 5))
+    b.append(box(965, 105, 185, 78, "4. Check", "green", "three loops"))
+    branches = [
+        (70, 270, "Discrete", "Binomial or Poisson", "point, tail, interval"),
+        (350, 270, "Continuous", "Uniform, Normal, Exp", "area, standardise"),
+        (630, 270, "Event", "count or condition", "sets, tree, complement"),
+        (910, 270, "Estimator", "bias before variance", "name the winner"),
+    ]
+    for x, y, label, sub, move in branches:
+        b.append(box(x, y, 220, 88, label, "orange", sub))
+        b.append(text(x + 110, y + 130, move, 18, 500, "middle", COLORS["muted"]))
+    loops = [("SUPPORT", "inside the allowed range"), ("BOUNDARY", "at least versus more than"), ("SANITY", "P in [0,1], variance ≥ 0")]
+    for i, (label, sub) in enumerate(loops):
+        b.append(box(135 + i * 325, 520, 280, 90, label, ["red", "orange", "green"][i], sub))
+    b.append(text(600, 675, "keep exact values until the final line", 22, 500, "middle", COLORS["muted"]))
+    svg("method-decision-tree.svg", "Question-solving decision path", "".join(b), desc="Identify, choose, solve, and check workflow with model branches")
+
+
+def mutation_operator_map():
+    b = [text(60, 58, "Question mutation map", 34, 500)]
+    b.append(box(55, 105, 300, 90, "Question skeleton", "blue", "model, target, solve path"))
+    b.append(box(55, 255, 300, 90, "Surface details", "cyan", "numbers, names, units, story"))
+    b.append(text(205, 405, "M0 changes the surface", 21, 500, "middle", COLORS["green"]))
+    b.append(text(205, 438, "type usually stays fixed", 19, 400, "middle", COLORS["muted"]))
+    ops = [
+        ("M1", "INVERT", "swap given and asked", "x to P becomes P to x"),
+        ("M2", "RE-CONDITION", "change a structural condition", "replacement, sample size"),
+        ("M3", "RE-TARGET", "same setup, new target", "point, tail, conditional"),
+        ("M4", "COMPOSE", "nest two models", "solve the inner model first"),
+    ]
+    for i, (code, name, action, example) in enumerate(ops):
+        y = 105 + i * 132
+        b.append(box(500, y, 150, 84, code, "purple", name))
+        b.append(line(650, y + 42, 705, y + 42, COLORS["grid"], 4))
+        b.append(box(705, y, 425, 84, action, "orange", example))
+    b.append(line(355, 150, 500, 150, COLORS["grid"], 4))
+    b.append(line(355, 300, 430, 300, COLORS["grid"], 4))
+    b.append(text(600, 675, "source match confidence belongs to the evidence ledger, not to visual similarity alone", 20, 500, "middle", COLORS["red"]))
+    svg("mutation-operators.svg", "Question mutation operators", "".join(b), desc="Difference between surface reskins and structural question mutations")
+
+
+def exam_timeline():
+    b = [text(60, 58, "Ninety-minute practice budget", 34, 500)]
+    segments = [("Read", 3, "blue"), ("Section A", 20, "cyan"), ("Section B", 35, "green"), ("Section C", 25, "orange"), ("Check", 7, "purple")]
+    x0, y, total_w = 75, 230, 1050
+    elapsed = 0
+    for label, minutes, color in segments:
+        width = total_w * minutes / 90
+        b.append(f'<rect x="{x0}" y="{y}" width="{width}" height="120" fill="{COLORS[color]}" opacity="0.88"/>')
+        b.append(text(x0 + width / 2, y + 52, label, 22 if width > 100 else 17, 500, "middle", COLORS["paper"]))
+        b.append(text(x0 + width / 2, y + 85, f"{minutes} min", 18 if width > 80 else 14, 500, "middle", COLORS["paper"]))
+        b.append(text(x0, y + 150, str(elapsed), 17, 500, "middle"))
+        elapsed += minutes
+        x0 += width
+    b.append(text(1125, y + 150, "90", 17, 500, "middle"))
+    b.append(text(600, 430, "3 + 20 + 35 + 25 + 7 = 90 minutes", 25, 500, "middle"))
+    b.append(box(155, 510, 380, 90, "Section C is an 8-mark block", "orange", "its topic may change"))
+    b.append(box(665, 510, 380, 90, "Leave seven minutes to check", "purple", "boundaries, units, missed parts"))
+    svg("exam-timeline.svg", "Ninety-minute exam practice budget", "".join(b), desc="Proportional ninety-minute timeline for reading, three sections, and checking")
+
+
+def expectation_variance():
+    b = [text(60, 58, "Mean is the balance point; variance is squared spread", 34, 500)]
+    x0, base = 120, 265
+    weights = [(1, .10), (2, .20), (3, .40), (4, .20), (5, .10)]
+    b.append(line(x0, base, x0 + 430, base, COLORS["ink"], 5))
+    for value, probability in weights:
+        x = x0 + (value - 1) * 107
+        b.append(f'<circle cx="{x}" cy="{base}" r="10" fill="{COLORS["blue"]}"/>')
+        b.append(f'<rect x="{x-18}" y="{base-probability*260}" width="36" height="{probability*260}" fill="{COLORS["cyan"]}"/>')
+        b.append(text(x, base + 35, value, 17, 500, "middle"))
+    mean_x = x0 + 2 * 107
+    b.append(line(mean_x, 105, mean_x, base + 15, COLORS["red"], 3, "8 6"))
+    b.append(text(mean_x, 95, "E(X) = 3", 22, 500, "middle", COLORS["red"]))
+    b.append(text(335, 330, "probability weights balance at the mean", 19, 400, "middle", COLORS["muted"]))
+    distributions = [(720, "small variance", [(-1,.2),(0,.6),(1,.2)], "green"), (980, "large variance", [(-2,.2),(0,.6),(2,.2)], "purple")]
+    for cx, label, points, color in distributions:
+        b.append(text(cx, 135, label, 21, 500, "middle"))
+        b.append(line(cx - 120, base, cx + 120, base, COLORS["ink"], 3))
+        for offset, probability in points:
+            x = cx + offset * 52
+            b.append(f'<rect x="{x-16}" y="{base-probability*210}" width="32" height="{probability*210}" fill="{COLORS[color]}"/>')
+        b.append(text(cx, base + 35, "same mean", 17, 500, "middle", COLORS["muted"]))
+    b.append(box(150, 455, 400, 105, "Expectation", "blue", "E[h(X)] = sum or integral of h(x) times weight"))
+    b.append(box(650, 455, 400, 105, "Variance", "purple", "Var(X) = E(X²) - [E(X)]²"))
+    b.append(text(600, 650, "shifts preserve variance; multiplying by a scales variance by a²", 22, 500, "middle"))
+    svg("expectation-variance.svg", "Expectation and variance", "".join(b), desc="Probability balance point and two distributions with the same mean but different variance")
+
+
+def continuous_pdf_cdf():
+    b = [text(60, 58, "Continuous probability: area, accumulation, derivative", 34, 500)]
+    b.append(box(70, 115, 300, 95, "PDF f(x)", "cyan", "nonnegative; total area = 1"))
+    b.append(box(450, 115, 300, 95, "Probability", "green", "area from a to b"))
+    b.append(box(830, 115, 300, 95, "CDF F(x)", "purple", "area to the left of x"))
+    b.append(line(370, 162, 450, 162, COLORS["grid"], 5))
+    b.append(text(410, 145, "integrate", 16, 500, "middle", COLORS["muted"]))
+    b.append(line(750, 162, 830, 162, COLORS["grid"], 5))
+    b.append(text(790, 145, "accumulate", 16, 500, "middle", COLORS["muted"]))
+    b.append(text(600, 285, "F(x) = integral from -infinity to x of f(t) dt", 25, 500, "middle"))
+    b.append(text(600, 330, "f(x) = F'(x), where an absolutely continuous F is differentiable", 22, 500, "middle", COLORS["purple"]))
+    b.append(box(70, 410, 315, 100, "Endpoints", "blue", "P(a<X<b) = P(a≤X≤b)"))
+    b.append(box(442, 410, 315, 100, "Support", "orange", "clip intervals to where f is nonzero"))
+    b.append(box(815, 410, 315, 100, "Point mass", "red", "P(X=c)=0 is not impossible"))
+    b.append(text(600, 590, "continuous interval: F(b) - F(a)", 24, 500, "middle"))
+    b.append(text(600, 635, "integer-valued interval: F(b) - F(a-1)", 24, 500, "middle", COLORS["red"]))
+    svg("continuous-pdf-cdf.svg", "Continuous PDF and CDF relationships", "".join(b), desc="Relationship between density, interval area, cumulative distribution, and differentiation")
+
+
 BUILDERS = [course_map, probability_tree, dice_heatmap, pmf_cdf, distribution_gallery,
-            normal_tables, sampling_clt, estimator_comparison, chebyshev, study_roadmap]
+            normal_tables, sampling_clt, estimator_comparison, chebyshev, study_roadmap,
+            formula_landscape, method_decision_tree, mutation_operator_map, exam_timeline,
+            expectation_variance, continuous_pdf_cdf]
 
 
 def main():

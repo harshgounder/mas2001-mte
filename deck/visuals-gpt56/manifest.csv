@@ -10,15 +10,15 @@ V07,done,assets/sampling-clt.svg,deck/notes/08-sampling-and-clt.md,sampling dist
 V08,done,assets/estimator-comparison.svg,deck/notes/09-estimation.md,estimator decision flow and variance comparison
 V09,done,assets/chebyshev-bound.svg,deck/notes/10-chebyshev-and-hidden.md,distribution-free central bound
 V10,done,assets/study-roadmap.svg,deck/14-MASTER-STUDY-ORDER.md,study sequence and gates
-V11,planned,,deck/01-CHEATSHEET.md,one-page formula landscape
+V11,done,assets/formula-landscape.svg,deck/01-CHEATSHEET.md,one-page formula landscape
 V12,planned,,deck/02-TERMS.md,term relationship map
-V13,planned,,deck/04-METHODS.md,method decision tree
-V14,planned,,deck/07-PATTERNS.md,mutation operator map
+V13,done,assets/method-decision-tree.svg,deck/04-METHODS.md,method decision tree
+V14,done,assets/mutation-operators.svg,deck/07-PATTERNS.md,mutation operator map
 V15,planned,,deck/08-TRAPS.md,trap and correction matrix
 V16,planned,,deck/09-QUESTIONS.md,question-family atlas
 V17,planned,,deck/10-SLIDE-MAP.md,page-to-topic timeline
 V18,planned,,deck/11-BEYOND-SLIDES.md,hidden prerequisite network
 V19,planned,,deck/12-DRILL.md,drill ladder and coverage matrix
-V20,planned,,deck/13-EXAM-MECHANICS.md,exam time allocation
-V21,planned,,deck/notes/04-expectation-and-variance.md,expectation balance and variance spread
-V22,planned,,deck/notes/05-continuous-rv.md,pdf area and cdf derivative
+V20,done,assets/exam-timeline.svg,deck/13-EXAM-MECHANICS.md,exam time allocation
+V21,done,assets/expectation-variance.svg,deck/notes/04-expectation-and-variance.md,expectation balance and variance spread
+V22,done,assets/continuous-pdf-cdf.svg,deck/notes/05-continuous-rv.md,pdf area and cdf derivative

@@ -29,3 +29,19 @@ These are generated from `build_visuals.py`. Open any image directly for the ful
 ![Sampling distributions](assets/sampling-clt.svg)
 
 ![Estimator comparison](assets/estimator-comparison.svg)
+
+## Formula and method maps
+
+![Formula landscape](assets/formula-landscape.svg)
+
+![Method decision tree](assets/method-decision-tree.svg)
+
+![Mutation operators](assets/mutation-operators.svg)
+
+## Exam and core concepts
+
+![Exam timeline](assets/exam-timeline.svg)
+
+![Expectation and variance](assets/expectation-variance.svg)
+
+![Continuous PDF and CDF](assets/continuous-pdf-cdf.svg)

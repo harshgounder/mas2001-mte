@@ -3,7 +3,7 @@
 This folder is separate from the existing deck documents and notes. It replaces selected ASCII sketches
 with exact, scalable diagrams while leaving the audited study text unchanged.
 
-## First visual set
+## Rendered visual set
 
 | visual | primary source files |
 |---|---|
@@ -17,6 +17,12 @@ with exact, scalable diagrams while leaving the audited study text unchanged.
 | `assets/estimator-comparison.svg` | `deck/notes/09-estimation.md` |
 | `assets/chebyshev-bound.svg` | `deck/notes/10-chebyshev-and-hidden.md` |
 | `assets/study-roadmap.svg` | `deck/14-MASTER-STUDY-ORDER.md` |
+| `assets/formula-landscape.svg` | `deck/01-CHEATSHEET.md` |
+| `assets/method-decision-tree.svg` | `deck/04-METHODS.md` |
+| `assets/mutation-operators.svg` | `deck/07-PATTERNS.md` |
+| `assets/exam-timeline.svg` | `deck/13-EXAM-MECHANICS.md` |
+| `assets/expectation-variance.svg` | `deck/notes/04-expectation-and-variance.md` |
+| `assets/continuous-pdf-cdf.svg` | `deck/notes/05-continuous-rv.md` |
 
 ## Rules
 
@@ -29,7 +35,7 @@ with exact, scalable diagrams while leaving the audited study text unchanged.
 
 ## Coverage status
 
-The first set covers the central diagrams shared across the deck. The remaining file-level
+The rendered set covers the central diagrams shared across the deck. The remaining file-level
 inventory belongs in `manifest.csv`; `planned` means the ASCII source has been inspected but
 its replacement has not yet been drawn.
 
