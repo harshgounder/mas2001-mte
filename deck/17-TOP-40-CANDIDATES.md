@@ -218,6 +218,6 @@ evidence: LMS theory-of-estimation Example 1 · bank 11·007 · same family as C
     C (1 block):  C1 normal+binomial composite or C2/C3 estimation (the 5+3 split)
 ```
 
-Drill order for today: the `***` tier first (14 questions), then `**` (24), then the two `*` (A11, plus any you fail twice). Attempt before reading any solution. Full papers for timing practice: reports/07-MOCK-PAPER-v2.md and the two real MTE papers.
+Drill order for today: the `***` tier first (16 questions), then the `**` tier (23), then the one `*` (A11), plus any question you fail twice. Attempt before reading any solution. Full papers for timing practice: reports/07-MOCK-PAPER-v2.md and the two real MTE papers.
 
 Built from: SNP-MTE-MASTER-ALL-QUESTIONS.md + SNP-MTE-QUESTIONS-ONLY-ALL.md (the Music package), your repo deck/worked + one-by-one, reports/20-SKELETON-LEDGER.md, reports/11-QUESTION-ATLAS, deck notes. Numbers follow the source files as printed.
