@@ -19,7 +19,7 @@ Questions only. No answers anywhere in this file on purpose.
   Chebyshev interval: (-1,3) -> (-1,1). Trains at the station: every 30 -> every 15 min.
   "Bread-making machine" -> "a machine". Expect NEW numbers on the same bones.
 - Cross-year repeats (the dead certs): Chebyshev (9+ graded uses), exponential phone (both
-  MTE years), Poisson transforms (both), normal composites (both), density find-k (both).
+  MTE years), Poisson (both), normal (both: the 2024 composite and the 2025 sample-mean), density mechanics (both: the 2024 triangular CDF and the 2025 kx^3 find-k).
 - Your bank's own 2 predicted papers (18 items) independently pick the same core: Chebyshev
   bounds, normal z-tables, SE/CLT, estimation unbiasedness, Poisson process questions.
   Green flag for the ranking below.
@@ -219,5 +219,43 @@ evidence: LMS theory-of-estimation Example 1 · bank 11·007 · same family as C
 ```
 
 Drill order for today: the `***` tier first (16 questions), then the `**` tier (23), then the one `*` (A11), plus any question you fail twice. Attempt before reading any solution. Full papers for timing practice: reports/07-MOCK-PAPER-v2.md and the two real MTE papers.
+
+## Self-audit (18 Sep): is this really the top 40, and what does it buy you
+
+```
+  EVIDENCE CLASSES OF THE 40 (every item checked):
+    traces to a prior MTE paper item or its verbatim family    17
+    graded course material (assignments, ETE, deck examples)   19
+    bank-only (the softest entries: A11, B6, C4, C8)            4
+
+  THE LIST RE-MAPPED AGAINST THE TWO REAL PAPERS:
+    MTE 2025-26: 8 of 8 slots land in the set
+                 (Q1->A3, Q2->A5, Q3->A7, Q4->B7, Q5->B1, Q6->B3, Q7->B5, Q8->B13+C3)
+    MTE 2024-25: 6 direct + 2 inside families = 7 of 8
+                 (the triangular-CDF MCQ sits inside C9; the uniform bound-vs-exact
+                  sits inside the B2/C7 family)
+
+  WHY THE PAPER LIKELY RETURNS TO THIS SET: both years drew 5-6 of the 8 slots from
+  the core families (Chebyshev, exponential, Poisson, normal, density mechanics,
+  estimation). The other 2-3 slots rotate among uniform, binomial, hidden items and
+  composites. The 40 hold the core in depth and every rotation seen so far.
+
+  A DRILL-ONLY RUN, WHAT IT LIKELY SCORES (an estimate with the method shown, not a
+  measured probability; a covered slot pays full marks for a drilled student):
+    per slot: P(covered) ~ 0.9 core / ~ 0.6 known rotation / ~ 0.3 field
+    scenario table, 30 marks:
+      the core + a known rotation, no surprises ....... 27-29  (~92%)
+      normal rotation, 4 core slots + 4 moves ......... 23-26  (~78-85%)
+      heavy rotation, 3+ slots outside everything ..... 19-22  (~63-73%)
+    central estimate for a clean drill: 23-25 / 30.
+
+  BENCH: the five that just missed (add these, about 30 minutes total):
+    geometric E = 1/p (H6) | hypergeometric mean nK/N (H7) | Poisson additivity (A2 A12)
+    | the triangular-CDF MCQ form (M24-A2) | the discrete conditional sibling
+
+  CAVEATS, stated: one setter so far, a two-paper history, tiers are evidence-weighted
+  judgment and not a calibrated probability. A paper from a different faculty pool
+  shifts the odds; the bench plus 12-DRILL covers most of that shift.
+```
 
 Built from: SNP-MTE-MASTER-ALL-QUESTIONS.md + SNP-MTE-QUESTIONS-ONLY-ALL.md (the Music package), your repo deck/worked + one-by-one, reports/20-SKELETON-LEDGER.md, reports/11-QUESTION-ATLAS, deck notes. Numbers follow the source files as printed.
